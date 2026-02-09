@@ -3,11 +3,11 @@
 > **Projet** : MYTHOS -- Plateforme de jeux narratifs multijoueur avec IA Maitre du Jeu
 > **Entreprise** : Mythos Interactive (SAS)
 > **Version** : 1.0
-> **Date** : Fevrier 2026
+> **Date** : 05 Mars 2026
 > **Competence RNCP** : C1.7 -- Supervision et controle du projet
 > **Methodologie** : Scrum (Agile) -- 7 sprints de 2 semaines (14 semaines)
 
-En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de supervision pour garantir que l'equipe dispose de processus clairs de gouvernance, d'escalade et de resolution de problemes. Ce document s'inspire des bonnes pratiques ITIL et Scrum, adaptees a notre contexte de projet etudiant de 14 semaines.
+En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de supervision pour que l'equipe ait des processus clairs de gouvernance, d'escalade et de resolution de problemes. Ce document s'inspire des bonnes pratiques ITIL et Scrum, adaptees a notre contexte de projet etudiant de 14 semaines. Concretement, on a construit ces processus au fur et a mesure -- le processus d'escalade par exemple a ete formalise apres qu'on ait perdu une demi-journee sur un blocage que personne n'avait remonte.
 
 ---
 
@@ -33,7 +33,7 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
                                  │
                     ┌────────────▼────────────┐
                     │    PRODUCT OWNER         │
-                    │    Zahid Ikay            │
+                    │    Kays ZAHIDI            │
                     │    (Chef de projet /     │
                     │     Architecte)          │
                     └────────────┬────────────┘
@@ -41,22 +41,17 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
               ┌──────────────────┼──────────────────┐
               │                  │                   │
    ┌──────────▼─────────┐ ┌─────▼──────────┐ ┌─────▼──────────────┐
-   │  SCRUM MASTER       │ │ DEV FRONTEND   │ │  DEV IA / TEMPS    │
-   │  Yasmine Benali     │ │ Lucas Martin   │ │  REEL              │
-   │  (Dev Frontend)     │ │                │ │  Karim Ouadah      │
+   │  SM / BACKEND / IA  │ │ DEV FRONTEND   │ │  FRONTEND / UX     │
+   │  Samy ZEROUALI      │ │ Youri EMMANUEL  │ │  + DEVOPS          │
+   │                     │ │                │ │  Yassir SABBAR      │
    └─────────────────────┘ └────────────────┘ └────────────────────┘
-                                                        │
-                                              ┌─────────▼──────────┐
-                                              │  UX/UI + DEVOPS    │
-                                              │  Sofia Reyes       │
-                                              └────────────────────┘
 ```
 
 #### Roles et responsabilites detailles
 
 | Membre | Role Scrum | Role technique | Responsabilites detaillees |
 |--------|-----------|----------------|---------------------------|
-| **Zahid Ikay** | Product Owner | Chef de projet / Architecte | - Definition et priorisation du backlog produit |
+| **Kays ZAHIDI** | Product Owner | Chef de projet / Architecte | - Definition et priorisation du backlog produit |
 | | | | - Vision produit et decisions de perimetre |
 | | | | - Validation des livrables a chaque Sprint Review |
 | | | | - Interface avec le client fictif (Mythos Interactive) |
@@ -64,29 +59,24 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 | | | | - Redaction et maintien du cahier des charges |
 | | | | - Arbitrage MoSCoW (Must/Should/Could/Won't) |
 | | | | - Suivi budgetaire (couts API IA, hebergement) |
-| **Yasmine Benali** | Scrum Master | Developpeur Frontend | - Facilitation de toutes les ceremonies Scrum |
+| **Samy ZEROUALI** | Scrum Master | Dev Backend + IA + Temps reel | - Facilitation de toutes les ceremonies Scrum |
 | | | | - Suivi de la velocite et du burndown chart |
 | | | | - Identification et resolution des blocages |
-| | | | - Garant du respect du cadre Scrum |
-| | | | - Animation des retrospectives |
-| | | | - Protection de l'equipe contre les perturbations exterieures |
-| | | | - Suivi des KPI projet (tableau de bord) |
-| | | | - Mediation en cas de conflit |
-| **Lucas Martin** | Developpeur | Developpeur Frontend | - Developpement de l'interface utilisateur (Next.js, React) |
+| | | | - Backend NestJS : API REST, Game Engine, WebSocket Gateway |
+| | | | - Service IA : prompt engineering, appels API Anthropic |
+| | | | - Integration et parsing des reponses LLM (JSON structure) |
+| | | | - Strategie duale Haiku/Sonnet |
+| | | | - Redaction et test des Scenario Packs |
+| | | | - Monitoring des couts et performances IA |
+| **Youri EMMANUEL** | Developpeur | Developpeur Frontend | - Developpement de l'interface utilisateur (Next.js, React) |
 | | | | - Implementation du design system (TailwindCSS) |
 | | | | - Game UI : narration, choix, discussion, jauges |
 | | | | - Integration WebSocket cote client (Socket.io) |
 | | | | - Responsive design mobile-first |
 | | | | - Tests frontend (Vitest) |
-| **Karim Ouadah** | Developpeur | Developpeur IA / Temps reel | - Service IA : prompt engineering, appels API Anthropic |
-| | | | - Integration et parsing des reponses LLM (JSON structure) |
-| | | | - WebSocket Gateway (NestJS + Socket.io) |
-| | | | - Streaming des reponses IA |
-| | | | - Strategie duale Haiku/Sonnet |
-| | | | - Redaction et test des Scenario Packs |
-| | | | - Monitoring des couts et performances IA |
-| **Sofia Reyes** | Developpeur | UX/UI + DevOps | - Maquettes UI/UX (Figma) |
+| **Yassir SABBAR** | Developpeur | Frontend / UX-UI + DevOps | - Maquettes UI/UX (Figma) |
 | | | | - Design system et charte graphique |
+| | | | - Developpement frontend complementaire (composants UI) |
 | | | | - Accessibilite WCAG 2.1 AA (audit + corrections) |
 | | | | - CI/CD avec GitHub Actions |
 | | | | - Deploiement Vercel (front) + Railway (back) |
@@ -95,23 +85,23 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 
 #### Matrice RACI
 
-| Activite | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (IA) | Sofia (DevOps) |
-|----------|:-:|:-:|:-:|:-:|:-:|
-| Vision produit & backlog | **R/A** | C | I | I | I |
-| Decisions architecture | **R/A** | C | C | C | C |
-| Ceremonies Scrum | C | **R/A** | C | C | C |
-| Suivi KPI & velocite | I | **R/A** | I | I | I |
-| Developpement frontend | I | C | **R/A** | C | C |
-| Developpement backend | C | I | I | **R/A** | I |
-| Service IA | C | I | I | **R/A** | I |
-| WebSocket / temps reel | I | I | C | **R/A** | I |
-| Maquettes UI/UX | A | I | C | I | **R** |
-| CI/CD & deploiement | I | I | I | I | **R/A** |
-| Accessibilite | A | I | C | I | **R** |
-| Tests E2E | A | C | **R** | **R** | C |
-| Communication client | **R/A** | C | I | I | I |
-| Communication encadrant | C | **R/A** | I | I | I |
-| Documentation projet | **R** | **R** | C | C | C |
+| Activite | Kays (PO/Archi) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) |
+|----------|:-:|:-:|:-:|:-:|
+| Vision produit & backlog | **R/A** | C | I | I |
+| Decisions architecture | **R/A** | C | I | I |
+| Ceremonies Scrum | C | **R/A** | C | C |
+| Suivi KPI & velocite | I | **R/A** | I | I |
+| Developpement frontend | I | I | **R/A** | R |
+| Developpement backend | A | **R/A** | I | I |
+| Service IA | A | **R/A** | I | I |
+| WebSocket / temps reel | I | **R** | C | I |
+| Maquettes UI/UX | A | I | C | **R** |
+| CI/CD & deploiement | I | I | I | **R/A** |
+| Accessibilite | A | I | C | **R** |
+| Tests E2E | A | **R** | **R** | C |
+| Communication client | **R/A** | C | I | I |
+| Communication encadrant | C | **R/A** | I | I |
+| Documentation projet | **R** | **R** | C | C |
 
 > **R** = Responsable (fait le travail) | **A** = Accountable (rend des comptes) | **C** = Consulte | **I** = Informe
 
@@ -124,12 +114,12 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 | Attribut | Detail |
 |----------|--------|
 | **Objectif** | Synchroniser l'equipe sur l'avancement quotidien, identifier les blocages immediatement |
-| **Participants** | Toute l'equipe de developpement (5 membres) |
+| **Participants** | Toute l'equipe de developpement (4 membres) |
 | **Frequence** | Quotidien (lundi au vendredi) |
 | **Duree** | 5 minutes (asynchrone, message ecrit) |
 | **Canal** | Discord -- canal `#daily-standup` |
 | **Horaire** | Avant 10h00 chaque jour |
-| **Qui anime** | Scrum Master (Yasmine Benali) -- verifie que tous les messages sont postes |
+| **Qui anime** | Scrum Master (Samy ZEROUALI) -- verifie que tous les messages sont postes |
 | **Qui decide** | Pas de decision ; identification des blocages uniquement |
 | **Ordre du jour type** | Chaque membre poste : |
 | | 1. Ce que j'ai fait hier |
@@ -150,8 +140,8 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 | **Duree** | 1h00 a 1h30 |
 | **Canal** | Discord -- vocal `#reunion-equipe` + partage ecran GitHub Projects |
 | **Horaire** | Lundi matin, premiere semaine du sprint |
-| **Qui anime** | Scrum Master (Yasmine Benali) |
-| **Qui decide** | Product Owner (Zahid Ikay) pour la priorisation ; equipe pour l'estimation et l'engagement |
+| **Qui anime** | Scrum Master (Samy ZEROUALI) |
+| **Qui decide** | Product Owner (Kays ZAHIDI) pour la priorisation ; equipe pour l'estimation et l'engagement |
 | **Ordre du jour type** | 1. Revue de la velocite du sprint precedent (5 min) |
 | | 2. Presentation des stories prioritaires par le PO (15 min) |
 | | 3. Clarification et questions (10 min) |
@@ -174,7 +164,7 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 | **Duree** | 30 a 45 minutes |
 | **Canal** | Discord -- vocal `#reunion-equipe` + partage ecran de la demo |
 | **Horaire** | Vendredi apres-midi, derniere semaine du sprint |
-| **Qui anime** | Product Owner (Zahid Ikay) |
+| **Qui anime** | Product Owner (Kays ZAHIDI) |
 | **Qui decide** | Client fictif + encadrant (feedback) ; PO (validation des stories) |
 | **Ordre du jour type** | 1. Rappel de l'objectif du sprint (2 min) |
 | | 2. Demo des fonctionnalites livrees (15-20 min) |
@@ -197,7 +187,7 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 | **Duree** | 30 minutes |
 | **Canal** | Discord -- vocal `#reunion-equipe` |
 | **Horaire** | Vendredi apres-midi, apres la Sprint Review |
-| **Qui anime** | Scrum Master (Yasmine Benali) |
+| **Qui anime** | Scrum Master (Samy ZEROUALI) |
 | **Qui decide** | L'equipe collectivement (vote sur les actions d'amelioration) |
 | **Ordre du jour type** | 1. Ice-breaker rapide (2 min) |
 | | 2. Collecte individuelle : Start / Stop / Continue (5 min) |
@@ -214,12 +204,12 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 | Attribut | Detail |
 |----------|--------|
 | **Objectif** | Revue strategique du projet : avancement global, risques majeurs, decisions de perimetre |
-| **Participants** | PO (Zahid Ikay) + SM (Yasmine Benali) + encadrant academique + client fictif |
+| **Participants** | PO (Kays ZAHIDI) + SM (Samy ZEROUALI) + encadrant academique + client fictif |
 | **Frequence** | Mensuelle (toutes les 4 semaines, soit tous les 2 sprints) |
 | **Duree** | 30 a 45 minutes |
 | **Canal** | Visioconference (Discord ou Google Meet) |
 | **Horaire** | A fixer avec l'encadrant |
-| **Qui anime** | Product Owner (Zahid Ikay) |
+| **Qui anime** | Product Owner (Kays ZAHIDI) |
 | **Qui decide** | Decisions strategiques : PO + encadrant ; decisions budgetaires : PO ; arbitrages perimetre : PO avec avis client |
 | **Ordre du jour type** | 1. Etat d'avancement global (planning prevu vs realise) (5 min) |
 | | 2. Tableau de bord KPI (velocite, budget, qualite) (5 min) |
@@ -236,12 +226,12 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 | Attribut | Detail |
 |----------|--------|
 | **Objectif** | Revue de l'architecture, des choix techniques, et de la dette technique |
-| **Participants** | Equipe technique (Zahid, Lucas, Karim, Sofia) |
+| **Participants** | Equipe technique (Kays, Youri, Samy, Yassir) |
 | **Frequence** | Hebdomadaire (ou sur demande si probleme technique) |
 | **Duree** | 15 a 30 minutes |
 | **Canal** | Discord -- vocal `#tech-review` |
 | **Horaire** | Mercredi apres-midi |
-| **Qui anime** | Architecte (Zahid Ikay) |
+| **Qui anime** | Architecte (Kays ZAHIDI) |
 | **Qui decide** | Architecte pour les choix techniques ; equipe pour les conventions |
 | **Ordre du jour type** | 1. Revue des PRs en attente (5 min) |
 | | 2. Discussion sur les choix techniques en cours (10 min) |
@@ -261,7 +251,7 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 │  TYPE DE DECISION      │  QUI DECIDE                       │
 ├────────────────────────┼───────────────────────────────────┤
 │                        │                                   │
-│  PERIMETRE PRODUIT     │  Product Owner (Zahid Ikay)       │
+│  PERIMETRE PRODUIT     │  Product Owner (Kays ZAHIDI)       │
 │  - Ajout/retrait de    │  avec avis du client fictif       │
 │    fonctionnalite      │  Decision en Sprint Planning      │
 │  - Priorisation        │  ou COPIL si impact majeur        │
@@ -269,7 +259,7 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 │                        │                                   │
 ├────────────────────────┼───────────────────────────────────┤
 │                        │                                   │
-│  TECHNIQUE             │  Architecte (Zahid Ikay)          │
+│  TECHNIQUE             │  Architecte (Kays ZAHIDI)          │
 │  - Choix de            │  avec consultation de l'equipe    │
 │    technologie         │  technique en Tech Review         │
 │  - Architecture        │  Decisions mineures : le dev      │
@@ -277,14 +267,14 @@ En tant que Product Owner et architecte du projet, j'ai mis en place ce cadre de
 │                        │                                   │
 ├────────────────────────┼───────────────────────────────────┤
 │                        │                                   │
-│  PLANNING              │  Scrum Master (Yasmine Benali)    │
+│  PLANNING              │  Scrum Master (Samy ZEROUALI)    │
 │  - Repartition des     │  avec engagement de l'equipe      │
 │    taches              │  en Sprint Planning               │
 │  - Ajustement sprint   │  PO valide si replanification     │
 │                        │                                   │
 ├────────────────────────┼───────────────────────────────────┤
 │                        │                                   │
-│  BUDGET                │  Product Owner (Zahid Ikay)       │
+│  BUDGET                │  Product Owner (Kays ZAHIDI)       │
 │  - Couts API IA        │  Escalade vers l'encadrant        │
 │  - Hebergement         │  si depassement > 20%             │
 │  - Outils              │                                   │
@@ -320,8 +310,8 @@ Delai : sous 48h               │  Decision en COPIL           │
                                 └──────────────┬───────────────┘
                                                │
 NIVEAU 2 (Tactique)             ┌──────────────▼───────────────┐
-Escalade vers le PO             │  Product Owner (Zahid Ikay)  │
-+ Scrum Master                  │  + Scrum Master (Yasmine)    │
+Escalade vers le PO             │  Product Owner (Kays ZAHIDI)  │
++ Scrum Master                  │  + Scrum Master (Samy)    │
 Delai : sous 24h               │  Decision en reunion adhoc   │
                                 └──────────────┬───────────────┘
                                                │
@@ -395,7 +385,7 @@ Delai : sous 4h                │  Daily standup + Discord     │
 #### Exemple rempli
 
 ```markdown
-## Daily Standup - Lucas - 17/03/2026
+## Daily Standup - Youri - 17/03/2026
 
 **Hier j'ai :**
 - Termine le composant `NarrationPanel` avec l'effet de streaming (S3-06)
@@ -406,8 +396,8 @@ Delai : sous 4h                │  Daily standup + Discord     │
 - Commencer le `DiscussionPanel` (chat)
 
 **Blocages / Besoins :**
-- J'ai besoin que l'evenement `game:options` soit emis cote backend --> @Karim
-- Le format JSON des options n'est pas documente --> @Zahid
+- J'ai besoin que l'evenement `game:options` soit emis cote backend --> @Samy
+- Le format JSON des options n'est pas documente --> @Kays
 
 **Ticket(s) en cours :** S3-06
 **Progression estimee :** 45%
@@ -438,7 +428,7 @@ Produire un rapport d'avancement hebdomadaire synthetique pour l'encadrant acade
 | Attribut | Detail |
 |----------|--------|
 | **Frequence** | Chaque vendredi |
-| **Responsable** | Scrum Master (Yasmine Benali) redige, Product Owner (Zahid Ikay) valide |
+| **Responsable** | Scrum Master (Samy ZEROUALI) redige, Product Owner (Kays ZAHIDI) valide |
 | **Destinataire** | Encadrant academique (via Notion, lien partage) |
 | **Copie** | Toute l'equipe (notification Discord `#rapports`) |
 
@@ -633,6 +623,8 @@ Closes #[numero_issue]
 
 ### 2.5 Monitoring technique en production
 
+Yassir a configure tout le monitoring (UptimeRobot, alertes Discord, health checks) en une apres-midi pendant le Sprint 0. Ca nous a bien rassures d'avoir les alertes en place avant meme le premier deploiement staging.
+
 #### Health checks
 
 | Endpoint | Service | Frequence | Outil | Alerte si |
@@ -647,11 +639,11 @@ Closes #[numero_issue]
 
 | Type d'alerte | Canal de notification | Responsable | Action attendue |
 |---------------|----------------------|-------------|-----------------|
-| **Service down** (backend/frontend) | Discord `#alertes-prod` + email DevOps | Sofia Reyes (DevOps) | Verifier les logs, redemarrer le service, escalader si > 15 min |
-| **Latence API IA > 10s** | Discord `#alertes-prod` | Karim Ouadah (Dev IA) | Verifier le statut d'Anthropic, activer le fallback |
-| **Taux d'erreur IA > 10%** | Discord `#alertes-prod` | Karim Ouadah (Dev IA) | Analyser les logs, corriger les prompts |
-| **Base de donnees inaccessible** | Discord `#alertes-prod` + email | Sofia Reyes (DevOps) | Verifier Railway, tenter reconnexion |
-| **Depassement budget API IA** | Discord `#alertes-prod` | Zahid Ikay (PO) + Karim | Analyser la consommation, activer les limites |
+| **Service down** (backend/frontend) | Discord `#alertes-prod` + email DevOps | Yassir SABBAR (DevOps) | Verifier les logs, redemarrer le service, escalader si > 15 min |
+| **Latence API IA > 10s** | Discord `#alertes-prod` | Samy ZEROUALI (Dev IA) | Verifier le statut d'Anthropic, activer le fallback |
+| **Taux d'erreur IA > 10%** | Discord `#alertes-prod` | Samy ZEROUALI (Dev IA) | Analyser les logs, corriger les prompts |
+| **Base de donnees inaccessible** | Discord `#alertes-prod` + email | Yassir SABBAR (DevOps) | Verifier Railway, tenter reconnexion |
+| **Depassement budget API IA** | Discord `#alertes-prod` | Kays ZAHIDI (PO) + Samy | Analyser la consommation, activer les limites |
 
 #### Logs
 
@@ -758,7 +750,7 @@ La methode des 5 Pourquoi permet de remonter a la cause racine d'un probleme en 
 │ Probleme observe : L'IA (Claude) a genere une narration incoherente │
 │   au tour 4 du scenario TRIBUNAL : un personnage mort au tour 2     │
 │   est reapparu comme temoin actif.                                  │
-│ Detecte par : Lucas Martin (testeur) pendant le test E2E Sprint 3   │
+│ Detecte par : Youri EMMANUEL (testeur) pendant le test E2E Sprint 3   │
 │ Impact : MAJEUR - Brise l'immersion, scenario illogique             │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
@@ -795,7 +787,7 @@ La methode des 5 Pourquoi permet de remonter a la cause racine d'un probleme en 
 │ 2. Ajouter un test de regression : "scenario avec personnage       │
 │    elimine au tour N, verifier coherence au tour N+2"              │
 │                                                                     │
-│ RESPONSABLE : Karim Ouadah (Dev IA)   DEADLINE : 20/03/2026        │
+│ RESPONSABLE : Samy ZEROUALI (Dev IA)   DEADLINE : 20/03/2026        │
 │                                                                     │
 │ ACTION PREVENTIVE (pour eviter la recurrence) :                     │
 │ 1. Rediger une specification formelle du game_state envoye a l'IA  │
@@ -803,7 +795,7 @@ La methode des 5 Pourquoi permet de remonter a la cause racine d'un probleme en 
 │ 2. Ajouter a la Definition of Done : "contrat d'interface          │
 │    documente pour tout echange entre services"                     │
 │                                                                     │
-│ RESPONSABLE : Zahid Ikay (PO/Archi)  DEADLINE : 22/03/2026         │
+│ RESPONSABLE : Kays ZAHIDI (PO/Archi)  DEADLINE : 22/03/2026         │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -872,12 +864,12 @@ Le diagramme d'Ishikawa (ou diagramme en aretes de poisson) permet d'identifier 
 
 | Cause identifiee | Action corrective | Priorite | Responsable |
 |------------------|-------------------|----------|-------------|
-| Prompt trop long | Implementer un resume automatique du game_state (max 2000 tokens) | Haute | Karim Ouadah |
-| Pas de cache | Mettre en cache les intros de scenarios et les descriptions de roles | Haute | Karim Ouadah |
-| Sonnet pour phases simples | Activer la strategie duale : Haiku pour setup/validation, Sonnet pour narration | Haute | Karim Ouadah |
-| Pas de metrique en prod | Configurer le monitoring du temps de reponse IA avec alerte a 10s | Moyenne | Sofia Reyes |
-| Pas de timeout client | Ajouter un timeout de 15s cote client avec message "L'IA prend un peu de temps..." | Moyenne | Lucas Martin |
-| Dev IA seul | Former un 2eme membre (Zahid) sur le prompt engineering pour backup | Faible | Karim + Zahid |
+| Prompt trop long | Implementer un resume automatique du game_state (max 2000 tokens) | Haute | Samy ZEROUALI |
+| Pas de cache | Mettre en cache les intros de scenarios et les descriptions de roles | Haute | Samy ZEROUALI |
+| Sonnet pour phases simples | Activer la strategie duale : Haiku pour setup/validation, Sonnet pour narration | Haute | Samy ZEROUALI |
+| Pas de metrique en prod | Configurer le monitoring du temps de reponse IA avec alerte a 10s | Moyenne | Yassir SABBAR |
+| Pas de timeout client | Ajouter un timeout de 15s cote client avec message "L'IA prend un peu de temps..." | Moyenne | Youri EMMANUEL |
+| Dev IA seul | Former un 2eme membre (Kays) sur le prompt engineering pour backup | Faible | Samy + Kays |
 
 ---
 
@@ -894,9 +886,9 @@ Le diagramme d'Ishikawa (ou diagramme en aretes de poisson) permet d'identifier 
 
 | ID | Date detection | Severite | Description | Impact | Detecte par | Assigne a | Statut | Cause racine | Action corrective | Date resolution | Post-mortem |
 |----|---------------|----------|-------------|--------|-------------|-----------|--------|-------------|-------------------|----------------|-------------|
-| PB-001 | 18/03/2026 | P1 | Personnage elimine reapparait dans la narration au tour 4 | Incoherence narrative, immersion brisee | Lucas Martin | Karim Ouadah | Resolu | Game state incomplet envoye a l'IA (joueurs elimines absents) | Modification de `buildPromptContext()` pour inclure les elimines + test regression | 20/03/2026 | Voir analyse 5P ci-dessus |
-| PB-002 | 25/03/2026 | P0 | Application inaccessible en prod pendant 45 min | Aucun utilisateur ne peut acceder au service | UptimeRobot (alerte auto) | Sofia Reyes | Resolu | Certificat SSL expire sur Railway | Renouvellement SSL + ajout rappel calendrier 30j avant expiration | 25/03/2026 | PM-001 |
-| PB-003 | 02/04/2026 | P2 | Timer de choix ne s'affiche pas sur Safari mobile | UX degradee sur Safari iOS (15% des utilisateurs) | Lucas Martin | Lucas Martin | En cours | API `setInterval` comportement different sur Safari | Investigation en cours, fix prevu sprint 5 | - | - |
+| PB-001 | 18/03/2026 | P1 | Personnage elimine reapparait dans la narration au tour 4 | Incoherence narrative, immersion brisee | Youri EMMANUEL | Samy ZEROUALI | Resolu | Game state incomplet envoye a l'IA (joueurs elimines absents) | Modification de `buildPromptContext()` pour inclure les elimines + test regression | 20/03/2026 | Voir analyse 5P ci-dessus |
+| PB-002 | 25/03/2026 | P0 | Application inaccessible en prod pendant 45 min | Aucun utilisateur ne peut acceder au service | UptimeRobot (alerte auto) | Yassir SABBAR | Resolu | Certificat SSL expire sur Railway | Renouvellement SSL + ajout rappel calendrier 30j avant expiration | 25/03/2026 | PM-001 |
+| PB-003 | 02/04/2026 | P2 | Timer de choix ne s'affiche pas sur Safari mobile | UX degradee sur Safari iOS (15% des utilisateurs) | Youri EMMANUEL | Youri EMMANUEL | En cours | API `setInterval` comportement different sur Safari | Investigation en cours, fix prevu sprint 5 | - | - |
 
 #### Statuts possibles
 
@@ -1158,11 +1150,11 @@ La re-planification est declenchee lorsqu'un ou plusieurs criteres d'ajustement 
 
 | Membre absent | Redistribution de ses taches |
 |---------------|------------------------------|
-| **Zahid Ikay** (PO/Archi) | Yasmine (SM) reprend le role PO temporairement ; decisions archi par vote equipe |
-| **Yasmine Benali** (SM/Front) | Zahid (PO) cumule PO + SM ; taches front redistribuees a Lucas |
-| **Lucas Martin** (Frontend) | Yasmine (SM) prend le relais frontend ; Sofia (UX/DevOps) aide sur les composants |
-| **Karim Ouadah** (IA/Temps reel) | Zahid (Archi) reprend l'AI Service ; Lucas gere le WebSocket cote client |
-| **Sofia Reyes** (UX/DevOps) | Yasmine gere le CI/CD ; maquettes gerees par Lucas ; accessibilite reportee |
+| **Kays ZAHIDI** (PO/Archi) | Samy (SM) reprend le role PO temporairement ; decisions archi par vote equipe |
+| **Samy ZEROUALI** (SM/Front) | Kays (PO) cumule PO + SM ; taches front redistribuees a Youri |
+| **Youri EMMANUEL** (Frontend) | Samy (SM) prend le relais frontend ; Yassir (UX/DevOps) aide sur les composants |
+| **Samy ZEROUALI** (IA/Temps reel) | Kays (Archi) reprend l'AI Service ; Youri gere le WebSocket cote client |
+| **Yassir SABBAR** (UX/DevOps) | Samy gere le CI/CD ; maquettes gerees par Youri ; accessibilite reportee |
 
 #### Scenario 5 : Depassement budget IA
 
@@ -1170,7 +1162,7 @@ La re-planification est declenchee lorsqu'un ou plusieurs criteres d'ajustement 
 |----------|--------|
 | **Declencheur** | Couts API Anthropic > 120% du previsionnel mensuel |
 | **Impact** | Risque de depasser le budget total du projet |
-| **Decision par** | Product Owner (Zahid Ikay) + Dev IA (Karim Ouadah) |
+| **Decision par** | Product Owner (Kays ZAHIDI) + Dev IA (Samy ZEROUALI) |
 | **Actions** | **Niveau 1 (> 120%) :** |
 | | 1. Passer a Claude Haiku pour toutes les phases sauf la narration principale |
 | | 2. Activer le cache agressif (intros, descriptions, prompts recurrents) |
@@ -1244,9 +1236,9 @@ La re-planification est declenchee lorsqu'un ou plusieurs criteres d'ajustement 
 
 | ID | Date | Sprint | Type d'ajustement | Declencheur | Decision prise | Impact | Decide par | Communique a | Statut |
 |----|------|--------|-------------------|-------------|----------------|--------|-----------|-------------|--------|
-| ADJ-001 | 07/03/2026 | Sprint 2 | Perimetre | Sprint 2 tres charge (34 SP), estimation du Game Loop Manager (S2-06) sous-evaluee | Reporter le ticket S2-07 (tests integration Game Engine) au Sprint 3 | -5 SP Sprint 2, +5 SP Sprint 3 ; tests retardes d'une semaine | PO (Zahid) | Equipe + encadrant | Fait |
+| ADJ-001 | 07/03/2026 | Sprint 2 | Perimetre | Sprint 2 tres charge (34 SP), estimation du Game Loop Manager (S2-06) sous-evaluee | Reporter le ticket S2-07 (tests integration Game Engine) au Sprint 3 | -5 SP Sprint 2, +5 SP Sprint 3 ; tests retardes d'une semaine | PO (Kays) | Equipe + encadrant | Fait |
 | ADJ-002 | 21/03/2026 | Sprint 3 | Budget | Couts API Anthropic du mois a 95EUR (previsionnel : 60EUR) | Passage a Haiku pour les phases setup et validation ; cache active pour les intros | Reduction attendue de 40% des couts ; qualite narrative inchangee (Sonnet pour narration) | PO + Dev IA | Equipe | Fait |
-| ADJ-003 | 04/04/2026 | Sprint 4 | Equipe | Sofia Reyes (DevOps) absente 4 jours (maladie) | Yasmine prend en charge le CI/CD temporairement ; audit accessibilite reporte au Sprint 5 | Velocite Sprint 4 reduite de 31 a 26 SP ; accessibilite decalee d'un sprint | SM + PO | Equipe + encadrant | Fait |
+| ADJ-003 | 04/04/2026 | Sprint 4 | Equipe | Yassir SABBAR (DevOps) absente 4 jours (maladie) | Samy prend en charge le CI/CD temporairement ; audit accessibilite reporte au Sprint 5 | Velocite Sprint 4 reduite de 31 a 26 SP ; accessibilite decalee d'un sprint | SM + PO | Equipe + encadrant | Fait |
 | ADJ-004 | 18/04/2026 | Sprint 5 | Technique | Temps de reponse IA P95 a 12s (cible < 5s) depuis le deploiement prod | Spike technique de 2 jours : optimisation prompts, activation streaming, cache agressif | P95 ramene a 4.5s ; cout d'un spike de 2 jours-homme | Equipe tech | Equipe | Fait |
 | ADJ-005 | 25/04/2026 | Buffer | Perimetre | Panel admin non termine (60% seulement) | Livrer le panel admin en mode "lecture seule" (stats uniquement, pas de gestion users) | Feature F12.2 (gestion users) retiree du MVP, reportee en V2 | PO + client fictif | Toutes les parties prenantes | Fait |
 

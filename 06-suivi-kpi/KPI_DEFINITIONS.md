@@ -2,13 +2,13 @@
 
 **Projet** : MYTHOS - Plateforme web de jeux narratifs multijoueurs avec MJ IA
 **Version** : 1.0
-**Date de creation** : 09/02/2026
+**Date de creation** : 03/03/2026
 **Methodologie** : Scrum (7 sprints de 2 semaines)
 **Perimetre** : 47 tickets | 196 story points
 **Outils de monitoring** : GitHub Projects, UptimeRobot, Google Lighthouse, GreenIT Analysis, WAVE
 **Budget monitoring** : 308 EUR
 
-Les KPI ont ete definis collectivement lors de notre atelier de cadrage en Sprint 0. Yasmine, en tant que Scrum Master, est responsable du suivi global des indicateurs projet. Chaque membre de l'equipe est responsable des KPI lies a son domaine d'expertise.
+Les KPI ont ete definis collectivement lors de notre atelier de cadrage en Sprint 0. Samy, en tant que Scrum Master, est responsable du suivi global des indicateurs projet. Chaque membre de l'equipe est responsable des KPI lies a son domaine d'expertise. On a mis du temps a se mettre d'accord sur les seuils KPI -- Samy voulait etre plus strict, Kays plus realiste. Au final on a trouve un compromis qui tenait la route pour une equipe de 4 etudiants.
 
 ---
 
@@ -69,7 +69,7 @@ Chaque indicateur est documente selon le schema suivant :
 - **Revue des KPI Projet** : a chaque Sprint Review (fin de sprint, toutes les 2 semaines)
 - **Revue des KPI Produit** : en continu via monitoring automatise + revue bi-mensuelle
 - **Revue des KPI Conformite** : a chaque fin de sprint + audit complet a mi-projet (Sprint 4) et en fin de projet (Sprint 7)
-- **Responsable global du suivi** : Yasmine (SM) / Zahid (PO)
+- **Responsable global du suivi** : Samy (SM) / Kays (PO)
 - **Outil de centralisation** : GitHub Projects (vues personnalisees) + tableur de suivi
 
 ---
@@ -91,8 +91,8 @@ Chaque indicateur est documente selon le schema suivant :
 | **Valeur cible (VERT)** | 28 SP/sprint (196 SP / 7 sprints = 28 SP/sprint en moyenne) |
 | **Seuil d'alerte (JAUNE)** | < 22 SP/sprint (moins de 80% de la cible) |
 | **Seuil critique (ROUGE)** | < 17 SP/sprint (moins de 60% de la cible) |
-| **Responsable** | Yasmine (SM) |
-| **Action corrective** | **JAUNE** : Analyser les impediments en retrospective, re-evaluer la complexite des tickets, identifier les facteurs bloquants. **ROUGE** : Reunion d'urgence avec l'equipe, re-planification du backlog, reduction du scope si necessaire, negociation avec Zahid (PO) sur les priorites. |
+| **Responsable** | Samy (SM) |
+| **Action corrective** | **JAUNE** : Analyser les impediments en retrospective, re-evaluer la complexite des tickets, identifier les facteurs bloquants. **ROUGE** : Reunion d'urgence avec l'equipe, re-planification du backlog, reduction du scope si necessaire, negociation avec Kays (PO) sur les priorites. |
 
 **Note** : La velocite est un indicateur de tendance, pas une metrique de performance individuelle. Les premiers sprints (1-2) servent a calibrer la velocite de reference.
 
@@ -125,8 +125,8 @@ Chaque indicateur est documente selon le schema suivant :
 | **Valeur cible (VERT)** | Ecart <= 10% entre la courbe reelle et la courbe ideale |
 | **Seuil d'alerte (JAUNE)** | Ecart entre 10% et 25% a mi-sprint (jour 5 sur 10 jours ouvrables) |
 | **Seuil critique (ROUGE)** | Ecart > 25% a mi-sprint OU trajectoire indiquant < 70% d'achevement en fin de sprint |
-| **Responsable** | Yasmine (SM) |
-| **Action corrective** | **JAUNE** : Discussion en Daily Stand-up, identification des blocages, re-priorisation des taches du sprint. **ROUGE** : Negociation de scope avec Zahid (PO), retrait de tickets du sprint si necessaire, mobilisation de ressources supplementaires. |
+| **Responsable** | Samy (SM) |
+| **Action corrective** | **JAUNE** : Discussion en Daily Stand-up, identification des blocages, re-priorisation des taches du sprint. **ROUGE** : Negociation de scope avec Kays (PO), retrait de tickets du sprint si necessaire, mobilisation de ressources supplementaires. |
 
 **Modele de Burndown sprint (ASCII)** :
 
@@ -167,8 +167,8 @@ SP restants
 | **Valeur cible (VERT)** | >= 85% |
 | **Seuil d'alerte (JAUNE)** | 70% - 84% |
 | **Seuil critique (ROUGE)** | < 70% |
-| **Responsable** | Yasmine (SM) |
-| **Action corrective** | **JAUNE** : Ameliorer l'estimation (Planning Poker plus rigoureux), reduire le nombre de tickets embarques au prochain sprint. **ROUGE** : Revue complete du processus d'estimation, analyse des causes racines (tickets mal definis, dependencies non identifiees, interruptions externes), mise en place de buffers de capacite (15-20%). |
+| **Responsable** | Samy (SM) |
+| **Action corrective** | **JAUNE** : Ameliorer l'estimation (Planning Poker plus serieux), reduire le nombre de tickets embarques au prochain sprint. **ROUGE** : Revue complete du processus d'estimation, analyse des causes racines (tickets mal definis, dependencies non identifiees, interruptions externes), mise en place de buffers de capacite (15-20%). |
 
 **Historique de reference (cible)** :
 
@@ -199,7 +199,7 @@ SP restants
 | **Valeur cible (VERT)** | <= 15% (ratio) ET 0 bugs critiques ouverts en fin de sprint |
 | **Seuil d'alerte (JAUNE)** | 15% - 25% OU 1 bug critique ouvert depuis > 48h |
 | **Seuil critique (ROUGE)** | > 25% OU >= 2 bugs critiques ouverts OU 1 bug critique ouvert depuis > 5 jours |
-| **Responsable** | Zahid / Developpeurs |
+| **Responsable** | Kays / Developpeurs |
 | **Action corrective** | **JAUNE** : Renforcer les code reviews, ajouter des tests unitaires sur les modules concernes, organiser un bug bash en fin de sprint. **ROUGE** : Sprint de stabilisation (dedier 50% de la capacite aux corrections), revue de l'architecture des modules les plus defaillants, mise en place de tests de regression automatises. |
 
 **Classification des bugs** :
@@ -227,7 +227,7 @@ SP restants
 | **Valeur cible (VERT)** | Mediane <= 10 jours ouvrables |
 | **Seuil d'alerte (JAUNE)** | Mediane entre 10 et 15 jours ouvrables |
 | **Seuil critique (ROUGE)** | Mediane > 15 jours ouvrables |
-| **Responsable** | Yasmine (SM) |
+| **Responsable** | Samy (SM) |
 | **Action corrective** | **JAUNE** : Analyser les goulets d'etranglement dans le workflow (ou les tickets stagnent-ils ?), limiter le Work In Progress (WIP). **ROUGE** : Revoir le processus de priorisation du backlog, mettre en place des WIP limits stricts, identifier et eliminer les dependances externes bloquantes, ameliorer le processus de refinement pour que les tickets soient "prets" plus rapidement. |
 
 ---
@@ -247,7 +247,7 @@ SP restants
 | **Valeur cible (VERT)** | Mediane <= 3 jours ouvrables |
 | **Seuil d'alerte (JAUNE)** | Mediane entre 3 et 5 jours ouvrables |
 | **Seuil critique (ROUGE)** | Mediane > 5 jours ouvrables |
-| **Responsable** | Zahid |
+| **Responsable** | Kays |
 | **Action corrective** | **JAUNE** : Decouper les tickets trop gros (> 8 SP), ameliorer les Definition of Ready, reduire le WIP par developpeur a 1-2 tickets max. **ROUGE** : Revue systematique des tickets > 5 jours, pair programming sur les tickets complexes, ameliorer la documentation technique pour reduire le temps de comprehension, verifier que les tickets sont suffisamment specifies. |
 
 **Relation Lead Time / Cycle Time** :
@@ -278,7 +278,7 @@ SP restants
 | **Valeur cible (VERT)** | Mediane <= 4 heures ouvrees (soit dans la demi-journee) |
 | **Seuil d'alerte (JAUNE)** | Mediane entre 4 et 8 heures ouvrees (soit dans la journee) |
 | **Seuil critique (ROUGE)** | Mediane > 8 heures ouvrees (plus d'une journee de travail) |
-| **Responsable** | Zahid |
+| **Responsable** | Kays |
 | **Action corrective** | **JAUNE** : Instaurer des creneaux dedies de review (debut et fin de journee), activer les notifications GitHub, limiter la taille des PR (< 400 lignes). **ROUGE** : Instaurer une politique de "review first" (les reviews passent avant le dev en cours), mettre en place un systeme de rotation des reviewers, decouper les grosses PR en PR incrementales. |
 
 **Bonnes pratiques de review pour MYTHOS** :
@@ -307,8 +307,8 @@ SP restants
 | **Valeur cible (VERT)** | SPI >= 0.90 (soit au maximum 10% de retard) |
 | **Seuil d'alerte (JAUNE)** | SPI entre 0.75 et 0.89 |
 | **Seuil critique (ROUGE)** | SPI < 0.75 (retard superieur a 25%) |
-| **Responsable** | Yasmine (SM) / Zahid (PO) |
-| **Action corrective** | **JAUNE** : Identifier les causes du retard, negocier le scope avec Zahid (PO), augmenter la capacite si possible (heures supplementaires ponctuelles). **ROUGE** : Re-planification complete du projet, reduction du scope (retrait de features non essentielles), communication aux parties prenantes, plan de rattrapage formalise. |
+| **Responsable** | Samy (SM) / Kays (PO) |
+| **Action corrective** | **JAUNE** : Identifier les causes du retard, negocier le scope avec Kays (PO), augmenter la capacite si possible (heures supplementaires ponctuelles). **ROUGE** : Re-planification complete du projet, reduction du scope (retrait de features non essentielles), communication aux parties prenantes, plan de rattrapage formalise. |
 
 **Exemple de calcul** :
 
@@ -348,7 +348,7 @@ Fin du Sprint 3 :
 | **Valeur cible (VERT)** | CPI >= 0.90 |
 | **Seuil d'alerte (JAUNE)** | CPI entre 0.75 et 0.89 |
 | **Seuil critique (ROUGE)** | CPI < 0.75 |
-| **Responsable** | Zahid (PO) |
+| **Responsable** | Kays (PO) |
 | **Action corrective** | **JAUNE** : Revue des depenses, identification des postes en depassement, recherche d'alternatives moins couteuses. **ROUGE** : Gel des depenses non essentielles, renegociation des services, passage a des tiers gratuits si possible, communication au sponsor. |
 
 **Ventilation budgetaire previsionnelle MYTHOS** :
@@ -374,7 +374,7 @@ Fin du Sprint 3 :
 | **Identifiant** | PROD-001 |
 | **Nom** | Temps de reponse API IA (percentiles P50, P95, P99) |
 | **Description** | Temps de reponse mesure entre l'envoi d'un prompt au service IA (OpenAI/Anthropic) et la reception complete de la reponse. Les percentiles P50 (mediane), P95 et P99 permettent de comprendre la distribution des temps de reponse, y compris les cas extremes. Critique pour l'experience de jeu en temps reel. |
-| **Objectif strategique** | Garantir une experience de jeu fluide ou le MJ IA repond en temps raisonnable, sans casser l'immersion narrative |
+| **Objectif strategique** | Assurer une experience de jeu fluide ou le MJ IA repond en temps raisonnable, sans casser l'immersion narrative |
 | **Formule de calcul** | `P50 = valeur en dessous de laquelle se trouvent 50% des temps de reponse` / `P95 = 95%` / `P99 = 99%` |
 | **Unite** | Millisecondes (ms) |
 | **Source de donnees** | Logs applicatifs (middleware de mesure cote serveur), timestamps avant/apres appel API IA |
@@ -382,7 +382,7 @@ Fin du Sprint 3 :
 | **Valeur cible (VERT)** | P50 <= 2000ms, P95 <= 5000ms, P99 <= 8000ms |
 | **Seuil d'alerte (JAUNE)** | P50 entre 2000-3500ms OU P95 entre 5000-8000ms OU P99 entre 8000-12000ms |
 | **Seuil critique (ROUGE)** | P50 > 3500ms OU P95 > 8000ms OU P99 > 12000ms |
-| **Responsable** | Zahid / Karim (IA) |
+| **Responsable** | Kays / Samy (IA) |
 | **Action corrective** | **JAUNE** : Optimiser les prompts (reduire la taille), activer le streaming de reponses, mettre en cache les reponses frequentes, verifier les quotas API. **ROUGE** : Implementer un systeme de fallback (reponses pre-generees en cas de timeout), revoir l'architecture (queue asynchrone), envisager un changement de modele IA (modele plus rapide), ajouter un indicateur de "reflexion en cours" pour l'utilisateur. |
 
 **Strategie de mesure** :
@@ -417,7 +417,7 @@ const measureAIResponse = async (prompt) => {
 | **Identifiant** | PROD-002 |
 | **Nom** | Latence WebSocket |
 | **Description** | Temps de propagation d'un message entre le serveur et les clients connectes via WebSocket. Essentiel pour le jeu multijoueur en temps reel : les actions des joueurs et les reponses du MJ IA doivent etre diffusees instantanement a tous les participants de la session. |
-| **Objectif strategique** | Garantir une communication temps reel fluide entre les joueurs et le MJ IA |
+| **Objectif strategique** | Assurer une communication temps reel fluide entre les joueurs et le MJ IA |
 | **Formule de calcul** | `Latence_WS = Timestamp_reception_client - Timestamp_emission_serveur` (mesure par ping/pong WebSocket) |
 | **Unite** | Millisecondes (ms) |
 | **Source de donnees** | Mecanisme de heartbeat WebSocket (ping/pong toutes les 30s) + logs serveur |
@@ -425,7 +425,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | P50 <= 100ms, P95 <= 250ms |
 | **Seuil d'alerte (JAUNE)** | P50 entre 100-200ms OU P95 entre 250-500ms |
 | **Seuil critique (ROUGE)** | P50 > 200ms OU P95 > 500ms OU taux de deconnexions > 5% |
-| **Responsable** | Karim (IA/Temps reel) |
+| **Responsable** | Samy (IA/Temps reel) |
 | **Action corrective** | **JAUNE** : Verifier la configuration du serveur WebSocket (compression, buffer size), optimiser la serialisation des messages (passer a un format binaire si necessaire). **ROUGE** : Revoir l'architecture WebSocket (scaling horizontal avec Redis adapter), implementer un mecanisme de reconnexion automatique cote client, ajouter un CDN ou un edge server, implementer le message queuing pour absorber les pics. |
 
 ---
@@ -445,7 +445,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | LCP <= 2.5s, INP <= 200ms, CLS <= 0.1 |
 | **Seuil d'alerte (JAUNE)** | LCP entre 2.5-4.0s OU INP entre 200-500ms OU CLS entre 0.1-0.25 |
 | **Seuil critique (ROUGE)** | LCP > 4.0s OU INP > 500ms OU CLS > 0.25 |
-| **Responsable** | Lucas (Frontend) |
+| **Responsable** | Youri (Frontend) |
 | **Action corrective** | **JAUNE** : Optimiser les images (formats modernes : WebP/AVIF), mettre en place le lazy loading, reduire le JavaScript bloque (code splitting). **ROUGE** : Audit complet des performances frontend, server-side rendering (SSR) pour les pages critiques, preloading des ressources critiques, suppression des bibliotheques lourdes non essentielles, mise en cache agressive (Service Worker). |
 
 **Pages cles a monitorer** :
@@ -466,7 +466,7 @@ const measureAIResponse = async (prompt) => {
 | **Identifiant** | PROD-004 |
 | **Nom** | Uptime / Disponibilite |
 | **Description** | Pourcentage de temps pendant lequel l'application est accessible et fonctionnelle pour les utilisateurs. Mesure a la fois la disponibilite du frontend (site web) et du backend (API + WebSocket). Les interruptions planifiees (maintenance) ne sont pas comptees comme indisponibilite si elles sont annoncees. |
-| **Objectif strategique** | Garantir une plateforme fiable accessible a tout moment pour les joueurs |
+| **Objectif strategique** | Avoir une plateforme fiable accessible a tout moment pour les joueurs |
 | **Formule de calcul** | `Uptime = ((Temps_total - Temps_indisponible_non_planifie) / Temps_total) x 100` |
 | **Unite** | Pourcentage (%) |
 | **Source de donnees** | UptimeRobot (plan gratuit : 50 moniteurs, check toutes les 5 minutes) |
@@ -474,7 +474,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | >= 99.0% (soit max ~7.3h d'indisponibilite par mois) |
 | **Seuil d'alerte (JAUNE)** | 97.0% - 98.9% (soit entre 8h et 22h d'indisponibilite par mois) |
 | **Seuil critique (ROUGE)** | < 97.0% (soit plus de 22h d'indisponibilite par mois) |
-| **Responsable** | Sofia (UX/DevOps) |
+| **Responsable** | Yassir (UX/DevOps) |
 | **Action corrective** | **JAUNE** : Analyser les incidents (logs, metriques serveur), mettre en place des healthchecks plus granulaires, ameliorer le processus de deploiement (zero-downtime). **ROUGE** : Audit d'infrastructure complet, mise en place de replicas/failover, ameliorer les alertes (notifications Slack/Discord via UptimeRobot), documenter et automatiser les procedures de recovery. |
 
 **Configuration UptimeRobot recommandee** :
@@ -495,7 +495,7 @@ const measureAIResponse = async (prompt) => {
 | **Identifiant** | PROD-005 |
 | **Nom** | Taux de completion de session de jeu |
 | **Description** | Pourcentage des sessions de jeu demarrees qui se terminent normalement (fin narrative ou decision des joueurs) par opposition aux sessions abandonnees (joueurs deconnectes, erreur technique, timeout). KPI metier fondamental qui mesure la valeur reelle delivree aux utilisateurs. |
-| **Objectif strategique** | Garantir que les joueurs puissent terminer leurs sessions de jeu sans interruption technique |
+| **Objectif strategique** | S'assurer que les joueurs puissent terminer leurs sessions de jeu sans interruption technique |
 | **Formule de calcul** | `Taux_completion_session = (Sessions terminees normalement / Sessions demarrees) x 100` |
 | **Unite** | Pourcentage (%) |
 | **Source de donnees** | Base de donnees applicative (table sessions : statut, timestamps debut/fin, raison de fin) |
@@ -503,7 +503,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | >= 80% |
 | **Seuil d'alerte (JAUNE)** | 65% - 79% |
 | **Seuil critique (ROUGE)** | < 65% |
-| **Responsable** | Zahid (PO) + Karim (IA/Temps reel) |
+| **Responsable** | Kays (PO) + Samy (IA/Temps reel) |
 | **Action corrective** | **JAUNE** : Analyser les motifs d'abandon (technique vs volontaire), ameliorer la gestion des deconnexions (reconnexion automatique, sauvegarde de session), optimiser les temps de reponse IA. **ROUGE** : Investigation approfondie des causes (analytics par etape de session), implementation de mecanismes de persistence de session, amelioration de l'UX pour guider les joueurs, ajout de feedback utilisateur in-app. |
 
 ---
@@ -523,7 +523,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | <= 5% |
 | **Seuil d'alerte (JAUNE)** | 5% - 10% |
 | **Seuil critique (ROUGE)** | > 10% |
-| **Responsable** | Karim (IA/Temps reel) |
+| **Responsable** | Samy (IA/Temps reel) |
 | **Action corrective** | **JAUNE** : Revoir les prompts systeme (clarifier le format attendu), ajouter une validation de schema sur les reponses, implementer un retry automatique avec backoff exponentiel. **ROUGE** : Implementer un systeme de fallback (templates de reponses pre-ecrites), revoir completement le prompt engineering, envisager un changement de modele, ajouter une couche de post-traitement pour corriger les reponses malformees. |
 
 **Categorisation des erreurs IA** :
@@ -546,7 +546,7 @@ const measureAIResponse = async (prompt) => {
 | **Identifiant** | PROD-007 |
 | **Nom** | Couverture de tests (backend et frontend) |
 | **Description** | Pourcentage du code source couvert par au moins un test automatise (unitaire, integration, ou end-to-end). Mesuree separement pour le backend (Node.js/NestJS 10+) et le frontend (React/Next.js). Indicateur de la confiance dans la qualite et la maintenabilite du code. |
-| **Objectif strategique** | Garantir un filet de securite contre les regressions et faciliter la refactorisation |
+| **Objectif strategique** | Avoir un filet de securite contre les regressions et faciliter la refactorisation |
 | **Formule de calcul** | `Couverture = (Lignes de code executees par les tests / Lignes de code total) x 100` |
 | **Unite** | Pourcentage (%) |
 | **Source de donnees** | Rapports de couverture Jest/Vitest (coverage report), integres dans la CI GitHub Actions |
@@ -554,7 +554,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | Backend >= 70%, Frontend >= 60% |
 | **Seuil d'alerte (JAUNE)** | Backend 50-69% OU Frontend 40-59% |
 | **Seuil critique (ROUGE)** | Backend < 50% OU Frontend < 40% |
-| **Responsable** | Zahid + Developpeurs |
+| **Responsable** | Kays + Developpeurs |
 | **Action corrective** | **JAUNE** : Instaurer une regle "pas de merge sans tests" sur les nouveaux modules, organiser des sessions de test writing en pair. **ROUGE** : Dedier une part du sprint au rattrapage de couverture (minimum 20% de la capacite), identifier les modules critiques non testes (IA, auth, WebSocket) et les prioriser. |
 
 **Objectifs par module** :
@@ -585,12 +585,14 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | <= 5 issues tech-debt ouvertes ET ratio <= 15% du backlog |
 | **Seuil d'alerte (JAUNE)** | 6-10 issues OU ratio 15-25% |
 | **Seuil critique (ROUGE)** | > 10 issues OU ratio > 25% OU 1+ issue tech-debt critique non traitee depuis 2 sprints |
-| **Responsable** | Zahid |
+| **Responsable** | Kays |
 | **Action corrective** | **JAUNE** : Allouer 15-20% de la capacite du prochain sprint a la reduction de dette, prioriser les items de dette qui impactent la velocite. **ROUGE** : Sprint de stabilisation dedie (50% de la capacite a la dette), revue d'architecture pour identifier les causes structurelles, definition de standards de code plus stricts, mise en place de linting automatique. |
 
 ---
 
 ## 4. KPI Conformite
+
+Les KPI de conformite ont ete les plus longs a calibrer. Yassir a pris le lead sur l'accessibilite et l'eco-index, et il a propose des seuils qu'on a ajustes ensemble apres avoir fait des premiers audits Lighthouse sur des pages de test.
 
 ### 4.1 CONF-001 : Score Lighthouse Accessibility
 
@@ -599,7 +601,7 @@ const measureAIResponse = async (prompt) => {
 | **Identifiant** | CONF-001 |
 | **Nom** | Score Lighthouse Accessibility |
 | **Description** | Score d'accessibilite calcule par Google Lighthouse, base sur les criteres WCAG 2.1. Evalue automatiquement les contrastes de couleur, les attributs ARIA, les labels de formulaire, la navigation au clavier, les textes alternatifs, et la structure semantique HTML. Score sur 100. |
-| **Objectif strategique** | Garantir l'accessibilite de la plateforme conformement aux exigences RGAA/WCAG et aux bonnes pratiques inclusives |
+| **Objectif strategique** | Assurer l'accessibilite de la plateforme conformement aux exigences RGAA/WCAG et aux bonnes pratiques inclusives |
 | **Formule de calcul** | Score automatique Lighthouse (0-100), calcule comme la moyenne ponderee des audits d'accessibilite passes |
 | **Unite** | Score sur 100 |
 | **Source de donnees** | Google Lighthouse (Chrome DevTools ou CLI `lighthouse --only-categories=accessibility`) |
@@ -607,7 +609,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | Score >= 90/100 |
 | **Seuil d'alerte (JAUNE)** | Score entre 75/100 et 89/100 |
 | **Seuil critique (ROUGE)** | Score < 75/100 |
-| **Responsable** | Yasmine (SM/Frontend) |
+| **Responsable** | Samy (SM/Frontend) |
 | **Action corrective** | **JAUNE** : Corriger les items identifies par Lighthouse (contraste, labels manquants, structure headings), ajouter des tests d'accessibilite automatiques dans la CI. **ROUGE** : Audit d'accessibilite approfondi (outil WAVE en complement), correction en priorite des items bloquants (navigation clavier, lecteur d'ecran), formation de l'equipe aux bonnes pratiques d'accessibilite. |
 
 **Pages auditees** :
@@ -637,7 +639,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | 0 erreurs (errors) sur toutes les pages auditees |
 | **Seuil d'alerte (JAUNE)** | 1-3 erreurs au total (toutes pages confondues) |
 | **Seuil critique (ROUGE)** | > 3 erreurs OU 1+ erreur sur la page de jeu (page critique) |
-| **Responsable** | Yasmine (SM/Frontend) |
+| **Responsable** | Samy (SM/Frontend) |
 | **Action corrective** | **JAUNE** : Corriger les erreurs identifiees dans le sprint en cours, documenter les corrections. **ROUGE** : Prioriser la correction des erreurs WAVE au-dessus des nouvelles features, organiser une session de correction en pair programming, verifier les corrections avec un lecteur d'ecran (VoiceOver/NVDA). |
 
 **Types d'erreurs WAVE a surveiller** :
@@ -666,7 +668,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | Grade B ou mieux (score >= 56/100) sur toutes les pages |
 | **Seuil d'alerte (JAUNE)** | Grade C (score 36-55) sur une ou plusieurs pages |
 | **Seuil critique (ROUGE)** | Grade D ou pire (score < 36) sur une page OU Grade E-F-G sur n'importe quelle page |
-| **Responsable** | Lucas (Frontend) |
+| **Responsable** | Youri (Frontend) |
 | **Action corrective** | **JAUNE** : Reduire le nombre de requetes HTTP (bundling, sprites), compresser les assets (gzip/brotli), simplifier le DOM. **ROUGE** : Audit complet d'eco-conception, suppression des ressources inutilisees, optimisation agressive des images, mise en place de lazy loading, pagination des donnees, reduction des dependances JavaScript. |
 
 **Correspondance Eco-index / Grades** :
@@ -698,7 +700,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | <= 500 Ko par page (en transfert compresse) |
 | **Seuil d'alerte (JAUNE)** | 500 Ko - 1 Mo |
 | **Seuil critique (ROUGE)** | > 1 Mo |
-| **Responsable** | Lucas (Frontend) |
+| **Responsable** | Youri (Frontend) |
 | **Action corrective** | **JAUNE** : Identifier les ressources les plus lourdes (images, bundles JS), les optimiser individuellement, verifier la compression serveur (Brotli). **ROUGE** : Audit asset par asset, remplacement des images lourdes par des formats modernes (WebP, AVIF) ou des SVG, code splitting agressif du JavaScript, suppression des polices inutilisees, implementation de tree-shaking. |
 
 **Budget de performance par type de ressource** :
@@ -729,7 +731,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | 100% des traitements documentes |
 | **Seuil d'alerte (JAUNE)** | 80% - 99% des traitements documentes |
 | **Seuil critique (ROUGE)** | < 80% OU un traitement critique (auth, paiement) non documente |
-| **Responsable** | Zahid (PO) / Responsable conformite |
+| **Responsable** | Kays (PO) / Responsable conformite |
 | **Action corrective** | **JAUNE** : Identifier les traitements non documentes, les ajouter au registre dans le sprint en cours. **ROUGE** : Suspendre les developpements impliquant des donnees personnelles jusqu'a mise en conformite, organiser une revue de conformite avec l'equipe, documenter en urgence les traitements critiques. |
 
 **Traitements de donnees identifies pour MYTHOS** :
@@ -762,7 +764,7 @@ const measureAIResponse = async (prompt) => {
 | **Identifiant** | CONF-006 |
 | **Nom** | Conformite ANSSI (checklist securite) |
 | **Description** | Pourcentage de conformite aux recommandations de securite de l'ANSSI (Agence Nationale de la Securite des Systemes d'Information), basee sur le Guide d'hygiene informatique et les bonnes pratiques de securisation des applications web. Evaluee via une checklist personnalisee adaptee au contexte de MYTHOS. |
-| **Objectif strategique** | Garantir un niveau de securite conforme aux standards nationaux et proteger les donnees des utilisateurs |
+| **Objectif strategique** | Assurer un niveau de securite conforme aux standards nationaux et proteger les donnees des utilisateurs |
 | **Formule de calcul** | `Conformite_ANSSI = (Nombre de criteres respectes / Nombre total de criteres applicables) x 100` |
 | **Unite** | Pourcentage (%) |
 | **Source de donnees** | Checklist ANSSI interne (auto-evaluation) + rapport de scan de securite |
@@ -770,7 +772,7 @@ const measureAIResponse = async (prompt) => {
 | **Valeur cible (VERT)** | >= 90% des criteres applicables respectes |
 | **Seuil d'alerte (JAUNE)** | 75% - 89% |
 | **Seuil critique (ROUGE)** | < 75% OU un critere critique non respecte (authentification, chiffrement) |
-| **Responsable** | Zahid / Sofia (UX/DevOps) |
+| **Responsable** | Kays / Yassir (UX/DevOps) |
 | **Action corrective** | **JAUNE** : Identifier et planifier la correction des criteres non respectes dans les sprints suivants. **ROUGE** : Priorisation immediate des correctifs de securite, revue de securite avec l'ensemble de l'equipe, report des features non securitaires tant que les criteres critiques ne sont pas respectes. |
 
 **Checklist ANSSI adaptee a MYTHOS** :
@@ -807,43 +809,43 @@ LEGENDE :  [VERT] = dans la cible    [JAUNE] = alerte    [ROUGE] = critique
 
 | ID | KPI | Unite | Cible [VERT] | Alerte [JAUNE] | Critique [ROUGE] | Freq. | Responsable |
 |----|-----|-------|-------------|----------------|------------------|-------|-------------|
-| PRJ-001 | Velocite d'equipe | SP/sprint | >= 28 | 22-27 | < 22 | Sprint | Yasmine (SM) |
-| PRJ-002 | Burndown/Burnup | % ecart | <= 10% | 10-25% | > 25% | Quotidien | Yasmine (SM) |
-| PRJ-003 | Taux completion sprint | % | >= 85% | 70-84% | < 70% | Sprint | Yasmine (SM) |
-| PRJ-004 | Taux de bugs | % | <= 15% | 15-25% | > 25% | Sprint | Zahid |
-| PRJ-005 | Lead Time | Jours | <= 10j | 10-15j | > 15j | Sprint | Yasmine (SM) |
-| PRJ-006 | Cycle Time | Jours | <= 3j | 3-5j | > 5j | Sprint | Zahid |
-| PRJ-007 | Review Turnaround | Heures | <= 4h | 4-8h | > 8h | Sprint | Zahid |
-| PRJ-008 | SPI (calendrier) | Ratio | >= 0.90 | 0.75-0.89 | < 0.75 | Sprint | Zahid (PO) |
-| PRJ-009 | CPI (budget) | Ratio | >= 0.90 | 0.75-0.89 | < 0.75 | Sprint | Zahid (PO) |
+| PRJ-001 | Velocite d'equipe | SP/sprint | >= 28 | 22-27 | < 22 | Sprint | Samy (SM) |
+| PRJ-002 | Burndown/Burnup | % ecart | <= 10% | 10-25% | > 25% | Quotidien | Samy (SM) |
+| PRJ-003 | Taux completion sprint | % | >= 85% | 70-84% | < 70% | Sprint | Samy (SM) |
+| PRJ-004 | Taux de bugs | % | <= 15% | 15-25% | > 25% | Sprint | Kays |
+| PRJ-005 | Lead Time | Jours | <= 10j | 10-15j | > 15j | Sprint | Samy (SM) |
+| PRJ-006 | Cycle Time | Jours | <= 3j | 3-5j | > 5j | Sprint | Kays |
+| PRJ-007 | Review Turnaround | Heures | <= 4h | 4-8h | > 8h | Sprint | Kays |
+| PRJ-008 | SPI (calendrier) | Ratio | >= 0.90 | 0.75-0.89 | < 0.75 | Sprint | Kays (PO) |
+| PRJ-009 | CPI (budget) | Ratio | >= 0.90 | 0.75-0.89 | < 0.75 | Sprint | Kays (PO) |
 
 #### KPI Produit (Qualite technique)
 
 | ID | KPI | Unite | Cible [VERT] | Alerte [JAUNE] | Critique [ROUGE] | Freq. | Responsable |
 |----|-----|-------|-------------|----------------|------------------|-------|-------------|
-| PROD-001 | Temps reponse IA (P50) | ms | <= 2000 | 2000-3500 | > 3500 | Continu | Zahid / Karim |
-| PROD-001 | Temps reponse IA (P95) | ms | <= 5000 | 5000-8000 | > 8000 | Continu | Zahid / Karim |
-| PROD-002 | Latence WebSocket (P50) | ms | <= 100 | 100-200 | > 200 | Continu | Karim (IA/Temps reel) |
-| PROD-003 | LCP | s | <= 2.5 | 2.5-4.0 | > 4.0 | Sprint | Lucas (Frontend) |
-| PROD-003 | INP | ms | <= 200 | 200-500 | > 500 | Sprint | Lucas (Frontend) |
-| PROD-003 | CLS | score | <= 0.1 | 0.1-0.25 | > 0.25 | Sprint | Lucas (Frontend) |
-| PROD-004 | Uptime | % | >= 99.0% | 97-98.9% | < 97% | Continu | Sofia (UX/DevOps) |
-| PROD-005 | Completion sessions | % | >= 80% | 65-79% | < 65% | Hebdo | Zahid (PO) + Karim |
-| PROD-006 | Erreurs API IA | % | <= 5% | 5-10% | > 10% | Continu | Karim (IA/Temps reel) |
-| PROD-007 | Couverture tests (BE) | % | >= 70% | 50-69% | < 50% | PR / Sprint | Zahid |
-| PROD-007 | Couverture tests (FE) | % | >= 60% | 40-59% | < 40% | PR / Sprint | Zahid |
-| PROD-008 | Dette technique | Nb issues | <= 5 | 6-10 | > 10 | Sprint | Zahid |
+| PROD-001 | Temps reponse IA (P50) | ms | <= 2000 | 2000-3500 | > 3500 | Continu | Kays / Samy |
+| PROD-001 | Temps reponse IA (P95) | ms | <= 5000 | 5000-8000 | > 8000 | Continu | Kays / Samy |
+| PROD-002 | Latence WebSocket (P50) | ms | <= 100 | 100-200 | > 200 | Continu | Samy (IA/Temps reel) |
+| PROD-003 | LCP | s | <= 2.5 | 2.5-4.0 | > 4.0 | Sprint | Youri (Frontend) |
+| PROD-003 | INP | ms | <= 200 | 200-500 | > 500 | Sprint | Youri (Frontend) |
+| PROD-003 | CLS | score | <= 0.1 | 0.1-0.25 | > 0.25 | Sprint | Youri (Frontend) |
+| PROD-004 | Uptime | % | >= 99.0% | 97-98.9% | < 97% | Continu | Yassir (UX/DevOps) |
+| PROD-005 | Completion sessions | % | >= 80% | 65-79% | < 65% | Hebdo | Kays (PO) + Samy |
+| PROD-006 | Erreurs API IA | % | <= 5% | 5-10% | > 10% | Continu | Samy (IA/Temps reel) |
+| PROD-007 | Couverture tests (BE) | % | >= 70% | 50-69% | < 50% | PR / Sprint | Kays |
+| PROD-007 | Couverture tests (FE) | % | >= 60% | 40-59% | < 40% | PR / Sprint | Kays |
+| PROD-008 | Dette technique | Nb issues | <= 5 | 6-10 | > 10 | Sprint | Kays |
 
 #### KPI Conformite
 
 | ID | KPI | Unite | Cible [VERT] | Alerte [JAUNE] | Critique [ROUGE] | Freq. | Responsable |
 |----|-----|-------|-------------|----------------|------------------|-------|-------------|
-| CONF-001 | Lighthouse Accessibility | /100 | >= 90 | 75-89 | < 75 | Sprint | Yasmine (SM/Frontend) |
-| CONF-002 | WAVE (erreurs) | Nb | 0 | 1-3 | > 3 | Sprint | Yasmine (SM/Frontend) |
-| CONF-003 | Eco-index | Grade | A-B | C | D ou pire | Sprint | Lucas (Frontend) |
-| CONF-004 | Poids des pages | Ko | <= 500 | 500-1000 | > 1000 | Sprint | Lucas (Frontend) |
-| CONF-005 | Conformite RGPD | % | 100% | 80-99% | < 80% | Sprint | Zahid (PO) |
-| CONF-006 | Conformite ANSSI | % | >= 90% | 75-89% | < 75% | Mi/Fin projet | Zahid / Sofia |
+| CONF-001 | Lighthouse Accessibility | /100 | >= 90 | 75-89 | < 75 | Sprint | Samy (SM/Frontend) |
+| CONF-002 | WAVE (erreurs) | Nb | 0 | 1-3 | > 3 | Sprint | Samy (SM/Frontend) |
+| CONF-003 | Eco-index | Grade | A-B | C | D ou pire | Sprint | Youri (Frontend) |
+| CONF-004 | Poids des pages | Ko | <= 500 | 500-1000 | > 1000 | Sprint | Youri (Frontend) |
+| CONF-005 | Conformite RGPD | % | 100% | 80-99% | < 80% | Sprint | Kays (PO) |
+| CONF-006 | Conformite ANSSI | % | >= 90% | 75-89% | < 75% | Mi/Fin projet | Kays / Yassir |
 
 ### 5.2 Calendrier de mesure par sprint
 
@@ -859,21 +861,21 @@ LEGENDE :  [VERT] = dans la cible    [JAUNE] = alerte    [ROUGE] = critique
 
 ### 5.3 Matrice de responsabilite (RACI)
 
-| KPI | Zahid (PO/Architecte) | Yasmine (SM/Frontend) | Lucas (Frontend) | Karim (IA/Temps reel) | Sofia (UX/DevOps) |
-|-----|----------------------|----------------------|-----------------|----------------------|-------------------|
-| PRJ-001 a PRJ-003 | I | R | I | I | I |
-| PRJ-004 | R | I | A | A | I |
-| PRJ-005 a PRJ-007 | A | R | C | C | I |
-| PRJ-008 a PRJ-009 | R | A | I | I | I |
-| PROD-001 a PROD-002 | C | I | I | R/A | I |
-| PROD-003 a PROD-004 | I | C | R/A | I | A |
-| PROD-005 | R | I | C | A | C |
-| PROD-006 | I | I | I | R/A | I |
-| PROD-007 | R | A | A | A | I |
-| PROD-008 | R | I | A | A | C |
-| CONF-001 a CONF-004 | I | R/A | R/A | I | C |
-| CONF-005 | R | I | I | I | A |
-| CONF-006 | R | I | C | A | A |
+| KPI | Kays (PO/Architecte) | Samy (SM/Backend+IA) | Youri (Frontend) | Yassir (UX/DevOps) |
+|-----|----------------------|----------------------|-----------------|-------------------|
+| PRJ-001 a PRJ-003 | I | **R** | I | I |
+| PRJ-004 | **R** | A | A | I |
+| PRJ-005 a PRJ-007 | A | **R** | C | I |
+| PRJ-008 a PRJ-009 | **R** | A | I | I |
+| PROD-001 a PROD-002 | C | **R/A** | I | I |
+| PROD-003 a PROD-004 | I | C | **R/A** | A |
+| PROD-005 | **R** | A | C | C |
+| PROD-006 | I | **R/A** | I | I |
+| PROD-007 | **R** | A | A | I |
+| PROD-008 | **R** | A | A | C |
+| CONF-001 a CONF-004 | I | **R/A** | C | C |
+| CONF-005 | **R** | I | I | A |
+| CONF-006 | **R** | A | C | A |
 
 **Legende RACI** : R = Responsable (fait le travail), A = Approbateur (valide), C = Consulte, I = Informe
 

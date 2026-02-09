@@ -4,12 +4,12 @@
 
 > **Projet** : MYTHOS
 > **Version** : 1.0
-> **Date** : Fevrier 2026
-> **Equipe** : 4-5 personnes (Scrum)
+> **Date** : 25 Fevrier 2026
+> **Equipe** : 4 personnes (Scrum) — Kays ZAHIDI, Samy ZEROUALI, Youri EMMANUEL, Yassir SABBAR
 > **Referentiel** : RNCP38822 -- Bloc 1
 > **Duree** : 14 semaines
 
-La gestion du changement et la conformite sont au coeur de notre demarche qualite. Ce document a ete co-redige par Zahid (aspects techniques et RGPD), Sofia (accessibilite WCAG et GreenIT) et Yasmine (processus de changement et qualite code). Nous nous sommes appuyes sur les referentiels ANSSI, RGAA et les recommandations du collectif GreenIT.
+La gestion du changement et la conformite sont au coeur de notre demarche qualite. Ce document a ete co-redige par Kays (aspects techniques et RGPD), Yassir (accessibilite WCAG et GreenIT) et Samy (processus de changement et qualite code). On s'est appuyes sur les referentiels ANSSI, RGAA et les recommandations du collectif GreenIT. Pour etre honnetes, au debut on n'avait pas de processus formel pour les change requests -- c'est apres le Sprint 1, quand on a eu un desaccord sur un changement de scope, qu'on s'est dit qu'il fallait poser un vrai cadre.
 
 ---
 
@@ -27,13 +27,13 @@ La gestion du changement et la conformite sont au coeur de notre demarche qualit
 
 ### 1.1 Philosophie
 
-Dans un projet Agile Scrum de 14 semaines, les changements sont inevitables et meme souhaitables. Cependant, tout changement non maitrise peut compromettre le calendrier, le budget ou la qualite du MVP. Le processus de gestion du changement MYTHOS garantit que chaque modification est evaluee, decidee et tracee de maniere rigoureuse.
+Dans un projet Agile Scrum de 14 semaines, les changements sont inevitables et meme souhaitables. Mais un changement non maitrise peut compromettre le calendrier, le budget ou la qualite du MVP. Notre processus de gestion du changement fait en sorte que chaque modification soit evaluee, decidee et tracee serieusement.
 
 **Principes directeurs** :
 - Tout changement est le bienvenu, mais il doit etre formalise
 - L'impact est toujours evalue AVANT la decision
-- Zahid (Product Owner) a le dernier mot sur le perimetre fonctionnel
-- Zahid (Architecte) a le dernier mot sur les choix techniques
+- Kays (Product Owner) a le dernier mot sur le perimetre fonctionnel
+- Kays (Architecte) a le dernier mot sur les choix techniques
 - Chaque changement est trace dans le registre
 
 ### 1.2 Types de changement
@@ -41,7 +41,7 @@ Dans un projet Agile Scrum de 14 semaines, les changements sont inevitables et m
 | Type | Description | Exemples | Processus |
 |------|-------------|----------|-----------|
 | **Mineur** | Changement technique sans impact fonctionnel | Refactoring, mise a jour de dependance, correction de typo | Directement via PR, pas de formulaire |
-| **Modere** | Ajout/modification de fonctionnalite dans le perimetre MVP | Nouvelle User Story, modification d'un Scenario Pack, changement d'UI | Formulaire de changement + validation Zahid (PO) |
+| **Modere** | Ajout/modification de fonctionnalite dans le perimetre MVP | Nouvelle User Story, modification d'un Scenario Pack, changement d'UI | Formulaire de changement + validation Kays (PO) |
 | **Majeur** | Changement de perimetre, de technologie ou d'architecture | Ajout d'un 3eme scenario, changement de LLM provider, refonte de l'architecture | Formulaire complet + Comite de decision |
 | **Urgent** | Correction critique en production | Bug bloquant, faille de securite, API down | Hotfix immediat + formalisation posteriori |
 
@@ -153,7 +153,7 @@ Chaque demande de changement Modere ou Majeur est formalisee via une issue GitHu
 │           │                                                             │
 │           ▼                                                             │
 │  ┌─────────────────────────────────────────────────────────┐            │
-│  │           ANALYSE D'IMPACT (responsable : Zahid)        │            │
+│  │           ANALYSE D'IMPACT (responsable : Kays)        │            │
 │  │                                                         │            │
 │  │  1. IMPACT TECHNIQUE                                    │            │
 │  │     ┗━ Quels modules/fichiers sont impactes ?           │            │
@@ -199,8 +199,8 @@ Chaque demande de changement Modere ou Majeur est formalisee via une issue GitHu
 │  │  │            │ regression│ modifier  │ regression │   │            │
 │  │  └────────────┴───────────┴───────────┴────────────┘    │            │
 │  │                                                         │            │
-│  │  Score 4-5 : Impact faible → Decision Zahid (PO) seul    │            │
-│  │  Score 6-8 : Impact modere → Decision Zahid (PO + Archi) │            │
+│  │  Score 4-5 : Impact faible → Decision Kays (PO) seul    │            │
+│  │  Score 6-8 : Impact modere → Decision Kays (PO + Archi) │            │
 │  │  Score 9-12 : Impact eleve → Comite de decision complet │            │
 │  └─────────────────────────────────────────────────────────┘            │
 └─────────────────────────────────────────────────────────────────────────┘
@@ -212,10 +212,10 @@ Chaque demande de changement Modere ou Majeur est formalisee via une issue GitHu
 
 | Membre | Role dans le comite | Voix |
 |--------|--------------------|----- |
-| **Zahid (PO/Architecte)** | President du comite, decide du perimetre | Voix decisive (perimetre) |
-| **Zahid (Architecte)** | Evalue la faisabilite technique | Voix decisive (technique) |
-| **Yasmine (SM/Frontend)** | Evalue l'impact sur le planning et le processus | Voix consultative |
-| **Developpeur concerne (Lucas, Karim ou Sofia)** | Apporte l'expertise technique detaillee | Voix consultative |
+| **Kays (PO/Architecte)** | President du comite, decide du perimetre | Voix decisive (perimetre) |
+| **Kays (Architecte)** | Evalue la faisabilite technique | Voix decisive (technique) |
+| **Samy (SM/Frontend)** | Evalue l'impact sur le planning et le processus | Voix consultative |
+| **Developpeur concerne (Youri, Samy ou Yassir)** | Apporte l'expertise technique detaillee | Voix consultative |
 
 #### Criteres d'acceptation
 
@@ -240,18 +240,18 @@ Un changement est **reporte** si :
 #### Processus de decision
 
 ```
-1. Yasmine (Scrum Master) presente la demande de changement en Sprint Planning
+1. Samy (Scrum Master) presente la demande de changement en Sprint Planning
    (ou en reunion exceptionnelle si urgent)
 
-2. Zahid (Architecte) presente l'analyse d'impact
+2. Kays (Architecte) presente l'analyse d'impact
 
 3. Discussion ouverte (time-boxee a 15 minutes)
 
 4. Vote :
-   - Zahid (PO) : Accepte / Refuse / Reporte (decisive sur le perimetre)
-   - Zahid (Architecte) : Faisable / Non faisable (decisive sur la technique)
-   - Yasmine (SM) : Recommandation planning
-   - Lucas, Karim, Sofia : Recommandation technique
+   - Kays (PO) : Accepte / Refuse / Reporte (decisive sur le perimetre)
+   - Kays (Architecte) : Faisable / Non faisable (decisive sur la technique)
+   - Samy (SM) : Recommandation planning
+   - Youri, Samy, Yassir : Recommandation technique
 
 5. Decision documentee dans l'issue GitHub + registre des changements
 
@@ -266,12 +266,12 @@ Le registre est maintenu dans un fichier centralise (`docs/CHANGE_LOG.md`) et da
 
 | ID | Date demande | Demandeur | Description | Type | Score impact | Decision | Date decision | Sprint impl. | Statut |
 |----|-------------|-----------|-------------|------|:---:|-----------|---------------|:---:|--------|
-| CR-001 | 15/02/2026 | Karim (IA) | Passer de Claude Sonnet a Claude Opus pour la narration | Majeur | 8 | Refuse | 16/02/2026 | - | Clos |
-| CR-002 | 22/02/2026 | Zahid (PO) | Ajouter un mode spectateur au lobby | Modere | 6 | Reporte | 23/02/2026 | V2 | Clos |
-| CR-003 | 01/03/2026 | Lucas (Frontend) | Remplacer Zustand par Jotai pour le state management | Modere | 7 | Refuse | 02/03/2026 | - | Clos |
-| CR-004 | 08/03/2026 | Karim (Backend) | Ajouter un cache Redis sur les prompts IA recurrents | Modere | 5 | Accepte | 08/03/2026 | Sprint 3 | Termine |
-| CR-005 | 15/03/2026 | Zahid (PO) | Reduire le nombre de tours de DEEP de 8 a 6 | Mineur | 4 | Accepte | 15/03/2026 | Sprint 4 | Termine |
-| CR-006 | 22/03/2026 | Sofia (DevOps) | Ajouter des tests E2E avec Playwright | Modere | 6 | Accepte | 23/03/2026 | Sprint 5 | En cours |
+| CR-001 | 15/02/2026 | Samy (IA) | Passer de Claude Sonnet a Claude Opus pour la narration | Majeur | 8 | Refuse | 16/02/2026 | - | Clos |
+| CR-002 | 22/02/2026 | Kays (PO) | Ajouter un mode spectateur au lobby | Modere | 6 | Reporte | 23/02/2026 | V2 | Clos |
+| CR-003 | 01/03/2026 | Youri (Frontend) | Remplacer Zustand par Jotai pour le state management | Modere | 7 | Refuse | 02/03/2026 | - | Clos |
+| CR-004 | 08/03/2026 | Samy (Backend) | Ajouter un cache Redis sur les prompts IA recurrents | Modere | 5 | Accepte | 08/03/2026 | Sprint 3 | Termine |
+| CR-005 | 15/03/2026 | Kays (PO) | Reduire le nombre de tours de DEEP de 8 a 6 | Mineur | 4 | Accepte | 15/03/2026 | Sprint 4 | Termine |
+| CR-006 | 22/03/2026 | Yassir (DevOps) | Ajouter des tests E2E avec Playwright | Modere | 6 | Accepte | 23/03/2026 | Sprint 5 | En cours |
 
 #### Exemple detaille : CR-004
 
@@ -280,7 +280,7 @@ DEMANDE DE CHANGEMENT CR-004
 ═══════════════════════════════
 
 Date        : 08/03/2026
-Demandeur   : Karim (Backend)
+Demandeur   : Samy (Backend)
 Sprint      : Sprint 3
 Type        : Modere
 
@@ -303,7 +303,7 @@ IMPACT :
 - Qualite : Pas de regression (nouveaux tests ajoutes) → Faible (1)
 - Score total : 5 (Faible)
 
-DECISION : Accepte par Zahid (PO) + Zahid (Architecte) le 08/03/2026
+DECISION : Accepte par Kays (PO) + Kays (Architecte) le 08/03/2026
 IMPLEMENTATION : Sprint 3, ticket S3-EXTRA-01
 STATUT : Termine et deploye le 18/03/2026
 ```
@@ -324,7 +324,7 @@ STATUT : Termine et deploye le 18/03/2026
 
 ### 2.1 Politique qualite MYTHOS
 
-La qualite du projet MYTHOS repose sur quatre piliers :
+La qualite du projet MYTHOS repose sur quatre piliers. En pratique, Samy a insiste pour qu'on etablisse les standards de code des le Sprint 0, avant meme d'ecrire la premiere ligne -- ca a evite pas mal de debats inutiles en code review par la suite :
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -831,12 +831,12 @@ L'IA Maitre du Jeu est le composant le plus couteux en termes d'impact environne
 
 | Sprint | Action | Responsable |
 |--------|--------|-------------|
-| Sprint 2 | Premiere mesure GreenIT sur les pages existantes | Lucas (Frontend) |
-| Sprint 3 | Mesure du nombre d'appels IA par partie (TRIBUNAL) | Karim (IA) |
-| Sprint 4 | Implementation du cache IA + mesure de la reduction | Karim (Backend) |
-| Sprint 5 | Audit GreenIT complet sur toutes les pages en production | Sofia (DevOps) |
+| Sprint 2 | Premiere mesure GreenIT sur les pages existantes | Youri (Frontend) |
+| Sprint 3 | Mesure du nombre d'appels IA par partie (TRIBUNAL) | Samy (IA) |
+| Sprint 4 | Implementation du cache IA + mesure de la reduction | Samy (Backend) |
+| Sprint 5 | Audit GreenIT complet sur toutes les pages en production | Yassir (DevOps) |
 | Sprint 5 | Rapport d'eco-conception pour le dossier RNCP | Toute l'equipe |
-| Buffer | Optimisations finales si eco-index < 50 | Lucas (Frontend) |
+| Buffer | Optimisations finales si eco-index < 50 | Youri (Frontend) |
 
 ---
 
@@ -958,14 +958,14 @@ Le contenu doit etre suffisamment robuste pour etre interprete de maniere fiable
 
 | Sprint | Action | Outil | Responsable | Livrable |
 |--------|--------|-------|-------------|----------|
-| Sprint 0 | Definir les guidelines d'accessibilite dans le design system | Figma | Sofia (UX/DevOps) | Charte a11y dans le design system |
-| Sprint 2 | Audit Lighthouse Accessibility sur les premieres pages (accueil, auth) | Lighthouse | Lucas (Frontend) | Score >= 90, corrections si necessaire |
-| Sprint 3 | Audit WAVE sur les pages de lobby et catalogue | WAVE | Sofia (UX/DevOps) | 0 erreur WAVE |
-| Sprint 4 | Test navigation clavier sur la Game UI complete | Manuel | Lucas (Frontend) + Sofia (UX/DevOps) | Tous les flux jouables au clavier |
-| Sprint 4 | Test lecteur d'ecran (VoiceOver macOS) sur le flux de jeu | VoiceOver | Sofia (UX/DevOps) | Flux complet lisible au lecteur d'ecran |
-| Sprint 5 | Audit WCAG complet (tous les criteres) | axe DevTools + Manuel | Sofia (UX/DevOps) + Lucas (Frontend) | Rapport d'audit PDF pour le dossier RNCP |
-| Sprint 5 | Tests avec utilisateurs en situation de handicap (si possible) | Sessions de test | Sofia (UX/DevOps) | Retours integres au backlog |
-| Sprint 5 | Verification finale Lighthouse > 90 sur toutes les pages en production | Lighthouse | Sofia (DevOps) | Captures d'ecran des scores |
+| Sprint 0 | Definir les guidelines d'accessibilite dans le design system | Figma | Yassir (UX/DevOps) | Charte a11y dans le design system |
+| Sprint 2 | Audit Lighthouse Accessibility sur les premieres pages (accueil, auth) | Lighthouse | Youri (Frontend) | Score >= 90, corrections si necessaire |
+| Sprint 3 | Audit WAVE sur les pages de lobby et catalogue | WAVE | Yassir (UX/DevOps) | 0 erreur WAVE |
+| Sprint 4 | Test navigation clavier sur la Game UI complete | Manuel | Youri (Frontend) + Yassir (UX/DevOps) | Tous les flux jouables au clavier |
+| Sprint 4 | Test lecteur d'ecran (VoiceOver macOS) sur le flux de jeu | VoiceOver | Yassir (UX/DevOps) | Flux complet lisible au lecteur d'ecran |
+| Sprint 5 | Audit WCAG complet (tous les criteres) | axe DevTools + Manuel | Yassir (UX/DevOps) + Youri (Frontend) | Rapport d'audit PDF pour le dossier RNCP |
+| Sprint 5 | Tests avec utilisateurs en situation de handicap (si possible) | Sessions de test | Yassir (UX/DevOps) | Retours integres au backlog |
+| Sprint 5 | Verification finale Lighthouse > 90 sur toutes les pages en production | Lighthouse | Yassir (DevOps) | Captures d'ecran des scores |
 | Buffer | Corrections finales si criteres non atteints | - | Toute l'equipe | Score final documente |
 
 ---
@@ -982,7 +982,7 @@ Conformement a l'article 30 du RGPD, le registre de traitement ci-dessous docume
 |-------|--------|
 | **Raison sociale** | Mythos Interactive SAS (entite fictive) |
 | **Adresse** | [Adresse du siege social] |
-| **Representant** | Zahid (Product Owner) |
+| **Representant** | Kays (Product Owner) |
 | **DPO** | Non designe (entreprise < 250 salaries, traitement non systematique a grande echelle) |
 | **Contact RGPD** | rgpd@mythos.game |
 
@@ -1389,7 +1389,7 @@ CLAUSES TYPES DE SOUS-TRAITANCE RGPD
 3. OBLIGATIONS DU SOUS-TRAITANT
    a) Ne traiter les donnees que sur instruction documentee du
       responsable de traitement
-   b) Garantir que les personnes autorisees a traiter les donnees
+   b) S'assurer que les personnes autorisees a traiter les donnees
       sont soumises a une obligation de confidentialite
    c) Prendre toutes les mesures de securite requises (Art. 32)
    d) Ne pas faire appel a un autre sous-traitant sans autorisation
@@ -1433,15 +1433,15 @@ CLAUSES TYPES DE SOUS-TRAITANCE RGPD
 
 | Sprint | Action RGPD | Responsable | Livrable |
 |--------|-------------|-------------|----------|
-| Sprint 0 | Definir la politique de minimisation des donnees | Zahid (PO) + Zahid (Architecte) | Liste des donnees collectees (registre v1) |
-| Sprint 1 | Implementer le hashage des mots de passe (bcrypt) | Karim (Backend) | Code + tests |
-| Sprint 1 | Rediger la politique de confidentialite (draft) | Zahid (PO) | Document Markdown |
-| Sprint 2 | Implementer la page "Politique de confidentialite" | Lucas (Frontend) | Page accessible |
-| Sprint 3 | Verifier les DPA des sous-traitants (Anthropic, Vercel, Railway) | Zahid (PO) | Checklist de conformite |
-| Sprint 4 | Implementer l'export des donnees (portabilite) | Karim (Backend) | Endpoint API + bouton frontend |
-| Sprint 5 | Implementer la suppression de compte (droit a l'oubli) | Karim (Backend) | Endpoint API + bouton frontend |
-| Sprint 5 | Finaliser le registre de traitement Article 30 | Zahid (PO) + Zahid (Architecte) | Document PDF pour le dossier RNCP |
-| Sprint 5 | Realiser l'AIPD simplifiee pour le traitement T3 | Zahid (PO) | Document PDF |
+| Sprint 0 | Definir la politique de minimisation des donnees | Kays (PO) + Kays (Architecte) | Liste des donnees collectees (registre v1) |
+| Sprint 1 | Implementer le hashage des mots de passe (bcrypt) | Samy (Backend) | Code + tests |
+| Sprint 1 | Rediger la politique de confidentialite (draft) | Kays (PO) | Document Markdown |
+| Sprint 2 | Implementer la page "Politique de confidentialite" | Youri (Frontend) | Page accessible |
+| Sprint 3 | Verifier les DPA des sous-traitants (Anthropic, Vercel, Railway) | Kays (PO) | Checklist de conformite |
+| Sprint 4 | Implementer l'export des donnees (portabilite) | Samy (Backend) | Endpoint API + bouton frontend |
+| Sprint 5 | Implementer la suppression de compte (droit a l'oubli) | Samy (Backend) | Endpoint API + bouton frontend |
+| Sprint 5 | Finaliser le registre de traitement Article 30 | Kays (PO) + Kays (Architecte) | Document PDF pour le dossier RNCP |
+| Sprint 5 | Realiser l'AIPD simplifiee pour le traitement T3 | Kays (PO) | Document PDF |
 | Buffer | Revue finale de conformite RGPD | Toute l'equipe | Checklist de conformite validee |
 
 ---
@@ -1487,6 +1487,6 @@ CLAUSES TYPES DE SOUS-TRAITANCE RGPD
 
 ---
 
-> **Document maintenu par** : Zahid (PO/Architecte) + Sofia (DevOps)
+> **Document maintenu par** : Kays (PO/Architecte) + Yassir (DevOps)
 > **Derniere mise a jour** : Sprint 0 -- Fevrier 2026
 > **Prochaine revue** : Sprint 3 (revue des DPA sous-traitants) puis Sprint 5 (audit final)

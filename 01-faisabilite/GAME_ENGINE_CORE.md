@@ -3,9 +3,9 @@
 ## Philosophie
 
 Le moteur MYTHOS repose sur un principe simple :
-**Tous les scénarios suivent la même boucle de jeu. Seule la configuration change.**
+**Tous les scenarios suivent la meme boucle de jeu. Seule la configuration change.**
 
-L'IA Maître du Jeu reçoit un "Scenario Pack" (config JSON + prompt système) et le moteur gère le reste.
+L'IA Maitre du Jeu recoit un "Scenario Pack" (config JSON + prompt systeme) et le moteur gere le reste. C'est Kays qui a pousse ce design des le depart -- l'idee c'est que pour ajouter un nouveau scenario, on n'a jamais besoin de toucher au code du moteur.
 
 ---
 
@@ -131,7 +131,7 @@ Chaque partie MYTHOS suit **toujours** ce cycle :
 
 ## 3. Game State (État du jeu universel)
 
-Le game_state est l'objet central que le moteur maintient et envoie à l'IA à chaque phase :
+Le game_state, c'est l'objet central que le moteur maintient et envoie a l'IA a chaque phase. On a debattu pas mal en equipe sur la structure exacte -- Samy voulait un format plus plat, Kays insistait pour avoir des sous-objets bien separes (public vs prive). Au final on est partis sur cette structure :
 
 ```json
 {
@@ -144,7 +144,7 @@ Le game_state est l'objet central que le moteur maintient et envoie à l'IA à c
   "players": [
     {
       "id": "player_1",
-      "name": "Zahid",
+      "name": "Kays",
       "role": "avocat_defense",
       "secret_info": "Vous savez que l'accusé était au bar ce soir-là",
       "status": "alive",
@@ -186,7 +186,7 @@ Le game_state est l'objet central que le moteur maintient et envoie à l'IA à c
 
 ## 4. Scenario Pack (Configuration par scénario)
 
-Chaque scénario est défini par un **Scenario Pack** JSON qui configure le moteur :
+Chaque scenario est defini par un **Scenario Pack** JSON qui configure le moteur. C'est le coeur de l'approche modulaire : un fichier JSON par scenario, et le moteur s'adapte tout seul :
 
 ```json
 {
@@ -317,7 +317,7 @@ Chaque scénario est défini par un **Scenario Pack** JSON qui configure le mote
 
 ## 5. Communication IA – Prompt universel
 
-Le moteur construit le prompt envoyé à l'IA ainsi :
+Le moteur construit le prompt envoye a l'IA comme ca. Samy a passe un bon moment a tester differentes structures de prompt avant de se fixer sur celle-ci :
 
 ```
 [SYSTEM PROMPT du Scenario Pack]

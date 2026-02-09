@@ -2,12 +2,12 @@
 
 > **Projet** : MYTHOS -- Plateforme de jeux narratifs multijoueur avec IA Maitre du Jeu
 > **Version** : 1.0
-> **Date** : Fevrier 2026
+> **Date** : 19 Fevrier 2026
 > **Budget total previsionnel** : 308 EUR
 > **Valorisation projet (TJM fictif)** : ~134 400 EUR
 > **Contexte** : Workshop 5A TL -- S1 -- Bloc 1 RNCP38822
 
-Le budget a été estimé avec prudence, en tenant compte de notre statut d'étudiants et des offres gratuites ou à bas coût des services cloud. La valorisation en équivalent marché permet au jury d'apprécier l'ampleur réelle du travail fourni.
+Le budget a ete le document le plus galere a ecrire, on a du reprendre les calculs 3 fois parce qu'on avait sous-estime les couts API IA au debut. On a essaye d'etre realistes vu qu'on est etudiants et qu'on profite des offres gratuites des services cloud. La valorisation en equivalent marche, c'est pour que le jury se rende compte du boulot reel.
 
 ---
 
@@ -31,11 +31,10 @@ Le budget a été estimé avec prudence, en tenant compte de notre statut d'étu
 
 | # | Membre | Role principal | Role secondaire | Disponibilite |
 |---|--------|---------------|-----------------|:---:|
-| M1 | Zahid | Product Owner / Architecte | Game Designer, Backend support | 18h/sem |
-| M2 | Yasmine | Scrum Master / Frontend Lead | UX/UI, DevOps | 16h/sem |
-| M3 | Lucas | Developpeur Frontend | Responsive, Accessibilite | 18h/sem |
-| M4 | Karim | Developpeur IA / Temps reel | BDD, API, Game Engine, Prompt Engineering, WebSocket | 18h/sem |
-| M5 | Sofia | UX/UI / DevOps | CI/CD, Deploiement, Design, Accessibilite | 16h/sem |
+| M1 | Kays | Product Owner / Chef de projet / Architecte | Game Designer, Backend support | 25h/sem |
+| M2 | Samy | Scrum Master / Dev Backend + IA + Temps reel | BDD, API, Game Engine, Prompt Engineering, WebSocket | 28h/sem |
+| M3 | Youri | Developpeur Frontend | Responsive, Accessibilite | 22h/sem |
+| M4 | Yassir | Dev Frontend / UX-UI + DevOps | CI/CD, Deploiement, Design, Accessibilite | 22h/sem |
 
 ### 1.2 Matrice de competences detaillee
 
@@ -46,50 +45,51 @@ Chaque membre est evalue sur une echelle de 1 a 5 :
 - **4** : Avance (maitrise le sujet, peut former les autres)
 - **5** : Expert (reference sur le sujet, architecture, decisions critiques)
 
-| Competence | Zahid (PO/Archi) | Yasmine (SM/Front) | Lucas (Front) | Karim (IA/Back) | Sofia (UX/DevOps) | Couverture equipe |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Gestion de projet Agile/Scrum** | 4 | 5 | 2 | 2 | 3 | Excellente |
-| **Architecture logicielle** | 5 | 3 | 2 | 4 | 3 | Excellente |
-| **React / Next.js** | 2 | 4 | 5 | 1 | 3 | Bonne |
-| **TailwindCSS** | 2 | 4 | 5 | 1 | 3 | Bonne |
-| **TypeScript** | 4 | 3 | 4 | 5 | 4 | Excellente |
-| **NestJS** | 3 | 1 | 1 | 5 | 3 | Correcte |
-| **PostgreSQL / Prisma** | 3 | 1 | 1 | 5 | 2 | Faible (1 expert) |
-| **Redis** | 2 | 1 | 1 | 4 | 3 | Faible (1 avance) |
-| **Socket.io / WebSocket** | 2 | 2 | 2 | 3 | 5 | Correcte |
-| **API REST** | 4 | 2 | 2 | 5 | 4 | Excellente |
-| **Prompt Engineering (LLM)** | 3 | 1 | 1 | 2 | 5 | Faible (1 expert) |
-| **Integration API IA (Anthropic)** | 2 | 1 | 1 | 2 | 5 | Faible (1 expert) |
-| **CI/CD / GitHub Actions** | 3 | 4 | 2 | 3 | 2 | Bonne |
-| **Docker / Deploiement** | 3 | 4 | 1 | 3 | 2 | Correcte |
-| **UX/UI Design (Figma)** | 3 | 4 | 3 | 1 | 2 | Bonne |
-| **Accessibilite (WCAG)** | 2 | 3 | 4 | 1 | 2 | Correcte |
-| **Tests (Jest/Vitest)** | 3 | 3 | 3 | 4 | 3 | Bonne |
-| **Git / Git Flow** | 4 | 4 | 3 | 5 | 4 | Excellente |
-| **Game Design** | 4 | 2 | 2 | 2 | 3 | Correcte |
-| **Securite web** | 3 | 2 | 2 | 4 | 3 | Bonne |
-| **Score moyen** | **3,1** | **2,7** | **2,4** | **3,1** | **3,2** | |
+| Competence | Kays (PO/Archi) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) | Couverture equipe |
+|---|:---:|:---:|:---:|:---:|:---:|
+| **Gestion de projet Agile/Scrum** | 4 | 4 | 2 | 2 | Bonne |
+| **Architecture logicielle** | 4 | 3 | 2 | 2 | Correcte |
+| **React / Next.js** | 3 | 2 | 4 | 3 | Bonne |
+| **TailwindCSS** | 2 | 2 | 4 | 3 | Bonne |
+| **TypeScript** | 3 | 4 | 3 | 3 | Bonne |
+| **NestJS** | 2 | 4 | 1 | 2 | Faible (1 avance) |
+| **PostgreSQL / Prisma** | 2 | 4 | 1 | 2 | Faible (1 avance) |
+| **Redis** | 2 | 3 | 1 | 2 | Correcte |
+| **Socket.io / WebSocket** | 2 | 3 | 2 | 3 | Correcte |
+| **API REST** | 3 | 4 | 2 | 3 | Bonne |
+| **Prompt Engineering (LLM)** | 3 | 3 | 1 | 2 | Correcte |
+| **Integration API IA (Anthropic)** | 2 | 3 | 1 | 2 | Correcte |
+| **CI/CD / GitHub Actions** | 3 | 2 | 1 | 4 | Correcte |
+| **Docker / Deploiement** | 2 | 2 | 1 | 4 | Correcte |
+| **UX/UI Design (Figma)** | 2 | 1 | 3 | 4 | Bonne |
+| **Accessibilite (WCAG)** | 2 | 1 | 3 | 3 | Correcte |
+| **Tests (Jest/Vitest)** | 3 | 3 | 2 | 2 | Correcte |
+| **Git / Git Flow** | 4 | 4 | 3 | 3 | Excellente |
+| **Game Design** | 4 | 2 | 2 | 2 | Faible (1 avance) |
+| **Securite web** | 3 | 3 | 2 | 2 | Correcte |
+| **Score moyen** | **2,8** | **2,8** | **2,0** | **2,6** | |
 
 ### 1.3 Analyse des risques de competences
 
 | Risque | Competence concernee | Membres couvrants | Plan de mitigation |
 |---|---|---|---|
-| **Bus factor = 1** : PostgreSQL/Prisma | BDD relationnelle | Karim uniquement (niveau 5) | Zahid en backup (niveau 3), session de transfert de connaissances en S0 |
-| **Bus factor = 1** : Prompt Engineering | IA / LLM | Karim uniquement (niveau 5) | Zahid en backup (niveau 3), documentation des prompts, bibliothèque de prompts partagee |
-| **Bus factor = 1** : WebSocket | Temps reel | Karim uniquement (niveau 5) | Zahid en backup (niveau 3), documentation Socket.io, tests automatises |
-| **Competence basse** : Redis | Cache / State | Karim (4), Sofia (3) | Formation interne 2h en S1, documentation Docker Redis |
-| **Competence basse** : Accessibilite | WCAG AA | Lucas (4), Yasmine (3) | Formation Lighthouse + WAVE en S4, checklist WCAG partagee |
+| **Bus factor = 1** : PostgreSQL/Prisma | BDD relationnelle | Samy (niveau 4), Kays backup (niveau 2) | Session de transfert de connaissances en S0, documentation schema BDD |
+| **Bus factor = 1** : NestJS | Backend framework | Samy (niveau 4), Kays backup (niveau 2) | Pair programming regulier, documentation architecture backend |
+| **Bus factor = 1** : CI/CD / Docker | Deploiement | Yassir (niveau 4), Kays backup (niveau 3/2) | Documentation pipeline CI/CD, session de transfert en S1 |
+| **Couverture correcte** : UX/UI Design | Design | Yassir (niveau 4), Youri backup (niveau 3) | Bonne couverture, Figma partage et design system documente |
+| **Competence basse** : Redis | Cache / State | Samy (3), Kays (2), Yassir (2) | Formation interne 2h en S1, documentation Docker Redis |
+| **Competence basse** : Accessibilite | WCAG AA | Youri (3), Yassir (3) | Formation Lighthouse + WAVE en S4, checklist WCAG partagee |
 
 ### 1.4 Plan de montee en competences
 
 | Formation | Animateur | Participants | Sprint | Duree | Format |
 |---|---|---|---|---|---|
-| Architecture Scenario Pack | Zahid (PO) | Toute l'equipe | S0 | 1h | Session live |
-| Prisma / PostgreSQL | Karim (Backend/IA) | Zahid, Sofia | S0 | 1h30 | Pair coding |
-| Prompt Engineering pour jeu narratif | Karim (IA) | Zahid, Lucas | S1 | 2h | Workshop |
-| Socket.io / WebSocket basics | Karim (IA) | Lucas, Sofia | S2 | 1h30 | Session live |
-| Accessibilite WCAG + Lighthouse | Lucas (Front) | Yasmine, Sofia | S4 | 1h | Session live |
-| Deploiement Vercel + Railway | Sofia (DevOps) | Karim, Yasmine | S4 | 1h | Demo live |
+| Architecture Scenario Pack | Kays (PO) | Toute l'equipe | S0 | 1h | Session live |
+| Prisma / PostgreSQL | Samy (SM/Back/IA) | Kays, Yassir | S0 | 1h30 | Pair coding |
+| Prompt Engineering pour jeu narratif | Kays + Samy | Youri, Yassir | S1 | 2h | Workshop |
+| Socket.io / WebSocket basics | Samy + Yassir | Kays, Youri | S2 | 1h30 | Session live |
+| Accessibilite WCAG + Lighthouse | Youri + Yassir | Kays, Samy | S4 | 1h | Session live |
+| CI/CD + Deploiement Vercel + Railway | Yassir (DevOps) | Kays, Samy, Youri | S4 | 1h | Demo live |
 
 **Cout total formation** : ~8h d'effort equipe, integre dans la capacite des sprints concernes.
 
@@ -99,20 +99,20 @@ Chaque membre est evalue sur une echelle de 1 a 5 :
 
 ### 2.1 Heures par semaine par membre par sprint
 
-| Sprint | Semaines | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (Back/IA) | Sofia (UX/DevOps) | Total/sem | Total sprint |
-|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Sprint 0** | S1-S2 | 18h | 16h | 18h | 18h | 16h | 86h | **172h** |
-| **Sprint 1** | S3-S4 | 18h | 16h | 18h | 18h | 16h | 86h | **172h** |
-| **Sprint 2** | S5-S6 | 18h | 16h | 18h | 20h | 18h | 90h | **180h** |
-| **Sprint 3** | S7-S8 | 18h | 16h | 20h | 20h | 18h | 92h | **184h** |
-| **Sprint 4** | S9-S10 | 16h | 16h | 20h | 16h | 18h | 86h | **172h** |
-| **Sprint 5** | S11-S12 | 16h | 18h | 18h | 18h | 16h | 86h | **172h** |
-| **Buffer** | S13-S14 | 18h | 18h | 18h | 18h | 18h | 90h | **180h** |
-| **Total** | 14 sem | **244h** | **232h** | **260h** | **256h** | **240h** | | **1 232h** |
+| Sprint | Semaines | Kays (PO) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) | Total/sem | Total sprint |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Sprint 0** | S1-S2 | 18h | 34h | 18h | 16h | 86h | **172h** |
+| **Sprint 1** | S3-S4 | 18h | 34h | 18h | 16h | 86h | **172h** |
+| **Sprint 2** | S5-S6 | 18h | 36h | 18h | 18h | 90h | **180h** |
+| **Sprint 3** | S7-S8 | 18h | 36h | 20h | 18h | 92h | **184h** |
+| **Sprint 4** | S9-S10 | 16h | 32h | 20h | 18h | 86h | **172h** |
+| **Sprint 5** | S11-S12 | 16h | 36h | 18h | 16h | 86h | **172h** |
+| **Buffer** | S13-S14 | 18h | 36h | 18h | 18h | 90h | **180h** |
+| **Total** | 14 sem | **244h** | **488h** | **260h** | **240h** | | **1 232h** |
 
 ### 2.2 Repartition de la charge par role et par sprint
 
-#### Zahid -- PO / Architecte (244h totales)
+#### Kays -- PO / Chef de projet / Architecte (244h totales)
 
 | Sprint | Heures | Repartition des activites |
 |---|:---:|---|
@@ -124,19 +124,19 @@ Chaque membre est evalue sur une echelle de 1 a 5 :
 | S5 | 32h | Validation admin (8h), review finale (8h), prep livrables (8h), ceremonies (4h), support (4h) |
 | Buffer | 36h | Video demo (10h), slides soutenance (8h), bugs (8h), retour experience (6h), repetition (4h) |
 
-#### Yasmine -- Scrum Master / Frontend Lead (232h totales)
+#### Samy -- Scrum Master / Dev Backend + IA + Temps reel (488h totales)
 
 | Sprint | Heures | Repartition des activites |
 |---|:---:|---|
-| S0 | 32h | Figma maquettes (14h), GitHub Projects (4h), ceremonies + facilitation (6h), CI/CD support (4h), CDC (4h) |
-| S1 | 32h | Ceremonies (6h), support frontend (10h), monitoring avancement (6h), burndown (4h), documentation (6h) |
-| S2 | 32h | Ceremonies (6h), preparation composants UI (12h), monitoring (6h), documentation (4h), support (4h) |
-| S3 | 32h | Ceremonies (6h), support frontend lobby (10h), monitoring (6h), tests manuels (6h), support (4h) |
-| S4 | 32h | Ceremonies (6h), polish UI support (10h), preparations S5 (8h), monitoring (4h), support (4h) |
-| S5 | 36h | Deploiement prod (10h), monitoring setup (6h), ceremonies (6h), tests (8h), documentation (6h) |
-| Buffer | 36h | Slides soutenance (8h), bugs front (8h), retour experience (6h), coordination finale (6h), repetition (8h) |
+| S0 | 68h | Config NestJS (6h), repo GitHub (6h), CI/CD (8h), CDC section backend (6h), schema BDD draft (6h), Figma maquettes (14h), GitHub Projects (4h), ceremonies + facilitation (6h), CI/CD support (4h), CDC (4h), ceremonies (4h) |
+| S1 | 68h | Schema Prisma (12h), Auth module (12h), API CRUD scenarios (8h), ceremonies (6h), support frontend (10h), monitoring avancement (6h), burndown (4h), documentation (6h), ceremonies (4h) |
+| S2 | 68h | Pack Loader (6h), Game State Manager (10h), Choice Engine (10h), Resource Manager (6h), Game Loop (lead) (4h), tests (4h), ceremonies (6h), preparation composants UI (12h), monitoring (6h), documentation (4h), support (4h) |
+| S3 | 72h | Session Manager (12h), Game Loop + WS (lead) (18h), tests E2E (6h), ceremonies (6h), support frontend lobby (10h), monitoring (6h), tests manuels (6h), support (4h), ceremonies (4h) |
+| S4 | 64h | Integration DEEP backend (10h), bug fixing (10h), preparation S5 (8h), ceremonies (6h), polish UI support (10h), preparations S5 (8h), monitoring (4h), support (4h), ceremonies (4h) |
+| S5 | 72h | API Admin (14h), tests backend (12h), deploiement support (6h), deploiement prod (10h), monitoring setup (6h), ceremonies (6h), tests (8h), documentation (6h), ceremonies (4h) |
+| Buffer | 72h | Bugs backend (12h), documentation API (8h), retour experience (6h), soutenance (6h), support (4h), slides soutenance (8h), bugs front (8h), retour experience (6h), coordination finale (6h), repetition (8h) |
 
-#### Lucas -- Developpeur Frontend (260h totales)
+#### Youri -- Developpeur Frontend (260h totales)
 
 | Sprint | Heures | Repartition des activites |
 |---|:---:|---|
@@ -148,19 +148,7 @@ Chaque membre est evalue sur une echelle de 1 a 5 :
 | S5 | 36h | Admin panel front (14h), accessibilite corrections (14h), tests front (4h), ceremonies (4h) |
 | Buffer | 36h | Bugs front (12h), documentation (6h), retour experience (6h), soutenance (8h), formation (4h) |
 
-#### Karim -- Developpeur IA / Temps reel (256h totales)
-
-| Sprint | Heures | Repartition des activites |
-|---|:---:|---|
-| S0 | 36h | Config NestJS (6h), repo GitHub (6h), CI/CD (8h), CDC section backend (6h), schema BDD draft (6h), ceremonies (4h) |
-| S1 | 36h | Schema Prisma (12h), Auth module (12h), API CRUD scenarios (8h), ceremonies (4h) |
-| S2 | 40h | Pack Loader (6h), Game State Manager (10h), Choice Engine (10h), Resource Manager (6h), Game Loop (lead) (4h), tests (4h) |
-| S3 | 40h | Session Manager (12h), Game Loop + WS (lead) (18h), tests E2E (6h), ceremonies (4h) |
-| S4 | 32h | Integration DEEP backend (10h), bug fixing (10h), preparation S5 (8h), ceremonies (4h) |
-| S5 | 36h | API Admin (14h), tests backend (12h), deploiement support (6h), ceremonies (4h) |
-| Buffer | 36h | Bugs backend (12h), documentation API (8h), retour experience (6h), soutenance (6h), support (4h) |
-
-#### Sofia -- UX/UI / DevOps (240h totales)
+#### Yassir -- Dev Frontend / UX-UI + DevOps (240h totales)
 
 | Sprint | Heures | Repartition des activites |
 |---|:---:|---|
@@ -196,22 +184,22 @@ Chaque membre est evalue sur une echelle de 1 a 5 :
 
 ### 3.1 Calendrier des absences previsibles
 
-| Semaine | Dates | Zahid | Yasmine | Lucas | Karim | Sofia | Evenements |
-|:---:|---|:---:|:---:|:---:|:---:|:---:|---|
-| S1 | 10/02 - 14/02 | OK | OK | OK | OK | OK | Kickoff projet |
-| S2 | 17/02 - 21/02 | OK | OK | OK | OK | OK | Sprint Review S0 |
-| S3 | 24/02 - 28/02 | OK | OK | OK | OK | OK | |
-| S4 | 03/03 - 07/03 | OK | OK | OK | OK | OK | Sprint Review S1 |
-| S5 | 10/03 - 14/03 | OK | OK | OK | OK | OK | |
-| S6 | 17/03 - 21/03 | OK | OK | OK | OK | OK | Sprint Review S2 |
-| S7 | 24/03 - 28/03 | OK | OK | OK | OK | OK | |
-| S8 | 31/03 - 04/04 | OK | -50% | OK | OK | OK | Yasmine : examens partiels, Sprint Review S3 |
-| S9 | 07/04 - 11/04 | -50% | OK | OK | -50% | OK | Zahid + Karim : projet parallele (deadline) |
-| S10 | 14/04 - 18/04 | OK | OK | OK | OK | OK | Sprint Review S4 |
-| S11 | 21/04 - 25/04 | OK | OK | OK | OK | OK | |
-| S12 | 28/04 - 02/05 | OK | OK | OK | OK | OK | Deploiement prod, Sprint Review S5 |
-| S13 | 05/05 - 09/05 | OK | OK | OK | OK | OK | **8 mai ferie** (-1 jour equipe) |
-| S14 | 12/05 - 16/05 | OK | OK | OK | OK | -50% | **14 mai ferie (Ascension)**, Sofia : soutenance autre UE |
+| Semaine | Dates | Kays | Samy | Youri | Yassir | Evenements |
+|:---:|---|:---:|:---:|:---:|:---:|---|
+| S1 | 10/02 - 14/02 | OK | OK | OK | OK | Kickoff projet |
+| S2 | 17/02 - 21/02 | OK | OK | OK | OK | Sprint Review S0 |
+| S3 | 24/02 - 28/02 | OK | OK | OK | OK | |
+| S4 | 03/03 - 07/03 | OK | OK | OK | OK | Sprint Review S1 |
+| S5 | 10/03 - 14/03 | OK | OK | OK | OK | |
+| S6 | 17/03 - 21/03 | OK | OK | OK | OK | Sprint Review S2 |
+| S7 | 24/03 - 28/03 | OK | OK | OK | OK | |
+| S8 | 31/03 - 04/04 | OK | -50% | OK | OK | Samy : examens partiels, Sprint Review S3 |
+| S9 | 07/04 - 11/04 | -50% | -50% | OK | OK | Kays + Samy : projet parallele (deadline) |
+| S10 | 14/04 - 18/04 | OK | OK | OK | OK | Sprint Review S4 |
+| S11 | 21/04 - 25/04 | OK | OK | OK | OK | |
+| S12 | 28/04 - 02/05 | OK | OK | OK | OK | Deploiement prod, Sprint Review S5 |
+| S13 | 05/05 - 09/05 | OK | OK | OK | OK | **8 mai ferie** (-1 jour equipe) |
+| S14 | 12/05 - 16/05 | OK | OK | OK | -50% | **14 mai ferie (Ascension)**, Yassir : soutenance autre UE |
 
 **Legende** :
 - OK = Disponibilite normale
@@ -222,25 +210,25 @@ Chaque membre est evalue sur une echelle de 1 a 5 :
 
 | Semaine | Capacite nominale | Reduction | Capacite reelle | Sprint impacte |
 |:---:|:---:|:---:|:---:|---|
-| S8 | 92h/sem | -8h (Yasmine -50%) | **84h** | Sprint 3 (integration WS) |
-| S9 | 86h/sem | -17h (Zahid -50%, Karim -50%) | **69h** | Sprint 4 (DEEP + UI) |
+| S8 | 92h/sem | -18h (Samy -50%) | **74h** | Sprint 3 (integration WS) |
+| S9 | 86h/sem | -25h (Kays -50%, Samy -50%) | **61h** | Sprint 4 (DEEP + UI) |
 | S13 | 90h/sem | -18h (8 mai ferie) | **72h** | Buffer |
-| S14 | 90h/sem | -18h (Ascension) -8h (Sofia -50%) | **64h** | Buffer |
+| S14 | 90h/sem | -18h (Ascension) -11h (Yassir -50%) | **61h** | Buffer |
 
 **Strategie d'attenuation** :
-- S8 : Yasmine (SM) en capacite reduite -> Zahid (PO) assure la facilitation des ceremonies
-- S9 : Zahid (PO) et Karim (Backend/IA) reduits -> Lucas (Frontend) et Sofia (DevOps) prennent le lead, sprint allege
+- S8 : Samy (SM/Back/IA) en capacite reduite -> Kays (PO) assure la facilitation des ceremonies
+- S9 : Kays (PO) et Samy (SM/Back/IA) reduits -> Youri (Frontend) et Yassir (DevOps) prennent le lead, sprint allege
 - S13-S14 : Buffer largement dimensionne pour absorber les pertes
 
 ### 3.3 Contraintes academiques recurrentes
 
-| Jour | Zahid | Yasmine | Lucas | Karim | Sofia | Impact |
-|---|---|---|---|---|---|---|
-| **Lundi** | Cours matin | Cours toute journee | Cours matin | Cours matin | Cours toute journee | Sprint Planning le lundi apres-midi (14h) |
-| **Mardi** | Cours matin | OK | OK | OK | Cours matin | Matinees reduites pour Zahid et Sofia |
-| **Mercredi** | OK | Cours apres-midi | OK | OK | OK | Refinement le mercredi matin si necessaire |
-| **Jeudi** | OK | OK | Cours matin | OK | OK | Journee la plus productive pour l'equipe |
-| **Vendredi** | OK | OK | OK | Cours matin | OK | Sprint Review le vendredi apres-midi (14h) |
+| Jour | Kays | Samy | Youri | Yassir | Impact |
+|---|---|---|---|---|---|
+| **Lundi** | Cours matin | Cours matin | Cours matin | Cours toute journee | Sprint Planning le lundi apres-midi (14h) |
+| **Mardi** | Cours matin | OK | OK | Cours matin | Matinees reduites pour Kays et Yassir |
+| **Mercredi** | OK | Cours apres-midi | OK | OK | Refinement le mercredi matin si necessaire |
+| **Jeudi** | OK | OK | Cours matin | OK | Journee la plus productive pour l'equipe |
+| **Vendredi** | OK | Cours matin | OK | OK | Sprint Review le vendredi apres-midi (14h) |
 
 **Creneaux de travail synchrone optimaux** : Mardi 14h-18h, Jeudi 14h-18h (toute l'equipe disponible)
 
@@ -261,106 +249,106 @@ Chaque membre est evalue sur une echelle de 1 a 5 :
 
 #### Phase Cadrage (Sprint 0)
 
-| Activite | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (Back/IA) | Sofia (UX/DevOps) |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Redaction CDC | A | R | R | R | R |
-| Definition architecture | A/R | C | I | R | C |
-| Maquettes Figma | C | A/R | R | I | I |
-| Initialisation repo Git | I | C | I | A/R | I |
-| Config Next.js (frontend) | I | C | A/R | I | I |
-| Config NestJS (backend) | C | I | I | A/R | I |
-| Config CI/CD | I | A/R | I | R | I |
-| Config GitHub Projects | I | A/R | I | I | I |
-| Definition backlog | A/R | R | C | C | C |
-| Design system | C | A/R | R | I | I |
+| Activite | Kays (PO) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) |
+|---|:---:|:---:|:---:|:---:|
+| Redaction CDC | A | R | R | R |
+| Definition architecture | A/R | R | I | C |
+| Maquettes Figma | C | A/R | R | I |
+| Initialisation repo Git | I | A/R | I | I |
+| Config Next.js (frontend) | I | C | A/R | I |
+| Config NestJS (backend) | C | A/R | I | I |
+| Config CI/CD | I | A/R | I | I |
+| Config GitHub Projects | I | A/R | I | I |
+| Definition backlog | A/R | R | C | C |
+| Design system | C | A/R | R | I |
 
 #### Phase Fondations (Sprint 1)
 
-| Activite | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (Back/IA) | Sofia (UX/DevOps) |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Schema Prisma (BDD) | C | I | I | A/R | I |
-| Module Auth backend | I | I | I | A/R | I |
-| Pages Auth frontend | I | I | A/R | C | I |
-| API CRUD Scenarios | A | I | I | R | I |
-| POC AI Service | C | I | I | C | A/R |
-| Page test IA frontend | I | I | R | I | A/C |
-| Scenario Pack TRIBUNAL | A/R | I | I | I | R |
-| Scenario Pack DEEP | A/R | I | I | I | R |
-| Tests unitaires Auth | I | I | I | A/R | I |
+| Activite | Kays (PO) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) |
+|---|:---:|:---:|:---:|:---:|
+| Schema Prisma (BDD) | C | A/R | I | I |
+| Module Auth backend | I | A/R | I | I |
+| Pages Auth frontend | I | I | A/R | I |
+| API CRUD Scenarios | A | R | I | I |
+| POC AI Service | C | C | I | A/R |
+| Page test IA frontend | I | I | R | A/C |
+| Scenario Pack TRIBUNAL | A/R | I | I | R |
+| Scenario Pack DEEP | A/R | I | I | R |
+| Tests unitaires Auth | I | A/R | I | I |
 
 #### Phase Game Engine (Sprint 2)
 
-| Activite | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (Back/IA) | Sofia (UX/DevOps) |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Scenario Pack Loader | C | I | I | A/R | I |
-| Game State Manager | C | I | I | A/R | C |
-| Role Manager | C | I | I | C | A/R |
-| Choice Engine | A | I | I | R | C |
-| Resource Manager | C | I | I | A/R | I |
-| Game Loop Manager | A | I | I | R | R |
-| Tests integration | I | I | I | A/R | C |
-| Preparation composants UI | I | C | A/R | I | I |
+| Activite | Kays (PO) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) |
+|---|:---:|:---:|:---:|:---:|
+| Scenario Pack Loader | C | A/R | I | I |
+| Game State Manager | C | A/R | I | C |
+| Role Manager | C | C | I | A/R |
+| Choice Engine | A | R | I | C |
+| Resource Manager | C | A/R | I | I |
+| Game Loop Manager | A | R | I | R |
+| Tests integration | I | A/R | I | C |
+| Preparation composants UI | I | C | A/R | I |
 
 #### Phase Multijoueur (Sprint 3)
 
-| Activite | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (Back/IA) | Sofia (UX/DevOps) |
-|---|:---:|:---:|:---:|:---:|:---:|
-| WebSocket Gateway | I | I | I | C | A/R |
-| Session Manager | C | I | I | A/R | C |
-| Integration WS + Game Loop | A | I | I | R | R |
-| Page catalogue scenarios | C | C | A/R | I | I |
-| Page lobby | C | C | A/R | C | I |
-| Game UI (narration/choix/chat) | A | C | R | C | C |
-| Test E2E TRIBUNAL | A | R | R | R | R |
+| Activite | Kays (PO) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) |
+|---|:---:|:---:|:---:|:---:|
+| WebSocket Gateway | I | C | I | A/R |
+| Session Manager | C | A/R | I | C |
+| Integration WS + Game Loop | A | R | I | R |
+| Page catalogue scenarios | C | C | A/R | I |
+| Page lobby | C | C | A/R | I |
+| Game UI (narration/choix/chat) | A | C | R | C |
+| Test E2E TRIBUNAL | A | R | R | R |
 
 #### Phase DEEP + UI (Sprint 4)
 
-| Activite | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (Back/IA) | Sofia (UX/DevOps) |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Composant jauges ressources | C | I | A/R | C | I |
-| Ecran de fin de partie | A | C | R | I | I |
-| Streaming IA | I | I | C | I | A/R |
-| Test E2E DEEP | A | R | R | R | R |
-| Historique narratif | C | I | A/R | I | I |
-| Polish UI responsive | C | C | A/R | I | I |
-| Reconnexion joueur | I | I | I | C | A/R |
+| Activite | Kays (PO) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) |
+|---|:---:|:---:|:---:|:---:|
+| Composant jauges ressources | C | C | A/R | I |
+| Ecran de fin de partie | A | C | R | I |
+| Streaming IA | I | I | C | A/R |
+| Test E2E DEEP | A | R | R | R |
+| Historique narratif | C | I | A/R | I |
+| Polish UI responsive | C | C | A/R | I |
+| Reconnexion joueur | I | C | I | A/R |
 
 #### Phase Deploiement (Sprint 5)
 
-| Activite | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (Back/IA) | Sofia (UX/DevOps) |
-|---|:---:|:---:|:---:|:---:|:---:|
-| API Admin | C | I | I | A/R | I |
-| Panel admin frontend | C | I | A/R | C | I |
-| Audit accessibilite | C | R | A/R | I | I |
-| Deploiement production | I | A/R | I | R | I |
-| Monitoring + health check | I | A/R | I | C | I |
-| Tests finaux | A | R | R | R | R |
-| Mesure eco-index | I | I | I | I | A/R |
+| Activite | Kays (PO) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) |
+|---|:---:|:---:|:---:|:---:|
+| API Admin | C | A/R | I | I |
+| Panel admin frontend | C | C | A/R | I |
+| Audit accessibilite | C | R | A/R | I |
+| Deploiement production | I | A/R | I | I |
+| Monitoring + health check | I | A/R | I | I |
+| Tests finaux | A | R | R | R |
+| Mesure eco-index | I | I | I | A/R |
 
 #### Phase Finalisation (Buffer)
 
-| Activite | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (Back/IA) | Sofia (UX/DevOps) |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Correction bugs | A | R | R | R | R |
-| Documentation technique | A | C | R | R | R |
-| Retour d'experience | I | I | R | R | R |
-| Video de demonstration | A/R | R | C | I | I |
-| Preparation soutenance | R | R | R | R | R |
+| Activite | Kays (PO) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) |
+|---|:---:|:---:|:---:|:---:|
+| Correction bugs | A | R | R | R |
+| Documentation technique | A | R | R | R |
+| Retour d'experience | I | R | R | R |
+| Video de demonstration | A/R | R | C | I |
+| Preparation soutenance | R | R | R | R |
 
 #### Activites transversales (tout au long du projet)
 
-| Activite | Zahid (PO) | Yasmine (SM) | Lucas (Front) | Karim (Back/IA) | Sofia (UX/DevOps) |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Sprint Planning | A | R | C | C | C |
-| Daily Standup | R | A | R | R | R |
-| Sprint Review | A | R | R | R | R |
-| Retrospective | C | A/R | R | R | R |
-| Backlog grooming | A/R | R | C | C | C |
-| Code review | C | R | R | R | R |
-| Gestion des risques | A | R | I | C | C |
-| Suivi budget API IA | A | R | I | I | C |
-| Communication stakeholders | A/R | R | I | I | I |
-| Veille technologique | C | I | R | R | R |
+| Activite | Kays (PO) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) |
+|---|:---:|:---:|:---:|:---:|
+| Sprint Planning | A | R | C | C |
+| Daily Standup | R | A | R | R |
+| Sprint Review | A | R | R | R |
+| Retrospective | C | A/R | R | R |
+| Backlog grooming | A/R | R | C | C |
+| Code review | C | R | R | R |
+| Gestion des risques | A | R | I | C |
+| Suivi budget API IA | A | R | I | C |
+| Communication stakeholders | A/R | R | I | I |
+| Veille technologique | C | R | R | R |
 
 ---
 
@@ -370,7 +358,7 @@ Chaque membre est evalue sur une echelle de 1 a 5 :
 
 #### 5.1.1 Ressources humaines
 
-Le projet est realise dans le cadre academique : les membres ne sont pas remuneres. Cependant, pour calculer la **valeur du projet**, nous appliquons un TJM (Taux Journalier Moyen) fictif.
+Le projet est fait dans un contexte scolaire : personne n'est paye. Mais pour calculer la **valeur du projet**, on applique un TJM (Taux Journalier Moyen) fictif.
 
 | Parametre | Valeur |
 |---|---|
@@ -384,11 +372,10 @@ Le projet est realise dans le cadre academique : les membres ne sont pas remuner
 
 | Membre | Heures totales | Valorisation fictive |
 |---|:---:|---:|
-| Zahid (PO / Architecte) | 244h | 12 200 EUR |
-| Yasmine (SM / Frontend) | 232h | 11 600 EUR |
-| Lucas (Dev Frontend) | 260h | 13 000 EUR |
-| Karim (Dev IA / Temps reel) | 256h | 12 800 EUR |
-| Sofia (UX/UI / DevOps) | 240h | 12 000 EUR |
+| Kays (PO / Chef de projet / Architecte) | 244h | 12 200 EUR |
+| Samy (SM / Dev Backend + IA + Temps reel) | 488h | 24 400 EUR |
+| Youri (Dev Frontend) | 260h | 13 000 EUR |
+| Yassir (Dev Frontend / UX-UI + DevOps) | 240h | 12 000 EUR |
 | **Total** | **1 232h** | **61 600 EUR** |
 
 #### 5.1.2 Infrastructure -- Detail par fournisseur et tier
@@ -515,8 +502,8 @@ Le projet est realise dans le cadre academique : les membres ne sont pas remuner
 | Valorisation RH (1 232h x 50 EUR/h) | 61 600 EUR |
 | Infrastructure (cout reel) | ~10 EUR |
 | API IA (cout reel) | ~36 EUR |
-| Outils (valeur marche : Figma Pro x5, Notion Team, etc.) | ~2 400 EUR/an |
-| **Valorisation totale du projet** | **~64 046 EUR** |
+| Outils (valeur marche : Figma Pro x4, Notion Team, etc.) | ~1 920 EUR/an |
+| **Valorisation totale du projet** | **~63 566 EUR** |
 
 ---
 
@@ -602,7 +589,7 @@ Ce tableau est rempli a chaque Sprint Review (toutes les 2 semaines) et consolid
 
 ### 7.1 Principes de l'Earned Value Management
 
-L'analyse de la valeur acquise (EVM) permet de mesurer objectivement la performance du projet en comparant trois indicateurs fondamentaux :
+L'analyse de la valeur acquise (EVM) sert a mesurer la performance du projet en comparant trois indicateurs :
 
 | Indicateur | Sigle | Definition | Formule |
 |---|:---:|---|---|
@@ -612,7 +599,7 @@ L'analyse de la valeur acquise (EVM) permet de mesurer objectivement la performa
 
 ### 7.2 Budget a l'achevement (BAC)
 
-Pour appliquer l'EVM, nous utilisons la valorisation fictive du projet comme Budget at Completion (BAC).
+Pour l'EVM, on utilise la valorisation fictive du projet comme Budget at Completion (BAC).
 
 | Element | Valeur |
 |---|---:|
@@ -849,7 +836,9 @@ Outils                 0%                                     0 EUR
 
 ### 9.1 Risque principal : depassement du budget API IA
 
-L'API IA (Anthropic Claude) represente **62% du budget reel** dans le scenario realiste. C'est le poste le plus volatile et le plus difficile a controler.
+> Samy a fait des tests de prompts pendant un week-end et il a consomme a lui seul presque 8$ en tokens. C'est la qu'on s'est dit qu'il fallait vraiment cadrer les appels IA et mettre des mocks dans les tests CI.
+
+L'API IA (Anthropic Claude) represente **62% du budget reel** dans le scenario realiste. C'est le poste le plus imprevisible et le plus dur a maitriser.
 
 #### Causes possibles de depassement
 
@@ -973,28 +962,28 @@ Budget IA consomme > 50% a mi-projet ?
 | Budget alloue | 308 EUR |
 | **Marge disponible** | **221 EUR** |
 
-La marge de 221 EUR constitue un filet de securite tres confortable pour couvrir meme les scenarios pessimistes.
+La marge de 221 EUR nous laisse largement de quoi voir venir, meme dans le pire des cas.
 
 ---
 
 ## Annexe A -- Grille de valorisation detaillee par sprint
 
-| Sprint | Zahid (h) | Yasmine (h) | Lucas (h) | Karim (h) | Sofia (h) | Total (h) | Valorisation (x50EUR) |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|---:|
-| Sprint 0 | 36 | 32 | 36 | 36 | 32 | 172 | 8 600 EUR |
-| Sprint 1 | 36 | 32 | 36 | 36 | 32 | 172 | 8 600 EUR |
-| Sprint 2 | 36 | 32 | 36 | 40 | 36 | 180 | 9 000 EUR |
-| Sprint 3 | 36 | 32 | 40 | 40 | 36 | 184 | 9 200 EUR |
-| Sprint 4 | 32 | 32 | 40 | 32 | 36 | 172 | 8 600 EUR |
-| Sprint 5 | 32 | 36 | 36 | 36 | 32 | 172 | 8 600 EUR |
-| Buffer | 36 | 36 | 36 | 36 | 36 | 180 | 9 000 EUR |
-| **Total** | **244** | **232** | **260** | **256** | **240** | **1 232** | **61 600 EUR** |
+| Sprint | Kays (h) | Samy (h) | Youri (h) | Yassir (h) | Total (h) | Valorisation (x50EUR) |
+|---|:---:|:---:|:---:|:---:|:---:|---:|
+| Sprint 0 | 36 | 68 | 36 | 32 | 172 | 8 600 EUR |
+| Sprint 1 | 36 | 68 | 36 | 32 | 172 | 8 600 EUR |
+| Sprint 2 | 36 | 72 | 36 | 36 | 180 | 9 000 EUR |
+| Sprint 3 | 36 | 72 | 40 | 36 | 184 | 9 200 EUR |
+| Sprint 4 | 32 | 64 | 40 | 36 | 172 | 8 600 EUR |
+| Sprint 5 | 32 | 72 | 36 | 32 | 172 | 8 600 EUR |
+| Buffer | 36 | 72 | 36 | 36 | 180 | 9 000 EUR |
+| **Total** | **244** | **488** | **260** | **240** | **1 232** | **61 600 EUR** |
 
 ---
 
 ## Annexe B -- Comparatif des couts API IA
 
-Ce comparatif permet de justifier le choix d'Anthropic Claude et de preparer le basculement si necessaire.
+Ce comparatif montre pourquoi on a choisi Anthropic Claude, et on a les alternatives sous la main si jamais on doit changer en cours de route.
 
 | Fournisseur | Modele | Cout input/1K tokens | Cout output/1K tokens | Cout par partie TRIBUNAL | Cout par partie DEEP |
 |---|---|---:|---:|---:|---:|

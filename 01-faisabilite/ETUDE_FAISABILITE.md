@@ -6,8 +6,8 @@
 |---|---|
 | **Projet** | MYTHOS |
 | **Version du document** | 1.0 |
-| **Date de rédaction** | 09 février 2026 |
-| **Auteur** | Zahid Ikay — Équipe MYTHOS |
+| **Date de rédaction** | 03 février 2026 |
+| **Auteur** | Kays ZAHIDI — Équipe MYTHOS |
 | **Classification** | RNCP — Bloc 1 : Planification et organisation d'un projet de développement logiciel |
 | **Statut** | En cours de validation |
 
@@ -29,17 +29,17 @@
 
 ## 1. Synthese decisionnelle
 
-Ce document formalise notre démarche d'analyse avant de nous engager sur 14 semaines de développement. En tant que chef de projet et architecte technique, j'ai coordonné cette étude avec l'ensemble de l'équipe pour valider que le projet MYTHOS est réalisable avec nos compétences, notre budget étudiant et nos contraintes de temps. Chaque section reflète nos discussions collectives et nos arbitrages.
+Ce document pose noir sur blanc notre analyse avant de nous lancer sur 14 semaines de dev. En tant que chef de projet et architecte technique, j'ai bossé cette étude avec toute l'équipe pour vérifier que MYTHOS tient la route avec nos compétences, notre budget étudiant et nos contraintes de temps. On a passé une bonne soirée sur Discord à débattre de certains points -- Samy voulait qu'on pousse plus loin l'analyse IA, Youri trouvait qu'on sous-estimait la partie frontend. Au final, chaque section reflète nos discussions et nos choix.
 
 ### 1.1 Contexte du projet
 
-MYTHOS est une plateforme web de jeux narratifs multijoueurs en temps reel ou un moteur d'Intelligence Artificielle assume le role de Maitre du Jeu (Game Master). Le projet s'inscrit dans la convergence de trois tendances majeures : l'explosion de l'IA generative (marche mondial estime a 67 milliards USD en 2025, projection 207 milliards USD en 2030), la croissance du marche du jeu casual et social (+18 % par an depuis 2022), et le renouveau du jeu narratif interactif porte par des titres comme *AI Dungeon*, *Inkle Studios* et le succes des jeux de societe narratifs (*Loup-Garou*, *Mysterium*, *Pandemic Legacy*).
+MYTHOS est une plateforme web de jeux narratifs multijoueurs en temps reel ou un moteur d'Intelligence Artificielle assume le role de Maitre du Jeu (Game Master). Le projet se situe a la croisee de trois tendances majeures : l'explosion de l'IA generative (marche mondial estime a 67 milliards USD en 2025, projection 207 milliards USD en 2030), la croissance du marche du jeu casual et social (+18 % par an depuis 2022), et le renouveau du jeu narratif interactif porte par des titres comme *AI Dungeon*, *Inkle Studios* et le succes des jeux de societe narratifs (*Loup-Garou*, *Mysterium*, *Pandemic Legacy*).
 
 ### 1.2 Proposition de valeur
 
 MYTHOS se differencie par trois piliers :
 
-1. **Moteur universel a scenarios modulaires** : Les scenarios (Scenario Packs) sont de simples fichiers de configuration JSON charges dynamiquement. Le moteur de jeu est agnostique du theme : un meme systeme de regles generique gere les roles, les jauges, les tours et les evenements. Cela permet un deploiement rapide de nouveaux contenus sans toucher au code.
+1. **Moteur universel a scenarios modulaires** : Les scenarios (Scenario Packs) sont de simples fichiers JSON charges dynamiquement. Le moteur de jeu se fiche du theme : un meme systeme de regles generique gere les roles, les jauges, les tours et les evenements. Concretement, ca veut dire qu'on peut sortir de nouveaux contenus sans toucher au code. Yassir a bien resume le truc en reunion : "un scenario c'est juste un fichier de config, pas du dev".
 
 2. **IA Game Master adaptative** : Le Game Master IA ne se contente pas de lire un script. Il narre en temps reel, arbitre les actions des joueurs, gere les PNJ, introduit des rebondissements contextuels et adapte le rythme en fonction de l'engagement mesure des joueurs (temps de reponse, frequence d'interactions).
 
@@ -55,7 +55,7 @@ MYTHOS se differencie par trois piliers :
 | Critere | Evaluation | Niveau de confiance |
 |---|---|---|
 | Faisabilite technique | Realisable avec contraintes identifiees | Eleve |
-| Faisabilite organisationnelle | Realisable sur 14 semaines avec equipe de 5 | Moyen-Eleve |
+| Faisabilite organisationnelle | Realisable sur 14 semaines avec equipe de 4 | Moyen-Eleve |
 | Faisabilite financiere | Budget maitrise (infrastructure cloud + API IA) | Moyen |
 | Risque global | Modere — risques principaux identifies et mitigables | Moyen-Eleve |
 | **Recommandation** | **GO conditionnel — sous reserve de validation du POC IA (semaine 2)** | — |
@@ -242,7 +242,7 @@ En tant que nouveau produit, sur un horizon de 18 mois post-lancement, avec une 
 
 ### 3.4 Avantage concurrentiel durable
 
-1. **Moteur universel + Scenario Packs** : La capacite a deployer de nouveaux scenarios via de simples fichiers JSON constitue un avantage structurel en termes de vitesse de contenu. Aucun concurrent actuel ne propose cette architecture modulaire.
+1. **Moteur universel + Scenario Packs** : Pouvoir deployer de nouveaux scenarios via de simples fichiers JSON, c'est un vrai avantage en termes de vitesse de contenu. Aucun concurrent actuel ne propose cette architecture modulaire.
 
 2. **Format "sweet spot"** : A mi-chemin entre le party game casual (Jackbox) et le JdR profond (Roll20), MYTHOS occupe un creneau vacant.
 
@@ -298,35 +298,36 @@ En tant que nouveau produit, sur un horizon de 18 mois post-lancement, avec une 
 
 ### 4.3 Matrice de competences de l'equipe
 
-L'equipe est composee de 5 membres. Chaque competence est evaluee sur une echelle de 1 a 5 :
+L'equipe est composee de 4 membres. Chaque competence est evaluee sur une echelle de 1 a 5 :
 - 1 = Debutant (necessite formation)
 - 2 = Notions de base
 - 3 = Competent (autonome sur des taches standard)
 - 4 = Avance (capable de concevoir des solutions complexes)
 - 5 = Expert (reference technique, capable de former les autres)
 
-| Competence | Zahid (PO / Architecte) | Yasmine (SM / Frontend) | Lucas (Frontend) | Karim (IA / Temps réel) | Sofia (UX/UI + DevOps) | Niveau moyen equipe | Seuil requis | Ecart |
-|---|---|---|---|---|---|---|---|---|
-| React / Next.js | 4 | 4 | 2 | 2 | 3 | 3,0 | 3 | 0,0 |
-| Node.js / NestJS | 4 | 2 | 4 | 3 | 1 | 2,8 | 3 | -0,2 |
-| WebSocket / Socket.io | 3 | 2 | 3 | 1 | 1 | 2,0 | 3 | **-1,0** |
-| PostgreSQL / Supabase | 3 | 1 | 4 | 3 | 1 | 2,4 | 3 | -0,6 |
-| Redis | 2 | 1 | 3 | 2 | 1 | 1,8 | 2 | -0,2 |
-| API LLM (OpenAI, Anthropic) | 3 | 1 | 2 | 4 | 1 | 2,2 | 3 | -0,8 |
-| Prompt Engineering | 2 | 1 | 1 | 4 | 2 | 2,0 | 3 | **-1,0** |
-| UI/UX Design | 2 | 3 | 1 | 1 | 5 | 2,4 | 3 | -0,6 |
-| DevOps / CI-CD | 3 | 2 | 3 | 2 | 1 | 2,2 | 2 | +0,2 |
-| Tests (unitaires, integration) | 3 | 2 | 3 | 2 | 1 | 2,2 | 3 | -0,8 |
-| Gestion de projet Agile | 4 | 2 | 2 | 2 | 3 | 2,6 | 3 | -0,4 |
+| Competence | Kays (PO / Architecte) | Samy (SM / Backend + IA) | Youri (Frontend) | Yassir (Frontend / UX + DevOps) | Niveau moyen equipe | Seuil requis | Ecart |
+|---|---|---|---|---|---|---|---|
+| React / Next.js | 3 | 2 | 4 | 3 | 3,0 | 3 | 0,0 |
+| Node.js / NestJS | 2 | 4 | 1 | 2 | 2,3 | 3 | -0,7 |
+| WebSocket / Socket.io | 2 | 3 | 2 | 3 | 2,5 | 3 | -0,5 |
+| PostgreSQL / Prisma | 2 | 4 | 1 | 2 | 2,3 | 3 | -0,7 |
+| Redis | 2 | 3 | 1 | 2 | 2,0 | 2 | 0,0 |
+| API LLM (Anthropic Claude) | 2 | 3 | 1 | 2 | 2,0 | 3 | **-1,0** |
+| Prompt Engineering | 3 | 3 | 1 | 2 | 2,3 | 3 | -0,7 |
+| UI/UX Design | 2 | 1 | 3 | 4 | 2,5 | 3 | -0,5 |
+| DevOps / CI-CD | 3 | 2 | 1 | 4 | 2,5 | 2 | +0,5 |
+| Tests (unitaires, integration) | 3 | 3 | 2 | 2 | 2,5 | 3 | -0,5 |
+| Gestion de projet Agile | 4 | 4 | 2 | 2 | 3,0 | 3 | 0,0 |
 
 **Analyse des ecarts critiques :**
 
 | Competence deficitaire | Ecart | Plan de mitigation |
 |---|---|---|
-| WebSocket / Socket.io | -1,0 | Formation acceleree Yasmine + Lucas en semaine 1, POC technique dedie |
-| Prompt Engineering | -1,0 | Karim forme l'equipe, ressources externes (guides OpenAI), sessions de pair-programming |
-| API LLM | -0,8 | Karim referent, documentation interne des patterns d'appel |
-| Tests | -0,8 | Mise en place de templates de tests des le sprint 1, formation TDD en semaine 2 |
+| API LLM (Anthropic Claude) | -1,0 | Samy referent (niveau 3), documentation interne des patterns d'appel, sessions de pair-programming |
+| Node.js / NestJS | -0,7 | Samy referent (niveau 4), Kays en backup (niveau 2), pair programming et code review systematique |
+| PostgreSQL / Prisma | -0,7 | Samy referent (niveau 4), formation Prisma en S0, documentation schema BDD |
+| Prompt Engineering | -0,7 | Kays et Samy co-referents (niveau 3), ressources externes (guides Anthropic), iterations collectives |
+| Tests | -0,5 | Mise en place de templates de tests des le sprint 1, formation TDD en semaine 2 |
 
 ### 4.4 Analyse des dependances techniques
 
@@ -363,13 +364,13 @@ L'equipe est composee de 5 membres. Chaque competence est evaluee sur une echell
 
 ### 4.5 Plan de POC (Proof of Concept)
 
-Le POC est prevu en **semaine 1 et semaine 2** et vise a valider les 3 incertitudes techniques majeures avant d'engager le developpement complet.
+Le POC est prevu en **semaine 1 et semaine 2** pour valider les 3 points techniques qui nous font le plus flipper avant de se lancer a fond dans le dev.
 
 | POC | Objectif | Critere de succes | Duree | Responsable |
 |---|---|---|---|---|
-| **POC-1 : IA Game Master** | Valider qu'un LLM peut generer une narration coherente et arbitrer des actions de joueurs dans un contexte de jeu structure | Narration coherente sur 10 tours consecutifs, respect des regles du scenario, temps de reponse < 3s dans 90% des cas | 3 jours | Karim (IA / Temps réel) |
-| **POC-2 : Temps reel multi-joueurs** | Valider la synchronisation d'etat de jeu entre 4+ clients via WebSocket | 4 clients synchronises avec latence < 200ms, gestion de la deconnexion/reconnexion, pas de desynchronisation d'etat | 2 jours | Lucas (Frontend) |
-| **POC-3 : Scenario Pack Loader** | Valider le chargement dynamique d'un fichier JSON de scenario et l'instanciation d'une partie avec des regles configurees | Chargement et validation d'un JSON de scenario, instanciation correcte des roles, jauges et phases de jeu | 2 jours | Zahid (PO / Architecte) |
+| **POC-1 : IA Game Master** | Valider qu'un LLM peut generer une narration coherente et arbitrer des actions de joueurs dans un contexte de jeu structure | Narration coherente sur 10 tours consecutifs, respect des regles du scenario, temps de reponse < 3s dans 90% des cas | 3 jours | Samy (IA / Temps réel) |
+| **POC-2 : Temps reel multi-joueurs** | Valider la synchronisation d'etat de jeu entre 4+ clients via WebSocket | 4 clients synchronises avec latence < 200ms, gestion de la deconnexion/reconnexion, pas de desynchronisation d'etat | 2 jours | Youri (Frontend) |
+| **POC-3 : Scenario Pack Loader** | Valider le chargement dynamique d'un fichier JSON de scenario et l'instanciation d'une partie avec des regles configurees | Chargement et validation d'un JSON de scenario, instanciation correcte des roles, jauges et phases de jeu | 2 jours | Kays (PO / Architecte) |
 
 **Decision GO/NO-GO technique prevue en fin de semaine 2.**
 
@@ -386,33 +387,32 @@ Si un POC echoue :
 
 | Membre | Role principal | Roles secondaires | Disponibilite hebdomadaire |
 |---|---|---|---|
-| **Zahid** | PO / Architecte technique | Architecture, Code review, Integration, Coordination | 25h/semaine |
-| **Yasmine** | SM / Developpeur Frontend | Integration UI, Tests frontend, Suivi Agile | 20h/semaine |
-| **Lucas** | Developpeur Frontend | API, Base de donnees, WebSocket | 20h/semaine |
-| **Karim** | Developpeur IA / Temps reel | Service IA, Tests IA, Prompt Engineering | 20h/semaine |
-| **Sofia** | Designer UX/UI + DevOps | Maquettes, Specs fonctionnelles, CI/CD, Tests utilisateurs | 18h/semaine |
+| **Kays ZAHIDI** | PO / Chef de projet / Architecte | Architecture, Code review, Integration, Coordination, Decisions techniques | 25h/semaine |
+| **Samy ZEROUALI** | Scrum Master / Dev Backend + IA | Backend NestJS, Service IA, Prompt Engineering, WebSocket, Suivi Agile | 28h/semaine |
+| **Youri EMMANUEL** | Developpeur Frontend | Interface React/Next.js, Integration UI, Tests frontend | 22h/semaine |
+| **Yassir SABBAR** | Dev Frontend / UX-UI + DevOps | Maquettes Figma, CI/CD, Deploiement, Accessibilite, Design system | 22h/semaine |
 
-**Disponibilite totale equipe : 103 heures/semaine soit environ 14,7 jours-homme/semaine.**
+**Disponibilite totale equipe : 97 heures/semaine soit environ 13,9 jours-homme/semaine.**
 
 ### 5.2 Matrice RACI
 
-| Activite | Zahid (PO / Architecte) | Yasmine (SM / Frontend) | Lucas (Frontend) | Karim (IA / Temps réel) | Sofia (UX/UI + DevOps) |
-|---|---|---|---|---|---|
-| Definition du backlog produit | C | I | I | I | **R/A** |
-| Architecture technique globale | **R/A** | C | C | C | I |
-| Conception UX/UI | C | C | I | I | **R/A** |
-| Developpement frontend | A | **R** | I | I | C |
-| Developpement backend / API | A | I | **R** | I | I |
-| Developpement moteur de jeu | **R** | I | C | I | I |
-| Developpement service IA | A | I | C | **R** | I |
-| Conception Scenario Packs (JSON) | C | I | I | C | **R/A** |
-| Integration WebSocket temps reel | A | C | **R** | I | I |
-| Tests unitaires et integration | **A** | R | R | R | I |
-| Tests utilisateurs | I | C | I | I | **R/A** |
-| CI/CD et deploiement | **R/A** | I | C | I | I |
-| Documentation technique | **A** | R | R | R | I |
-| Revue de sprint / retrospective | **R** | C | C | C | C |
-| Communication projet (RNCP) | **R/A** | C | C | C | C |
+| Activite | Kays (PO / Architecte) | Samy (SM / Backend + IA) | Youri (Frontend) | Yassir (Frontend / UX + DevOps) |
+|---|---|---|---|---|
+| Definition du backlog produit | **R/A** | C | I | C |
+| Architecture technique globale | **R/A** | C | I | I |
+| Conception UX/UI | C | I | C | **R/A** |
+| Developpement frontend | A | I | **R** | R |
+| Developpement backend / API | A | **R** | I | I |
+| Developpement moteur de jeu | **R** | C | I | I |
+| Developpement service IA | A | **R** | I | I |
+| Conception Scenario Packs (JSON) | **R/A** | C | I | C |
+| Integration WebSocket temps reel | A | **R** | C | I |
+| Tests unitaires et integration | **A** | R | R | R |
+| Tests utilisateurs | I | I | C | **R/A** |
+| CI/CD et deploiement | A | I | I | **R** |
+| Documentation technique | **A** | R | R | R |
+| Revue de sprint / retrospective | C | **R** | C | C |
+| Communication projet (RNCP) | **R/A** | C | C | C |
 
 *Legende : **R** = Responsible (realise), **A** = Accountable (valide/rend des comptes), **C** = Consulted, **I** = Informed*
 
@@ -429,20 +429,20 @@ Si un POC echoue :
 
 ### 5.4 Charge de travail estimee par sprint (en jours-homme)
 
-| Sprint | Semaines | Objectif principal | Yasmine (Front) | Lucas (Front) | Karim (IA) | Zahid (Archi) | Sofia (UX) | Total j/h |
-|---|---|---|---|---|---|---|---|---|
-| Sprint 0 | Sem 1-2 | Setup + POC + Architecture | 4 | 6 | 6 | 8 | 5 | **29** |
-| Sprint 1 | Sem 3-4 | Moteur de jeu v1/v2 + Auth + WebSocket | 5 | 8 | 4 | 8 | 4 | **29** |
-| Sprint 2 | Sem 5-6 | Interface joueur + Lobby + IA GM v1 + TRIBUNAL | 6 | 5 | 6 | 6 | 6 | **29** |
-| Sprint 3 | Sem 7-8 | TRIBUNAL complet + DEEP scenario + Jauges UI | 7 | 6 | 6 | 5 | 5 | **29** |
-| Sprint 4 | Sem 9-10 | Integration + Bug fixes + Tests utilisateurs | 6 | 5 | 5 | 6 | 6 | **28** |
-| Sprint 5 | Sem 11-12 | Performance + Optimisation IA + Polish UI | 6 | 5 | 5 | 5 | 6 | **27** |
-| Sprint 6 / Buffer | Sem 13-14 | Deploiement production + Stabilisation + Doc RNCP | 4 | 5 | 4 | 7 | 5 | **25** |
-| | | **TOTAL** | **38** | **40** | **36** | **45** | **37** | **196** |
+| Sprint | Semaines | Objectif principal | Kays (Archi) | Samy (SM/Back/IA) | Youri (Front) | Yassir (UX/DevOps) | Total j/h |
+|---|---|---|---|---|---|---|---|
+| Sprint 0 | Sem 1-2 | Setup + POC + Architecture | 8 | 10 | 7 | 5 | **30** |
+| Sprint 1 | Sem 3-4 | Moteur de jeu + Auth + WebSocket | 8 | 9 | 8 | 5 | **30** |
+| Sprint 2 | Sem 5-6 | Interface joueur + Lobby + IA GM v1 + TRIBUNAL | 6 | 10 | 6 | 6 | **28** |
+| Sprint 3 | Sem 7-8 | TRIBUNAL complet + DEEP + Jauges UI | 5 | 11 | 7 | 6 | **29** |
+| Sprint 4 | Sem 9-10 | Integration + Bug fixes + Tests utilisateurs | 6 | 9 | 6 | 6 | **27** |
+| Sprint 5 | Sem 11-12 | Performance + Optimisation IA + Polish UI | 6 | 9 | 6 | 6 | **27** |
+| Sprint 6 / Buffer | Sem 13-14 | Deploiement production + Stabilisation + Doc RNCP | 7 | 7 | 6 | 5 | **25** |
+| | | **TOTAL** | **46** | **65** | **46** | **39** | **196** |
 
 **Charge totale estimee : 196 jours-homme sur 7 sprints de 2 semaines (14 semaines).**
-**Capacite theorique : 14 semaines x 14,7 j/h = 205,8 j/h.**
-**Marge : 9,8 j/h soit 5 % — marge faible, vigilance requise sur le planning.**
+**Capacite theorique : 14 semaines x 13,9 j/h = 194,6 j/h.**
+**Marge : faible — Samy est clairement le plus charge avec son double role SM + Backend/IA. On va devoir surveiller ca de pres, quitte a redistribuer des taches vers Youri si ca devient trop.**
 
 ### 5.5 Calendrier academique et jalons
 
@@ -464,7 +464,7 @@ Si un POC echoue :
 | Hypothese | Valeur | Source/Justification |
 |---|---|---|
 | Duree du projet | 14 semaines | Contrainte academique |
-| Taille de l'equipe | 5 personnes | Contrainte academique |
+| Taille de l'equipe | 4 personnes | Contrainte academique |
 | Cout du travail etudiant | 0 EUR (projet academique) | Le travail de l'equipe n'est pas facture |
 | Cout equivalent marche (pour reference) | 350 EUR/jour-homme | Tarif junior freelance Paris |
 | Budget disponible (cash) | 500 EUR maximum | Contrainte realiste pour un projet etudiant |
@@ -536,7 +536,7 @@ A titre indicatif, si le travail de l'equipe etait facture au tarif junior du ma
 | Jours-homme de developpement | 196 j/h | 350 EUR/j | 68 600 EUR |
 | **Valorisation totale du projet** | | | **68 600 EUR** |
 
-Cette valorisation est importante pour la presentation RNCP, car elle traduit l'ampleur reelle du projet en termes d'effort.
+Ce chiffre est important pour la presentation RNCP : ca montre l'ampleur reelle du projet en termes d'effort.
 
 ### 6.4 Analyse cout/benefice post-lancement
 
@@ -642,7 +642,7 @@ Si l'on inclut les couts mensuels post-lancement (infrastructure + API IA = ~280
 
 ### 8.1 Criteres de decision ponderes
 
-Chaque critere est evalue sur une echelle de 1 (insuffisant) a 5 (excellent). La ponderation reflete l'importance relative du critere pour la reussite du projet.
+Chaque critere est note de 1 (insuffisant) a 5 (excellent). Les poids traduisent l'importance de chaque critere pour la reussite du projet. On a debattu un bon moment en equipe sur les ponderations -- Samy trouvait qu'on devait mettre plus de poids sur la technique, mais on a finalement decide de garder un equilibre.
 
 | # | Critere | Poids (%) | Note (1-5) | Score pondere |
 |---|---|---|---|---|
@@ -684,11 +684,11 @@ Chaque critere est evalue sur une echelle de 1 (insuffisant) a 5 (excellent). La
 
 ### 9.1 Synthese
 
-L'etude de faisabilite du projet MYTHOS demontre que le projet est **realisable sur le plan technique, organisationnel et financier**, avec des risques identifies et des plans de mitigation definis. Le positionnement produit (jeu narratif IA casual multijoueur, sessions courtes) repond a un besoin reel du marche, dans un creneau peu concurrence et en forte croissance.
+Au bout de cette etude, on est convaincus que MYTHOS est **faisable techniquement, organisationnellement et financierement**, avec des risques identifies et des plans de mitigation en place. Le positionnement (jeu narratif IA casual multijoueur, sessions courtes) repond a un vrai besoin du marche, sur un creneau peu concurrence et en forte croissance.
 
 Les principaux points d'attention sont :
 - La **dependance aux API IA tierces** (cout et disponibilite), mitigee par le double sourcing et le caching.
-- La **marge de planning reduite** (5 %), qui necessite une rigueur de suivi Agile et une capacite de priorisation rapide (coupe de fonctionnalites "Should Have" si necessaire).
+- La **marge de planning reduite** (5 %), qui demande un suivi Agile serieux et la capacite de prioriser vite (couper des fonctionnalites "Should Have" si besoin).
 - La **montee en competence technique** requise sur WebSocket et Prompt Engineering, planifiee des la semaine 1.
 
 ### 9.2 Recommandations
@@ -714,4 +714,4 @@ Les principaux points d'attention sont :
 ---
 
 *Document redige dans le cadre du Bloc 1 RNCP — Planification et organisation d'un projet de developpement logiciel.*
-*Derniere mise a jour : 09 fevrier 2026.*
+*Derniere mise a jour : 03 fevrier 2026.*

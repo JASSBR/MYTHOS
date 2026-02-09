@@ -6,9 +6,9 @@
 | ----------------- | ------------------------------------------- |
 | **Projet**        | MYTHOS                                      |
 | **Version**       | 1.0                                         |
-| **Date**          | 09 fevrier 2026                             |
+| **Date**          | 06 fevrier 2026                             |
 | **Responsable**   | Chef de projet MYTHOS                       |
-| **Equipe**        | 4-5 personnes                               |
+| **Equipe**        | 4 personnes — Kays, Samy, Youri, Yassir     |
 | **Duree projet**  | 14 semaines                                 |
 
 ---
@@ -31,16 +31,16 @@
 
 ### 1.1 Alignement avec les objectifs projet
 
-Le plan de veille MYTHOS est directement lie aux objectifs strategiques du projet. Chaque objectif de veille alimente une decision projet concrete.
+Le plan de veille MYTHOS est directement lie aux objectifs du projet. Chaque objectif de veille alimente une decision concrete. On s'est vite rendu compte en debut de projet que sans veille organisee, on risquait de passer a cote de trucs importants -- Samy a par exemple repere un changement de pricing de l'API OpenAI trois jours apres l'annonce grace a sa veille RSS.
 
 | # | Objectif projet                                                  | Objectif de veille associe                                                     | Priorite  |
 | - | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ | --------- |
 | 1 | Proposer une experience narrative immersive pilotee par IA       | Suivre les avancees des LLM (Claude, GPT, Llama) en generation narrative       | Critique  |
-| 2 | Garantir une experience temps reel fluide (2-8 joueurs)          | Evaluer les technologies WebSocket, WebRTC, CRDT pour le multijoueur           | Critique  |
+| 2 | Assurer une experience temps reel fluide (2-8 joueurs)           | Evaluer les technologies WebSocket, WebRTC, CRDT pour le multijoueur           | Critique  |
 | 3 | Lancer 2 scenarios (TRIBUNAL, DEEP) en 14 semaines              | Identifier les patterns de game design narratif et les formats JSON de config  | Haute     |
 | 4 | Cibler les joueurs casual (sessions 15-25 min)                   | Analyser le marche du jeu casual/social et les attentes UX                     | Haute     |
 | 5 | Construire un moteur de jeu universel (6 phases)                 | Surveiller les architectures de moteurs de jeu modulaires                      | Moyenne   |
-| 6 | Assurer l'eco-conception et l'accessibilite                      | Suivre les normes RGAA/WCAG, les bonnes pratiques GreenIT et le RGESN         | Moyenne   |
+| 6 | Integrer l'eco-conception et l'accessibilite                     | Suivre les normes RGAA/WCAG, les bonnes pratiques GreenIT et le RGESN         | Moyenne   |
 | 7 | Preparer la scalabilite post-MVP                                 | Anticiper les evolutions d'infrastructure (serverless, edge computing)         | Basse     |
 
 ### 1.2 Resultats attendus de la veille
@@ -99,7 +99,7 @@ Le plan de veille MYTHOS est directement lie aux objectifs strategiques du proje
 
 ### Axe 3 : Marche du jeu narratif et social
 
-> Comprendre le marche, les concurrents et les attentes des joueurs casual pour positionner MYTHOS de maniere unique.
+> Comprendre le marche, les concurrents et ce que veulent les joueurs casual pour bien positionner MYTHOS.
 
 | Element          | Detail                                                                                                                                                    |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -121,7 +121,7 @@ Le plan de veille MYTHOS est directement lie aux objectifs strategiques du proje
 
 ### Axe 4 : Eco-conception et accessibilite
 
-> Integrer des la conception les principes d'eco-conception numerique et d'accessibilite universelle.
+> Penser eco-conception et accessibilite des le depart, pas en mode rattrapage a la fin. Yassir tient beaucoup a cet axe.
 
 | Element          | Detail                                                                                                                                                    |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -536,9 +536,9 @@ apparu ? Qui est derriere ? Quelles sont les caracteristiques principales ?]
 | Revue mensuelle + rapport                 | 2h              | 6h (3 revues)        | Chef de projet       |
 | Discussion/partage equipe (stand-up)      | 0h30            | 7h                   | Toute l'equipe       |
 | **Total par personne**                    | **~1h30/sem**   | **~21h total**       |                      |
-| **Total equipe (5 personnes)**            | **~6h/sem**     | **~90h total**       |                      |
+| **Total equipe (4 personnes)**            | **~5h/sem**     | **~70h total**       |                      |
 
-> **Soit environ 6h/semaine pour toute l'equipe, representant ~3.75% du temps total disponible** (5 personnes x 35h x 14 semaines = 2 450h).
+> **Soit environ 5h/semaine pour toute l'equipe, representant ~3.6% du temps total disponible** (4 personnes x 24h moy. x 14 semaines = 1 344h).
 
 ### 9.2 Budget financier
 
@@ -554,7 +554,7 @@ apparu ? Qui est derriere ? Quelles sont les caracteristiques principales ?]
 | **Total evenements (optionnel)**       |                     | **~420 EUR**          |                                            |
 | **Total general**                      |                     | **~456 EUR**          |                                            |
 
-> **Note** : La majorite des outils de veille utilises sont gratuits ou proposent des plans gratuits suffisants pour nos besoins. Le poste principal est le temps humain (~90h equipe).
+> **Note** : La plupart des outils de veille qu'on utilise sont gratuits ou ont des plans gratuits qui nous suffisent. Le vrai cout, c'est le temps qu'on y passe (~90h equipe sur le projet). On a debattu 20 minutes en reunion pour savoir si Feedly Pro valait le coup a 6 EUR/mois -- au final oui, ca fait gagner du temps sur l'agregation RSS.
 
 ### 9.3 Retour sur investissement attendu
 
@@ -563,7 +563,7 @@ apparu ? Qui est derriere ? Quelles sont les caracteristiques principales ?]
 | Eviter un mauvais choix technologique (cout de refactoring)         | 40-80h de dev economisees                   |
 | Identifier une opportunite de marche (pivot rapide)                 | Avantage concurrentiel mesurable            |
 | Optimiser les couts API Claude (prompts, cache, modeles)            | 20-40% d'economie sur les couts API         |
-| Garantir la conformite accessibilite des le depart                  | Eviter un audit correctif post-lancement    |
+| S'assurer de la conformite accessibilite des le depart              | Eviter un audit correctif post-lancement    |
 | Anticiper les evolutions technologiques (Next.js, NestJS, Redis)    | Reduction de la dette technique             |
 
 ---
@@ -614,4 +614,4 @@ apparu ? Qui est derriere ? Quelles sont les caracteristiques principales ?]
 
 ---
 
-*Document de reference -- A reviser mensuellement ou lors de changements majeurs dans le perimetre du projet.*
+*Document de reference -- A mettre a jour tous les mois ou quand le perimetre du projet change.*

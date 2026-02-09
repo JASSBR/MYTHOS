@@ -2,11 +2,11 @@
 
 **Projet** : MYTHOS - Plateforme web de jeux narratifs multijoueurs avec MJ IA
 **Version** : 1.0
-**Date de creation** : 09/02/2026
+**Date de creation** : 04/03/2026
 **Methodologie** : Scrum (7 sprints de 2 semaines)
 **Perimetre** : 47 tickets | 196 story points
 
-Les tableaux de bord constituent notre outil de pilotage operationnel. Yasmine met a jour le dashboard sprint a chaque Daily Standup, et Zahid presente le dashboard mensuel lors des Sprint Reviews. Les templates ci-dessous sont utilises tels quels dans notre espace GitHub Projects.
+Les tableaux de bord sont notre outil de pilotage operationnel au quotidien. Samy met a jour le dashboard sprint a chaque Daily Standup, et Kays presente le dashboard mensuel lors des Sprint Reviews. Les templates ci-dessous sont utilises tels quels dans notre espace GitHub Projects. On les a iteres plusieurs fois avant d'arriver a cette version -- les premieres versions avaient trop de metriques et personne ne les lisait en entier.
 
 ---
 
@@ -24,8 +24,8 @@ Les tableaux de bord constituent notre outil de pilotage operationnel. Yasmine m
 ## 1. Dashboard Sprint
 
 > **Usage** : A completer a la fin de chaque sprint (toutes les 2 semaines), avant la Sprint Review.
-> **Responsable** : Yasmine (SM)
-> **Destinataires** : Equipe, Zahid (PO), parties prenantes
+> **Responsable** : Samy (SM)
+> **Destinataires** : Equipe, Kays (PO), parties prenantes
 
 ---
 
@@ -232,7 +232,7 @@ Story Points restants
 ## 2. Dashboard Mensuel
 
 > **Usage** : A completer a la fin de chaque mois (couvre environ 2 sprints).
-> **Responsable** : Zahid (PO) / Yasmine (SM)
+> **Responsable** : Kays (PO) / Samy (SM)
 > **Destinataires** : Equipe, encadrant, parties prenantes
 
 ---
@@ -421,7 +421,7 @@ Impact
 ## 3. Template de compte-rendu de Sprint Review
 
 > **Usage** : Redige apres chaque Sprint Review (ceremonie Scrum de fin de sprint).
-> **Responsable** : Zahid (PO) (avec support de Yasmine (SM))
+> **Responsable** : Kays (PO) (avec support de Samy (SM))
 > **Duree de la ceremonie** : 1h maximum
 
 ---
@@ -436,11 +436,11 @@ Impact
 
 | Nom | Role | Present |
 |-----|------|---------|
-| Zahid | PO / Architecte | Oui/Non |
-| Yasmine | SM / Frontend | Oui/Non |
-| Lucas | Frontend | Oui/Non |
-| Karim | IA / Temps reel | Oui/Non |
-| Sofia | UX / DevOps | Oui/Non |
+| Kays | PO / Architecte | Oui/Non |
+| Samy | SM / Frontend | Oui/Non |
+| Youri | Frontend | Oui/Non |
+| Samy | IA / Temps reel | Oui/Non |
+| Yassir | UX / DevOps | Oui/Non |
 | [Encadrant] | Partie prenante / Tuteur | Oui/Non |
 
 ---
@@ -525,9 +525,11 @@ Impact
 ## 4. Template de compte-rendu de Retrospective
 
 > **Usage** : Redige apres chaque Sprint Retrospective (ceremonie Scrum interne a l'equipe).
-> **Responsable** : Yasmine (SM)
+> **Responsable** : Samy (SM)
 > **Duree de la ceremonie** : 45 min - 1h
 > **Format utilise** : Start / Stop / Continue
+
+Le template de retro a ete teste en vraie reunion avant d'etre valide. On a fait un "dry run" en Sprint 0 avec des donnees fictives pour voir si le format Start/Stop/Continue fonctionnait bien pour nous -- ca a permis d'ajuster la duree de chaque etape.
 
 ---
 
@@ -535,17 +537,17 @@ Impact
 
 **Date** : [JJ/MM/AAAA]
 **Heure** : [HH:MM] - [HH:MM]
-**Facilitateur** : Yasmine (SM)
+**Facilitateur** : Samy (SM)
 
 **Participants** :
 
 | Nom | Role | Present |
 |-----|------|---------|
-| Yasmine | SM / Frontend | Oui |
-| Zahid | PO / Architecte | Oui/Non |
-| Lucas | Frontend | Oui/Non |
-| Karim | IA / Temps reel | Oui/Non |
-| Sofia | UX / DevOps | Oui/Non |
+| Samy | SM / Frontend | Oui |
+| Kays | PO / Architecte | Oui/Non |
+| Youri | Frontend | Oui/Non |
+| Samy | IA / Temps reel | Oui/Non |
+| Yassir | UX / DevOps | Oui/Non |
 
 **Note** : La retrospective est un moment de l'equipe. Les parties prenantes externes ne participent pas.
 
@@ -610,7 +612,7 @@ Impact
 | 2 | | | | |
 | 3 | | | | |
 
-**Maximum 3 actions par retrospective** pour garantir qu'elles soient reellement mises en oeuvre.
+**Maximum 3 actions par retrospective** pour s'assurer qu'elles soient reellement mises en oeuvre.
 
 ---
 
@@ -625,7 +627,7 @@ Impact
 ## 5. Template de rapport d'avancement hebdomadaire
 
 > **Usage** : Rapport concis envoye chaque vendredi a l'encadrant/tuteur.
-> **Responsable** : Zahid (PO)
+> **Responsable** : Kays (PO)
 > **Format** : Email ou document partage
 > **Duree de redaction** : 15-20 minutes maximum
 
@@ -753,13 +755,13 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 
 | # | Ticket | Type | SP | Statut | Assignee | Remarque |
 |---|--------|------|----|--------|----------|----------|
-| 1 | MYTH-001 Setup du projet (monorepo, CI/CD) | Tech | 5 | Done | Sofia | Monorepo Next.js + NestJS 10+ configure |
-| 2 | MYTH-002 Modele de donnees (schema BDD) | Tech | 3 | Done | Zahid | PostgreSQL + Prisma ORM |
-| 3 | MYTH-003 Inscription / Connexion (auth JWT) | Feature | 5 | Done | Zahid | bcrypt + JWT, tests unitaires OK |
-| 4 | MYTH-004 Page d'accueil (landing page) | Feature | 3 | Done | Lucas | Design responsive, Lighthouse 92 |
-| 5 | MYTH-005 Page de connexion/inscription (UI) | Feature | 3 | Done | Yasmine | Formulaires accessibles, validation |
-| 6 | MYTH-006 Configuration UptimeRobot + monitoring | Tech | 2 | Done | Sofia | 4 moniteurs configures |
-| 7 | MYTH-007 Premier appel API IA (prototype) | Feature | 5 | In Progress | Karim | Prompt systeme OK, parsing a finaliser |
+| 1 | MYTH-001 Setup du projet (monorepo, CI/CD) | Tech | 5 | Done | Yassir | Monorepo Next.js + NestJS 10+ configure |
+| 2 | MYTH-002 Modele de donnees (schema BDD) | Tech | 3 | Done | Kays | PostgreSQL + Prisma ORM |
+| 3 | MYTH-003 Inscription / Connexion (auth JWT) | Feature | 5 | Done | Kays | bcrypt + JWT, tests unitaires OK |
+| 4 | MYTH-004 Page d'accueil (landing page) | Feature | 3 | Done | Youri | Design responsive, Lighthouse 92 |
+| 5 | MYTH-005 Page de connexion/inscription (UI) | Feature | 3 | Done | Samy | Formulaires accessibles, validation |
+| 6 | MYTH-006 Configuration UptimeRobot + monitoring | Tech | 2 | Done | Yassir | 4 moniteurs configures |
+| 7 | MYTH-007 Premier appel API IA (prototype) | Feature | 5 | In Progress | Samy | Prompt systeme OK, parsing a finaliser |
 
 **Total SP planifies** : 26 | **Total SP livres** : 21 + 3 SP partiels = **24 SP** | **Taux** : 85.7% (6/7 tickets)
 
@@ -840,9 +842,9 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 
 | # | Risque | Probabilite | Impact | Criticite | Action de mitigation | Responsable | Echeance | Statut |
 |---|--------|------------|--------|-----------|---------------------|-------------|----------|--------|
-| R1 | Temps de reponse IA trop lent pour une experience de jeu fluide | Moyen | Eleve | Eleve | Implementer le streaming de reponses IA + indicateur de chargement | Karim | Sprint 3 | Ouvert |
-| R2 | Budget API IA depasse si utilisation intensive en dev | Moyen | Moyen | Moyen | Utiliser des mocks en dev, limiter les appels reels aux tests d'integration | Zahid | Sprint 2 | Ouvert |
-| R3 | Complexite du parsing des reponses IA sous-estimee | Eleve | Moyen | Eleve | Definir un schema JSON strict, ajouter validation + fallback | Karim | Sprint 2 | En cours |
+| R1 | Temps de reponse IA trop lent pour une experience de jeu fluide | Moyen | Eleve | Eleve | Implementer le streaming de reponses IA + indicateur de chargement | Samy | Sprint 3 | Ouvert |
+| R2 | Budget API IA depasse si utilisation intensive en dev | Moyen | Moyen | Moyen | Utiliser des mocks en dev, limiter les appels reels aux tests d'integration | Kays | Sprint 2 | Ouvert |
+| R3 | Complexite du parsing des reponses IA sous-estimee | Eleve | Moyen | Eleve | Definir un schema JSON strict, ajouter validation + fallback | Samy | Sprint 2 | En cours |
 
 ---
 
@@ -881,9 +883,9 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 
 | # | Decision | Contexte | Impact | Prise par | Date |
 |---|----------|----------|--------|-----------|------|
-| 1 | Utiliser Prisma comme ORM | Plusieurs options evaluees, Prisma offre le meilleur DX avec TypeScript | Standard technique pour tout le projet | Zahid | 11/03 |
-| 2 | Format JSON structure pour les reponses IA | Le format texte libre est trop imprevisible pour le parsing | Architecture du service IA | Karim | 14/03 |
-| 3 | Deploiement sur Vercel (frontend) + Railway (backend) | Tiers gratuits suffisants pour le MVP, migration possible ulterieurement | Infrastructure et budget | Zahid | 10/03 |
+| 1 | Utiliser Prisma comme ORM | Plusieurs options evaluees, Prisma offre le meilleur DX avec TypeScript | Standard technique pour tout le projet | Kays | 11/03 |
+| 2 | Format JSON structure pour les reponses IA | Le format texte libre est trop imprevisible pour le parsing | Architecture du service IA | Samy | 14/03 |
+| 3 | Deploiement sur Vercel (frontend) + Railway (backend) | Tiers gratuits suffisants pour le MVP, migration possible ulterieurement | Infrastructure et budget | Kays | 10/03 |
 
 ---
 
@@ -891,11 +893,11 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 
 | # | Action | Responsable | Priorite | Echeance |
 |---|--------|-------------|----------|----------|
-| 1 | Finaliser le parsing IA (MYTH-007) et valider le format JSON | Karim | Haute | Debut Sprint 2 |
-| 2 | Augmenter la couverture de tests backend a >= 65% | Zahid | Haute | Fin Sprint 2 |
-| 3 | Corriger le bug de contraste footer (MYTH-BUG-003) | Yasmine | Moyenne | Sprint 2 |
-| 4 | Documenter les 2 traitements RGPD manquants | Zahid | Moyenne | Sprint 2 |
-| 5 | Implementer le lobby de creation de partie (Epic E5) | Lucas | Haute | Sprint 2 |
+| 1 | Finaliser le parsing IA (MYTH-007) et valider le format JSON | Samy | Haute | Debut Sprint 2 |
+| 2 | Augmenter la couverture de tests backend a >= 65% | Kays | Haute | Fin Sprint 2 |
+| 3 | Corriger le bug de contraste footer (MYTH-BUG-003) | Samy | Moyenne | Sprint 2 |
+| 4 | Documenter les 2 traitements RGPD manquants | Kays | Moyenne | Sprint 2 |
+| 5 | Implementer le lobby de creation de partie (Epic E5) | Youri | Haute | Sprint 2 |
 
 ---
 
@@ -909,11 +911,11 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 
 | Nom | Role | Present |
 |-----|------|---------|
-| Zahid | PO / Architecte | Oui |
-| Yasmine | SM / Frontend | Oui |
-| Lucas | Frontend | Oui |
-| Karim | IA / Temps reel | Oui |
-| Sofia | UX / DevOps | Oui |
+| Kays | PO / Architecte | Oui |
+| Samy | SM / Frontend | Oui |
+| Youri | Frontend | Oui |
+| Samy | IA / Temps reel | Oui |
+| Yassir | UX / DevOps | Oui |
 | [Encadrant] | Partie prenante / Tuteur | Oui |
 
 ---
@@ -944,17 +946,17 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 
 **Date** : 21/03/2026
 **Heure** : 15:15 - 16:00
-**Facilitateur** : Yasmine (SM)
+**Facilitateur** : Samy (SM)
 
 **Participants** :
 
 | Nom | Role | Present |
 |-----|------|---------|
-| Zahid | PO / Architecte | Oui |
-| Yasmine | SM / Frontend | Oui |
-| Lucas | Frontend | Oui |
-| Karim | IA / Temps reel | Oui |
-| Sofia | UX / DevOps | Oui |
+| Kays | PO / Architecte | Oui |
+| Samy | SM / Frontend | Oui |
+| Youri | Frontend | Oui |
+| Samy | IA / Temps reel | Oui |
+| Yassir | UX / DevOps | Oui |
 
 **Note** : La retrospective est un moment d'equipe. Les parties prenantes externes ne participent pas.
 
@@ -977,16 +979,16 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 
 | # | Proposition | Priorite | Action decidee | Responsable |
 |---|-------------|----------|---------------|-------------|
-| 1 | Ecrire les tests en meme temps que le code (TDD light) | Haute | Pour chaque nouveau ticket, ecrire au minimum les tests des cas nominaux avant le code | Zahid |
-| 2 | Faire un audit Lighthouse systematique avant chaque merge | Moyenne | Ajouter un check Lighthouse dans la CI ou avant chaque PR | Zahid |
-| 3 | Documenter les traitements RGPD en meme temps que le dev des features | Moyenne | Ajouter un item "RGPD" dans la Definition of Done | Zahid |
+| 1 | Ecrire les tests en meme temps que le code (TDD light) | Haute | Pour chaque nouveau ticket, ecrire au minimum les tests des cas nominaux avant le code | Kays |
+| 2 | Faire un audit Lighthouse systematique avant chaque merge | Moyenne | Ajouter un check Lighthouse dans la CI ou avant chaque PR | Kays |
+| 3 | Documenter les traitements RGPD en meme temps que le dev des features | Moyenne | Ajouter un item "RGPD" dans la Definition of Done | Kays |
 
 ##### STOP
 
 | # | Proposition | Priorite | Action decidee | Responsable |
 |---|-------------|----------|---------------|-------------|
-| 1 | Sous-estimer la complexite des tickets IA | Haute | Ajouter systematiquement un buffer de +2 SP sur les tickets lies a l'IA | Zahid |
-| 2 | Reporter les corrections de bugs mineurs | Moyenne | Corriger les bugs mineurs dans la journee quand c'est possible | Zahid |
+| 1 | Sous-estimer la complexite des tickets IA | Haute | Ajouter systematiquement un buffer de +2 SP sur les tickets lies a l'IA | Kays |
+| 2 | Reporter les corrections de bugs mineurs | Moyenne | Corriger les bugs mineurs dans la journee quand c'est possible | Kays |
 
 ##### CONTINUE
 
@@ -994,7 +996,7 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 |---|-------------|----------|
 | 1 | Commits atomiques et PR bien decrites | Facilite la relecture et le suivi |
 | 2 | Utilisation active de GitHub Projects pour le suivi | Board bien maintenu, transitions de statut a jour |
-| 3 | Tests manuels rigoureux avant merge | Aucun bug critique, bonne qualite globale |
+| 3 | Tests manuels serieux avant merge | Aucun bug critique, bonne qualite globale |
 
 ---
 
@@ -1002,9 +1004,9 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 
 | # | Action | Responsable | Critere de succes | Suivi prevu |
 |---|--------|-------------|-------------------|-------------|
-| 1 | Ecrire les tests en meme temps que le code | Zahid | Couverture backend >= 65% en fin de Sprint 2 | Retro Sprint 2 |
-| 2 | Ajouter buffer +2 SP sur les tickets IA | Zahid | Pas de report de ticket IA au Sprint 3 | Retro Sprint 2 |
-| 3 | Documenter RGPD en continu (ajout a la DoD) | Zahid | Conformite RGPD >= 80% en fin de Sprint 2 | Retro Sprint 2 |
+| 1 | Ecrire les tests en meme temps que le code | Kays | Couverture backend >= 65% en fin de Sprint 2 | Retro Sprint 2 |
+| 2 | Ajouter buffer +2 SP sur les tickets IA | Kays | Pas de report de ticket IA au Sprint 3 | Retro Sprint 2 |
+| 3 | Documenter RGPD en continu (ajout a la DoD) | Kays | Conformite RGPD >= 80% en fin de Sprint 2 | Retro Sprint 2 |
 
 ---
 
@@ -1020,7 +1022,7 @@ puis rattrapage J6-J10. Tendance globale satisfaisante.
 
 **Semaine** : S11 (du 10/03 au 14/03/2026)
 **Sprint en cours** : Sprint 1 - Semaine 1/2
-**Redacteur** : Zahid
+**Redacteur** : Kays
 
 ---
 
@@ -1081,7 +1083,7 @@ Le Sprint 1 a demarre conformement au plan. L'architecture technique (monorepo, 
 
 **Semaine** : S12 (du 17/03 au 21/03/2026)
 **Sprint en cours** : Sprint 1 - Semaine 2/2
-**Redacteur** : Zahid
+**Redacteur** : Kays
 
 ---
 

@@ -3,11 +3,11 @@
 > **Projet** : MYTHOS -- Plateforme de jeux narratifs multijoueur avec IA Maitre du Jeu
 > **Entreprise** : Mythos Interactive (SAS)
 > **Version** : 1.0
-> **Date** : Fevrier 2026
+> **Date** : 06 Mars 2026
 > **Competence RNCP** : C1.7 -- Supervision et controle du projet
 > **Methodologie** : Scrum (Agile) -- 7 sprints de 2 semaines (14 semaines)
 
-La communication est un facteur critique de succes pour notre projet. Ce plan a ete elabore par Zahid (chef de projet) avec les retours de Yasmine (Scrum Master) qui facilite les ceremonies et assure le lien entre l'equipe et les parties prenantes. Chaque canal et chaque frequence de communication ont ete choisis pour maximiser la transparence sans surcharger l'equipe.
+La communication est un facteur cle pour notre projet. Ce plan a ete elabore par Kays (chef de projet) avec les retours de Samy (Scrum Master) qui facilite les ceremonies et fait le lien entre l'equipe et les parties prenantes. On a choisi chaque canal et chaque frequence de communication pour rester transparents sans surcharger l'equipe. Au debut on communiquait un peu dans tous les sens sur Discord, donc on a rapidement structure les canaux -- ca a fait une vraie difference.
 
 ---
 
@@ -134,7 +134,7 @@ La communication est un facteur critique de succes pour notre projet. Ce plan a 
 
 | Attribut | Detail |
 |----------|--------|
-| **Nom / Role** | Equipe de developpement MYTHOS (5 membres) |
+| **Nom / Role** | Equipe de developpement MYTHOS (4 membres) |
 | **Attentes** | - Objectifs de sprint clairs et atteignables |
 | | - Specifications et maquettes disponibles avant le developpement |
 | | - Communication fluide et transparente |
@@ -698,9 +698,9 @@ Sprint 3:  ███████████████████████
 
 **Plateforme de jeux narratifs multijoueur avec IA Maitre du Jeu**
 
-**Equipe** : [Noms des 5 membres]
+**Equipe** : Kays ZAHIDI, Samy ZEROUALI, Youri EMMANUEL, Yassir SABBAR
 **Entreprise** : Mythos Interactive (SAS)
-**Date** : [Mois Annee]
+**Date** : Mai 2026
 **Contexte** : Workshop 5A TL -- S1 -- Bloc 1 RNCP38822
 
 ---
@@ -873,7 +873,7 @@ Sprint 3:  ███████████████████████
 
 ### 3.1 Structure du journal de bord (Notion)
 
-Le journal de bord est heberge dans Notion, avec la structure suivante :
+Le journal de bord est heberge dans Notion. Kays a mis en place la structure pendant le Sprint 0 et on l'a ajustee apres les deux premieres semaines quand on s'est rendu compte qu'il manquait une section dediee aux risques et aux post-mortems. Voici la structure actuelle :
 
 ```
 Notion > Projet MYTHOS > Journal de bord
@@ -939,11 +939,11 @@ Notion > Projet MYTHOS > Journal de bord
 
 | Nom | Role | Present |
 |-----|------|---------|
-| Zahid Ikay | PO / Architecte | Oui / Non |
-| Yasmine Benali | SM / Dev Frontend | Oui / Non |
-| Lucas Martin | Dev Frontend | Oui / Non |
-| Karim Ouadah | Dev IA / Temps reel | Oui / Non |
-| Sofia Reyes | UX/UI / DevOps | Oui / Non |
+| Kays ZAHIDI | PO / Architecte | Oui / Non |
+| Samy ZEROUALI | SM / Dev Frontend | Oui / Non |
+| Youri EMMANUEL | Dev Frontend | Oui / Non |
+| Samy ZEROUALI | Dev IA / Temps reel | Oui / Non |
+| Yassir SABBAR | UX/UI / DevOps | Oui / Non |
 | [Encadrant] | Encadrant academique | Oui / Non |
 | [Client fictif] | Client | Oui / Non |
 
@@ -1025,27 +1025,27 @@ Notion > Projet MYTHOS > Journal de bord
 
 ## 2. Collecte individuelle
 
-### Zahid Ikay (PO)
+### Kays ZAHIDI (PO)
 - **Start** : [Ce qu'on devrait commencer]
 - **Stop** : [Ce qu'on devrait arreter]
 - **Continue** : [Ce qui fonctionne bien]
 
-### Yasmine Benali (SM)
+### Samy ZEROUALI (SM)
 - **Start** : [...]
 - **Stop** : [...]
 - **Continue** : [...]
 
-### Lucas Martin (Frontend)
+### Youri EMMANUEL (Frontend)
 - **Start** : [...]
 - **Stop** : [...]
 - **Continue** : [...]
 
-### Karim Ouadah (IA)
+### Samy ZEROUALI (IA)
 - **Start** : [...]
 - **Stop** : [...]
 - **Continue** : [...]
 
-### Sofia Reyes (DevOps)
+### Yassir SABBAR (DevOps)
 - **Start** : [...]
 - **Stop** : [...]
 - **Continue** : [...]
@@ -1079,11 +1079,11 @@ Chaque membre attribue une note de 1 a 5 a son moral pour ce sprint :
 
 | Membre | Moral (1-5) | Commentaire |
 |--------|:-----------:|-------------|
-| Zahid Ikay | [X] | [Optionnel] |
-| Yasmine Benali | [X] | [Optionnel] |
-| Lucas Martin | [X] | [Optionnel] |
-| Karim Ouadah | [X] | [Optionnel] |
-| Sofia Reyes | [X] | [Optionnel] |
+| Kays ZAHIDI | [X] | [Optionnel] |
+| Samy ZEROUALI | [X] | [Optionnel] |
+| Youri EMMANUEL | [X] | [Optionnel] |
+| Samy ZEROUALI | [X] | [Optionnel] |
+| Yassir SABBAR | [X] | [Optionnel] |
 | **Moyenne** | **[X.X]** | |
 
 ---
@@ -1111,16 +1111,16 @@ scenario TRIBUNAL jouable de bout en bout en multijoueur. 34 SP ont ete selectio
 **Decisions prises** :
 - Priorite absolue : WebSocket Gateway (S3-01) et Session Manager (S3-02) doivent etre
   termines avant mercredi pour debloquer le reste de l'equipe
-- Karim commence par le WebSocket Gateway pendant que Lucas avance sur la page lobby
+- Samy commence par le WebSocket Gateway pendant que Youri avance sur la page lobby
   (mock des donnees en attendant le backend)
-- Zahid valide les specs de l'API Session avant 17h
+- Kays valide les specs de l'API Session avant 17h
 
 **Daily standups** :
-- Zahid : Preparation des specs Session Manager + validation Scenario Pack TRIBUNAL
-- Yasmine : Configuration du board Sprint 3 + aide Lucas sur le layout lobby
-- Lucas : Debut composant page lobby (mockee) + integration maquettes Figma
-- Karim : Debut WebSocket Gateway NestJS + Socket.io setup
-- Sofia : Finalisation pipeline CI/CD + ajout du lint WebSocket
+- Kays : Preparation des specs Session Manager + validation Scenario Pack TRIBUNAL
+- Samy : Configuration du board Sprint 3 + aide Youri sur le layout lobby
+- Youri : Debut composant page lobby (mockee) + integration maquettes Figma
+- Samy : Debut WebSocket Gateway NestJS + Socket.io setup
+- Yassir : Finalisation pipeline CI/CD + ajout du lint WebSocket
 
 **Blocages** : Aucun
 
@@ -1129,18 +1129,18 @@ scenario TRIBUNAL jouable de bout en bout en multijoueur. 34 SP ont ete selectio
 ### Mardi 17/03/2026
 
 **Daily standups** :
-- Zahid : Specs Session Manager terminees. Revue PR S3-01 (WS Gateway) en cours
-- Yasmine : Aide sur le CSS du lobby. Commence les metriques du burndown Sprint 3
-- Lucas : Page lobby 70% terminee (liste joueurs, chat mock). Bloque sur le format
-  des evenements WS --> besoin de la doc de Karim
-- Karim : WebSocket Gateway fonctionnel (connexion + auth JWT). PR S3-01 ouverte.
+- Kays : Specs Session Manager terminees. Revue PR S3-01 (WS Gateway) en cours
+- Samy : Aide sur le CSS du lobby. Commence les metriques du burndown Sprint 3
+- Youri : Page lobby 70% terminee (liste joueurs, chat mock). Bloque sur le format
+  des evenements WS --> besoin de la doc de Samy
+- Samy : WebSocket Gateway fonctionnel (connexion + auth JWT). PR S3-01 ouverte.
   Documente les evenements WS dans le README
-- Sofia : Tests du pipeline CI avec les tests WebSocket. Alerte : le build timeout
+- Yassir : Tests du pipeline CI avec les tests WebSocket. Alerte : le build timeout
   sur les tests Socket.io (probleme de port)
 
 **Blocages** :
-- Lucas bloque sur le format des evenements WS : resolu a 14h apres sync avec Karim
-- Sofia : timeout CI sur les tests WS --> workaround : augmentation du timeout Jest a 30s
+- Youri bloque sur le format des evenements WS : resolu a 14h apres sync avec Samy
+- Yassir : timeout CI sur les tests WS --> workaround : augmentation du timeout Jest a 30s
 
 **Decisions** : Le format des evenements WS est fige et documente dans `docs/websocket-events.md`
 
@@ -1158,12 +1158,12 @@ scenario TRIBUNAL jouable de bout en bout en multijoueur. 34 SP ont ete selectio
   Decision : implementer un resume automatique du game_state (max 2000 tokens)
 
 **Daily standups** :
-- Zahid : Review PR S3-01 Done. Commence la review PR S3-02
-- Yasmine : Burndown a jour. Point rapide avec Lucas sur le composant ChoicePanel
-- Lucas : Page lobby quasi terminee (90%). Commence l'integration WebSocket reelle
+- Kays : Review PR S3-01 Done. Commence la review PR S3-02
+- Samy : Burndown a jour. Point rapide avec Youri sur le composant ChoicePanel
+- Youri : Page lobby quasi terminee (90%). Commence l'integration WebSocket reelle
   (remplacement des mocks). Premier test avec 2 onglets : les joueurs se voient dans le lobby !
-- Karim : Session Manager (S3-02) presque termine. PR ouverte. Debut S3-03 (WS + Game Loop)
-- Sofia : CI stabilisee. Debut du composant NarrationPanel (aide Lucas)
+- Samy : Session Manager (S3-02) presque termine. PR ouverte. Debut S3-03 (WS + Game Loop)
+- Yassir : CI stabilisee. Debut du composant NarrationPanel (aide Youri)
 
 **Moment cle** : Premier test temps reel reussi ! 2 onglets connectes, les joueurs apparaissent
 dans le lobby en temps reel. Euphorie dans l'equipe.
@@ -1173,38 +1173,38 @@ dans le lobby en temps reel. Euphorie dans l'equipe.
 ### Jeudi 19/03/2026
 
 **Daily standups** :
-- Zahid : PR S3-02 approuvee et mergee. Travail sur les Scenario Packs : ajustement
+- Kays : PR S3-02 approuvee et mergee. Travail sur les Scenario Packs : ajustement
   des prompts TRIBUNAL apres 3 parties de test. Probleme : PB-001 (personnage mort reapparait)
-- Yasmine : Suivi des metriques. Aide Lucas sur l'animation du timer
-- Lucas : Integration WS sur le lobby terminee (Done !). Commence la Game UI (S3-06)
+- Samy : Suivi des metriques. Aide Youri sur l'animation du timer
+- Youri : Integration WS sur le lobby terminee (Done !). Commence la Game UI (S3-06)
   Composant NarrationPanel avec effet de streaming
-- Karim : S3-03 en cours (connexion Game Loop + WebSocket). Complexe : la gestion des
+- Samy : S3-03 en cours (connexion Game Loop + WebSocket). Complexe : la gestion des
   phases en temps reel necessite un refactoring du Game Loop Manager. Estimation revisee : +1 jour
-- Sofia : Aide sur le composant DiscussionPanel. Configuration UptimeRobot pour le monitoring
+- Yassir : Aide sur le composant DiscussionPanel. Configuration UptimeRobot pour le monitoring
 
 **Blocages** :
 - PB-001 detecte : l'IA regenere un personnage elimine au tour 2 comme temoin au tour 4
-  --> Assigne a Karim, analyse 5 Pourquoi lancee (voir registre des problemes)
-- Karim signale un retard de 1 jour sur S3-03 : la gestion des transitions de phases via WS
+  --> Assigne a Samy, analyse 5 Pourquoi lancee (voir registre des problemes)
+- Samy signale un retard de 1 jour sur S3-03 : la gestion des transitions de phases via WS
   est plus complexe que prevu
 
-**Decision** : Appliquer le scenario d'ajustement "Retard leger" : Yasmine aide Karim
-sur l'integration WS pendant 1 journee
+**Decision** : Appliquer le scenario d'ajustement "Retard leger" : Kays aide Samy
+sur l'integration WS pendant 1 journee (pair programming)
 
 ---
 
 ### Vendredi 20/03/2026
 
 **Daily standups** :
-- Zahid : Preparation de la demo Sprint Review (pas de Review cette semaine, c'est la
+- Kays : Preparation de la demo Sprint Review (pas de Review cette semaine, c'est la
   semaine 1 du sprint). Correction du Scenario Pack TRIBUNAL suite a PB-001
-- Yasmine : Aide Karim sur l'integration WS (pair programming matin). Redaction du
+- Kays : Aide Samy sur l'integration WS (pair programming matin). Redaction du
   rapport hebdomadaire l'apres-midi
-- Lucas : Game UI en cours (50%). NarrationPanel + ChoicePanel fonctionnels.
+- Youri : Game UI en cours (50%). NarrationPanel + ChoicePanel fonctionnels.
   Reste : DiscussionPanel, PrivateInfoPanel, PhaseIndicator
-- Karim : S3-03 avance bien grace a l'aide de Yasmine. Les phases Narration et Action
+- Samy : S3-03 avance bien grace a l'aide de Kays. Les phases Narration et Action
   emettent correctement les evenements WS. Reste : Resolution, Discussion, Finale
-- Sofia : UptimeRobot configure. Monitoring en place. Aide sur les composants UI mineurs
+- Yassir : UptimeRobot configure. Monitoring en place. Aide sur les composants UI mineurs
 
 **Rapport hebdomadaire envoye** : Sprint 3 en bonne voie malgre le retard de 1 jour sur S3-03.
 PB-001 identifie et en cours de resolution. 60% des SP du sprint couverts a mi-sprint.

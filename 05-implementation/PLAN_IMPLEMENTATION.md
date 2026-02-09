@@ -4,12 +4,12 @@
 
 > **Projet** : MYTHOS
 > **Version** : 1.0
-> **Date** : Fevrier 2026
-> **Equipe** : 4-5 personnes (Scrum)
+> **Date** : 24 Fevrier 2026
+> **Equipe** : 4 personnes (Scrum) — Kays ZAHIDI, Samy ZEROUALI, Youri EMMANUEL, Yassir SABBAR
 > **Duree** : 14 semaines (7 sprints de 2 semaines)
 > **Referentiel** : RNCP38822 -- Bloc 1
 
-Ce plan d'implementation decrit concretement comment nous deployons et livrons MYTHOS. Sofia, responsable DevOps, a concu le pipeline CI/CD en collaboration avec Zahid. Chaque environnement (local, staging, production) a ete teste et valide des le Sprint 0 pour eviter les surprises de derniere minute.
+Ce plan d'implementation decrit concretement comment on deploie et livre MYTHOS. Yassir, responsable DevOps, a concu le pipeline CI/CD avec Kays. Chaque environnement (local, staging, production) a ete teste et valide des le Sprint 0 pour eviter les surprises de derniere minute. Yassir a configure tout le monitoring en une apres-midi, on etait impressionnes -- ca nous a permis de gagner du temps pour la suite. On a aussi pris le temps de faire un dry-run complet du flux de deploiement en equipe avant de passer a la suite, histoire que tout le monde soit a l'aise.
 
 ---
 
@@ -31,7 +31,7 @@ Ce plan d'implementation decrit concretement comment nous deployons et livrons M
 
 ### 1.1 Philosophie generale
 
-Le deploiement de MYTHOS suit une strategie **progressive a 3 paliers** garantissant que chaque livraison est testee, validee et stable avant d'atteindre les utilisateurs finaux. Chaque environnement joue un role precis dans la chaine de qualite.
+Le deploiement de MYTHOS suit une strategie **progressive a 3 paliers** pour s'assurer que chaque livraison est testee, validee et stable avant d'atteindre les utilisateurs finaux. Chaque environnement joue un role precis dans la chaine de qualite.
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────┐
@@ -121,7 +121,7 @@ volumes:
 - Les donnees sont reinitialises a chaque deploiement via les seeds Prisma
 - Les tests E2E automatises tournent apres chaque deploiement staging
 - L'equipe teste manuellement les flux critiques (partie complete)
-- Zahid (Product Owner) valide les fonctionnalites avant le passage en production
+- Kays (Product Owner) valide les fonctionnalites avant le passage en production
 - Alerte Slack/Discord si le deploiement echoue
 
 ### 1.4 Environnement PRODUCTION
@@ -248,7 +248,7 @@ develop ──────●──●──●──●──●──●──
 
 ### 2.4 Convention de commits (Conventional Commits)
 
-Le projet adopte la specification **Conventional Commits v1.0.0** pour garantir un historique lisible et permettre la generation automatique de changelogs.
+Le projet adopte la specification **Conventional Commits v1.0.0** pour avoir un historique lisible et permettre la generation automatique de changelogs.
 
 **Format** :
 
@@ -1315,7 +1315,7 @@ Avant chaque mise en production, l'equipe passe en revue la checklist suivante :
 
 #### Fonctionnel
 
-- [ ] Zahid (Product Owner) a valide les fonctionnalites sur staging
+- [ ] Kays (Product Owner) a valide les fonctionnalites sur staging
 - [ ] Les criteres d'acceptation des tickets sont tous satisfaits
 - [ ] Les flux critiques ont ete testes manuellement :
   - [ ] Inscription / Connexion
@@ -1490,10 +1490,10 @@ Apres chaque deploiement reussi, la checklist suivante est validee :
 
 | Dashboard | URL | Qui y accede |
 |-----------|-----|-------------|
-| Vercel Dashboard | `https://vercel.com/team/mythos` | Sofia (DevOps) + Zahid (Architecte) |
-| Railway Dashboard | `https://railway.app/project/mythos` | Sofia (DevOps) + Zahid (Architecte) |
-| Upstash Console | `https://console.upstash.com` | Sofia (DevOps) + Zahid (Architecte) |
-| Anthropic Console | `https://console.anthropic.com` | Zahid (Architecte) + Karim (IA) |
+| Vercel Dashboard | `https://vercel.com/team/mythos` | Yassir (DevOps) + Kays (Architecte) |
+| Railway Dashboard | `https://railway.app/project/mythos` | Yassir (DevOps) + Kays (Architecte) |
+| Upstash Console | `https://console.upstash.com` | Yassir (DevOps) + Kays (Architecte) |
+| Anthropic Console | `https://console.anthropic.com` | Kays (Architecte) + Samy (IA) |
 | UptimeRobot | `https://uptimerobot.com/dashboard` | Toute l'equipe |
 | GitHub Actions | `https://github.com/team/mythos/actions` | Toute l'equipe |
 | GitHub Projects | `https://github.com/orgs/team/projects/1` | Toute l'equipe |
@@ -1735,7 +1735,7 @@ ETAPE 7 : Decouverte du projet (30 min)
 
 ETAPE 8 : Premier ticket (variable)
 ─────────────────────────────────────
-1. Yasmine (Scrum Master) vous assigne un ticket "starter" (petit, bien defini)
+1. Samy (Scrum Master) vous assigne un ticket "starter" (petit, bien defini)
 2. Creer la branche : git checkout -b feature/SX-XX-description
 3. Developper, tester, commiter (Conventional Commits)
 4. Ouvrir une PR vers develop
@@ -1747,13 +1747,13 @@ ETAPE 8 : Premier ticket (variable)
 
 | Besoin | Qui contacter | Canal |
 |--------|-------------|-------|
-| Probleme Git / CI/CD | Sofia (DevOps) | Discord #tech-help |
-| Question architecture backend | Zahid (Architecte) / Karim (Backend) | Discord #backend |
-| Question frontend / UI | Lucas (Frontend) | Discord #frontend |
-| Question IA / prompts | Karim (IA/Temps reel) | Discord #ai-service |
-| Question produit / priorite | Zahid (Product Owner) | Discord #product |
-| Acces manquant | Yasmine (Scrum Master) | Discord #general |
-| Cle API Anthropic | Zahid (Architecte) | Message prive Discord |
+| Probleme Git / CI/CD | Yassir (DevOps) | Discord #tech-help |
+| Question architecture backend | Kays (Architecte) / Samy (Backend) | Discord #backend |
+| Question frontend / UI | Youri (Frontend) | Discord #frontend |
+| Question IA / prompts | Samy (IA/Temps reel) | Discord #ai-service |
+| Question produit / priorite | Kays (Product Owner) | Discord #product |
+| Acces manquant | Samy (Scrum Master) | Discord #general |
+| Cle API Anthropic | Kays (Architecte) | Message prive Discord |
 
 ### 9.4 Ressources d'apprentissage
 
@@ -1863,6 +1863,6 @@ mythos/
 
 ---
 
-> **Document maintenu par** : Zahid (Architecte) / Sofia (DevOps)
+> **Document maintenu par** : Kays (Architecte) / Yassir (DevOps)
 > **Derniere mise a jour** : Sprint 0 – Fevrier 2026
 > **Prochaine revue** : Sprint 2 (mise a jour post-deploiement staging)

@@ -1,15 +1,15 @@
 # MYTHOS - Specifications Fonctionnelles
 
-**Version** : 1.0 | **Date** : 09/02/2026 | **Statut** : Draft
+**Version** : 1.0 | **Date** : 10/02/2026 | **Statut** : Draft
 **Projet** : Plateforme web de jeux narratifs multijoueurs avec IA Game Master
 
-> Ces spécifications fonctionnelles ont été rédigées en collaboration avec Sofia (UX/UI) qui a validé les parcours utilisateurs, et Karim (IA) qui a défini les contraintes du Game Master IA. Chaque user story a été discutée en équipe et priorisée selon la méthode MoSCoW.
+> On a ecrit ces specs fonctionnelles ensemble. Yassir a valide les parcours utilisateurs cote UX, et Samy a pose les contraintes du Game Master IA. Pour les user stories, on a tout discute en equipe et prio avec MoSCoW — ca a pris plus de temps que prevu parce qu'on n'etait pas d'accord sur ce qui etait "Must" vs "Should" pour le chat en jeu.
 
 ---
 
 ## 1. Presentation du Projet
 
-MYTHOS est une plateforme de jeux narratifs multijoueurs en temps reel ou une Intelligence Artificielle tient le role de Maitre du Jeu (MJ). Le moteur de jeu universel repose sur une boucle en 6 phases et des scenarios configurables via des fichiers JSON appeles **Scenario Packs**.
+MYTHOS est une plateforme de jeux narratifs multijoueurs en temps reel ou une IA fait office de Maitre du Jeu (MJ). Le moteur de jeu repose sur une boucle en 6 phases et des scenarios configurables via des fichiers JSON qu'on appelle **Scenario Packs**.
 
 ### 1.1 Boucle de jeu (6 phases)
 
@@ -247,7 +247,7 @@ Vote (TRIBUNAL)                -> OUI: [EPILOGUE] -> IA genere fin
 | US-39 | En tant qu'IA MJ, je veux adapter la difficulte afin de maintenir l'engagement | Analyse jauges, ajustement evenements, tension narrative | 5 | C |
 | US-40 | En tant qu'IA MJ, je veux generer l'epilogue afin de conclure l'histoire | Resume coherent, revele secrets, personnalise par joueur | 5 | M |
 | US-41 | En tant qu'IA MJ, je veux gerer les joueurs absents afin de ne pas bloquer | Action par defaut apres timeout, narration adaptee | 3 | M |
-| US-42 | En tant qu'IA MJ, je veux maintenir la coherence narrative afin de garantir l'immersion | Memoire contextuelle par partie, references evenements passes | 5 | S |
+| US-42 | En tant qu'IA MJ, je veux maintenir la coherence narrative pour assurer l'immersion | Memoire contextuelle par partie, references evenements passes | 5 | S |
 
 ---
 
@@ -291,7 +291,7 @@ Vote (TRIBUNAL)                -> OUI: [EPILOGUE] -> IA genere fin
 | Jure | 1-3 | Voter selon conviction |
 | Accuse | 1 | Survivre au proces |
 
-Distribution : aleatoire par IA MJ, equilibre garanti (min 1 par camp).
+Distribution : aleatoire par IA MJ, on s'assure qu'il y ait au moins 1 joueur par camp.
 
 ### 6.5 Jauges (DEEP)
 
@@ -316,6 +316,8 @@ Les actions des joueurs peuvent augmenter ou diminuer les jauges.
 
 ## 7. Matrice de Tracabilite
 
+> Petit retour : on a d'abord ecrit les user stories sans matrice, et on s'est rendu compte en relisant qu'on avait oublie de couvrir la partie admin correctement. C'est Kays qui a insiste pour faire cette matrice et ca nous a permis de boucher les trous.
+
 ### User Stories <-> Fonctionnalites <-> Objectifs
 
 | Objectif | Fonctionnalite | User Stories |
@@ -336,6 +338,8 @@ Les actions des joueurs peuvent augmenter ou diminuer les jauges.
 ---
 
 ## 8. Wireframes Textuels ASCII
+
+> Les wireframes ASCII c'est Youri qui a eu l'idee, vu que tout le monde n'avait pas acces a Figma en meme temps. Ca nous a permis de se mettre d'accord sur la structure des ecrans avant de passer au design final.
 
 ### 8.1 Ecran d'Accueil
 
@@ -607,4 +611,4 @@ Les actions des joueurs peuvent augmenter ou diminuer les jauges.
 
 ---
 
-*Document genere le 09/02/2026 - MYTHOS v1.0 MVP*
+*Document genere le 10/02/2026 - MYTHOS v1.0 MVP*

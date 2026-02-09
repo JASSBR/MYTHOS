@@ -1,12 +1,13 @@
 # MYTHOS – Backlog Détaillé & Planification des Sprints
 
+> **Date** : 17 Fevrier 2026
 > **Méthodologie** : Scrum (Agile)
 > **Durée des sprints** : 2 semaines
 > **Outil** : GitHub Projects (Kanban)
 > **Estimation** : Story Points (suite de Fibonacci : 1, 2, 3, 5, 8, 13)
 > **Priorisation** : MoSCoW (Must / Should / Could / Won't)
 
-Le backlog a été construit collaborativement lors de nos sessions de Sprint Planning. Chaque ticket a fait l'objet d'un Planning Poker pour estimer sa complexité. Les priorités reflètent notre stratégie de livraison progressive : d'abord les fondations techniques, puis le moteur de jeu, enfin les scénarios.
+On a construit le backlog ensemble pendant nos Sprint Planning. Pour les estimations, on a fait du Planning Poker — les premiers tours etaient un peu chaotiques parce que Samy estimait tout plus bas que les autres. Kays a propose de structurer le backlog par epic, Samy preferait par sprint — au final on a fait les deux. Les priorites suivent notre logique de livraison : d'abord les fondations techniques, puis le moteur de jeu, puis les scenarios.
 
 ---
 
@@ -37,14 +38,14 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 
 | Sprint | Vélocité cible (SP) | Justification |
 |--------|:---:|---|
-| Sprint 0 | 21 | Sprint de cadrage, pas de code complexe |
-| Sprint 1 | 26 | Fondations + POC, montée en charge |
-| Sprint 2 | 34 | Game Engine core, sprint le plus technique |
-| Sprint 3 | 34 | Multijoueur + TRIBUNAL, intégration lourde |
-| Sprint 4 | 31 | DEEP + UI, capitalisation sur le moteur existant |
+| Sprint 0 | 23 | Sprint de cadrage, pas de code complexe |
+| Sprint 1 | 29 | Fondations + POC, montée en charge |
+| Sprint 2 | 37 | Game Engine core, sprint le plus technique |
+| Sprint 3 | 37 | Multijoueur + TRIBUNAL, intégration lourde |
+| Sprint 4 | 29 | DEEP + UI, capitalisation sur le moteur existant |
 | Sprint 5 | 26 | Polish, admin, tests, déploiement |
-| Buffer | 13 | Bugs, docs, soutenance |
-| **Total** | **185 SP** | |
+| Buffer | 15 | Bugs, docs, soutenance |
+| **Total** | **196 SP** | |
 
 ---
 
@@ -77,7 +78,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S0-02 |
 | **Épic** | Infrastructure |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim + Sofia |
+| **Assigné** | Samy + Yassir |
 | **Story Points** | 2 |
 | **Description** | Créer le repository GitHub avec la structure monorepo (ou multi-repo) pour le projet MYTHOS. Configurer les branches (main, develop, feature/*), les règles de protection de branche, et le template de PR. |
 | **Critères d'acceptation** | - Repository créé et accessible par toute l'équipe |
@@ -94,7 +95,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S0-03 |
 | **Épic** | Infrastructure |
 | **Priorité** | `must-have` |
-| **Assigné** | Yasmine + Lucas |
+| **Assigné** | Samy + Youri |
 | **Story Points** | 2 |
 | **Description** | Initialiser le projet Next.js 14+ avec App Router, TailwindCSS, TypeScript, Zustand. Configurer ESLint, Prettier, et la structure de dossiers. |
 | **Critères d'acceptation** | - `npx create-next-app` exécuté avec TypeScript + App Router |
@@ -111,7 +112,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S0-04 |
 | **Épic** | Infrastructure |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 2 |
 | **Description** | Initialiser le projet NestJS avec TypeScript. Configurer les modules de base, Prisma ORM, et la connexion à PostgreSQL. |
 | **Critères d'acceptation** | - Projet NestJS créé avec `@nestjs/cli` |
@@ -128,7 +129,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S0-05 |
 | **Épic** | Infrastructure |
 | **Priorité** | `must-have` |
-| **Assigné** | Sofia |
+| **Assigné** | Yassir |
 | **Story Points** | 3 |
 | **Description** | Mettre en place les workflows GitHub Actions pour le lint, les tests, et le déploiement automatique sur Vercel (front) et Railway (back). |
 | **Critères d'acceptation** | - Workflow `ci.yml` : lint + tests sur chaque PR |
@@ -144,7 +145,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S0-06 |
 | **Épic** | Design |
 | **Priorité** | `must-have` |
-| **Assigné** | Sofia |
+| **Assigné** | Yassir |
 | **Story Points** | 5 |
 | **Description** | Concevoir les maquettes de tous les écrans clés de MYTHOS dans Figma : page d'accueil, catalogue scénarios, lobby, game UI (narration, choix, discussion, jauges), écran de fin, admin. Définir le design system (couleurs, typo, composants). |
 | **Critères d'acceptation** | - Design system défini (palette sombre immersive, typographies, spacing) |
@@ -167,7 +168,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S0-07 |
 | **Épic** | Gestion de projet |
 | **Priorité** | `must-have` |
-| **Assigné** | Yasmine |
+| **Assigné** | Samy |
 | **Story Points** | 1 |
 | **Description** | Configurer le board GitHub Projects avec les colonnes Kanban, les labels, les milestones (sprints), et importer le backlog initial. |
 | **Critères d'acceptation** | - Board avec colonnes : Backlog / To Do / In Progress / Review / Done |
@@ -193,7 +194,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S1-01 |
 | **Épic** | Backend – Data |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Définir le schéma Prisma complet avec toutes les entités : User, GameSession, ScenarioPack, Player, GameRound, PlayerChoice. Créer les migrations et les seeds de données initiales (2 Scenario Packs : TRIBUNAL + DEEP). |
 | **Critères d'acceptation** | - `schema.prisma` complet avec toutes les entités et relations |
@@ -209,7 +210,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S1-02 |
 | **Épic** | Backend – Auth |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Implémenter le module Auth NestJS avec inscription (register), connexion (login), et middleware JWT. Inclure la validation des entrées et le hashage des mots de passe. |
 | **Critères d'acceptation** | - `POST /api/auth/register` : crée un user, retourne JWT |
@@ -227,7 +228,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S1-03 |
 | **Épic** | Frontend – Auth |
 | **Priorité** | `must-have` |
-| **Assigné** | Yasmine + Lucas |
+| **Assigné** | Samy + Youri |
 | **Story Points** | 3 |
 | **Description** | Créer les pages d'inscription et de connexion avec formulaires, validation côté client, et gestion du token JWT dans le store Zustand. |
 | **Critères d'acceptation** | - Page `/register` avec formulaire (username, email, password, confirmation) |
@@ -245,7 +246,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S1-04 |
 | **Épic** | Backend – Scenarios |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 3 |
 | **Description** | Implémenter les endpoints REST pour lister et consulter les Scenario Packs. |
 | **Critères d'acceptation** | - `GET /api/scenarios` : retourne la liste des scénarios (id, name, slug, description, min/max players, duration, tags) |
@@ -260,7 +261,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S1-05 |
 | **Épic** | Backend – IA |
 | **Priorité** | `must-have` | `spike` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Créer le service AI dans NestJS. Implémenter le premier flux complet : construction du prompt à partir d'un Scenario Pack + game_state → appel API Claude → parsing de la réponse JSON (narration + options + private_messages). Valider la latence et la qualité. |
 | **Critères d'acceptation** | - `AiService` NestJS créé avec le SDK Anthropic installé |
@@ -279,7 +280,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S1-06 |
 | **Épic** | Frontend – IA |
 | **Priorité** | `must-have` | `spike` |
-| **Assigné** | Lucas + Karim |
+| **Assigné** | Youri + Samy |
 | **Story Points** | 3 |
 | **Description** | Créer une page de test temporaire `/poc-ai` qui permet de tester le flux IA de bout en bout : sélectionner un scénario, simuler un game_state, appeler l'API, afficher la narration et les options. |
 | **Critères d'acceptation** | - Page `/poc-ai` accessible (dev only) |
@@ -297,9 +298,9 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S1-07 |
 | **Épic** | Game Design |
 | **Priorité** | `must-have` |
-| **Assigné** | Zahid + Karim |
+| **Assigné** | Kays + Samy |
 | **Story Points** | 5 |
-| **Description** | Rédiger les fichiers JSON complets des Scenario Packs TRIBUNAL et DEEP avec tous les champs : settings, roles, resources, phases_override, end_conditions, ai_system_prompt. Tester et itérer les prompts IA pour garantir la qualité narrative. |
+| **Description** | Rédiger les fichiers JSON complets des Scenario Packs TRIBUNAL et DEEP avec tous les champs : settings, roles, resources, phases_override, end_conditions, ai_system_prompt. Tester et iterer les prompts IA pour s'assurer de la qualite narrative. |
 | **Critères d'acceptation** | - `tribunal.json` complet : 5 rôles, 5 rounds, phases override, prompt IA testé |
 | | - `deep.json` complet : 3 rôles, 4 ressources (O2, énergie, coque, profondeur), 8 rounds, prompt IA testé |
 | | - Prompts IA testés sur ≥ 3 parties simulées chacun |
@@ -312,9 +313,11 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 
 # SPRINT 2 – Game Engine Core (Sem 5-6)
 
-> **Objectif** : Implémenter le moteur de jeu universel : boucle de jeu en 6 phases, Game State Manager, Choice Engine, Scenario Pack Loader. Le moteur doit être capable de faire tourner une partie complète en mode "simulation" (sans WebSocket).
-> **Vélocité cible** : 34 SP
-> **Critère de succès** : Une partie complète de TRIBUNAL peut être jouée via des appels API REST (sans temps réel).
+> **Objectif** : Implementer le moteur de jeu : boucle en 6 phases, Game State Manager, Choice Engine, Scenario Pack Loader. Le moteur doit pouvoir faire tourner une partie complete en mode "simulation" (sans WebSocket).
+> **Velocite cible** : 34 SP
+> **Critere de succes** : Une partie complete de TRIBUNAL peut etre jouee via des appels API REST (sans temps reel).
+>
+> C'est le sprint qui nous faisait le plus peur a tous. Le Game Loop Manager a 13 SP c'etait un gros morceau, Samy et Kays ont du bosser en binome dessus presque tous les jours.
 
 ## Tickets Sprint 2
 
@@ -324,7 +327,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S2-01 |
 | **Épic** | Backend – Game Engine |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 3 |
 | **Description** | Service qui charge un Scenario Pack depuis la BDD, valide sa structure JSON, et le rend disponible au Game Engine. |
 | **Critères d'acceptation** | - `ScenarioPackLoaderService` créé |
@@ -340,7 +343,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S2-02 |
 | **Épic** | Backend – Game Engine |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Service qui crée, lit, met à jour et persiste le game_state dans Redis. Le game_state contient : session_id, scenario, current_round, phase, players (avec rôles et secret_info), public_state (narrative_history, revealed_info, resources), private_states, actions_history, end_conditions_met. |
 | **Critères d'acceptation** | - `GameStateManagerService` créé |
@@ -359,7 +362,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S2-03 |
 | **Épic** | Backend – Game Engine |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 3 |
 | **Description** | Service qui distribue aléatoirement les rôles aux joueurs en début de partie, en respectant les contraintes du Scenario Pack (count par rôle, rôles "fill" pour compléter). |
 | **Critères d'acceptation** | - `RoleManagerService` créé |
@@ -377,7 +380,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S2-04 |
 | **Épic** | Backend – Game Engine |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Service qui gère la collecte des choix des joueurs pendant la phase ACTION. Supporte les modes : individual (chaque joueur choisit secrètement), vote (majorité), designated (un joueur désigné choisit). Gère les timers et le timeout. |
 | **Critères d'acceptation** | - `ChoiceEngineService` créé |
@@ -397,7 +400,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S2-05 |
 | **Épic** | Backend – Game Engine |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 3 |
 | **Description** | Service qui gère les jauges de ressources pour les scénarios qui en définissent (ex: DEEP). Applique la décroissance par tour, modifie les ressources selon les choix des joueurs, et vérifie les conditions de fin liées aux ressources. |
 | **Critères d'acceptation** | - `ResourceManagerService` créé |
@@ -414,7 +417,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S2-06 |
 | **Épic** | Backend – Game Engine |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim + Zahid |
+| **Assigné** | Samy + Kays |
 | **Story Points** | 13 |
 | **Description** | Service central qui orchestre la boucle de jeu en 6 phases. C'est le chef d'orchestre du Game Engine : il appelle le Scenario Pack Loader, le Role Manager, le Game State Manager, le AI Service, le Choice Engine, et le Resource Manager dans le bon ordre. |
 | **Critères d'acceptation** | - `GameLoopManagerService` créé |
@@ -436,7 +439,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S2-07 |
 | **Épic** | Tests |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Rédiger une suite de tests d'intégration qui simulent une partie complète pour chaque scénario (TRIBUNAL et DEEP) via le Game Loop Manager. |
 | **Critères d'acceptation** | - Test TRIBUNAL : partie de 5 tours avec 4 joueurs simulés, vérifie les transitions de phase |
@@ -463,7 +466,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S3-01 |
 | **Épic** | Backend – Temps réel |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Créer le WebSocket Gateway NestJS avec Socket.io. Implémenter l'authentification JWT sur la connexion WebSocket, la gestion des rooms (1 room = 1 session), et les événements de base. |
 | **Critères d'acceptation** | - `GameGateway` NestJS créé avec `@WebSocketGateway()` |
@@ -481,7 +484,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S3-02 |
 | **Épic** | Backend – Sessions |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Service gérant le cycle de vie des sessions : création (choix scénario → génère un code unique), gestion du lobby (joueurs connectés, chat pré-partie), et lancement de la partie par l'hôte. |
 | **Critères d'acceptation** | - `POST /api/sessions` : crée une session avec code aléatoire (6 chars alphanumériques) |
@@ -500,7 +503,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S3-03 |
 | **Épic** | Backend – Intégration |
 | **Priorité** | `must-have` |
-| **Assigné** | Karim + Zahid |
+| **Assigné** | Samy + Kays |
 | **Story Points** | 8 |
 | **Description** | Brancher le Game Loop Manager sur le WebSocket Gateway pour que toutes les phases émettent les événements temps réel aux clients : narration, options, résolution, messages privés, jauges, fin de partie. |
 | **Critères d'acceptation** | - Phase NARRATION : émet `game:narration` (broadcast) + `game:options` (broadcast) + `game:private_message` (individuel) |
@@ -519,7 +522,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S3-04 |
 | **Épic** | Frontend – Pages |
 | **Priorité** | `must-have` |
-| **Assigné** | Yasmine + Lucas |
+| **Assigné** | Samy + Youri |
 | **Story Points** | 3 |
 | **Description** | Page d'accueil affichant les scénarios disponibles sous forme de cartes. Clic sur une carte → page détail du scénario. Bouton "Créer une partie". |
 | **Critères d'acceptation** | - Page `/` affiche les cards scénarios (appel `GET /api/scenarios`) |
@@ -536,7 +539,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S3-05 |
 | **Épic** | Frontend – Pages |
 | **Priorité** | `must-have` |
-| **Assigné** | Yasmine + Lucas |
+| **Assigné** | Samy + Youri |
 | **Story Points** | 5 |
 | **Description** | Page de lobby pour attendre les joueurs avant le lancement. Affiche la liste des joueurs connectés en temps réel, un chat de lobby, le code d'invitation copiable, et le bouton "Lancer la partie" (hôte uniquement). |
 | **Critères d'acceptation** | - Page `/session/:code` accessible après création ou join |
@@ -554,7 +557,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S3-06 |
 | **Épic** | Frontend – Game UI |
 | **Priorité** | `must-have` |
-| **Assigné** | Yasmine + Lucas |
+| **Assigné** | Samy + Youri |
 | **Story Points** | 8 |
 | **Description** | Interface de jeu principale. Affiche la narration (avec streaming), les options de choix (avec timer), la phase de discussion (chat), le panneau d'infos privées (rôle, secret), et l'indicateur de tour. |
 | **Critères d'acceptation** | - Composant `NarrationPanel` : affiche le texte narratif avec effet de streaming |
@@ -602,7 +605,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S4-01 |
 | **Épic** | Frontend – Game UI |
 | **Priorité** | `must-have` |
-| **Assigné** | Yasmine + Lucas |
+| **Assigné** | Samy + Youri |
 | **Story Points** | 3 |
 | **Description** | Composant React affichant les jauges de ressources (O2, énergie, coque, profondeur) pour le scénario DEEP. Barres visuelles + labels textuels (accessibilité). Animation de transition quand une valeur change. |
 | **Critères d'acceptation** | - Composant `ResourceGauges` affiche les barres de jauges dynamiquement |
@@ -620,7 +623,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S4-02 |
 | **Épic** | Frontend – Game UI |
 | **Priorité** | `must-have` |
-| **Assigné** | Yasmine + Lucas |
+| **Assigné** | Samy + Youri |
 | **Story Points** | 5 |
 | **Description** | Écran affiché à la fin de la partie : climax narratif, révélation de tous les rôles, résumé de la partie (choix clés), résultat (victoire/défaite), et boutons "Rejouer" / "Retour au catalogue". |
 | **Critères d'acceptation** | - Section : texte du climax final (narration IA) |
@@ -639,7 +642,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S4-03 |
 | **Épic** | Backend – IA |
 | **Priorité** | `should-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Modifier l'AI Service pour utiliser le streaming de l'API Claude. La narration est envoyée progressivement via WebSocket au fur et à mesure que l'IA génère le texte, donnant un effet "l'IA écrit en temps réel". |
 | **Critères d'acceptation** | - AI Service utilise `stream: true` dans l'appel API Anthropic |
@@ -672,7 +675,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S4-05 |
 | **Épic** | Frontend – Game UI |
 | **Priorité** | `should-have` |
-| **Assigné** | Yasmine + Lucas |
+| **Assigné** | Samy + Youri |
 | **Story Points** | 3 |
 | **Description** | Panneau latéral ou modal affichant l'historique des tours passés : résumé de chaque narration et choix effectués. Permet au joueur de se rafraîchir la mémoire. |
 | **Critères d'acceptation** | - Bouton "Historique" dans la Game UI |
@@ -688,7 +691,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S4-06 |
 | **Épic** | Frontend – Polish |
 | **Priorité** | `must-have` |
-| **Assigné** | Lucas + Sofia |
+| **Assigné** | Youri + Yassir |
 | **Story Points** | 5 |
 | **Description** | Pass de polish sur toute la Game UI : responsive mobile parfait, animations de transition entre phases, micro-interactions, loading states, états vides/erreur. |
 | **Critères d'acceptation** | - Game UI parfaitement utilisable sur mobile (320px+) |
@@ -705,7 +708,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S4-07 |
 | **Épic** | Backend – Robustesse |
 | **Priorité** | `should-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Gérer le cas où un joueur se déconnecte en cours de partie (fermeture navigateur, perte réseau). Le joueur doit pouvoir se reconnecter et retrouver l'état de la partie. |
 | **Critères d'acceptation** | - Déconnexion détectée : joueur marqué `disconnected` dans le game_state |
@@ -720,7 +723,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 
 # SPRINT 5 – Admin + Accessibilité + Déploiement (Sem 11-12)
 
-> **Objectif** : Ajouter le panel d'administration, garantir l'accessibilité WCAG AA, déployer en production, et écrire les tests finaux.
+> **Objectif** : Ajouter le panel d'administration, s'assurer de l'accessibilite WCAG AA, deployer en production, et ecrire les tests finaux.
 > **Vélocité cible** : 26 SP
 > **Critère de succès** : MVP déployé en production, accessible, avec panel admin fonctionnel.
 
@@ -732,7 +735,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S5-01 |
 | **Épic** | Backend – Admin |
 | **Priorité** | `should-have` |
-| **Assigné** | Karim |
+| **Assigné** | Samy |
 | **Story Points** | 5 |
 | **Description** | Endpoints admin protégés (role: admin) : statistiques d'utilisation, liste des sessions, gestion des utilisateurs. |
 | **Critères d'acceptation** | - `GET /api/admin/stats` : nb sessions total, nb joueurs, scénario le plus joué, durée moyenne, taux de complétion |
@@ -749,7 +752,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S5-02 |
 | **Épic** | Frontend – Admin |
 | **Priorité** | `should-have` |
-| **Assigné** | Yasmine + Lucas |
+| **Assigné** | Samy + Youri |
 | **Story Points** | 5 |
 | **Description** | Interface d'administration avec dashboard de stats, liste des sessions, et gestion des utilisateurs. Accessible uniquement aux admins. |
 | **Critères d'acceptation** | - Page `/admin` protégée (redirect si non-admin) |
@@ -765,7 +768,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S5-03 |
 | **Épic** | Accessibilité |
 | **Priorité** | `must-have` |
-| **Assigné** | Sofia + Lucas |
+| **Assigné** | Yassir + Youri |
 | **Story Points** | 5 |
 | **Description** | Audit complet d'accessibilité (Lighthouse + WAVE + test manuel clavier/lecteur d'écran) et corrections pour atteindre WCAG 2.1 AA sur toutes les pages. |
 | **Critères d'acceptation** | - Lighthouse Accessibility > 90 sur toutes les pages |
@@ -784,7 +787,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S5-04 |
 | **Épic** | Infrastructure |
 | **Priorité** | `must-have` |
-| **Assigné** | Sofia |
+| **Assigné** | Yassir |
 | **Story Points** | 3 |
 | **Description** | Déployer le MVP complet en production sur Vercel (front) + Railway (back + PostgreSQL + Redis). Configurer les variables d'environnement, le domaine, et le monitoring de base. |
 | **Critères d'acceptation** | - Frontend déployé sur Vercel avec URL publique |
@@ -803,7 +806,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S5-05 |
 | **Épic** | Infrastructure |
 | **Priorité** | `should-have` |
-| **Assigné** | Sofia |
+| **Assigné** | Yassir |
 | **Story Points** | 2 |
 | **Description** | Mettre en place le monitoring de base : UptimeRobot pour le health check, logging structuré côté backend, et dashboard des coûts API Anthropic. |
 | **Critères d'acceptation** | - UptimeRobot configuré : ping `/api/health` toutes les 5 min |
@@ -835,7 +838,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | S5-07 |
 | **Épic** | Numérique responsable |
 | **Priorité** | `must-have` |
-| **Assigné** | Sofia |
+| **Assigné** | Yassir |
 | **Story Points** | 1 |
 | **Description** | Exécuter GreenIT Analysis sur toutes les pages en production. Documenter les scores et les axes d'amélioration. |
 | **Critères d'acceptation** | - GreenIT Analysis exécuté sur : accueil, lobby, game UI, admin |
@@ -908,7 +911,7 @@ Le backlog a été construit collaborativement lors de nos sessions de Sprint Pl
 | **ID** | SB-04 |
 | **Épic** | Livrable |
 | **Priorité** | `must-have` |
-| **Assigné** | Sofia + Zahid |
+| **Assigné** | Yassir + Kays |
 | **Story Points** | 2 |
 | **Description** | Tourner et monter une vidéo de démonstration du MVP montrant le parcours complet : catalogue → création session → lobby → partie TRIBUNAL → partie DEEP → écran de fin. |
 | **Critères d'acceptation** | - Durée : 3-5 minutes |

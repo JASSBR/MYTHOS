@@ -2,13 +2,13 @@
 
 > **Projet** : MYTHOS -- Plateforme de jeux narratifs multijoueur avec IA Maitre du Jeu
 > **Version** : 1.0
-> **Date** : Fevrier 2026
+> **Date** : 18 Fevrier 2026
 > **Methodologie** : Scrum (Agile)
 > **Duree totale** : 14 semaines (7 sprints de 2 semaines)
-> **Equipe** : 4-5 personnes
+> **Equipe** : 4 personnes — Kays ZAHIDI, Samy ZEROUALI, Youri EMMANUEL, Yassir SABBAR
 > **Contexte** : Workshop 5A TL -- S1 -- Bloc 1 RNCP38822
 
-Ce planning a été élaboré en concertation avec toute l'équipe lors de notre session de cadrage initiale. Les estimations de story points reflètent nos discussions de Planning Poker et intègrent les aléas identifiés dans notre analyse de risques.
+On a monte ce planning ensemble pendant notre session de cadrage initiale. Les estimations en story points viennent de nos sessions de Planning Poker (avec pas mal de debats, surtout sur le Game Loop Manager que Samy voulait estimer a 8 SP alors que Kays disait 13 — on a pris 13 et on a bien fait). On a aussi pris en compte les risques qu'on avait identifies.
 
 ---
 
@@ -238,7 +238,7 @@ Chaque jalon fait l'objet d'une revue formelle (Gate Review) avec l'equipe et le
 
 ### 4.1 Identification du chemin critique
 
-Le chemin critique represente la sequence de taches la plus longue du projet, pour laquelle tout retard impacte directement la date de livraison finale. Aucune marge de flottement n'existe sur ces taches.
+Le chemin critique c'est la chaine de taches la plus longue du projet : si on prend du retard sur l'une d'elles, ca decale directement la date de livraison finale. Il n'y a zero marge sur ces taches.
 
 ```
 CHEMIN CRITIQUE (en gras) :
@@ -307,23 +307,23 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 | ID | Titre | SP | Priorite | Assigne |
 |----|-------|----|----------|---------|
 | S0-01 | Rediger le cahier des charges v1 | 8 | must-have | Toute l'equipe |
-| S0-02 | Initialiser le repository GitHub | 2 | must-have | Karim |
-| S0-03 | Configurer le projet Next.js (Frontend) | 2 | must-have | Yasmine + Lucas |
-| S0-04 | Configurer le projet NestJS (Backend) | 2 | must-have | Karim |
-| S0-05 | Configurer CI/CD avec GitHub Actions | 3 | must-have | Sofia |
-| S0-06 | Creer les maquettes UI/UX (Figma) | 5 | must-have | Sofia |
-| S0-07 | Configurer GitHub Projects (Kanban) | 1 | must-have | Yasmine |
+| S0-02 | Initialiser le repository GitHub | 2 | must-have | Samy |
+| S0-03 | Configurer le projet Next.js (Frontend) | 2 | must-have | Samy + Youri |
+| S0-04 | Configurer le projet NestJS (Backend) | 2 | must-have | Samy |
+| S0-05 | Configurer CI/CD avec GitHub Actions | 3 | must-have | Yassir |
+| S0-06 | Creer les maquettes UI/UX (Figma) | 5 | must-have | Yassir |
+| S0-07 | Configurer GitHub Projects (Kanban) | 1 | must-have | Samy |
 | **Total** | | **23 SP** | | |
 
 #### Capacite de l'equipe
 
 | Membre | Role | Heures dispo/sem | Heures totales (2 sem) | Justification |
 |--------|------|:---:|:---:|---|
-| Zahid | PO / Architecte | 18h | 36h | Cours les lundis et mardis matin (-4h/sem) |
-| Yasmine | Scrum Master / Frontend | 16h | 32h | Cours lundi + mercredi (-6h/sem), ceremonie SM (-2h/sem) |
-| Lucas | Dev Frontend | 18h | 36h | Cours les lundis et jeudis matin (-4h/sem) |
-| Karim | Dev Backend / IA / Temps reel | 18h | 36h | Cours les lundis et vendredis matin (-4h/sem) |
-| Sofia | UX/UI / DevOps | 16h | 32h | Cours lundi + mardi (-6h/sem), preparation projet IA parallele |
+| Kays | PO / Architecte | 18h | 36h | Cours les lundis et mardis matin (-4h/sem) |
+| Samy | Scrum Master / Frontend | 16h | 32h | Cours lundi + mercredi (-6h/sem), ceremonie SM (-2h/sem) |
+| Youri | Dev Frontend | 18h | 36h | Cours les lundis et jeudis matin (-4h/sem) |
+| Samy | Dev Backend / IA / Temps reel | 18h | 36h | Cours les lundis et vendredis matin (-4h/sem) |
+| Yassir | UX/UI / DevOps | 16h | 32h | Cours lundi + mardi (-6h/sem), preparation projet IA parallele |
 | **Total equipe** | | **86h/sem** | **172h** | |
 
 #### Charge prevue vs capacite
@@ -387,24 +387,24 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 
 | ID | Titre | SP | Priorite | Assigne |
 |----|-------|----|----------|---------|
-| S1-01 | Modele de donnees complet (Prisma) | 5 | must-have | Karim |
-| S1-02 | Authentification (Register + Login) | 5 | must-have | Karim |
-| S1-03 | Pages Auth frontend | 3 | must-have | Yasmine + Lucas |
-| S1-04 | API CRUD Scenarios | 3 | must-have | Karim |
-| S1-05 | POC AI Service (appel API Anthropic) | 5 | must-have / spike | Karim |
-| S1-06 | Page de test IA (frontend) | 3 | must-have / spike | Lucas + Karim |
-| S1-07 | Scenario Packs TRIBUNAL et DEEP (JSON) | 5 | must-have | Zahid + Karim |
+| S1-01 | Modele de donnees complet (Prisma) | 5 | must-have | Samy |
+| S1-02 | Authentification (Register + Login) | 5 | must-have | Samy |
+| S1-03 | Pages Auth frontend | 3 | must-have | Samy + Youri |
+| S1-04 | API CRUD Scenarios | 3 | must-have | Samy |
+| S1-05 | POC AI Service (appel API Anthropic) | 5 | must-have / spike | Samy |
+| S1-06 | Page de test IA (frontend) | 3 | must-have / spike | Youri + Samy |
+| S1-07 | Scenario Packs TRIBUNAL et DEEP (JSON) | 5 | must-have | Kays + Samy |
 | **Total** | | **29 SP** | | |
 
 #### Capacite de l'equipe
 
 | Membre | Heures dispo/sem | Heures totales (2 sem) | Taches principales |
 |--------|:---:|:---:|---|
-| Zahid (PO) | 18h | 36h | S1-07 (Scenario Packs), review CDC, support equipe |
-| Yasmine (SM) | 16h | 32h | Ceremonies, support frontend, monitoring avancement |
-| Lucas (Frontend) | 18h | 36h | S1-03, S1-06 |
-| Karim (Backend/IA) | 18h | 36h | S1-01, S1-02, S1-04, S1-05 |
-| Sofia (UX/DevOps) | 16h | 32h | S1-06 (support), S1-07 (support) |
+| Kays (PO) | 18h | 36h | S1-07 (Scenario Packs), review CDC, support equipe |
+| Samy (SM) | 16h | 32h | Ceremonies, support frontend, monitoring avancement |
+| Youri (Frontend) | 18h | 36h | S1-03, S1-06 |
+| Samy (Backend/IA) | 18h | 36h | S1-01, S1-02, S1-04, S1-05 |
+| Yassir (UX/DevOps) | 16h | 32h | S1-06 (support), S1-07 (support) |
 | **Total** | **86h/sem** | **172h** | |
 
 #### Charge prevue vs capacite
@@ -468,24 +468,24 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 
 | ID | Titre | SP | Priorite | Assigne |
 |----|-------|----|----------|---------|
-| S2-01 | Scenario Pack Loader | 3 | must-have | Karim |
-| S2-02 | Game State Manager | 5 | must-have | Karim |
-| S2-03 | Role Manager | 3 | must-have | Karim |
-| S2-04 | Choice Engine | 5 | must-have | Karim |
-| S2-05 | Resource Manager | 3 | must-have | Karim |
-| S2-06 | Game Loop Manager | 13 | must-have | Karim + Zahid |
-| S2-07 | Tests d'integration Game Engine | 5 | must-have | Karim |
+| S2-01 | Scenario Pack Loader | 3 | must-have | Samy |
+| S2-02 | Game State Manager | 5 | must-have | Samy |
+| S2-03 | Role Manager | 3 | must-have | Samy |
+| S2-04 | Choice Engine | 5 | must-have | Samy |
+| S2-05 | Resource Manager | 3 | must-have | Samy |
+| S2-06 | Game Loop Manager | 13 | must-have | Samy + Kays |
+| S2-07 | Tests d'integration Game Engine | 5 | must-have | Samy |
 | **Total** | | **37 SP** | | |
 
 #### Capacite de l'equipe
 
 | Membre | Heures dispo/sem | Heures totales (2 sem) | Taches principales |
 |--------|:---:|:---:|---|
-| Zahid (PO) | 18h | 36h | Review architecture, tests Scenario Packs, support |
-| Yasmine (SM) | 16h | 32h | Ceremonies, support Game Engine, documentation |
-| Lucas (Frontend) | 18h | 36h | Preparation composants UI (en avance sur S3), refacto auth |
-| Karim (Backend/IA) | 20h | 40h | S2-01, S2-02, S2-03, S2-04, S2-05, S2-06 (lead), S2-07 |
-| Sofia (UX/DevOps) | 18h | 36h | S2-06 (support), optimisation prompts, documentation |
+| Kays (PO) | 18h | 36h | Review architecture, tests Scenario Packs, support |
+| Samy (SM) | 16h | 32h | Ceremonies, support Game Engine, documentation |
+| Youri (Frontend) | 18h | 36h | Preparation composants UI (en avance sur S3), refacto auth |
+| Samy (Backend/IA) | 20h | 40h | S2-01, S2-02, S2-03, S2-04, S2-05, S2-06 (lead), S2-07 |
+| Yassir (UX/DevOps) | 18h | 36h | S2-06 (support), optimisation prompts, documentation |
 | **Total** | **90h/sem** | **180h** | |
 
 **Note** : Capacite augmentee car sprint technique intense, moins de cours cette semaine (vacances partielles).
@@ -549,12 +549,12 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 
 | ID | Titre | SP | Priorite | Assigne |
 |----|-------|----|----------|---------|
-| S3-01 | WebSocket Gateway (NestJS + Socket.io) | 5 | must-have | Karim |
-| S3-02 | Session Manager (creation + lobby) | 5 | must-have | Karim |
-| S3-03 | Connecter Game Loop au WebSocket | 8 | must-have | Karim + Zahid |
-| S3-04 | Frontend -- Page catalogue scenarios | 3 | must-have | Yasmine + Lucas |
-| S3-05 | Frontend -- Page lobby | 5 | must-have | Yasmine + Lucas |
-| S3-06 | Frontend -- Game UI (narration + choix + discussion) | 8 | must-have | Lucas |
+| S3-01 | WebSocket Gateway (NestJS + Socket.io) | 5 | must-have | Samy |
+| S3-02 | Session Manager (creation + lobby) | 5 | must-have | Samy |
+| S3-03 | Connecter Game Loop au WebSocket | 8 | must-have | Samy + Kays |
+| S3-04 | Frontend -- Page catalogue scenarios | 3 | must-have | Samy + Youri |
+| S3-05 | Frontend -- Page lobby | 5 | must-have | Samy + Youri |
+| S3-06 | Frontend -- Game UI (narration + choix + discussion) | 8 | must-have | Youri |
 | S3-07 | Test E2E -- Partie complete TRIBUNAL | 3 | must-have | Toute l'equipe |
 | **Total** | | **37 SP** | | |
 
@@ -562,11 +562,11 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 
 | Membre | Heures dispo/sem | Heures totales (2 sem) | Taches principales |
 |--------|:---:|:---:|---|
-| Zahid (PO) | 18h | 36h | Validation UX, tests manuels TRIBUNAL, review |
-| Yasmine (SM) | 16h | 32h | Ceremonies, support frontend lobby, monitoring |
-| Lucas (Frontend) | 20h | 40h | S3-04, S3-05, S3-06 (charge lourde frontend) |
-| Karim (Backend/IA) | 20h | 40h | S3-01, S3-02, S3-03 (lead), S3-07 |
-| Sofia (UX/DevOps) | 18h | 36h | S3-03 (support WS), S3-07, documentation |
+| Kays (PO) | 18h | 36h | Validation UX, tests manuels TRIBUNAL, review |
+| Samy (SM) | 16h | 32h | Ceremonies, support frontend lobby, monitoring |
+| Youri (Frontend) | 20h | 40h | S3-04, S3-05, S3-06 (charge lourde frontend) |
+| Samy (Backend/IA) | 20h | 40h | S3-01, S3-02, S3-03 (lead), S3-07 |
+| Yassir (UX/DevOps) | 18h | 36h | S3-03 (support WS), S3-07, documentation |
 | **Total** | **92h/sem** | **184h** | |
 
 **Note** : Semaine 7 = pas de vacances scolaires, disponibilite normale. Semaine 8 debut des vacances de Paques -> disponibilite legerement accrue pour certains.
@@ -631,24 +631,24 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 
 | ID | Titre | SP | Priorite | Assigne |
 |----|-------|----|----------|---------|
-| S4-01 | Composant jauges de ressources | 3 | must-have | Yasmine + Lucas |
-| S4-02 | Ecran de fin de partie | 5 | must-have | Lucas |
-| S4-03 | Streaming IA (reponse progressive) | 5 | should-have | Karim |
+| S4-01 | Composant jauges de ressources | 3 | must-have | Samy + Youri |
+| S4-02 | Ecran de fin de partie | 5 | must-have | Youri |
+| S4-03 | Streaming IA (reponse progressive) | 5 | should-have | Samy |
 | S4-04 | Test E2E -- Partie complete DEEP | 3 | must-have | Toute l'equipe |
-| S4-05 | Historique narratif (timeline) | 3 | should-have | Lucas |
-| S4-06 | Polish UI Game -- Responsive + Animations | 5 | must-have | Lucas + Sofia |
-| S4-07 | Gestion de la reconnexion joueur | 5 | should-have | Karim |
+| S4-05 | Historique narratif (timeline) | 3 | should-have | Youri |
+| S4-06 | Polish UI Game -- Responsive + Animations | 5 | must-have | Youri + Yassir |
+| S4-07 | Gestion de la reconnexion joueur | 5 | should-have | Samy |
 | **Total** | | **29 SP** | | |
 
 #### Capacite de l'equipe
 
 | Membre | Heures dispo/sem | Heures totales (2 sem) | Taches principales |
 |--------|:---:|:---:|---|
-| Zahid (PO) | 16h | 32h | Tests DEEP, validation UX ecran fin, review |
-| Yasmine (SM) | 16h | 32h | Ceremonies, polish UI support, preparations S5 |
-| Lucas (Frontend) | 20h | 40h | S4-01, S4-02, S4-05, S4-06 (charge front lourde) |
-| Karim (Backend/IA) | 16h | 32h | S4-03, S4-07, support integration DEEP, bug fixing |
-| Sofia (UX/DevOps) | 18h | 36h | S4-06 (UX polish), optimisation prompts DEEP, prep S5 |
+| Kays (PO) | 16h | 32h | Tests DEEP, validation UX ecran fin, review |
+| Samy (SM) | 16h | 32h | Ceremonies, polish UI support, preparations S5 |
+| Youri (Frontend) | 20h | 40h | S4-01, S4-02, S4-05, S4-06 (charge front lourde) |
+| Samy (Backend/IA) | 16h | 32h | S4-03, S4-07, support integration DEEP, bug fixing |
+| Yassir (UX/DevOps) | 18h | 36h | S4-06 (UX polish), optimisation prompts DEEP, prep S5 |
 | **Total** | **86h/sem** | **172h** | |
 
 **Note** : Semaine 9-10 = vacances de Paques pour certains. Disponibilite reduite pour PO et Backend (projets paralleles). Le frontend est en charge maximale.
@@ -706,30 +706,30 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 
 #### Objectif du sprint (Sprint Goal)
 
-> Ajouter le panel d'administration, garantir l'accessibilite WCAG AA, deployer le MVP en production, et ecrire les tests finaux. A la fin de ce sprint, le MVP est en ligne et utilisable.
+> Ajouter le panel d'administration, s'assurer de l'accessibilite WCAG AA, deployer le MVP en production, et ecrire les tests finaux. A la fin de ce sprint, le MVP est en ligne et utilisable.
 
 #### User Stories selectionnees
 
 | ID | Titre | SP | Priorite | Assigne |
 |----|-------|----|----------|---------|
-| S5-01 | API Admin (stats + gestion) | 5 | should-have | Karim |
-| S5-02 | Panel d'administration frontend | 5 | should-have | Yasmine + Lucas |
-| S5-03 | Audit et corrections d'accessibilite | 5 | must-have | Sofia + Lucas |
-| S5-04 | Deploiement production | 3 | must-have | Sofia |
-| S5-05 | Monitoring et health check | 2 | should-have | Sofia |
+| S5-01 | API Admin (stats + gestion) | 5 | should-have | Samy |
+| S5-02 | Panel d'administration frontend | 5 | should-have | Samy + Youri |
+| S5-03 | Audit et corrections d'accessibilite | 5 | must-have | Yassir + Youri |
+| S5-04 | Deploiement production | 3 | must-have | Yassir |
+| S5-05 | Monitoring et health check | 2 | should-have | Yassir |
 | S5-06 | Tests finaux (couverture cible) | 5 | must-have | Toute l'equipe |
-| S5-07 | Mesurer l'eco-index | 1 | must-have | Sofia |
+| S5-07 | Mesurer l'eco-index | 1 | must-have | Yassir |
 | **Total** | | **26 SP** | | |
 
 #### Capacite de l'equipe
 
 | Membre | Heures dispo/sem | Heures totales (2 sem) | Taches principales |
 |--------|:---:|:---:|---|
-| Zahid (PO) | 16h | 32h | Validation admin, review finale, preparation livrables |
-| Yasmine (SM) | 18h | 36h | Ceremonies, coordination deploiement, S5-06 (tests front) |
-| Lucas (Frontend) | 18h | 36h | S5-02, S5-03, S5-06 (tests front) |
-| Karim (Backend/IA) | 18h | 36h | S5-01, S5-06 (tests back), optimisation couts IA |
-| Sofia (UX/DevOps) | 16h | 32h | S5-04, S5-05, S5-07, documentation |
+| Kays (PO) | 16h | 32h | Validation admin, review finale, preparation livrables |
+| Samy (SM) | 18h | 36h | Ceremonies, coordination deploiement, S5-06 (tests front) |
+| Youri (Frontend) | 18h | 36h | S5-02, S5-03, S5-06 (tests front) |
+| Samy (Backend/IA) | 18h | 36h | S5-01, S5-06 (tests back), optimisation couts IA |
+| Yassir (UX/DevOps) | 16h | 32h | S5-04, S5-05, S5-07, documentation |
 | **Total** | **86h/sem** | **172h** | |
 
 #### Charge prevue vs capacite
@@ -750,7 +750,7 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 | Score Lighthouse < 90 (accessibilite) | Moyenne | Eleve | Audit Lighthouse des le jour 1, corrections iteratives |
 | Deploiement prod echoue | Faible | Critique | Deploiement progressif (staging d'abord), rollback automatique |
 | Variables d'env mal configurees en prod | Moyenne | Moyen | Checklist de deploiement, test `/api/health` immediat |
-| Couverture tests insuffisante | Moyenne | Moyen | Focus sur les chemins critiques, pas de couverture exhaustive |
+| Couverture tests insuffisante | Moyenne | Moyen | Focus sur les chemins critiques, pas besoin de tout couvrir |
 
 #### Livrables du sprint
 
@@ -796,7 +796,7 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 | SB-01 | Corriger les bugs restants | 5 | must-have | Toute l'equipe |
 | SB-02 | Documentation technique finale | 3 | must-have | Toute l'equipe |
 | SB-03 | Annexe retour d'experience | 2 | must-have | Toute l'equipe (individuel) |
-| SB-04 | Video de demonstration | 2 | must-have | Sofia + Zahid |
+| SB-04 | Video de demonstration | 2 | must-have | Yassir + Kays |
 | SB-05 | Preparer la soutenance | 3 | must-have | Toute l'equipe |
 | **Total** | | **15 SP** | | |
 
@@ -804,11 +804,11 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 
 | Membre | Heures dispo/sem | Heures totales (2 sem) | Taches principales |
 |--------|:---:|:---:|---|
-| Zahid (PO) | 18h | 36h | SB-04 (video), SB-05 (slides), SB-01, SB-03 |
-| Yasmine (SM) | 18h | 36h | SB-05 (slides), SB-01, SB-03, coordination |
-| Lucas (Frontend) | 18h | 36h | SB-01 (bugs front), SB-02, SB-03 |
-| Karim (Backend/IA) | 18h | 36h | SB-01 (bugs back/IA), SB-02, SB-03 |
-| Sofia (UX/DevOps) | 18h | 36h | SB-01 (bugs UX), SB-02, SB-03, SB-04 (video support) |
+| Kays (PO) | 18h | 36h | SB-04 (video), SB-05 (slides), SB-01, SB-03 |
+| Samy (SM) | 18h | 36h | SB-05 (slides), SB-01, SB-03, coordination |
+| Youri (Frontend) | 18h | 36h | SB-01 (bugs front), SB-02, SB-03 |
+| Samy (Backend/IA) | 18h | 36h | SB-01 (bugs back/IA), SB-02, SB-03 |
+| Yassir (UX/DevOps) | 18h | 36h | SB-01 (bugs UX), SB-02, SB-03, SB-04 (video support) |
 | **Total** | **90h/sem** | **180h** | |
 
 #### Charge prevue vs capacite
@@ -864,7 +864,7 @@ Ces taches ne sont pas sur le chemin critique strict mais ont une marge tres fai
 
 ### 6.1 Strategie de release
 
-Le projet suit une strategie de **release incrementale** : chaque sprint livre un increment fonctionnel potentiellement deployable. La release officielle (MVP) est deployee en production au Sprint 5.
+On suit une strategie de **release incrementale** : chaque sprint livre un increment fonctionnel potentiellement deployable. La release officielle (MVP) part en production au Sprint 5.
 
 ```
 Sprint 0 ──> Sprint 1 ──> Sprint 2 ──> Sprint 3 ──> Sprint 4 ──> Sprint 5 ──> Buffer
@@ -925,6 +925,8 @@ Sprint 0 ──> Sprint 1 ──> Sprint 2 ──> Sprint 3 ──> Sprint 4 ─
 ## 7. Buffer et marges de securite
 
 ### 7.1 Buffer integre au planning
+
+> Honnêtement, le buffer de 2 semaines c'est Kays qui a insiste pour le mettre. Au debut on trouvait ca exagere, mais vu comment le Sprint 2 et 3 sont charges, on est contents de l'avoir.
 
 | Type de buffer | Duree | Justification |
 |---|---|---|

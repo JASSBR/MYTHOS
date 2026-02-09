@@ -1,9 +1,9 @@
 # MYTHOS - Specifications Techniques
 
 > Plateforme web de jeux narratifs multijoueurs avec Maitre du Jeu IA
-> Version 1.0 | Fevrier 2026
+> Version 1.0 | 11 Fevrier 2026
 
-> L'architecture technique a été définie par Zahid (architecte) et validée collectivement lors d'un atelier technique en semaine 1. Les choix technologiques (NestJS, Socket.io, Prisma) ont été confirmés par les résultats de nos trois POCs réalisés en Sprint 0.
+> L'architecture a ete posee par Kays et on l'a validee tous ensemble pendant un atelier technique en semaine 1. Samy avait d'abord propose Express au lieu de NestJS, mais apres avoir compare les deux sur un mini-POC, on est tous tombes d'accord sur NestJS. Les choix techno (NestJS, Socket.io, Prisma) ont ete confirmes par nos trois POCs du Sprint 0.
 
 ---
 
@@ -735,6 +735,379 @@ Messages narratifs pre-ecrits par phase dans le Scenario Pack, utilises si l'IA 
 
 ---
 
+## 15. Diagrammes UML
+
+On a regroupe ici les diagrammes UML du projet, en syntaxe Mermaid. Ca couvre le modele de classes backend, le flux d'une partie, l'architecture de deploiement, et les cas d'utilisation des differents acteurs.
+
+---
+
+### 15.1 Diagramme de classes (backend NestJS)
+
+Ce diagramme montre le modele de donnees du backend NestJS, tel qu'on l'a defini via Prisma. On y retrouve les entites principales (utilisateur, partie, joueur, evenement, scenario, message) et leurs relations. C'est la base de notre BDD PostgreSQL et ca determine la structure des DTOs et services NestJS.
+
+```mermaid
+classDiagram
+    class User {
+        +String id
+        +String email
+        +String username
+        +String passwordHash
+        +String avatar
+        +DateTime createdAt
+        +DateTime updatedAt
+        +register()
+        +login()
+        +updateProfile()
+        +getStats()
+    }
+
+    class Game {
+        +String id
+        +String code
+        +String scenarioId
+        +GameStatus status
+        +String currentPhase
+        +Int currentRound
+        +Int maxPlayers
+        +Boolean isPrivate
+        +Json stateSnapshot
+        +DateTime createdAt
+        +DateTime finishedAt
+        +start()
+        +pause()
+        +resume()
+        +finish()
+        +getState()
+    }
+
+    class GamePlayer {
+        +String id
+        +String gameId
+        +String userId
+        +String role
+        +Boolean isAlive
+        +Json data
+        +DateTime joinedAt
+        +submitAction()
+        +vote()
+        +disconnect()
+    }
+
+    class Scenario {
+        +String id
+        +String slug
+        +String name
+        +String description
+        +Json config
+        +String version
+        +loadConfig()
+        +getRoles()
+        +getPhases()
+        +getWinConditions()
+    }
+
+    class GameEvent {
+        +String id
+        +String gameId
+        +Int round
+        +String phase
+        +String type
+        +String actorId
+        +Json data
+        +String narrative
+        +DateTime createdAt
+        +resolve()
+        +toLog()
+    }
+
+    class Message {
+        +String id
+        +String gameId
+        +String userId
+        +String content
+        +String type
+        +DateTime createdAt
+        +sanitize()
+        +broadcast()
+    }
+
+    class UserStats {
+        +String userId
+        +Int gamesPlayed
+        +Int gamesWon
+        +Int totalPlaytime
+        +String favoriteScenario
+        +DateTime updatedAt
+        +increment()
+        +recalculate()
+    }
+
+    User "1" --> "*" GamePlayer : participe
+    Game "1" --> "*" GamePlayer : contient
+    Game "*" --> "1" Scenario : utilise
+    Game "1" --> "*" GameEvent : genere
+    Game "1" --> "*" Message : contient
+    User "1" --> "1" UserStats : possede
+    User "1" --> "*" Game : heberge (host)
+    User "1" --> "*" GameEvent : declenche (actor)
+    User "1" --> "*" Message : envoie
+```
+
+---
+
+### 15.2 Diagramme de sequence (flow complet d'une partie)
+
+Ce diagramme retrace le flux complet d'une partie MYTHOS, de la creation du lobby jusqu'a l'ecran de resultats. On y voit les interactions entre le joueur, le frontend Next.js, l'API NestJS, le moteur de jeu, le service IA Claude, Redis et PostgreSQL. La boucle de rounds et le broadcast WebSocket sont bien visibles.
+
+```mermaid
+sequenceDiagram
+    actor Joueur
+    participant Frontend as Frontend (Next.js)
+    participant API as API (NestJS)
+    participant Engine as GameEngine
+    participant AI as IA Claude
+    participant WS as WebSocket (Socket.io)
+    participant Redis as Redis (Upstash)
+    participant DB as PostgreSQL
+
+    Note over Joueur, DB: Phase 1 - Creation et Lobby
+
+    Joueur->>Frontend: Creer une partie
+    Frontend->>API: POST /api/games {scenarioId, maxPlayers}
+    API->>DB: INSERT game (status: LOBBY)
+    DB-->>API: game cree
+    API-->>Frontend: {gameId, code}
+    Frontend-->>Joueur: Afficher lobby + code
+
+    Joueur->>Frontend: Partager le code
+    Note over Joueur: D'autres joueurs rejoignent
+
+    loop Pour chaque joueur
+        Joueur->>Frontend: Rejoindre avec code
+        Frontend->>API: POST /api/games/:id/join
+        API->>DB: INSERT game_player
+        API->>WS: Emit game:player_joined
+        WS-->>Frontend: Broadcast nouveau joueur
+        Frontend-->>Joueur: Mise a jour liste joueurs
+    end
+
+    Note over Joueur, DB: Phase 2 - Demarrage de la partie
+
+    Joueur->>Frontend: Demarrer la partie (hote)
+    Frontend->>API: POST /api/games/:id/start
+    API->>Engine: startGame(gameId)
+    Engine->>DB: UPDATE game (status: PLAYING)
+    Engine->>Redis: SET game:state
+    Engine->>AI: Generer narration d'introduction
+    AI-->>Engine: {narrative: "Introduction..."}
+    Engine->>WS: Emit game:phase + game:narrative
+    WS-->>Frontend: Broadcast a tous les joueurs
+    Frontend-->>Joueur: Afficher intro narrative
+
+    Note over Joueur, DB: Phase 3 - Boucle de jeu (rounds)
+
+    loop Pour chaque round (1 a maxRounds)
+
+        Note over Engine: Phase NARRATIVE
+        Engine->>AI: buildPrompt(context, round)
+        AI-->>Engine: {narrative, effects, hints}
+        Engine->>WS: Emit game:narrative
+        WS-->>Frontend: Afficher narration du round
+        Frontend-->>Joueur: Lire la narration
+
+        Note over Engine: Phase ACTION
+        Engine->>WS: Emit game:phase {phase: ACTION, timer}
+        WS-->>Frontend: Afficher actions disponibles
+
+        par Actions des joueurs
+            Joueur->>Frontend: Choisir une action
+            Frontend->>WS: Emit game:action {action, data}
+            WS->>Engine: processAction()
+            Engine->>Engine: validateAction()
+            Engine->>AI: Generer resultat narratif
+            AI-->>Engine: {narrative, result}
+            Engine->>WS: Emit game:action_result (broadcast)
+            WS-->>Frontend: Afficher resultat
+            Frontend-->>Joueur: Voir le resultat de l'action
+        end
+
+        Note over Engine: Phase RESOLUTION
+        Engine->>Engine: resolvePhase()
+        Engine->>AI: Generer synthese de resolution
+        AI-->>Engine: {narrative, stateChanges}
+        Engine->>Redis: UPDATE game:state
+        Engine->>DB: INSERT game_events
+
+        Note over Engine: Phase VOTE (si applicable)
+        Engine->>WS: Emit game:phase {phase: VOTE}
+        WS-->>Frontend: Afficher interface de vote
+
+        par Votes des joueurs
+            Joueur->>Frontend: Voter
+            Frontend->>WS: Emit game:vote {targetId}
+            WS->>Engine: registerVote()
+            Engine->>WS: Emit game:vote_update (broadcast)
+            WS-->>Frontend: Mise a jour votes
+        end
+
+        Note over Engine: Phase TRANSITION
+        Engine->>Engine: checkWinConditions()
+        Engine->>AI: Generer transition
+        AI-->>Engine: {narrative}
+        Engine->>WS: Emit game:phase {nextRound}
+        WS-->>Frontend: Broadcast mise a jour
+        Frontend-->>Joueur: Afficher transition
+
+    end
+
+    Note over Joueur, DB: Phase 4 - Resolution finale
+
+    Engine->>Engine: determineWinner()
+    Engine->>AI: Generer epilogue final
+    AI-->>Engine: {narrative, winner, summary}
+    Engine->>DB: UPDATE game (status: FINISHED)
+    Engine->>DB: UPDATE user_stats
+    Engine->>Redis: DELETE game:state
+    Engine->>WS: Emit game:ended {winner, summary, stats}
+    WS-->>Frontend: Afficher ecran de resultats
+    Frontend-->>Joueur: Voir resultats et statistiques
+```
+
+---
+
+### 15.3 Diagramme de deploiement
+
+Ce diagramme montre comment MYTHOS est deploye en production : la repartition des composants sur Vercel, Railway, Upstash et Anthropic, avec les protocoles de communication entre chaque couche. Le pipeline CI/CD via GitHub Actions est aussi represente — c'est Yassir qui a gere toute cette partie.
+
+```mermaid
+graph TB
+    subgraph "Client"
+        Browser["Navigateur Web<br/>(Chrome, Firefox, Safari)"]
+    end
+
+    subgraph "CDN & Frontend - Vercel"
+        CDN["Vercel CDN<br/>(Edge Network)"]
+        NextJS["Next.js 14+ SSR<br/>React 18+ / TailwindCSS<br/>Socket.io Client"]
+    end
+
+    subgraph "Backend - Railway"
+        NestJS["NestJS 10+ API<br/>REST + Socket.io 4+<br/>Prisma 5+ ORM"]
+        PG["PostgreSQL 16+<br/>(Railway Managed)<br/>Donnees persistantes"]
+    end
+
+    subgraph "Cache - Upstash"
+        Redis["Redis 7+<br/>(Upstash Serverless)<br/>Cache + Sessions + Pub/Sub"]
+    end
+
+    subgraph "IA - Externe"
+        Claude["Anthropic Claude API<br/>claude-sonnet-4-20250514<br/>Game Master IA"]
+    end
+
+    subgraph "CI/CD - GitHub"
+        GH["GitHub Repository<br/>(main branch)"]
+        Actions["GitHub Actions<br/>lint / test / build / deploy"]
+    end
+
+    Browser -->|"HTTPS"| CDN
+    CDN -->|"SSR"| NextJS
+    NextJS -->|"HTTPS REST"| NestJS
+    NextJS -->|"WSS Socket.io"| NestJS
+    NestJS -->|"TCP Prisma"| PG
+    NestJS -->|"TCP TLS"| Redis
+    NestJS -->|"HTTPS API"| Claude
+
+    GH -->|"push / PR"| Actions
+    Actions -->|"Deploy Frontend"| CDN
+    Actions -->|"Deploy Backend"| NestJS
+
+    style Browser fill:#e1f5fe,stroke:#0277bd
+    style CDN fill:#e8f5e9,stroke:#2e7d32
+    style NextJS fill:#e8f5e9,stroke:#2e7d32
+    style NestJS fill:#fff3e0,stroke:#e65100
+    style PG fill:#fff3e0,stroke:#e65100
+    style Redis fill:#fce4ec,stroke:#c62828
+    style Claude fill:#f3e5f5,stroke:#6a1b9a
+    style GH fill:#f5f5f5,stroke:#424242
+    style Actions fill:#f5f5f5,stroke:#424242
+```
+
+---
+
+### 15.4 Diagramme de cas d'utilisation
+
+Ce diagramme liste les trois acteurs principaux (Joueur, Game Master IA, Administrateur) et les fonctionnalites de chacun. Ca nous a servi a verifier qu'on n'avait rien oublie par rapport au cahier des charges.
+
+```mermaid
+graph LR
+    subgraph "Acteurs"
+        Joueur(("Joueur"))
+        IA(("Game Master IA"))
+        Admin(("Administrateur"))
+    end
+
+    subgraph "Cas d'utilisation - Joueur"
+        UC1["S'inscrire sur la plateforme"]
+        UC2["Se connecter / Se deconnecter"]
+        UC3["Consulter son profil et statistiques"]
+        UC4["Creer une partie"]
+        UC5["Rejoindre une partie (code)"]
+        UC6["Jouer un tour (soumettre une action)"]
+        UC7["Voter lors de la phase de vote"]
+        UC8["Envoyer un message dans le chat"]
+        UC9["Voir les resultats de la partie"]
+        UC10["Consulter l'historique des parties"]
+    end
+
+    subgraph "Cas d'utilisation - Game Master IA"
+        UC11["Narrer l'histoire a chaque phase"]
+        UC12["Arbitrer les actions des joueurs"]
+        UC13["Generer des evenements narratifs"]
+        UC14["Adapter le rythme et la difficulte"]
+        UC15["Produire l'epilogue final"]
+        UC16["Fournir des indices contextuels"]
+    end
+
+    subgraph "Cas d'utilisation - Administrateur"
+        UC17["Acceder au dashboard d'administration"]
+        UC18["Gerer les utilisateurs (ban, unban)"]
+        UC19["Consulter les metriques (parties, joueurs, IA)"]
+        UC20["Surveiller les performances serveur"]
+        UC21["Gerer les Scenario Packs"]
+        UC22["Consulter les logs et erreurs"]
+    end
+
+    Joueur --> UC1
+    Joueur --> UC2
+    Joueur --> UC3
+    Joueur --> UC4
+    Joueur --> UC5
+    Joueur --> UC6
+    Joueur --> UC7
+    Joueur --> UC8
+    Joueur --> UC9
+    Joueur --> UC10
+
+    IA --> UC11
+    IA --> UC12
+    IA --> UC13
+    IA --> UC14
+    IA --> UC15
+    IA --> UC16
+
+    Admin --> UC17
+    Admin --> UC18
+    Admin --> UC19
+    Admin --> UC20
+    Admin --> UC21
+    Admin --> UC22
+
+    style Joueur fill:#e3f2fd,stroke:#1565c0
+    style IA fill:#f3e5f5,stroke:#6a1b9a
+    style Admin fill:#fff8e1,stroke:#f57f17
+```
+
+---
+
 ## Annexe: MVP Scenarios
 
 | | TRIBUNAL | DEEP |
@@ -748,4 +1121,4 @@ Messages narratifs pre-ecrits par phase dans le Scenario Pack, utilises si l'IA 
 
 ---
 
-*Document genere pour le projet MYTHOS - Fevrier 2026*
+*Document genere pour le projet MYTHOS - 11 Fevrier 2026*

@@ -4,8 +4,8 @@
 
 > **Projet** : MYTHOS
 > **Version** : 1.0
-> **Date** : Février 2026
-> **Équipe** : Zahid Ikay (PO/Architecte), Yasmine Benali (SM/Frontend), Lucas Martin (Frontend), Karim Ouadah (IA/Temps réel), Sofia Reyes (UX/DevOps)
+> **Date** : 12 Février 2026
+> **Équipe** : Kays ZAHIDI (PO/Architecte), Samy ZEROUALI (SM/Backend + IA + Temps réel), Youri EMMANUEL (Frontend), Yassir SABBAR (Frontend/UX-UI + DevOps)
 > **Contexte** : Workshop 5A TL – S1 – Bloc 1 RNCP38822
 
 ---
@@ -30,7 +30,7 @@
 
 ### 1.1 Présentation générale
 
-En tant que chef de projet et architecte technique de l'équipe MYTHOS, ce cahier des charges synthétise l'ensemble de notre travail de conception, de recherche et de planification. Il constitue le document de référence pour le développement de la plateforme et répond aux exigences du Bloc 1 du référentiel RNCP38822.
+En tant que chef de projet et architecte technique de l'equipe MYTHOS, j'ai redige ce cahier des charges qui regroupe tout notre travail de conception, de recherche et de planification. C'est notre document de reference pour le dev de la plateforme, et il repond aux exigences du Bloc 1 du referentiel RNCP38822.
 
 **Projet** : MYTHOS – Plateforme de jeux narratifs multijoueur avec IA Maître du Jeu
 
@@ -42,7 +42,7 @@ Mythos Interactive est un studio de jeux indépendant spécialisé dans les exp�
 
 ### 1.2 Origine du besoin
 
-Le marché du jeu narratif en ligne connaît une croissance significative, portée par plusieurs tendances :
+Le marche du jeu narratif en ligne est en pleine croissance, pousse par plusieurs tendances :
 
 - **Essor de l'IA générative** : Les LLM (Large Language Models) permettent désormais de générer du contenu narratif cohérent et adaptatif en temps réel, ouvrant la voie à des expériences de jeu impossibles auparavant.
 - **Succès des jeux sociaux** : Les jeux de déduction sociale (Among Us, Loup-Garou, Time Bomb) ont démontré l'appétit du grand public pour des expériences multijoueur courtes, sociales et accessibles.
@@ -185,11 +185,10 @@ MYTHOS est une plateforme où l'IA est le Maître du Jeu universel. Les joueurs 
 
 | Membre | Rôle principal | Compétences clés |
 |--------|---------------|------------------|
-| Zahid | Chef de projet / Architecte | Gestion de projet Agile, architecture logicielle, NestJS |
-| Yasmine | Développeur Frontend | React, Next.js, TailwindCSS, responsive design |
-| Lucas | Développeur Frontend | React, Next.js, TailwindCSS, responsive design |
-| Karim | Développeur IA / Temps réel | Prompt engineering, Socket.io, intégration API LLM |
-| Sofia | UX/UI / DevOps | Figma, accessibilité WCAG, GitHub Actions, déploiement |
+| Kays | PO / Chef de projet / Architecte technique | Gestion de projet Agile, architecture logicielle, NestJS |
+| Samy | Scrum Master / Dev Backend + IA + Temps réel | Prompt engineering, Socket.io, intégration API LLM, NestJS |
+| Youri | Dev Frontend | React, Next.js, TailwindCSS, responsive design |
+| Yassir | Dev Frontend / UX-UI + DevOps | Figma, accessibilité WCAG, GitHub Actions, déploiement, React, Next.js |
 
 #### Contraintes techniques identifiées
 
@@ -250,7 +249,7 @@ MYTHOS est une plateforme où l'IA est le Maître du Jeu universel. Les joueurs 
 | **Organisationnelle** | Moyenne | Moyen | Équipe compétente mais contrainte en temps. Scrum nécessaire. |
 | **Financière** | Élevée | Faible | Coûts maîtrisés grâce aux tiers gratuits. ROI hypothétique positif dès Y1. |
 
-**Conclusion** : Le projet MYTHOS est faisable. Le périmètre MVP (moteur + 2 scénarios) est réaliste pour une équipe de 4-5 personnes sur un semestre, sous réserve d'un cadrage strict via la méthodologie Agile et d'une priorisation MoSCoW rigoureuse.
+**Conclusion** : Le projet MYTHOS est faisable. Le perimetre MVP (moteur + 2 scenarios) est realiste pour une equipe de 4 personnes sur un semestre, a condition de bien cadrer avec la methodo Agile et de faire une priorisation MoSCoW serieuse.
 
 ---
 
@@ -333,9 +332,11 @@ MYTHOS est une plateforme où l'IA est le Maître du Jeu universel. Les joueurs 
 |----------|-----------|---------------|---------|
 | **NestJS** | Modulaire, TypeScript natif, WebSocket intégré, injection de dépendances, architecture structurée (vs Express), écosystème complet (vs Fastify) | Courbe d'apprentissage | Retenu (Express et Fastify écartés) |
 
-### 3.4 Apports de la veille – Innovations intégrées au projet
+### 3.4 Apports de la veille -- Innovations integrees au projet
 
-| Apport identifié | Source | Intégration dans MYTHOS |
+> C'est pendant la veille que Samy est tombe sur la strategie duale LLM (Haiku + Sonnet) dans un benchmark Reddit. On a teste et ca nous a fait economiser pas mal sur les couts API tout en gardant une bonne qualite de narration.
+
+| Apport identifie | Source | Integration dans MYTHOS |
 |-----------------|--------|------------------------|
 | **Streaming LLM** | Blogs Anthropic/OpenAI | La narration s'affiche progressivement (effet "l'IA écrit en temps réel") pour masquer la latence |
 | **Structured Output JSON** | Documentation API Claude | L'IA retourne directement un JSON structuré (narration + options + messages privés), simplifiant le parsing |
@@ -788,7 +789,7 @@ La solution respecte les principes d'accessibilité WCAG 2.1 niveau AA :
 | ID | Risque | Catégorie | Probabilité | Impact | Criticité | Plan de mitigation |
 |----|--------|-----------|-------------|--------|-----------|-------------------|
 | R1 | Latence excessive API IA (>5s) | Technique | Moyenne | Élevé | Critique | Streaming des réponses, animation d'attente immersive "L'IA réfléchit...", cache des intros, stratégie duale Haiku/Sonnet |
-| R2 | Incohérence narrative de l'IA au fil des tours | Technique | Élevée | Élevé | Critique | Envoi du game_state complet résumé à chaque appel, prompt engineering rigoureux, tests de scénarios complets |
+| R2 | Incoherence narrative de l'IA au fil des tours | Technique | Elevee | Eleve | Critique | Envoi du game_state complet resume a chaque appel, prompt engineering soigne, tests de scenarios complets |
 | R3 | Coûts API IA dépassant le budget | Financier | Moyenne | Moyen | Majeur | Stratégie duale (Haiku pour phases simples), limites d'appels par session, cache, monitoring des coûts |
 | R4 | Désynchronisation entre joueurs (WebSocket) | Technique | Faible | Élevé | Majeur | État centralisé côté serveur (Redis), mécanisme de reconnexion Socket.io, heartbeat régulier |
 | R5 | Dépassement du calendrier | Organisationnel | Élevée | Moyen | Majeur | Scrum sprints de 2 semaines, priorisation MoSCoW stricte, sprint buffer en fin de projet |
@@ -799,6 +800,8 @@ La solution respecte les principes d'accessibilité WCAG 2.1 niveau AA :
 | R10 | Complexité du moteur universel sous-estimée | Technique | Moyenne | Moyen | Majeur | Proof of concept dès le sprint 1, interface Scenario Pack validée avant implémentation |
 
 ### 7.2 Plan de gestion des risques
+
+> On a fait cette analyse de risques en equipe et ca a donne lieu a un vrai debat sur R5 (depassement calendrier). Youri pensait qu'on etait trop optimistes sur les sprints 2 et 3, et au final on a rajoute un sprint buffer pour se proteger.
 
 **Risques critiques (R1, R2)** – Actions immédiates :
 1. **Sprint 1** : Proof of concept du flux IA complet (prompt → réponse → affichage) pour valider la latence et la cohérence
@@ -842,11 +845,10 @@ La solution respecte les principes d'accessibilité WCAG 2.1 niveau AA :
 
 | Rôle Scrum | Membre | Responsabilités principales |
 |------------|--------|---------------------------|
-| **Product Owner / Architecte** | Zahid | Vision produit, priorisation backlog, validation des livrables, architecture |
-| **Scrum Master / Frontend** | Yasmine | Facilitation des cérémonies, suivi vélocité, résolution blocages, développement frontend |
-| **Dev Frontend** | Lucas | UI/UX, game UI, responsive, accessibilité |
-| **Dev IA / Temps réel** | Karim | AI Service, prompt engineering, Socket.io, intégration Scenario Packs |
-| **UX/UI / DevOps** | Sofia | Design Figma, accessibilité WCAG, CI/CD GitHub Actions, déploiement |
+| **PO / Chef de projet / Architecte technique** | Kays | Vision produit, priorisation backlog, validation des livrables, architecture |
+| **Scrum Master / Dev Backend + IA + Temps réel** | Samy | Facilitation des cérémonies, suivi vélocité, AI Service, prompt engineering, Socket.io, intégration Scenario Packs |
+| **Dev Frontend** | Youri | UI/UX, game UI, responsive, accessibilité |
+| **Dev Frontend / UX-UI + DevOps** | Yassir | Design Figma, accessibilité WCAG, CI/CD GitHub Actions, déploiement |
 
 ### 8.4 Outils de pilotage
 

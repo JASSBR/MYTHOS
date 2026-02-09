@@ -6,9 +6,9 @@
 | ----------------- | ------------------------------------------- |
 | **Projet**        | MYTHOS                                      |
 | **Version**       | 1.0                                         |
-| **Date**          | 09 fevrier 2026                             |
+| **Date**          | 07 fevrier 2026                             |
 | **Responsable**   | Chef de projet MYTHOS                       |
-| **Derniere MAJ**  | 09/02/2026                                  |
+| **Derniere MAJ**  | 07/02/2026                                  |
 
 ---
 
@@ -30,7 +30,7 @@
 
 ### 1.1 Approche
 
-L'analyse concurrentielle a ete menee selon une demarche structuree en quatre etapes :
+Pour cette analyse concurrentielle, on a procede en quatre etapes. On s'est chacun inscrit sur les plateformes concurrentes pour les tester nous-memes -- Kays et Samy ont fait des sessions sur AI Dungeon, Youri a passe une soiree sur Wolvesville, et Yassir a teste Character.AI et Storium.
 
 1. **Identification** : Recensement des acteurs directs et indirects positionnees sur le croisement IA generative, jeu narratif et/ou multijoueur.
 2. **Collecte** : Analyse des produits (inscription, test utilisateur), etude des sites web, reviews utilisateurs (Steam, App Store, Reddit), articles de presse specialisee.
@@ -100,7 +100,7 @@ Les concurrents sont positionnes selon deux axes strategiques pour MYTHOS :
 
 ### 2.2 Lecture du mapping
 
-**Quadrant superieur droit (cible MYTHOS)** : Ce quadrant -- forte complexite narrative ET fort aspect multijoueur -- est le moins occupe. C'est precisement la ou MYTHOS se positionne, ce qui represente une opportunite de marche significative.
+**Quadrant superieur droit (cible MYTHOS)** : Ce quadrant -- forte complexite narrative ET fort aspect multijoueur -- est quasiment vide. C'est pile la ou MYTHOS veut se placer, et c'est une vraie opportunite.
 
 | Quadrant                            | Concurrents                        | Saturation |
 | ----------------------------------- | ---------------------------------- | ---------- |
@@ -109,7 +109,7 @@ Les concurrents sont positionnes selon deux axes strategiques pour MYTHOS :
 | Narratif fort + Solo                | AI Dungeon, Novel AI, D&D Beyond   | Haute      |
 | Narratif faible + Solo              | Character.AI (conversationnel)     | Moyenne    |
 
-**Conclusion** : MYTHOS vise un espace de marche sous-exploite ou la combinaison IA narrative + multijoueur synchrone n'est proposee par aucun acteur majeur.
+**En gros** : MYTHOS vise un creneau ou personne ne propose la combinaison IA narrative + multijoueur synchrone. Quand on a fait ce mapping en equipe, ca nous a confortes dans notre choix de positionnement.
 
 ---
 
@@ -482,7 +482,7 @@ Les concurrents sont positionnes selon deux axes strategiques pour MYTHOS :
 | Novel AI           | 2                       | 3                         | 10                     | 7/45           |
 | **MYTHOS (cible)** | **15**                  | **0**                     | **0**                  | **45/45**      |
 
-> **Aucun concurrent existant ne couvre l'ensemble des features cibles de MYTHOS.** Le score maximum atteint est 15/45 (Among Us), principalement grace a ses mecaniques multijoueur, mais sans composante IA ni narrative forte.
+> **Aucun concurrent existant ne coche toutes les cases que MYTHOS vise.** Le meilleur score est 15/45 (Among Us), surtout grace a ses mecaniques multijoueur, mais il n'a ni IA ni narration. Ca nous a rassures sur le fait qu'on ne reinvente pas la roue -- on combine des trucs qui existent deja, mais que personne n'a assembles ensemble.
 
 ---
 
@@ -583,6 +583,8 @@ Les concurrents sont positionnes selon deux axes strategiques pour MYTHOS :
 
 ### 9.1 Ce qu'on reprend (bonnes pratiques)
 
+Apres avoir teste tous ces jeux, on s'est poses pour lister ce qu'on voulait garder et ce qu'on voulait eviter. Youri a particulierement insiste sur l'importance de l'onboarding d'Among Us ("t'arrives, tu joues, t'as rien a lire") et Yassir sur l'UX conversationnelle de Character.AI.
+
 | Concurrent         | Bonne pratique                                   | Application dans MYTHOS                                            |
 | ------------------ | ------------------------------------------------ | ------------------------------------------------------------------ |
 | **Among Us**       | Simplicite des regles, onboarding immediat       | Tutoriel en 1 minute, regles expliquees pendant la partie par l'IA |
@@ -638,7 +640,7 @@ Les concurrents sont positionnes selon deux axes strategiques pour MYTHOS :
 |  🔵 IA Game Master structuree (game loop 6 phases)                   |
 |  🔵 Scenarios JSON configurables (moteur universel)                  |
 |  🔵 Fusion deduction sociale + narration IA                          |
-|  🔵 Coherence narrative garantie sur session complete                |
+|  🔵 Coherence narrative assuree sur session complete                |
 |  🔵 Extensibilite communautaire (creation de scenarios)              |
 |                                                                       |
 +-----------------------------------------------------------------------+
@@ -709,4 +711,4 @@ Exemple pour AI Dungeon :
 
 ---
 
-*Document de reference -- A mettre a jour mensuellement ou lors de l'emergence d'un nouveau concurrent significatif.*
+*Document de reference -- A mettre a jour tous les mois ou si un nouveau concurrent interessant apparait.*
