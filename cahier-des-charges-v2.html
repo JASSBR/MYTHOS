@@ -293,7 +293,7 @@
     <p class="subtitle">Plateforme de jeux narratifs multijoueurs avec IA Game Master</p>
     <div class="meta-grid">
       <div class="meta-item">
-        <div class="label">Duree</div>
+        <div class="label">Durée</div>
         <div class="value">14 semaines (7 sprints)</div>
       </div>
       <div class="meta-item">
@@ -301,19 +301,19 @@
         <div class="value">308 EUR / 500 EUR</div>
       </div>
       <div class="meta-item">
-        <div class="label">Equipe</div>
+        <div class="label">Équipe</div>
         <div class="value">4 membres — 97h/sem</div>
       </div>
       <div class="meta-item">
         <div class="label">Backlog</div>
-        <div class="value">47 tickets — 196 SP</div>
+        <div class="value">47 tickets (42 US + 5 taches techniques) — 196 SP</div>
       </div>
       <div class="meta-item">
-        <div class="label">Referentiel</div>
+        <div class="label">Référentiel</div>
         <div class="value">RNCP38822 — Bloc 1</div>
       </div>
       <div class="meta-item">
-        <div class="label">Decision</div>
+        <div class="label">Décision</div>
         <div class="value">GO CONDITIONNEL</div>
       </div>
     </div>
@@ -321,40 +321,41 @@
       Workshop 5A TL — S1 — Bloc 1 RNCP38822<br>
       Kays ZAHIDI &bull; Samy ZEROUALI &bull; Youri EMMANUEL &bull; Yassir SABBAR
     </p>
-    <div class="version-badge">v2.0 — Fevrier 2026</div>
+    <div class="version-badge">v2.0 — Février 2026</div>
   </div>
 
   <!-- ================= TOC ================= -->
   <div class="toc">
-    <h2>Table des matieres</h2>
+    <h2>Table des matières</h2>
     <ul class="toc-list">
 
       <li class="toc-item">
-        <div class="toc-item-header"><a href="#sec1">1. Resume executif</a></div>
+        <div class="toc-item-header"><a href="#sec1">1. Résumé exécutif</a></div>
         <ul class="toc-subs">
           <li><a href="#sec1">Tableau recapitulatif</a></li>
-          <li><a href="#sec1">Decision GO / NO-GO</a></li>
+          <li><a href="#sec1">Décision GO / NO-GO</a></li>
         </ul>
       </li>
 
       <li class="toc-item">
         <div class="toc-item-header"><a href="#sec2">2. Contexte et objectifs</a> <span class="rncp">C1.1</span></div>
         <ul class="toc-subs">
-          <li><a href="#sec2">Problematique et vision</a></li>
+          <li><a href="#sec2">Problématique et vision</a></li>
           <li><a href="#sec2">Proposition de valeur — 3 piliers</a></li>
-          <li><a href="#sec2">Perimetre MVP</a></li>
+          <li><a href="#sec2">Périmètre MVP</a></li>
           <li><a href="#sec2">Personas</a></li>
           <li><a href="#sec2">Analyse de marche</a></li>
         </ul>
       </li>
 
       <li class="toc-item">
-        <div class="toc-item-header"><a href="#sec3">3. Etude de faisabilite</a> <span class="rncp">C1.1</span></div>
+        <div class="toc-item-header"><a href="#sec3">3. Étude de faisabilité</a> <span class="rncp">C1.1</span></div>
         <ul class="toc-subs">
           <li><a href="#sec3">Faisabilite technique — Matrice de competences</a></li>
-          <li><a href="#sec3">Faisabilite financiere</a></li>
+          <li><a href="#sec3">Faisabilite financière</a></li>
           <li><a href="#sec3">Faisabilite organisationnelle</a></li>
           <li><a href="#sec3">Analyse SWOT</a></li>
+          <li><a href="#sec3">Faisabilite réglementaire et environnementale</a></li>
         </ul>
       </li>
 
@@ -362,7 +363,7 @@
         <div class="toc-item-header"><a href="#sec4">4. Veille technologique et concurrentielle</a> <span class="rncp">C1.2</span></div>
         <ul class="toc-subs">
           <li><a href="#sec4">Benchmark concurrentiel</a></li>
-          <li><a href="#sec4">Decisions d'architecture (ADR)</a></li>
+          <li><a href="#sec4">Décisions d'architecture (ADR)</a></li>
           <li><a href="#sec4">Plan de veille</a></li>
         </ul>
       </li>
@@ -372,54 +373,54 @@
         <ul class="toc-subs">
           <li><a href="#sec5">Diagramme d'architecture macro</a></li>
           <li><a href="#sec5">Stack technique</a></li>
-          <li><a href="#sec5">Modele de donnees (ERD)</a></li>
-          <li><a href="#sec5">Flux temps reel — Diagramme de sequence</a></li>
+          <li><a href="#sec5">Modèle de données (ERD)</a></li>
+          <li><a href="#sec5">Flux temps réel — Diagramme de sequence</a></li>
           <li><a href="#sec5">API REST</a></li>
-          <li><a href="#sec5">Evenements WebSocket</a></li>
-          <li><a href="#sec5">Strategie IA — Claude API</a></li>
+          <li><a href="#sec5">Événements WebSocket</a></li>
+          <li><a href="#sec5">Stratégie IA — Claude API</a></li>
         </ul>
       </li>
 
       <li class="toc-item">
-        <div class="toc-item-header"><a href="#sec6">6. Specifications fonctionnelles</a> <span class="rncp">C1.3</span></div>
+        <div class="toc-item-header"><a href="#sec6">6. Spécifications fonctionnelles</a> <span class="rncp">C1.3</span></div>
         <ul class="toc-subs">
-          <li><a href="#sec6">Acteurs du systeme</a></li>
+          <li><a href="#sec6">Acteurs du système</a></li>
           <li><a href="#sec6">User Stories — Priorisation MoSCoW</a></li>
-          <li><a href="#sec6">Regles metier cles</a></li>
+          <li><a href="#sec6">Regles métier cles</a></li>
           <li><a href="#sec6">Game Loop — Boucle de jeu en 6 phases</a></li>
-          <li><a href="#sec6">Scenario Packs — Structure JSON</a></li>
+          <li><a href="#sec6">Scénario Packs — Structure JSON</a></li>
           <li><a href="#sec6">Maquettes Figma</a></li>
         </ul>
       </li>
 
       <li class="toc-item">
-        <div class="toc-item-header"><a href="#sec7">7. Specifications techniques</a> <span class="rncp">C1.3</span></div>
+        <div class="toc-item-header"><a href="#sec7">7. Spécifications techniques</a> <span class="rncp">C1.3</span></div>
         <ul class="toc-subs">
           <li><a href="#sec7">Structure du projet</a></li>
-          <li><a href="#sec7">Strategie de prompt engineering IA</a></li>
+          <li><a href="#sec7">Stratégie de prompt engineering IA</a></li>
           <li><a href="#sec7">Cache Redis</a></li>
-          <li><a href="#sec7">Securite</a></li>
+          <li><a href="#sec7">Sécurité</a></li>
         </ul>
       </li>
 
       <li class="toc-item">
         <div class="toc-item-header"><a href="#sec8">8. Feuille de route et planning</a> <span class="rncp">C1.4 + C1.5</span></div>
         <ul class="toc-subs">
-          <li><a href="#sec8">Methodologie Scrum adaptee</a></li>
+          <li><a href="#sec8">Méthodologie Scrum adaptée</a></li>
           <li><a href="#sec8">Matrice RACI</a></li>
           <li><a href="#sec8">Jalons du projet</a></li>
           <li><a href="#sec8">Gantt du projet</a></li>
-          <li><a href="#sec8">Backlog par sprint (47 tickets)</a></li>
-          <li><a href="#sec8">Repartition de charge equilibree</a></li>
+          <li><a href="#sec8">Backlog par sprint (47 tickets (42 US + 5 taches techniques))</a></li>
+          <li><a href="#sec8">Répartition de charge equilibree</a></li>
           <li><a href="#sec8">Chemin critique</a></li>
-          <li><a href="#sec8">Budget detaille du projet</a></li>
+          <li><a href="#sec8">Budget détaillé du projet</a></li>
         </ul>
       </li>
 
       <li class="toc-item">
         <div class="toc-item-header"><a href="#sec9">9. Analyse des risques</a> <span class="rncp">C1.5 + C1.7</span></div>
         <ul class="toc-subs">
-          <li><a href="#sec9">Matrice probabilite / impact</a></li>
+          <li><a href="#sec9">Matrice probabilité / impact</a></li>
           <li><a href="#sec9">Registre des risques (12 risques)</a></li>
           <li><a href="#sec9">Top 5 — Plans de mitigation et contingence</a></li>
           <li><a href="#sec9">Plan de crise (3 niveaux)</a></li>
@@ -432,19 +433,19 @@
         <ul class="toc-subs">
           <li><a href="#sec10">KPIs Projet (6 indicateurs)</a></li>
           <li><a href="#sec10">KPIs Produit (5 indicateurs)</a></li>
-          <li><a href="#sec10">KPIs Conformite (4 indicateurs)</a></li>
-          <li><a href="#sec10">Outils de mesure et frequence</a></li>
+          <li><a href="#sec10">KPIs Conformité (4 indicateurs)</a></li>
+          <li><a href="#sec10">Outils de mesure et fréquence</a></li>
           <li><a href="#sec10">Tableau de bord de suivi</a></li>
-          <li><a href="#sec10">Conformite ITIL et ANSSI</a></li>
+          <li><a href="#sec10">Conformité ITIL et ANSSI</a></li>
         </ul>
       </li>
 
       <li class="toc-item">
-        <div class="toc-item-header"><a href="#sec11">11. Conformite reglementaire</a> <span class="rncp">C1.3 + C1.6</span></div>
+        <div class="toc-item-header"><a href="#sec11">11. Conformité réglementaire</a> <span class="rncp">C1.3 + C1.6</span></div>
         <ul class="toc-subs">
-          <li><a href="#sec11">RGPD — Strategie de conformite</a></li>
+          <li><a href="#sec11">RGPD — Stratégie de conformité</a></li>
           <li><a href="#sec11">Accessibilite WCAG 2.1 AA</a></li>
-          <li><a href="#sec11">GreenIT — Eco-conception</a></li>
+          <li><a href="#sec11">GreenIT — Éco-conception</a></li>
         </ul>
       </li>
 
@@ -458,6 +459,10 @@
         </ul>
       </li>
 
+      <li class="toc-item">
+        <div class="toc-item-header"><a href="#glossaire">Glossaire</a></div>
+      </li>
+
     </ul>
   </div>
 
@@ -465,33 +470,33 @@
   <div class="content">
 
     <!-- ================= SECTION 1 ================= -->
-    <h2 id="sec1">1. Resume executif</h2>
+    <h2 id="sec1">1. Résumé exécutif</h2>
 
-    <p><strong>MYTHOS</strong> est une plateforme web de jeux narratifs multijoueurs en temps reel ou une intelligence artificielle generative (Claude, Anthropic) assure le role de Maitre du Jeu. Le moteur repose sur une boucle de jeu en 6 phases et des scenarios modulaires (Scenario Packs JSON), permettant des sessions courtes de 15-25 minutes, accessibles depuis un navigateur, sans aucune installation. Le MVP livre deux scenarios — <strong>TRIBUNAL</strong> (drame judiciaire a roles caches) et <strong>DEEP</strong> (survie sous-marine cooperative) — jouables de 2 a 8 joueurs.</p>
+    <p><strong>MYTHOS</strong> est une plateforme web de jeux narratifs multijoueurs en temps réel ou une intelligence artificielle générative (Claude, Anthropic) assure le rôle de Maître du Jeu. Le moteur repose sur une boucle de jeu en 6 phases et des scénarios modulaires (Scénario Packs JSON), permettant des sessions courtes de 15-25 minutes, accessibles depuis un navigateur, sans aucune installation. Le MVP livre deux scénarios — <strong>TRIBUNAL</strong> (drame judiciaire a rôlescaches) et <strong>DEEP</strong> (survie sous-marine cooperative) — jouables de 2 a 8 joueurs.</p>
 
     <h3>Tableau recapitulatif</h3>
     <table>
       <thead><tr><th>Critere</th><th>Valeur</th></tr></thead>
       <tbody>
-        <tr><td><strong>Equipe</strong></td><td>4 membres (Kays, Samy, Youri, Yassir) — 97h/semaine</td></tr>
-        <tr><td><strong>Duree</strong></td><td>14 semaines — 7 sprints de 2 semaines</td></tr>
+        <tr><td><strong>Équipe</strong></td><td>4 membres (Kays, Samy, Youri, Yassir) — 97h/semaine</td></tr>
+        <tr><td><strong>Durée</strong></td><td>14 semaines — 7 sprints de 2 semaines</td></tr>
         <tr><td><strong>Budget</strong></td><td>308 EUR (sur enveloppe de 500 EUR)</td></tr>
         <tr><td><strong>Stack</strong></td><td>Next.js 14, NestJS 10, PostgreSQL 16, Redis, Socket.io, Claude API</td></tr>
-        <tr><td><strong>Backlog</strong></td><td>47 tickets — 196 story points</td></tr>
-        <tr><td><strong>Scenarios MVP</strong></td><td>TRIBUNAL (4-8 joueurs) + DEEP (3-6 joueurs)</td></tr>
-        <tr><td><strong>Referentiel</strong></td><td>RNCP38822 — Bloc 1 (C1.1 → C1.7)</td></tr>
+        <tr><td><strong>Backlog</strong></td><td>47 tickets (42 US + 5 taches techniques) — 196 story points</td></tr>
+        <tr><td><strong>Scénarios MVP</strong></td><td>TRIBUNAL (4-8 joueurs) + DEEP (3-6 joueurs)</td></tr>
+        <tr><td><strong>Référentiel</strong></td><td>RNCP38822 — Bloc 1 (C1.1 → C1.7)</td></tr>
       </tbody>
     </table>
 
-    <h3>Decision GO / NO-GO</h3>
+    <h3>Décision GO / NO-GO</h3>
     <table>
       <thead><tr><th>Critere</th><th>Poids</th><th>Score (/5)</th><th>Pondere</th></tr></thead>
       <tbody>
         <tr><td>Faisabilite technique</td><td>25%</td><td>3.5</td><td>0.88</td></tr>
-        <tr><td>Faisabilite financiere</td><td>15%</td><td>4.5</td><td>0.68</td></tr>
+        <tr><td>Faisabilite financière</td><td>15%</td><td>4.5</td><td>0.68</td></tr>
         <tr><td>Faisabilite organisationnelle</td><td>20%</td><td>3.5</td><td>0.70</td></tr>
-        <tr><td>Adequation marche</td><td>15%</td><td>4.0</td><td>0.60</td></tr>
-        <tr><td>Maitrise des risques</td><td>15%</td><td>3.5</td><td>0.53</td></tr>
+        <tr><td>Adéquation marche</td><td>15%</td><td>4.0</td><td>0.60</td></tr>
+        <tr><td>Maîtrise des risques</td><td>15%</td><td>3.5</td><td>0.53</td></tr>
         <tr><td>Couverture RNCP</td><td>10%</td><td>4.5</td><td>0.45</td></tr>
         <tr style="font-weight:700; background:#eef2ff;"><td><strong>TOTAL</strong></td><td><strong>100%</strong></td><td></td><td><strong>3.83 / 5</strong></td></tr>
       </tbody>
@@ -501,30 +506,30 @@
       <span class="badge badge-go">GO CONDITIONNEL — 3.83 / 5</span>
       <p style="margin-top:10px; font-size:0.9em;">
         <strong>Conditions :</strong> Montee en competences IA en Sprint 0 (moyenne equipe : 2.0/5) •
-        Redistribution charge backend (Samy 60% → 40%) •
-        Fallback narratif predefini si latence Claude > 10s
+        Redistribution charge backend (Samy 60% → 30%) •
+        Fallback narratif prédéfini si latence Claude > 10s
       </p>
     </div>
 
     <!-- ================= SECTION 2 ================= -->
     <h2 id="sec2" class="section-break">2. Contexte et objectifs</h2>
-    <div class="rncp-box">Competence RNCP : C1.1 — Etude de faisabilite d'un projet</div>
+    <div class="rncp-box">Compétence RNCP : C1.1 — Étude de faisabilité d'un projet</div>
 
-    <h3>2.1 Problematique et vision</h3>
-    <p>Le marche du jeu en ligne social est domine par des titres repetitifs (Among Us, Werewolf Online) qui souffrent d'un manque de renouvellement narratif. Parallelement, les outils d'IA generative narrative (AI Dungeon, Novel AI) restent des experiences solo sans dimension multijoueur. <strong>Aucune plateforme ne combine ces deux dimensions.</strong></p>
-    <p>MYTHOS repond a cette lacune en proposant une experience unique : des <strong>jeux narratifs multijoueurs en temps reel</strong> ou une IA generative joue le role de Maitre du Jeu. Chaque partie est unique grace a la narration adaptative, et le format modulaire (Scenario Packs) garantit un renouvellement constant du contenu sans modification du code.</p>
+    <h3>2.1 Problématique et vision</h3>
+    <p>Le marche du jeu en ligne social est domine par des titres repetitifs (Among Us, Werewolf Online) qui souffrent d'un manque de renouvellement narratif. Parallelement, les outils d'IA générative narrative (AI Dungeon, Novel AI) restent des expériences solo sans dimension multijoueur. <strong>Aucune plateforme ne combine ces deux dimensions.</strong></p>
+    <p>MYTHOS répond a cette lacune en proposant une expérience unique : des <strong>jeux narratifs multijoueurs en temps réel</strong> ou une IA générative joue le rôle de Maître du Jeu. Chaque partie est unique grace a la narration adaptative, et le format modulaire (Scénario Packs) garantit un renouvellement constant du contenu sans modification du code.</p>
 
     <h3>2.2 Proposition de valeur — 3 piliers</h3>
     <div class="card-grid">
       <div class="card">
         <div class="number">1</div>
-        <h4 style="color:var(--primary);">Moteur universel a scenarios modulaires</h4>
-        <p style="font-size:0.85em;">Les Scenario Packs sont de simples fichiers JSON charges dynamiquement. Le moteur gere roles, jauges, tours et evenements de maniere generique.</p>
+        <h4 style="color:var(--primary);">Moteur universel a scénarios modulaires</h4>
+        <p style="font-size:0.85em;">Les Scénario Packs sont de simples fichiers JSON charges dynamiquement. Le moteur gère rôles, jauges, tours et événements de manière générique.</p>
       </div>
       <div class="card">
         <div class="number">2</div>
         <h4 style="color:var(--primary);">IA Game Master adaptative</h4>
-        <p style="font-size:0.85em;">Le GM IA narre en temps reel, arbitre les actions, gere les PNJ, et adapte le rythme en fonction de l'engagement des joueurs.</p>
+        <p style="font-size:0.85em;">Le GM IA narre en temps réel, arbitre les actions, gèreles PNJ, et adapté le rythme en fonction de l'engagement des joueurs.</p>
       </div>
       <div class="card">
         <div class="number">3</div>
@@ -533,15 +538,15 @@
       </div>
     </div>
 
-    <h3>2.2 Perimetre MVP</h3>
+    <h3>2.3 Périmètre MVP</h3>
     <table>
       <thead><tr><th>Inclus dans le MVP</th><th>Post-MVP (hors perimetre)</th></tr></thead>
       <tbody>
-        <tr><td>Authentification (email + OAuth Google)</td><td>Marketplace de scenarios communautaires</td></tr>
-        <tr><td>2 scenarios : TRIBUNAL + DEEP</td><td>Editeur visuel de Scenario Packs</td></tr>
+        <tr><td>Authentification (email + OAuth Google)</td><td>Marketplace de scénarios communautaires</td></tr>
+        <tr><td>2 scénarios : TRIBUNAL + DEEP</td><td>Éditeur visuel de Scénario Packs</td></tr>
         <tr><td>Game Engine 6 phases avec timers</td><td>Matchmaking automatique</td></tr>
         <tr><td>IA Game Master (Claude Sonnet + Haiku)</td><td>Voix synthetisee / TTS pour narration</td></tr>
-        <tr><td>Lobby temps reel avec chat</td><td>Application mobile native</td></tr>
+        <tr><td>Lobby temps réel avec chat</td><td>Application mobile native</td></tr>
         <tr><td>Profil joueur + historique parties</td><td>Systeme de progression / XP</td></tr>
         <tr><td>Dashboard admin basique</td><td>Monetisation (abonnement, achats in-app)</td></tr>
         <tr><td>Deploiement production (Vercel + Railway)</td><td>Mode spectateur</td></tr>
@@ -549,27 +554,27 @@
       </tbody>
     </table>
 
-    <h3>2.3 Personas</h3>
+    <h3>2.4 Personas</h3>
 
     <div class="card" style="border-left: 4px solid var(--accent);">
       <h4 style="margin-top:0;">Lucas, 22 ans — Etudiant casual</h4>
       <p style="font-size:0.9em; margin-bottom:4px;"><strong>Profil :</strong> Joue 3-4h/semaine, habitue d'Among Us et Gartic Phone. Toujours sur navigateur.</p>
       <p style="font-size:0.9em; margin-bottom:4px;"><strong>Frustrations :</strong> Parties trop longues, installation requise, repetitivite des jeux sociaux.</p>
-      <p style="font-size:0.9em; margin-bottom:4px;"><strong>Besoin MYTHOS :</strong> Sessions courtes (15 min), zero friction (lien + code), scenarios renouveles grace a l'IA.</p>
-      <p style="font-size:0.9em;"><strong>Scenario prefere :</strong> TRIBUNAL — votes rapides, tension sociale, parties imprevues.</p>
+      <p style="font-size:0.9em; margin-bottom:4px;"><strong>Besoin MYTHOS :</strong> Sessions courtes (15 min), zero friction (lien + code), scénarios renouvelés grace a l'IA.</p>
+      <p style="font-size:0.9em;"><strong>Scénario préféré :</strong> TRIBUNAL — votes rapides, tension sociale, parties imprevues.</p>
     </div>
 
     <div class="card" style="border-left: 4px solid var(--primary);">
       <h4 style="margin-top:0;">Camille, 28 ans — Game designer indie / joueuse JDR</h4>
       <p style="font-size:0.9em; margin-bottom:4px;"><strong>Profil :</strong> Joueuse de JDR papier (D&D, Vampire), game designer independante. Recherche de narration emergente.</p>
-      <p style="font-size:0.9em; margin-bottom:4px;"><strong>Frustrations :</strong> Trouver un MJ disponible, sessions de 4h difficilement planifiables, qualite narrative inegale en ligne.</p>
-      <p style="font-size:0.9em; margin-bottom:4px;"><strong>Besoin MYTHOS :</strong> IA MJ de qualite avec choix impactants, narration riche, jauges dynamiques.</p>
-      <p style="font-size:0.9em;"><strong>Scenario prefere :</strong> DEEP — survie cooperative, gestion de ressources, narration immersive.</p>
+      <p style="font-size:0.9em; margin-bottom:4px;"><strong>Frustrations :</strong> Trouver un MJ disponible, sessions de 4h difficilement planifiables, qualité narrative inegale en ligne.</p>
+      <p style="font-size:0.9em; margin-bottom:4px;"><strong>Besoin MYTHOS :</strong> IA MJ de qualité avec choix impactants, narration riche, jauges dynamiques.</p>
+      <p style="font-size:0.9em;"><strong>Scénario préféré :</strong> DEEP — survie cooperative, gestion de ressources, narration immersive.</p>
     </div>
 
-    <h3>2.4 Analyse de marche</h3>
+    <h3>2.5 Analyse de marche</h3>
     <table>
-      <thead><tr><th>Marche</th><th>Valeur</th><th>Perimetre</th><th>Source</th></tr></thead>
+      <thead><tr><th>Marche</th><th>Valeur</th><th>Périmètre</th><th>Source</th></tr></thead>
       <tbody>
         <tr><td><strong>TAM</strong> — IA Gaming mondial</td><td>7,2 Mds USD</td><td>Tous jeux integrant IA</td><td>Newzoo 2025</td></tr>
         <tr><td><strong>SAM</strong> — Jeux narratifs IA casual, Europe</td><td>250 M USD</td><td>Narratif + IA + casual + EU</td><td>Estimation</td></tr>
@@ -581,7 +586,7 @@
     <table>
       <thead><tr><th>Tendance</th><th>Impact pour MYTHOS</th><th>Horizon</th></tr></thead>
       <tbody>
-        <tr><td>Democratisation des LLM (baisse des couts -40%/an)</td><td>Cout par partie en baisse constante, rentabilite acceleree</td><td>2025-2027</td></tr>
+        <tr><td>Démocratisation des LLM (baisse des coûts -40%/an)</td><td>Coût par partie en baisse constante, rentabilité accélérée</td><td>2025-2027</td></tr>
         <tr><td>Fatigue des jeux sociaux repetitifs (Among Us -60% DAU)</td><td>Audience en recherche de nouveaute, narration comme differenciant</td><td>2025-2026</td></tr>
         <tr><td>Croissance du JDR en ligne (Roll20 +300% depuis 2020)</td><td>Public cible JDR deja habitue au format narratif multijoueur</td><td>En cours</td></tr>
         <tr><td>Cloud gaming et navigateur-first</td><td>Zero installation = friction minimale, compatible avec notre approche web</td><td>En cours</td></tr>
@@ -639,12 +644,12 @@
     <blockquote>MYTHOS est le seul acteur dans le quadrant <strong>Multijoueur + IA Générative</strong>, ce qui constitue un avantage de premier entrant significatif.</blockquote>
 
     <!-- ================= SECTION 3 ================= -->
-    <h2 id="sec3" class="section-break">3. Etude de faisabilite</h2>
-    <div class="rncp-box">Competence RNCP : C1.1 — Realiser une etude de faisabilite (technique, financiere, organisationnelle)</div>
+    <h2 id="sec3" class="section-break">3. Étude de faisabilité</h2>
+    <div class="rncp-box">Compétence RNCP : C1.1 — Réaliser une étude de faisabilité (technique, financière, organisationnelle)</div>
 
     <h3>3.1 Faisabilite technique — Matrice de competences</h3>
     <table>
-      <thead><tr><th>Competence</th><th>Kays</th><th>Samy</th><th>Youri</th><th>Yassir</th><th>Moy.</th><th>Requis</th><th>Ecart</th></tr></thead>
+      <thead><tr><th>Compétence</th><th>Kays</th><th>Samy</th><th>Youri</th><th>Yassir</th><th>Moy.</th><th>Requis</th><th>Écart</th></tr></thead>
       <tbody>
         <tr><td>React / Next.js</td><td>3</td><td>2</td><td>4</td><td>3</td><td>3.0</td><td>3</td><td class="seuil-vert">0</td></tr>
         <tr><td>Node.js / NestJS</td><td>2</td><td>4</td><td>1</td><td>2</td><td>2.3</td><td>3</td><td class="seuil-rouge">-0.7</td></tr>
@@ -656,9 +661,9 @@
         <tr><td>Gestion Agile</td><td>4</td><td>4</td><td>2</td><td>2</td><td>3.0</td><td>3</td><td class="seuil-vert">0</td></tr>
       </tbody>
     </table>
-    <blockquote><strong>Point critique :</strong> API LLM a 2.0/5 (ecart -1.0). Mitigation : Sprint 0 dedie avec POC IA + pair programming Samy/Kays.</blockquote>
+    <blockquote><strong>Point critique :</strong> API LLM a 2.0/5 (ecart -1.0). Mitigation : Sprint 0 dédié avec POC IA + pair programming Samy/Kays.</blockquote>
 
-    <h3>3.2 Faisabilite financiere</h3>
+    <h3>3.2 Faisabilite financière</h3>
     <table>
       <thead><tr><th>Phase</th><th>Semaines</th><th>Montant</th><th>Postes principaux</th></tr></thead>
       <tbody>
@@ -671,28 +676,28 @@
       </tbody>
     </table>
 
-    <h4>Scenarios financiers</h4>
+    <h4>Scénarios financiers</h4>
     <table>
       <thead><tr><th>Scenario</th><th>Budget estime</th><th>Hypothese</th><th>Risque</th></tr></thead>
       <tbody>
         <tr><td class="seuil-vert">Optimiste</td><td>240 EUR</td><td>Faible usage API IA, free tiers suffisants, pas d'imprevus</td><td>Faible</td></tr>
-        <tr><td class="seuil-jaune">Realiste</td><td>308 EUR</td><td>Usage API IA modere, 1-2 imprevus mineurs</td><td>Moyen</td></tr>
+        <tr><td class="seuil-jaune">Realiste</td><td>308 EUR</td><td>Usage API IA modéré, 1-2 imprevus mineurs</td><td>Moyen</td></tr>
         <tr><td class="seuil-rouge">Pessimiste</td><td>420 EUR</td><td>Surconsommation IA, fallback payant, debug intensif</td><td>Eleve</td></tr>
       </tbody>
     </table>
-    <p><strong>Cout IA par partie estime :</strong> ~0.04 USD (mix Sonnet narration + Haiku phases simples).</p>
+    <p><strong>Coût IA par partie estime :</strong> ~0.04 USD (mix Sonnet narration + Haiku phases simples).</p>
 
     <h3>3.3 Faisabilite organisationnelle</h3>
     <table>
-      <thead><tr><th>Membre</th><th>Role principal</th><th>Disponibilite</th><th>Roles secondaires</th></tr></thead>
+      <thead><tr><th>Membre</th><th>Role principal</th><th>Disponibilité</th><th>Roles secondaires</th></tr></thead>
       <tbody>
-        <tr><td><strong>Kays ZAHIDI</strong></td><td>PO / Chef de projet / Architecte</td><td>25h/semaine</td><td>Code review, integration, decisions techniques</td></tr>
+        <tr><td><strong>Kays ZAHIDI</strong></td><td>PO / Chef de projet / Architecte</td><td>25h/semaine</td><td>Code review, integration, décisions techniques</td></tr>
         <tr><td><strong>Samy ZEROUALI</strong></td><td>Scrum Master / Dev Backend + IA</td><td>28h/semaine</td><td>NestJS, Service IA, Prompt Engineering, WebSocket</td></tr>
         <tr><td><strong>Youri EMMANUEL</strong></td><td>Dev Frontend</td><td>22h/semaine</td><td>React/Next.js, integration UI, tests frontend</td></tr>
-        <tr><td><strong>Yassir SABBAR</strong></td><td>Dev Frontend / UX-UI + DevOps</td><td>22h/semaine</td><td>Maquettes Figma, CI/CD, deploiement, accessibilite</td></tr>
+        <tr><td><strong>Yassir SABBAR</strong></td><td>Dev Frontend / UX-UI + DevOps</td><td>22h/semaine</td><td>Maquettes Figma, CI/CD, déploiement, accessibilité</td></tr>
       </tbody>
     </table>
-    <p><strong>Capacite totale :</strong> 97h/semaine = ~13,9 jours-homme/semaine.</p>
+    <p><strong>Capacité totale :</strong> 97h/semaine = ~13,9 jours-homme/semaine.</p>
 
     <h3>3.4 Analyse SWOT</h3>
     <div class="swot-grid">
@@ -700,7 +705,7 @@
         <h4>Forces</h4>
         <ul>
           <li>Concept innovant (IA MJ + multijoueur + narratif)</li>
-          <li>Architecture modulaire (Scenario Packs)</li>
+          <li>Architecture modulaire (Scénario Packs)</li>
           <li>Sessions courtes (15-25 min, zero friction)</li>
           <li>Stack moderne et maitrisee</li>
         </ul>
@@ -709,9 +714,9 @@
         <h4>Faiblesses</h4>
         <ul>
           <li>Dependance API tierce (Anthropic)</li>
-          <li>Equipe de 4 (bus factor eleve)</li>
-          <li>Competences IA a developper (2.0/5)</li>
-          <li>Seul 1 dev backend dedie (Samy)</li>
+          <li>Équipe de 4 (bus factor eleve)</li>
+          <li>Compétences IA a developper (2.0/5)</li>
+          <li>Seul 1 dev backend dédié (Samy)</li>
         </ul>
       </div>
       <div class="swot-cell opportunites">
@@ -728,15 +733,29 @@
         <ul>
           <li>Entree de gros studios sur le creneau IA</li>
           <li>Augmentation tarifs API LLM</li>
-          <li>Qualite IA insuffisante pour fideliser</li>
-          <li>Regulation IA (AI Act)</li>
+          <li>Qualité IA insuffisante pour fidéliser</li>
+          <li>Régulation IA (AI Act)</li>
         </ul>
       </div>
     </div>
 
+    <h3>3.5 Faisabilite réglementaire et environnementale</h3>
+    <p>Au-dela des aspects techniques, financiers et organisationnels, la faisabilité du projet intègre des contraintes légales et environnementales détaillées en section 11 :</p>
+    <table>
+      <thead><tr><th>Contrainte</th><th>Impact sur le projet</th><th>Section de reference</th></tr></thead>
+      <tbody>
+        <tr><td><strong>RGPD (Règlement UE 2016/679)</strong></td><td>Collecte minimale de données, consentement cookies, droits des utilisateurs, notification CNIL sous 72h en cas de breach</td><td>Section 11.1</td></tr>
+        <tr><td><strong>Protection des mineurs</strong></td><td>Vérification d'age a l'inscription (13 ans minimum), consentement parental requis pour les 13-16 ans, contenus IA adaptés</td><td>Section 11.1</td></tr>
+        <tr><td><strong>AI Act (Règlement UE 2024/1689)</strong></td><td>Classification du système IA (risque limite), obligation de transparence sur le contenu généré par IA</td><td>Section 11.1</td></tr>
+        <tr><td><strong>Accessibilite WCAG 2.1 AA</strong></td><td>Navigation clavier, contrastes 4.5:1, textes alternatifs, timers ajustables</td><td>Section 11.2</td></tr>
+        <tr><td><strong>Éco-conception (GreenIT)</strong></td><td>Optimisation des requetes IA, lazy loading, compression assets, hébergement bas carbone</td><td>Section 11.3</td></tr>
+      </tbody>
+    </table>
+    <blockquote><strong>Conclusion faisabilité :</strong> Toutes les contraintes réglementaires sont adressées par des mesures concrètes intégrées des la phase de conception (Privacy by Design, accessibilité native, éco-conception). Aucun blocage réglementaire identifié.</blockquote>
+
     <!-- ================= SECTION 4 ================= -->
     <h2 id="sec4" class="section-break">4. Veille technologique et concurrentielle</h2>
-    <div class="rncp-box">Competence RNCP : C1.2 — Realiser une veille technologique et concurrentielle</div>
+    <div class="rncp-box">Compétence RNCP : C1.2 — Réaliser une veille technologique et concurrentielle</div>
 
     <h3>4.1 Benchmark concurrentiel</h3>
     <table>
@@ -751,9 +770,9 @@
         <tr><td><strong>Storium</strong></td><td>Storytelling collab</td><td>Non</td><td>Oui</td><td>Fort</td><td>2.4/5</td></tr>
       </tbody>
     </table>
-    <blockquote><strong>USP MYTHOS :</strong> Seule plateforme combinant IA generative (MJ) + multijoueur temps reel + scenarios modulaires. Aucun concurrent ne couvre ces 3 piliers simultanement.</blockquote>
+    <blockquote><strong>USP MYTHOS :</strong> Seule plateforme combinant IA générative (MJ) + multijoueur temps réel + scénarios modulaires. Aucun concurrent ne couvre ces 3 piliers simultanément.</blockquote>
 
-    <h3>4.2 Decisions d'architecture (ADR)</h3>
+    <h3>4.2 Décisions d'architecture (ADR)</h3>
 
     <h4>ADR-01 : Framework Backend</h4>
     <table>
@@ -763,38 +782,38 @@
         <tr><td>TypeScript</td><td class="seuil-vert">Natif</td><td>Config manuelle</td><td>Support partiel</td></tr>
         <tr><td>WebSocket</td><td class="seuil-vert">@nestjs/websockets</td><td>Middleware externe</td><td>Plugin externe</td></tr>
         <tr><td>Courbe d'apprentissage</td><td>Moyenne</td><td class="seuil-vert">Facile</td><td>Facile</td></tr>
-        <tr><td>Ecosysteme</td><td class="seuil-vert">Riche (Guards, Pipes)</td><td>Tres riche</td><td>Croissant</td></tr>
+        <tr><td>Ecosystème</td><td class="seuil-vert">Riche (Guards, Pipes)</td><td>Tres riche</td><td>Croissant</td></tr>
       </tbody>
     </table>
-    <p><strong>Decision :</strong> NestJS — structure imposee indispensable pour 4 devs, WebSocket integre, TypeScript natif.</p>
+    <p><strong>Décision :</strong> NestJS — structure imposée indispensable pour 4 devs, WebSocket intégré, TypeScript natif.</p>
 
-    <h4>ADR-02 : Base de donnees</h4>
+    <h4>ADR-02 : Base de données</h4>
     <table>
       <thead><tr><th>Critere</th><th>PostgreSQL</th><th>MongoDB</th></tr></thead>
       <tbody>
         <tr><td>Schema relationnel</td><td class="seuil-vert">Natif (FK, JOIN)</td><td>References manuelles</td></tr>
-        <tr><td>Donnees flexibles (JSON)</td><td class="seuil-vert">JSONB natif</td><td class="seuil-vert">Natif</td></tr>
+        <tr><td>Données flexibles (JSON)</td><td class="seuil-vert">JSONB natif</td><td class="seuil-vert">Natif</td></tr>
         <tr><td>Transactions</td><td class="seuil-vert">ACID complet</td><td>Multi-doc depuis v4</td></tr>
         <tr><td>Prisma ORM</td><td class="seuil-vert">Support complet</td><td>Support partiel</td></tr>
-        <tr><td>Hebergement gratuit</td><td>Railway / Supabase</td><td>Atlas free tier</td></tr>
+        <tr><td>Hébergement gratuit</td><td>Railway / Supabase</td><td>Atlas free tier</td></tr>
       </tbody>
     </table>
-    <p><strong>Decision :</strong> PostgreSQL — modele relationnel fort (User→Game→Player), JSONB pour les Scenario Packs et jauges.</p>
+    <p><strong>Décision :</strong> PostgreSQL — modèle relationnel fort (User→Game→Player), JSONB pour les Scénario Packs et jauges.</p>
 
-    <h4>ADR-03 : Modele IA</h4>
+    <h4>ADR-03 : Modèle IA</h4>
     <table>
       <thead><tr><th>Critere</th><th>Claude (Anthropic)</th><th>GPT-4 (OpenAI)</th><th>Mistral</th></tr></thead>
       <tbody>
         <tr><td>Context window</td><td class="seuil-vert">200k tokens</td><td>128k tokens</td><td>32k tokens</td></tr>
-        <tr><td>Qualite roleplay</td><td class="seuil-vert">Excellent</td><td>Bon</td><td>Moyen</td></tr>
+        <tr><td>Qualité roleplay</td><td class="seuil-vert">Excellent</td><td>Bon</td><td>Moyen</td></tr>
         <tr><td>Streaming</td><td class="seuil-vert">SSE natif</td><td class="seuil-vert">SSE natif</td><td>SSE natif</td></tr>
-        <tr><td>Cout / 1M tokens (entree)</td><td>3 USD (Sonnet)</td><td>10 USD (GPT-4o)</td><td class="seuil-vert">0.25 USD</td></tr>
-        <tr><td>Strategie duale</td><td class="seuil-vert">Sonnet + Haiku</td><td>GPT-4o + GPT-4o-mini</td><td>Large + Small</td></tr>
+        <tr><td>Coût / 1M tokens (entree)</td><td>3 USD (Sonnet)</td><td>10 USD (GPT-4o)</td><td class="seuil-vert">0.25 USD</td></tr>
+        <tr><td>Stratégie duale</td><td class="seuil-vert">Sonnet + Haiku</td><td>GPT-4o + GPT-4o-mini</td><td>Large + Small</td></tr>
       </tbody>
     </table>
-    <p><strong>Decision :</strong> Claude (Anthropic) — meilleur roleplay, context window 200k, strategie duale Sonnet/Haiku optimale pour le cout.</p>
+    <p><strong>Décision :</strong> Claude (Anthropic) — meilleur roleplay, context window 200k, stratégie duale Sonnet/Haiku optimale pour le coût.</p>
 
-    <h4>ADR-04 : Temps reel</h4>
+    <h4>ADR-04 : Temps réel</h4>
     <table>
       <thead><tr><th>Critere</th><th>Socket.io</th><th>WS natif</th></tr></thead>
       <tbody>
@@ -805,48 +824,48 @@
         <tr><td>Integration NestJS</td><td class="seuil-vert">@nestjs/websockets</td><td>Adapter custom</td></tr>
       </tbody>
     </table>
-    <p><strong>Decision :</strong> Socket.io — rooms pour les sessions de jeu, reconnexion automatique critique pour le gameplay.</p>
+    <p><strong>Décision :</strong> Socket.io — rooms pour les sessions de jeu, reconnexion automatique critique pour le gameplay.</p>
 
     <h4>ADR-05 : ORM</h4>
     <table>
       <thead><tr><th>Critere</th><th>Prisma</th><th>TypeORM</th></tr></thead>
       <tbody>
         <tr><td>Schema-first</td><td class="seuil-vert">Oui (prisma.schema)</td><td>Decorateurs</td></tr>
-        <tr><td>Types auto-generes</td><td class="seuil-vert">@prisma/client</td><td>Partiel</td></tr>
+        <tr><td>Types auto-générés</td><td class="seuil-vert">@prisma/client</td><td>Partiel</td></tr>
         <tr><td>Migrations</td><td class="seuil-vert">prisma migrate</td><td>CLI migrations</td></tr>
         <tr><td>JSONB PostgreSQL</td><td class="seuil-vert">Support natif</td><td>Support partiel</td></tr>
         <tr><td>DX (Developer Experience)</td><td class="seuil-vert">Excellent</td><td>Bonne</td></tr>
       </tbody>
     </table>
-    <p><strong>Decision :</strong> Prisma — typage auto-genere essentiel pour 4 devs, migrations simples, support JSONB.</p>
+    <p><strong>Décision :</strong> Prisma — typage auto-généré essentiel pour 4 devs, migrations simples, support JSONB.</p>
 
-    <h4>ADR-06 : Hebergement</h4>
+    <h4>ADR-06 : Hébergement</h4>
     <table>
       <thead><tr><th>Critere</th><th>Vercel + Railway</th><th>AWS (EC2/ECS)</th></tr></thead>
       <tbody>
         <tr><td>Deploiement</td><td class="seuil-vert">Git push → deploy</td><td>Configuration manuelle</td></tr>
-        <tr><td>Cout initial</td><td class="seuil-vert">Free tiers genereux</td><td>Payant des le debut</td></tr>
+        <tr><td>Coût initial</td><td class="seuil-vert">Free tiers généreux</td><td>Payant des le début</td></tr>
         <tr><td>WebSocket support</td><td>Railway (OK)</td><td class="seuil-vert">Natif</td></tr>
         <tr><td>Scalabilite</td><td>Limitee (free tier)</td><td class="seuil-vert">Illimitee</td></tr>
-        <tr><td>Complexite DevOps</td><td class="seuil-vert">Minimale</td><td>Elevee</td></tr>
+        <tr><td>Complexité DevOps</td><td class="seuil-vert">Minimale</td><td>Élevée</td></tr>
       </tbody>
     </table>
-    <p><strong>Decision :</strong> Vercel (front) + Railway (back) — zero config, free tiers, adapte au budget etudiant de 308 EUR.</p>
+    <p><strong>Décision :</strong> Vercel (front) + Railway (back) — zero config, free tiers, adapté au budget étudiant de 308 EUR.</p>
 
     <h3>4.3 Plan de veille</h3>
     <table>
-      <thead><tr><th>Axe</th><th>Objectif</th><th>Outils</th><th>Frequence</th></tr></thead>
+      <thead><tr><th>Axe</th><th>Objectif</th><th>Outils</th><th>Fréquence</th></tr></thead>
       <tbody>
-        <tr><td><strong>IA Generative</strong></td><td>Nouveaux modeles, baisses de prix, features</td><td>Anthropic Blog, Hugging Face, ArXiv</td><td>Hebdomadaire</td></tr>
+        <tr><td><strong>IA Generative</strong></td><td>Nouveaux modèles, baisses de prix, features</td><td>Anthropic Blog, Hugging Face, ArXiv</td><td>Hebdomadaire</td></tr>
         <tr><td><strong>Temps Reel / WebSocket</strong></td><td>Perf, nouveaux protocoles, best practices</td><td>Socket.io GitHub, Web.dev</td><td>Bimensuelle</td></tr>
         <tr><td><strong>Gaming Narratif</strong></td><td>Tendances, concurrents, retours joueurs</td><td>Steam, Reddit r/rpg, Itch.io</td><td>Bimensuelle</td></tr>
-        <tr><td><strong>Eco-conception</strong></td><td>GreenIT, optimisation, reglementation</td><td>GR491, EcoIndex, W3C Sustainability</td><td>Mensuelle</td></tr>
+        <tr><td><strong>Éco-conception</strong></td><td>GreenIT, optimisation, reglementation</td><td>GR491, EcoIndex, W3C Sustainability</td><td>Mensuelle</td></tr>
       </tbody>
     </table>
 
     <!-- ================= SECTION 5 ================= -->
     <h2 id="sec5" class="section-break">5. Architecture logicielle</h2>
-    <div class="rncp-box">Competence RNCP : C1.3 — Concevoir l'architecture d'une solution logicielle</div>
+    <div class="rncp-box">Compétence RNCP : C1.3 — Concevoir l'architecture d'une solution logicielle</div>
 
     <h3>5.1 Diagramme d'architecture macro</h3>
     <div class="mermaid-container">
@@ -862,7 +881,7 @@ graph TB
     subgraph BACKEND["BACKEND — NestJS 10"]
         AUTH["Auth Module<br/>JWT + OAuth"]
         GAME["Game Engine<br/>6 phases"]
-        SCENARIO["Scenario Service<br/>JSON Packs"]
+        SCENARIO["Scénario Service<br/>JSON Packs"]
         SOCKETB["WebSocket Gateway<br/>Socket.io"]
         AI["AI Service<br/>Claude API"]
     end
@@ -894,19 +913,19 @@ graph TB
         <tr><td>Frontend</td><td>Next.js 14 + React 18</td><td>SSR pour SEO, excellent DX</td></tr>
         <tr><td>UI</td><td>Tailwind CSS + Shadcn/UI</td><td>Prototypage rapide, design system coherent</td></tr>
         <tr><td>State</td><td>Zustand</td><td>State management leger et performant</td></tr>
-        <tr><td>Temps reel</td><td>Socket.io 4+</td><td>Rooms, namespaces, reconnexion auto</td></tr>
-        <tr><td>Backend</td><td>NestJS 10+ (Node.js)</td><td>Structure modulaire, TypeScript natif, WebSocket integre</td></tr>
-        <tr><td>ORM</td><td>Prisma 5+</td><td>Schema-first, typage auto-genere, migrations</td></tr>
-        <tr><td>IA</td><td>API Anthropic Claude</td><td>Context window 200k, excellent roleplay, strategie duale</td></tr>
+        <tr><td>Temps réel</td><td>Socket.io 4+</td><td>Rooms, namespaces, reconnexion auto</td></tr>
+        <tr><td>Backend</td><td>NestJS 10+ (Node.js)</td><td>Structure modulaire, TypeScript natif, WebSocket intégré</td></tr>
+        <tr><td>ORM</td><td>Prisma 5+</td><td>Schema-first, typage auto-généré, migrations</td></tr>
+        <tr><td>IA</td><td>API Anthropic Claude</td><td>Context window 200k, excellent roleplay, stratégie duale</td></tr>
         <tr><td>BDD</td><td>PostgreSQL 16</td><td>JSONB natif, relationnel robuste</td></tr>
-        <tr><td>Cache</td><td>Redis (Upstash)</td><td>Pub/sub pour WebSocket, sessions temps reel</td></tr>
-        <tr><td>Hebergement</td><td>Vercel (front) + Railway (back)</td><td>Free tiers, deploiement auto, zero config</td></tr>
+        <tr><td>Cache</td><td>Redis (Upstash)</td><td>Pub/sub pour WebSocket, sessions temps réel</td></tr>
+        <tr><td>Hébergement</td><td>Vercel (front) + Railway (back)</td><td>Free tiers, déploiement auto, zero config</td></tr>
         <tr><td>CI/CD</td><td>GitHub Actions</td><td>Integration native, gratuit</td></tr>
         <tr><td>Monitoring</td><td>Sentry + Vercel Analytics + UptimeRobot</td><td>Erreurs + performance + uptime</td></tr>
       </tbody>
     </table>
 
-    <h3>5.3 Modele de donnees (ERD)</h3>
+    <h3>5.3 Modèle de données (ERD)</h3>
     <div class="mermaid-container">
       <pre class="mermaid">
 erDiagram
@@ -927,7 +946,7 @@ erDiagram
         string email UK
         string password_hash
         string username UK
-        enum role "player | admin"
+        enum rôle"player | admin"
         string oauth_provider
         datetime created_at
         datetime banned_until
@@ -999,7 +1018,7 @@ erDiagram
       </pre>
     </div>
 
-    <h3>5.4 Flux temps reel — Diagramme de sequence</h3>
+    <h3>5.4 Flux temps réel — Diagramme de sequence</h3>
     <div class="mermaid-container">
       <pre class="mermaid">
 sequenceDiagram
@@ -1040,7 +1059,7 @@ sequenceDiagram
         <tr><td><code>POST</code></td><td>/api/auth/register</td><td>Inscription</td><td>Non</td></tr>
         <tr><td><code>POST</code></td><td>/api/auth/login</td><td>Connexion (JWT 24h)</td><td>Non</td></tr>
         <tr><td><code>GET</code></td><td>/api/users/me</td><td>Profil courant</td><td>JWT</td></tr>
-        <tr><td><code>GET</code></td><td>/api/scenarios</td><td>Liste scenarios actifs</td><td>Optionnel</td></tr>
+        <tr><td><code>GET</code></td><td>/api/scenarios</td><td>Liste scénarios actifs</td><td>Optionnel</td></tr>
         <tr><td><code>GET</code></td><td>/api/scenarios/:slug</td><td>Detail scenario</td><td>Optionnel</td></tr>
         <tr><td><code>POST</code></td><td>/api/sessions</td><td>Creer session</td><td>JWT</td></tr>
         <tr><td><code>GET</code></td><td>/api/sessions/:code</td><td>Infos session</td><td>JWT</td></tr>
@@ -1051,7 +1070,7 @@ sequenceDiagram
       </tbody>
     </table>
 
-    <h3>5.6 Evenements WebSocket</h3>
+    <h3>5.6 Événements WebSocket</h3>
     <table>
       <thead><tr><th>Direction</th><th>Event</th><th>Payload</th></tr></thead>
       <tbody>
@@ -1066,38 +1085,38 @@ sequenceDiagram
         <tr><td>Serveur → Client</td><td><code>game:narration</code></td><td>{ text, isStreaming }</td></tr>
         <tr><td>Serveur → Client</td><td><code>game:resolution</code></td><td>{ text, updatedGauges, events }</td></tr>
         <tr><td>Serveur → Client</td><td><code>game:vote-results</code></td><td>{ results, eliminated? }</td></tr>
-        <tr><td>Serveur → Client</td><td><code>game:ended</code></td><td>{ epilogue, stats, winner? }</td></tr>
+        <tr><td>Serveur → Client</td><td><code>game:ended</code></td><td>{ épilogue, stats, winner? }</td></tr>
         <tr><td>Serveur → Client</td><td><code>game:private-info</code></td><td>{ role, secret, objectives }</td></tr>
       </tbody>
     </table>
 
-    <h3>5.7 Strategie IA — Claude API</h3>
+    <h3>5.7 Stratégie IA — Claude API</h3>
     <table>
       <thead><tr><th>Parametre</th><th>Valeur</th></tr></thead>
       <tbody>
-        <tr><td>Modele principal</td><td>claude-sonnet-4-20250514 (narration, resolution)</td></tr>
-        <tr><td>Modele secondaire</td><td>claude-haiku (setup, validation actions)</td></tr>
+        <tr><td>Modèle principal</td><td>claude-sonnet-4-20250514 (narration, resolution)</td></tr>
+        <tr><td>Modèle secondaire</td><td>claude-haiku (setup, validation actions)</td></tr>
         <tr><td>Max tokens</td><td>512 (narration) / 256 (resolution) / 128 (validation)</td></tr>
         <tr><td>Temperature</td><td>0.8 (narration) / 0.3 (resolution, validation)</td></tr>
         <tr><td>Streaming</td><td>Actif pour narration (SSE → WebSocket)</td></tr>
         <tr><td>Retry</td><td>3 tentatives, backoff exponentiel (1s, 2s, 4s)</td></tr>
         <tr><td>Fallback</td><td>Claude Haiku si Sonnet timeout > 10s</td></tr>
-        <tr><td>Cout estime / partie</td><td>~0.04 USD (mix Sonnet + Haiku)</td></tr>
+        <tr><td>Coût estime / partie</td><td>~0.04 USD (mix Sonnet + Haiku)</td></tr>
       </tbody>
     </table>
 
     <!-- ================= SECTION 6 ================= -->
-    <h2 id="sec6" class="section-break">6. Specifications fonctionnelles</h2>
-    <div class="rncp-box">Competence RNCP : C1.3 — Concevoir et specifier une solution logicielle</div>
+    <h2 id="sec6" class="section-break">6. Spécifications fonctionnelles</h2>
+    <div class="rncp-box">Compétence RNCP : C1.3 — Concevoir et specifier une solution logicielle</div>
 
-    <h3>6.1 Acteurs du systeme</h3>
+    <h3>6.1 Acteurs du système</h3>
     <table>
       <thead><tr><th>Acteur</th><th>Description</th><th>Droits</th></tr></thead>
       <tbody>
         <tr><td><strong>Joueur</strong></td><td>Utilisateur inscrit qui rejoint et joue des parties</td><td>S'inscrire, rejoindre, jouer, chatter, voter, consulter profil/historique</td></tr>
         <tr><td><strong>Hote</strong></td><td>Joueur qui cree une session (herite des droits Joueur)</td><td>Creer partie, configurer parametres, lancer partie, expulser joueur</td></tr>
         <tr><td><strong>Admin</strong></td><td>Moderateur de la plateforme</td><td>Voir stats, gerer sessions actives, bannir utilisateurs</td></tr>
-        <tr><td><strong>IA Game Master</strong></td><td>Agent Claude qui narre, arbitre et resout les actions</td><td>Generer narration, resoudre actions, mettre a jour jauges, generer epilogue</td></tr>
+        <tr><td><strong>IA Game Master</strong></td><td>Agent Claude qui narre, arbitre et résout les actions</td><td>Générer narration, résoudre actions, mettre a jour jauges, générer épilogue</td></tr>
       </tbody>
     </table>
 
@@ -1110,18 +1129,18 @@ sequenceDiagram
         <tr><td>US-01</td><td>Visiteur</td><td>m'inscrire par email</td><td>creer un compte</td><td>3</td></tr>
         <tr><td>US-02</td><td>Visiteur</td><td>me connecter</td><td>acceder a mon profil</td><td>3</td></tr>
         <tr><td>US-03</td><td>Visiteur</td><td>me connecter via Google</td><td>eviter la saisie manuelle</td><td>5</td></tr>
-        <tr><td>US-04</td><td>Joueur</td><td>voir la liste des scenarios</td><td>choisir un scenario</td><td>3</td></tr>
+        <tr><td>US-04</td><td>Joueur</td><td>voir la liste des scénarios</td><td>choisir un scenario</td><td>3</td></tr>
         <tr><td>US-05</td><td>Joueur</td><td>creer une partie</td><td>inviter mes amis</td><td>5</td></tr>
         <tr><td>US-06</td><td>Joueur</td><td>rejoindre une partie via code</td><td>participer au jeu</td><td>5</td></tr>
         <tr><td>US-07</td><td>Hote</td><td>configurer les parametres</td><td>adapter la partie (joueurs, timers, difficulte)</td><td>5</td></tr>
         <tr><td>US-08</td><td>Hote</td><td>lancer la partie</td><td>demarrer le jeu</td><td>3</td></tr>
-        <tr><td>US-09</td><td>Joueur</td><td>recevoir mon role secret</td><td>connaitre mon objectif</td><td>5</td></tr>
+        <tr><td>US-09</td><td>Joueur</td><td>recevoir mon rôlesecret</td><td>connaître mon objectif</td><td>5</td></tr>
         <tr><td>US-10</td><td>Joueur</td><td>lire la narration IA</td><td>comprendre la situation</td><td>8</td></tr>
         <tr><td>US-11</td><td>Joueur</td><td>soumettre une action</td><td>influencer l'histoire</td><td>5</td></tr>
-        <tr><td>US-12</td><td>Joueur</td><td>voir la resolution IA</td><td>connaitre les consequences</td><td>8</td></tr>
+        <tr><td>US-12</td><td>Joueur</td><td>voir la resolution IA</td><td>connaître les consequences</td><td>8</td></tr>
         <tr><td>US-13</td><td>Joueur</td><td>discuter avec les autres</td><td>debattre et strategiser</td><td>5</td></tr>
-        <tr><td>US-14</td><td>Joueur</td><td>voter (TRIBUNAL)</td><td>eliminer un suspect</td><td>5</td></tr>
-        <tr><td>US-15</td><td>Joueur</td><td>voir l'ecran de fin</td><td>connaitre le resultat et les stats</td><td>5</td></tr>
+        <tr><td>US-14</td><td>Joueur</td><td>voter (TRIBUNAL)</td><td>éliminér un suspect</td><td>5</td></tr>
+        <tr><td>US-15</td><td>Joueur</td><td>voir l'ecran de fin</td><td>connaître le resultat et les stats</td><td>5</td></tr>
         <tr><td>US-16</td><td>Joueur</td><td>voir les jauges (DEEP)</td><td>gerer les ressources du sous-marin</td><td>8</td></tr>
       </tbody>
     </table>
@@ -1130,7 +1149,7 @@ sequenceDiagram
     <table>
       <thead><tr><th>#</th><th>En tant que...</th><th>Je veux...</th><th>Afin de...</th><th>SP</th></tr></thead>
       <tbody>
-        <tr><td>US-17</td><td>Joueur</td><td>voir le streaming narration mot a mot</td><td>vivre l'immersion en temps reel</td><td>5</td></tr>
+        <tr><td>US-17</td><td>Joueur</td><td>voir le streaming narration mot a mot</td><td>vivre l'immersion en temps réel</td><td>5</td></tr>
         <tr><td>US-18</td><td>Joueur</td><td>consulter mon profil</td><td>voir mes stats et historique</td><td>3</td></tr>
         <tr><td>US-19</td><td>Joueur</td><td>envoyer un message prive</td><td>communiquer en secret</td><td>3</td></tr>
         <tr><td>US-20</td><td>Joueur</td><td>etre reconnecte automatiquement</td><td>reprendre apres une coupure reseau</td><td>5</td></tr>
@@ -1139,7 +1158,7 @@ sequenceDiagram
         <tr><td>US-23</td><td>Hote</td><td>expulser un joueur du lobby</td><td>gerer les perturbateurs</td><td>3</td></tr>
         <tr><td>US-24</td><td>Admin</td><td>voir les stats globales</td><td>monitorer la plateforme</td><td>5</td></tr>
         <tr><td>US-25</td><td>Admin</td><td>voir les sessions actives</td><td>intervenir si necessaire</td><td>3</td></tr>
-        <tr><td>US-26</td><td>Admin</td><td>bannir un utilisateur</td><td>moderer la plateforme</td><td>3</td></tr>
+        <tr><td>US-26</td><td>Admin</td><td>bannir un utilisateur</td><td>modérer la plateforme</td><td>3</td></tr>
       </tbody>
     </table>
 
@@ -1149,7 +1168,7 @@ sequenceDiagram
       <tbody>
         <tr><td>US-27</td><td>Joueur</td><td>voir une animation de revelation de role</td><td>3</td></tr>
         <tr><td>US-28</td><td>Joueur</td><td>partager le code de partie via lien</td><td>2</td></tr>
-        <tr><td>US-29</td><td>Joueur</td><td>voir un recap de partie detaille</td><td>5</td></tr>
+        <tr><td>US-29</td><td>Joueur</td><td>voir un recap de partie détaillé</td><td>5</td></tr>
         <tr><td>US-30</td><td>Joueur</td><td>changer mon avatar/pseudo</td><td>2</td></tr>
         <tr><td>US-31</td><td>Joueur</td><td>signaler un bug depuis l'interface</td><td>3</td></tr>
         <tr><td>US-32</td><td>Joueur</td><td>voir les regles du scenario avant de jouer</td><td>2</td></tr>
@@ -1168,18 +1187,18 @@ sequenceDiagram
         <tr><td>US-38</td><td>Joueur</td><td>jouer sur mobile natif</td><td>Webapp responsive suffit pour le MVP</td></tr>
         <tr><td>US-39</td><td>Joueur</td><td>gagner des points d'XP / niveaux</td><td>Systeme de progression — post-MVP</td></tr>
         <tr><td>US-40</td><td>Joueur</td><td>regarder une partie en spectateur</td><td>Mode spectateur — post-MVP</td></tr>
-        <tr><td>US-41</td><td>Admin</td><td>moderer le chat en temps reel</td><td>Moderation manuelle — post-MVP</td></tr>
+        <tr><td>US-41</td><td>Admin</td><td>modérer le chat en temps réel</td><td>Modération manuelle — post-MVP</td></tr>
         <tr><td>US-42</td><td>Joueur</td><td>entendre la narration en voix synthetisee</td><td>TTS — post-MVP (cout API eleve)</td></tr>
       </tbody>
     </table>
 
-    <h3>6.3 Regles metier cles</h3>
+    <h3>6.3 Regles métier cles</h3>
 
     <div class="card">
-      <h4 style="margin-top:0;">RM-01 : Creation et gestion de session</h4>
+      <h4 style="margin-top:0;">RM-01 : Création et gestion de session</h4>
       <ul>
         <li>Un joueur connecte peut creer une session → il devient <strong>Hote</strong></li>
-        <li>Un code unique de 6 caracteres (format ABC-XY-123) est genere automatiquement</li>
+        <li>Un code unique de 6 caractères (format ABC-XY-123) est généré automatiquement</li>
         <li>La session reste en statut <code>waiting</code> jusqu'au lancement par l'hote</li>
         <li>L'hote peut configurer : nombre de joueurs (min/max du scenario), timers, difficulte IA</li>
         <li>Le bouton "Lancer la partie" est desactive tant que <code>min_players</code> n'est pas atteint</li>
@@ -1188,14 +1207,14 @@ sequenceDiagram
     </div>
 
     <div class="card">
-      <h4 style="margin-top:0;">RM-02 : Distribution des roles</h4>
+      <h4 style="margin-top:0;">RM-02 : Distribution des rôles</h4>
       <ul>
-        <li>A l'appel de <code>game:start</code>, le serveur distribue aleatoirement les roles du Scenario Pack</li>
-        <li>Chaque joueur recoit son role via l'evenement prive <code>game:private-info</code></li>
-        <li>Les roles sont stockes dans <code>Player.role_name</code> et <code>Player.role_data</code> (JSON)</li>
-        <li>Pour TRIBUNAL : les roles sont <strong>secrets</strong> (hidden_roles: true) — seul le joueur connait son role</li>
-        <li>Pour DEEP : les roles sont <strong>publics</strong> (hidden_roles: false) — tous les joueurs voient les roles</li>
-        <li>Si le nombre de joueurs est inferieur au nombre de roles : certains roles sont omis (priorite definie dans le Pack)</li>
+        <li>A l'appel de <code>game:start</code>, le serveur distribue aléatoirement les rôlesdu Scénario Pack</li>
+        <li>Chaque joueur reçoit son rôle via l'événement privé <code>game:private-info</code></li>
+        <li>Les rôles sont stockes dans <code>Player.role_name</code> et <code>Player.role_data</code> (JSON)</li>
+        <li>Pour TRIBUNAL : les rôles sont <strong>secrets</strong> (hidden_roles: true) — seul le joueur connaît son role</li>
+        <li>Pour DEEP : les rôles sont <strong>publics</strong> (hidden_roles: false) — tous les joueurs voient les rôles</li>
+        <li>Si le nombre de joueurs est inférieur au nombre de rôles : certains rôles sont omis (priorité définie dans le Pack)</li>
       </ul>
     </div>
 
@@ -1204,10 +1223,10 @@ sequenceDiagram
       <ul>
         <li>Le joueur est marque <code>is_connected: false</code> mais reste dans la partie</li>
         <li>Grace period de 60s pour reconnexion automatique (Socket.io reconnect)</li>
-        <li>A la reconnexion : le client recoit l'etat complet via <code>game:sync-state</code></li>
+        <li>A la reconnexion : le client reçoit l'etat complet via <code>game:sync-state</code></li>
         <li>Si timeout depasse (>60s) : actions automatiques vides (<code>is_timeout: true</code>), votes = abstention</li>
-        <li>L'IA adapte sa narration pour integrer l'absence du joueur dans l'histoire ("Le Jure reste silencieux...")</li>
-        <li>Si l'hote se deconnecte : le role d'hote est transfere au joueur suivant (par ordre d'arrivee)</li>
+        <li>L'IA adapté sa narration pour intégrér l'absence du joueur dans l'histoire ("Le Jure reste silencieux...")</li>
+        <li>Si l'hote se deconnecte : le rôle d'hote est transfere au joueur suivant (par ordre d'arrivee)</li>
       </ul>
     </div>
 
@@ -1218,17 +1237,17 @@ sequenceDiagram
         <li>Chaque joueur <strong>vivant</strong> vote pour un autre joueur OU s'abstient</li>
         <li>Timer : 30s (configurable, min 15s, max 60s). Timeout = abstention automatique</li>
         <li>Le vote est confirme par un clic sur "Confirmer mon vote" — <strong>irreversible</strong></li>
-        <li>Le joueur avec le plus de votes est elimine — son role est revele a tous</li>
+        <li>Le joueur avec le plus de votes est éliminé — son rôleest révèle à tous</li>
         <li>En cas d'egalite : l'IA tranche narrativement (resolution speciale type "le juge tranche")</li>
-        <li>Un joueur elimine peut encore observer le chat mais ne peut plus agir ni voter</li>
-        <li>Condition de fin TRIBUNAL : si l'Accuse est elimine → Procureur gagne. Si 3 rounds sans elimination de l'Accuse → Accuse gagne.</li>
+        <li>Un joueur éliminé peut encore observer le chat mais ne peut plus agir ni voter</li>
+        <li>Condition de fin TRIBUNAL : si l'Accuse est éliminé → Procureur gagne. Si 3 rounds sans elimination de l'Accuse → Accuse gagne.</li>
       </ul>
     </div>
 
     <div class="card">
       <h4 style="margin-top:0;">RM-05 : Jauges DEEP</h4>
       <ul>
-        <li>4 jauges temps reel : <strong>O2</strong> (100→0), <strong>Energie</strong> (100→0), <strong>Coque</strong> (100→0), <strong>Profondeur</strong> (0→100)</li>
+        <li>4 jauges temps réel : <strong>O2</strong> (100→0), <strong>Energie</strong> (100→0), <strong>Coque</strong> (100→0), <strong>Profondeur</strong> (0→100)</li>
         <li>Chaque round : les jauges evoluent selon les actions des joueurs et la resolution IA</li>
         <li>L'IA calcule les deltas de jauges dans son JSON de sortie (<code>gauges_delta</code>)</li>
         <li>Seuils critiques visuels : O2 <20 (rouge clignotant), Energie <15, Coque <25</li>
@@ -1246,7 +1265,7 @@ sequenceDiagram
           <tr><td>Explorer (Plongeur)</td><td>-10</td><td>-5</td><td>0</td><td>+5 a +15</td></tr>
         </tbody>
       </table>
-      <p><em>Note : les deltas exacts sont determines par l'IA en fonction du contexte narratif. Les valeurs ci-dessus sont indicatives.</em></p>
+      <p><em>Note : les deltas exacts sont détermines par l'IA en fonction du contexte narratif. Les valeurs ci-dessus sont indicatives.</em></p>
     </div>
 
     <div class="card">
@@ -1254,10 +1273,10 @@ sequenceDiagram
       <ul>
         <li>Le chat est actif pendant toutes les phases (sauf SETUP)</li>
         <li><strong>Chat public :</strong> visible par tous les joueurs de la session</li>
-        <li><strong>Chat prive :</strong> message adresse a un seul joueur (whisper) via <code>recipientId</code></li>
+        <li><strong>Chat privé:</strong> message adresse a un seul joueur (whisper) via <code>recipientId</code></li>
         <li>Les messages sont horodates et associes au round/phase courant</li>
-        <li>Longueur max : 500 caracteres par message, rate limit : 5 messages/10s par joueur</li>
-        <li>Les joueurs elimines (TRIBUNAL) peuvent lire mais pas ecrire dans le chat</li>
+        <li>Longueur max : 500 caractères par message, rate limit : 5 messages/10s par joueur</li>
+        <li>Les joueurs éliminés (TRIBUNAL) peuvent lire mais pas écrire dans le chat</li>
         <li>Sanitisation XSS obligatoire cote serveur avant broadcast</li>
       </ul>
     </div>
@@ -1267,11 +1286,11 @@ sequenceDiagram
       <table>
         <thead><tr><th>Scenario</th><th>Victoire</th><th>Defaite</th><th>Max rounds</th></tr></thead>
         <tbody>
-          <tr><td><strong>TRIBUNAL</strong></td><td>L'Accuse survit tous les rounds</td><td>L'Accuse est elimine par vote</td><td>5 rounds</td></tr>
+          <tr><td><strong>TRIBUNAL</strong></td><td>L'Accuse survit tous les rounds</td><td>L'Accuse est éliminé par vote</td><td>5 rounds</td></tr>
           <tr><td><strong>DEEP</strong></td><td>Profondeur atteint 100</td><td>O2 ou Coque atteint 0</td><td>8 rounds</td></tr>
         </tbody>
       </table>
-      <p>A la fin de partie, l'IA genere un <strong>epilogue personnalise</strong> qui resume les evenements cles et revele les roles secrets (TRIBUNAL). Les statistiques sont calculees et stockees pour le profil joueur.</p>
+      <p>A la fin de partie, l'IA génère un <strong>épilogue personnalisé</strong> qui résume les événements cles et révèle les rôles secrets (TRIBUNAL). Les statistiques sont calculées et stockées pour le profil joueur.</p>
     </div>
 
     <h3>6.4 Game Loop — Boucle de jeu en 6 phases</h3>
@@ -1279,9 +1298,9 @@ sequenceDiagram
     <div class="mermaid-container">
       <pre class="mermaid">
 graph LR
-    SETUP["SETUP<br/>Distribution roles<br/>Config scenario"] --> NARRATION["NARRATION<br/>IA narre la scene<br/>15s affichage"]
+    SETUP["SETUP<br/>Distribution rôles<br/>Config scenario"] --> NARRATION["NARRATION<br/>IA narre la scene<br/>15s affichage"]
     NARRATION --> ACTION["ACTION<br/>Joueurs agissent<br/>30-120s"]
-    ACTION --> RESOLUTION["RESOLUTION<br/>IA resout<br/>20s affichage"]
+    ACTION --> RESOLUTION["RESOLUTION<br/>IA résout<br/>20s affichage"]
     RESOLUTION --> DISCUSSION["DISCUSSION<br/>Chat + debat<br/>30-180s"]
     DISCUSSION --> VOTE["VOTE<br/>Si TRIBUNAL<br/>15-60s"]
     VOTE --> |"Round suivant"| NARRATION
@@ -1299,7 +1318,7 @@ graph LR
 
     <h4>Timers par phase</h4>
     <table>
-      <thead><tr><th>Phase</th><th>Duree defaut</th><th>Min</th><th>Max</th><th>Timeout</th></tr></thead>
+      <thead><tr><th>Phase</th><th>Durée défaut</th><th>Min</th><th>Max</th><th>Timeout</th></tr></thead>
       <tbody>
         <tr><td>Narration</td><td>15s (affichage)</td><td>10s</td><td>30s</td><td>Auto-skip</td></tr>
         <tr><td>Action</td><td>60s</td><td>30s</td><td>120s</td><td>Action vide soumise</td></tr>
@@ -1309,10 +1328,10 @@ graph LR
       </tbody>
     </table>
 
-    <h3>6.5 Scenario Packs — Structure JSON</h3>
+    <h3>6.5 Scénario Packs — Structure JSON</h3>
 
     <div class="scenario-card tribunal">
-      <h4 style="margin-top:0;">TRIBUNAL — Drame judiciaire a roles caches</h4>
+      <h4 style="margin-top:0;">TRIBUNAL — Drame judiciaire a rôlescaches</h4>
       <p><strong>Joueurs :</strong> 4-8 | <strong>Rounds :</strong> 5 | <strong>Mecanique :</strong> Roles secrets + vote du verdict</p>
       <table>
         <thead><tr><th>Propriete</th><th>Valeur</th></tr></thead>
@@ -1343,7 +1362,7 @@ graph LR
         </tbody>
       </table>
       <table style="margin-top:10px;">
-        <thead><tr><th>Jauge</th><th>Depart</th><th>Min/Max</th><th>Seuil critique</th></tr></thead>
+        <thead><tr><th>Jauge</th><th>Départ</th><th>Min/Max</th><th>Seuil critique</th></tr></thead>
         <tbody>
           <tr><td><strong>O2</strong></td><td>100</td><td>0</td><td><span class="seuil-rouge">&#x2264; 20</span></td></tr>
           <tr><td><strong>Energie</strong></td><td>100</td><td>0</td><td><span class="seuil-rouge">&#x2264; 15</span></td></tr>
@@ -1355,13 +1374,13 @@ graph LR
     </div>
 
     <h3>6.6 Maquettes Figma</h3>
-    <p>14 maquettes haute-fidelite realisees sur Figma (design system sombre). <strong>Design system :</strong> Theme sombre (eco-conception OLED), palette indigo/violet (#6366f1), typographie Inter, composants Shadcn/UI, coins arrondis 12px.</p>
+    <p>14 maquettes haute-fidelite réalisées sur Figma (design system sombre). <strong>Design system :</strong> Thème sombre (éco-conception OLED), palette indigo/violet (#6366f1), typographie Inter, composants Shadcn/UI, coins arrondis 12px.</p>
 
     <h4>Authentification et navigation</h4>
     <div class="mockup-grid">
       <div class="mockup-item">
         <img src="mockups/01 — Landing Page.png" alt="Page d'accueil MYTHOS">
-        <div class="caption">Landing Page — Hero + CTA + 3 etapes + Scenarios</div>
+        <div class="caption">Landing Page — Hero + CTA + 3 étapes + Scénarios</div>
       </div>
       <div class="mockup-item">
         <img src="mockups/04 — Dashboard.png" alt="Dashboard joueur">
@@ -1380,7 +1399,7 @@ graph LR
     </div>
     <div class="mockup-grid">
       <div class="mockup-item">
-        <img src="mockups/07 — Scenario Detail (Tribunal).png" alt="Detail scenario Le Tribunal">
+        <img src="mockups/07 — ScénarioDetail (Tribunal).png" alt="Detail scenario Le Tribunal">
         <div class="caption">Detail scenario — Roles, phases, histoire, CTA jouer</div>
       </div>
       <div class="mockup-item">
@@ -1389,26 +1408,26 @@ graph LR
       </div>
     </div>
 
-    <h4>Creation de partie (flux en 4 etapes)</h4>
+    <h4>Création de partie (flux en 4 étapes)</h4>
     <p>Stepper progressif : Choix scenario → Parametres → Recapitulatif → Confirmation avec code de partie.</p>
     <div class="mockup-grid">
       <div class="mockup-item">
-        <img src="mockups/05 — Create Game (Step 1).png" alt="Etape 1 : Choix scenario">
-        <div class="caption">Etape 1 — Choix du scenario (cards selectionnables)</div>
+        <img src="mockups/05 — Create Game (Step 1).png" alt="Étape 1 : Choix scenario">
+        <div class="caption">Étape 1 — Choix du scenario (cards selectionnables)</div>
       </div>
       <div class="mockup-item">
-        <img src="mockups/05b — Create Game (Step 2).png" alt="Etape 2 : Parametres">
-        <div class="caption">Etape 2 — Parametres (joueurs, duree, difficulte IA)</div>
+        <img src="mockups/05b — Create Game (Step 2).png" alt="Étape 2 : Parametres">
+        <div class="caption">Étape 2 — Parametres (joueurs, durée, difficulte IA)</div>
       </div>
     </div>
     <div class="mockup-grid">
       <div class="mockup-item">
-        <img src="mockups/05c — Create Game (Step 3).png" alt="Etape 3 : Recapitulatif">
-        <div class="caption">Etape 3 — Recapitulatif avant confirmation</div>
+        <img src="mockups/05c — Create Game (Step 3).png" alt="Étape 3 : Recapitulatif">
+        <div class="caption">Étape 3 — Recapitulatif avant confirmation</div>
       </div>
       <div class="mockup-item">
-        <img src="mockups/05d — Create Game (Step 4 — Success).png" alt="Etape 4 : Confirmation">
-        <div class="caption">Etape 4 — Code partie genere (ABC-XY-123)</div>
+        <img src="mockups/05d — Create Game (Step 4 — Success).png" alt="Étape 4 : Confirmation">
+        <div class="caption">Étape 4 — Code partie généré (ABC-XY-123)</div>
       </div>
     </div>
 
@@ -1416,10 +1435,10 @@ graph LR
     <div class="mockup-grid">
       <div class="mockup-item">
         <img src="mockups/08 — Game Lobby.png" alt="Lobby - Salle d'attente">
-        <div class="caption">Lobby — Joueurs temps reel, chat, lancement par l'hote</div>
+        <div class="caption">Lobby — Joueurs temps réel, chat, lancement par l'hote</div>
       </div>
       <div class="mockup-item">
-        <img src="mockups/10 — Game Results.png" alt="Ecran Victoire et resultats">
+        <img src="mockups/10 — Game Results.png" alt="Écran Victoire et resultats">
         <div class="caption">Resultats — Epilogue IA, classement, stats, rejouer</div>
       </div>
     </div>
@@ -1430,30 +1449,30 @@ graph LR
       </div>
       <div class="mockup-item">
         <img src="mockups/09b — Active Game (Vote Phase).png" alt="Phase Vote en jeu">
-        <div class="caption">Jeu : Vote — Grille selection, barre progression, temps reel</div>
+        <div class="caption">Jeu : Vote — Grille selection, barre progression, temps réel</div>
       </div>
     </div>
 
-    <h4>Annotations UX et accessibilite</h4>
+    <h4>Annotations UX et accessibilité</h4>
     <table>
-      <thead><tr><th>Ecran</th><th>Elements cles</th><th>Accessibilite</th></tr></thead>
+      <thead><tr><th>Écran</th><th>Elements cles</th><th>Accessibilite</th></tr></thead>
       <tbody>
-        <tr><td><strong>Landing</strong></td><td>Hero + 2 CTA, 3 etapes "Comment jouer", cards scenarios</td><td>Skip link, contraste >7:1 (AAA), aria-hidden decoratifs</td></tr>
+        <tr><td><strong>Landing</strong></td><td>Hero + 2 CTA, 3 étapes "Comment jouer", cards scénarios</td><td>Skip link, contraste >7:1 (AAA), aria-hidden decoratifs</td></tr>
         <tr><td><strong>Login / Register</strong></td><td>Formulaires centres, OAuth Google, indicateur force MDP</td><td>aria-required, aria-describedby erreurs, autofocus, aria-live</td></tr>
         <tr><td><strong>Dashboard</strong></td><td>Sidebar nav, stats cards, code rejoindre, parties actives</td><td>Sidebar collapsible, barre violette active, pagination</td></tr>
-        <tr><td><strong>Scenario Detail</strong></td><td>Roles en grille coloree, phases en barre horizontale</td><td>Couleurs doublees par icones, heading h2/h3 correct</td></tr>
+        <tr><td><strong>ScénarioDetail</strong></td><td>Roles en grille coloree, phases en barre horizontale</td><td>Couleurs doublees par icones, heading h2/h3 correct</td></tr>
         <tr><td><strong>Profil</strong></td><td>Avatar, 6 stats cards, onglets Stats/Historique/Parametres</td><td>role="tablist", fleches clavier, aria-selected</td></tr>
-        <tr><td><strong>Creation partie</strong></td><td>Stepper 4 etapes, slider joueurs, chips duree, recap</td><td>Slider aria-valuemin/max/now, labels explicites</td></tr>
-        <tr><td><strong>Lobby</strong></td><td>Info scenario, liste joueurs temps reel, chat, lancement</td><td>WebSocket live updates, code copiable</td></tr>
-        <tr><td><strong>Jeu : Narration</strong></td><td>Timer cercle, streaming IA typewriter, sidebar jauges PV/SUS</td><td>Timer aria-live, jauges mises a jour temps reel</td></tr>
+        <tr><td><strong>Création partie</strong></td><td>Stepper 4 étapes, slider joueurs, chips durée, recap</td><td>Slider aria-valuemin/max/now, labels explicites</td></tr>
+        <tr><td><strong>Lobby</strong></td><td>Info scenario, liste joueurs temps réel, chat, lancement</td><td>WebSocket live updates, code copiable</td></tr>
+        <tr><td><strong>Jeu : Narration</strong></td><td>Timer cercle, streaming IA typewriter, sidebar jauges PV/SUS</td><td>Timer aria-live, jauges mises a jour temps réel</td></tr>
         <tr><td><strong>Jeu : Vote</strong></td><td>Question orange, grille joueurs, barre progression votes</td><td>role="radiogroup", aria-checked, aria-live resultat</td></tr>
-        <tr><td><strong>Resultats</strong></td><td>Trophee anime, epilogue IA, classement, 4 stats cards</td><td>Roles reveles, confettis CSS, 3 CTA (rejouer/nouvelle/dashboard)</td></tr>
+        <tr><td><strong>Resultats</strong></td><td>Trophee anime, épilogue IA, classement, 4 stats cards</td><td>Roles révèles, confettis CSS, 3 CTA (rejouer/nouvelle/dashboard)</td></tr>
       </tbody>
     </table>
 
     <!-- ================= SECTION 7 ================= -->
-    <h2 id="sec7" class="section-break">7. Specifications techniques</h2>
-    <div class="rncp-box">Competence RNCP : C1.3 — Concevoir les specifications techniques d'une solution</div>
+    <h2 id="sec7" class="section-break">7. Spécifications techniques</h2>
+    <div class="rncp-box">Compétence RNCP : C1.3 — Concevoir les spécifications techniques d'une solution</div>
 
     <h3>7.1 Structure du projet</h3>
     <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
@@ -1497,13 +1516,13 @@ graph LR
       </div>
     </div>
 
-    <h3>7.2 Strategie de prompt engineering IA</h3>
+    <h3>7.2 Stratégie de prompt engineering IA</h3>
 
     <div class="prompt-visual">
-      <div class="prompt-header">&#x1F916; System Prompt — Structure du Maitre du Jeu</div>
+      <div class="prompt-header">&#x1F916; System Prompt — Structure du Maître du Jeu</div>
       <div class="prompt-body">
         <div class="prompt-section-title">IDENTITE</div>
-        <div class="prompt-line"><span class="prompt-key">Role</span><span class="prompt-val">Tu es le Maitre du Jeu pour le scenario "<em>{scenario_name}</em>"</span></div>
+        <div class="prompt-line"><span class="prompt-key">Role</span><span class="prompt-val">Tu es le Maître du Jeu pour le scenario "<em>{scenario_name}</em>"</span></div>
 
         <div class="prompt-section-title">VARIABLES DE CONTEXTE</div>
         <div class="prompt-line"><span class="prompt-key">CONTEXTE</span><span class="prompt-val">{scenario_description}</span></div>
@@ -1516,7 +1535,7 @@ graph LR
         <div class="prompt-rule">&#x2192; Narration en 2-3 paragraphes max (150 mots)</div>
         <div class="prompt-rule">&#x2192; Ton : {scenario_tone} (dramatique pour TRIBUNAL, tendu pour DEEP)</div>
         <div class="prompt-rule">&#x2192; Integre les actions de TOUS les joueurs</div>
-        <div class="prompt-rule">&#x2192; Ne revele jamais les roles secrets</div>
+        <div class="prompt-rule">&#x2192; Ne révèle jamais les rôles secrets</div>
 
         <div class="prompt-output">
           <div class="prompt-output-label">FORMAT DE SORTIE (JSON)</div>
@@ -1526,13 +1545,13 @@ graph LR
     </div>
 
     <table>
-      <thead><tr><th>Aspect</th><th>Strategie</th></tr></thead>
+      <thead><tr><th>Aspect</th><th>Stratégie</th></tr></thead>
       <tbody>
         <tr><td><strong>Gestion du contexte</strong></td><td>Resume des 2 derniers rounds (pas l'historique complet) pour rester sous 4k tokens d'input</td></tr>
         <tr><td><strong>Format entree</strong></td><td>JSON structure : { round, phase, players_actions[], current_gauges }</td></tr>
         <tr><td><strong>Format sortie</strong></td><td>JSON structure : { narration, events[], gauges_delta, private_messages[] }</td></tr>
         <tr><td><strong>Content filter</strong></td><td>System prompt interdit : violence explicite, contenu sexuel, discours haineux. Validation Haiku pre-envoi.</td></tr>
-        <tr><td><strong>Strategie duale</strong></td><td>Sonnet pour narration/resolution (creatif) — Haiku pour setup/validation (rapide/econome)</td></tr>
+        <tr><td><strong>Stratégie duale</strong></td><td>Sonnet pour narration/resolution (creatif) — Haiku pour setup/validation (rapide/econome)</td></tr>
         <tr><td><strong>Max appels/tour</strong></td><td>2 appels max : 1 narration + 1 resolution. Pas d'appel pendant Discussion/Vote.</td></tr>
       </tbody>
     </table>
@@ -1541,38 +1560,38 @@ graph LR
     <table>
       <thead><tr><th>Cle</th><th>Valeur</th><th>TTL</th><th>Usage</th></tr></thead>
       <tbody>
-        <tr><td><code>game:{code}:state</code></td><td>JSON (status, round, phase, players)</td><td>4h</td><td>Etat temps reel de la partie</td></tr>
+        <tr><td><code>game:{code}:state</code></td><td>JSON (status, round, phase, players)</td><td>4h</td><td>État temps réel de la partie</td></tr>
         <tr><td><code>game:{code}:actions</code></td><td>Hash (playerId → actionText)</td><td>4h</td><td>Actions du round courant</td></tr>
         <tr><td><code>game:{code}:votes</code></td><td>Hash (playerId → choice)</td><td>4h</td><td>Votes du round courant</td></tr>
         <tr><td><code>game:{code}:timer</code></td><td>Timestamp fin</td><td>5min</td><td>Timer phase courante</td></tr>
-        <tr><td><code>game:{code}:chat</code></td><td>List (messages recents)</td><td>4h</td><td>Messages chat temps reel</td></tr>
+        <tr><td><code>game:{code}:chat</code></td><td>List (messages recents)</td><td>4h</td><td>Messages chat temps réel</td></tr>
         <tr><td><code>user:{id}:session</code></td><td>JWT payload cache</td><td>24h</td><td>Eviter re-verification JWT</td></tr>
         <tr><td><code>ai:ratelimit:{gameId}</code></td><td>Counter</td><td>60s</td><td>Rate limit appels Claude (max 10/min)</td></tr>
       </tbody>
     </table>
 
-    <h3>7.4 Securite</h3>
+    <h3>7.4 Sécurité</h3>
     <table>
       <thead><tr><th>Couche</th><th>Mesure</th><th>Implementation</th></tr></thead>
       <tbody>
         <tr><td>Authentification</td><td>JWT RS256 + refresh token</td><td>@nestjs/jwt, access 15min, refresh 7j, rotation</td></tr>
-        <tr><td>Autorisation</td><td>Guards role-based</td><td>@nestjs/passport, roles: player, admin</td></tr>
+        <tr><td>Autorisation</td><td>Guards role-based</td><td>@nestjs/passport, rôles : player, admin</td></tr>
         <tr><td>CORS</td><td>Whitelist origines</td><td>Vercel domain + localhost dev uniquement</td></tr>
         <tr><td>Rate limiting</td><td>API : 100 req/min, Auth : 5 req/min</td><td>@nestjs/throttler + Redis counter</td></tr>
         <tr><td>Validation input</td><td>DTO + class-validator</td><td>Pipes globaux NestJS, whitelist properties</td></tr>
         <tr><td>Sanitisation</td><td>XSS protection</td><td>DOMPurify (front), helmet (back), CSP headers</td></tr>
         <tr><td>Mots de passe</td><td>Hashing bcrypt (12 rounds)</td><td>Jamais stockes en clair, salt unique</td></tr>
         <tr><td>WebSocket</td><td>Auth par token a la connexion</td><td>Middleware Socket.io verifie JWT au handshake</td></tr>
-        <tr><td>Donnees sensibles</td><td>Variables d'environnement</td><td>.env non commite, secrets via Railway/Vercel env</td></tr>
+        <tr><td>Données sensibles</td><td>Variables d'environnement</td><td>.env non commite, secrets via Railway/Vercel env</td></tr>
         <tr><td>Dependances</td><td>Audit automatique</td><td>npm audit dans CI/CD, Dependabot GitHub</td></tr>
       </tbody>
     </table>
 
     <!-- ================= SECTION 8 ================= -->
     <h2 id="sec8" class="section-break">8. Feuille de route et planning</h2>
-    <div class="rncp-box">Competence RNCP : C1.4 — Elaborer la feuille de route d'un projet | C1.5 — Mettre en place un projet</div>
+    <div class="rncp-box">Compétence RNCP : C1.4 — Elaborer la feuille de route d'un projet | C1.5 — Mettre en place un projet</div>
 
-    <h3>8.1 Methodologie Scrum adaptee</h3>
+    <h3>8.1 Méthodologie Scrum adaptée</h3>
     <table>
       <thead><tr><th>Element</th><th>Adaptation MYTHOS</th></tr></thead>
       <tbody>
@@ -1588,7 +1607,7 @@ graph LR
 
     <h3>8.2 Matrice RACI</h3>
     <table>
-      <thead><tr><th>Activite</th><th>Kays (PO)</th><th>Samy (SM)</th><th>Youri (Front)</th><th>Yassir (Front/DevOps)</th></tr></thead>
+      <thead><tr><th>Activité</th><th>Kays (PO)</th><th>Samy (SM)</th><th>Youri (Front)</th><th>Yassir (Front/DevOps)</th></tr></thead>
       <tbody>
         <tr><td>Architecture technique</td><td><strong>A</strong></td><td><strong>R</strong></td><td>C</td><td>C</td></tr>
         <tr><td>Backend NestJS</td><td>C</td><td><strong>R</strong></td><td>I</td><td>C</td></tr>
@@ -1608,13 +1627,13 @@ graph LR
     <table>
       <thead><tr><th>#</th><th>Jalon</th><th>Date</th><th>Livrables</th><th>Criteres de validation</th></tr></thead>
       <tbody>
-        <tr><td>M0</td><td>Kickoff</td><td>10/02/2026</td><td>Equipe constituee, outils configures</td><td>Repo cree, CI/CD fonctionnel, Discord actif</td></tr>
+        <tr><td>M0</td><td>Kickoff</td><td>10/02/2026</td><td>Équipe constituee, outils configures</td><td>Repo cree, CI/CD fonctionnel, Discord actif</td></tr>
         <tr><td>M1</td><td>Cadrage valide</td><td>21/02/2026</td><td>CDC v2, maquettes Figma, repo + CI/CD</td><td>CDC approuve, 14 ecrans Figma valides, pipeline vert</td></tr>
         <tr><td>M2</td><td>POC IA valide</td><td>07/03/2026</td><td>Auth, BDD, POC IA (1 flux narratif)</td><td>Login fonctionnel, 1 narration Claude bout-en-bout</td></tr>
         <tr><td>M3</td><td>Game Engine OK</td><td>21/03/2026</td><td>Moteur 6 phases, TRIBUNAL jouable en REST</td><td>5 rounds TRIBUNAL via REST API (sans WebSocket)</td></tr>
-        <tr><td>M4</td><td>Alpha TRIBUNAL</td><td>04/04/2026</td><td>WebSocket, lobby, Game UI, 4 joueurs simultanes</td><td>Partie TRIBUNAL complete a 4 joueurs en temps reel</td></tr>
-        <tr><td>M5</td><td>Beta 2 scenarios</td><td>18/04/2026</td><td>DEEP + jauges, UI finale, streaming IA</td><td>DEEP jouable, jauges fonctionnelles, streaming OK</td></tr>
-        <tr><td>M6</td><td>MVP Production</td><td>02/05/2026</td><td>Admin, accessibilite, deploiement prod</td><td>Deploye en prod, Lighthouse Accessibility >90</td></tr>
+        <tr><td>M4</td><td>Alpha TRIBUNAL</td><td>04/04/2026</td><td>WebSocket, lobby, Game UI, 4 joueurs simultanes</td><td>Partie TRIBUNAL complete a 4 joueurs en temps réel</td></tr>
+        <tr><td>M5</td><td>Beta 2 scénarios</td><td>18/04/2026</td><td>DEEP + jauges, UI finale, streaming IA</td><td>DEEP jouable, jauges fonctionnelles, streaming OK</td></tr>
+        <tr><td>M6</td><td>MVP Production</td><td>02/05/2026</td><td>Admin, accessibilité, déploiement prod</td><td>Deploye en prod, Lighthouse Accessibility >90</td></tr>
         <tr><td>M7</td><td>Livraison finale</td><td>16/05/2026</td><td>Docs, video, soutenance</td><td>Video 3-5 min, documentation complete, soutenance OK</td></tr>
       </tbody>
     </table>
@@ -1638,7 +1657,7 @@ gantt
     section Sprint 1 — Fondations
     Auth (register/login/JWT)    :s1a, 2026-02-24, 5d
     Schema Prisma + migrations   :s1b, 2026-02-24, 3d
-    CRUD Scenarios               :s1c, after s1b, 4d
+    CRUD Scénarios               :s1c, after s1b, 4d
     Pages auth + dashboard       :s1d, 2026-02-24, 7d
     POC IA valide                :s1e, after s0e, 5d
     Jalon M2                     :milestone, m2, 2026-03-07, 0d
@@ -1646,14 +1665,14 @@ gantt
     section Sprint 2 — Game Engine
     Game Engine 6 phases         :s2a, 2026-03-09, 7d
     REST sessions API            :s2b, 2026-03-09, 5d
-    Scenario Packs JSON          :s2c, 2026-03-12, 4d
+    Scénario Packs JSON          :s2c, 2026-03-12, 4d
     UI Game Board                :s2d, 2026-03-09, 7d
     Timer service                :s2e, 2026-03-14, 4d
     Jalon M3                     :milestone, m3, 2026-03-21, 0d
 
     section Sprint 3 — Multijoueur
     WebSocket Gateway            :s3a, 2026-03-23, 5d
-    Lobby temps reel             :s3b, after s3a, 4d
+    Lobby temps réel             :s3b, after s3a, 4d
     TRIBUNAL multijoueur         :s3c, 2026-03-25, 7d
     Chat en jeu                  :s3d, 2026-03-28, 4d
     Jalon M4                     :milestone, m4, 2026-04-04, 0d
@@ -1661,7 +1680,7 @@ gantt
     section Sprint 4 — DEEP + Polish
     DEEP scenario + jauges       :s4a, 2026-04-06, 7d
     Streaming IA (SSE)           :s4b, 2026-04-06, 5d
-    Ecran fin + stats            :s4c, 2026-04-10, 5d
+    Écran fin + stats            :s4c, 2026-04-10, 5d
     Profil + historique          :s4d, 2026-04-13, 4d
     Jalon M5                     :milestone, m5, 2026-04-18, 0d
 
@@ -1681,7 +1700,7 @@ gantt
       </pre>
     </div>
 
-    <h3>8.5 Backlog par sprint (47 tickets — 196 SP)</h3>
+    <h3>8.5 Backlog par sprint (47 tickets (42 US + 5 taches techniques) — 196 SP)</h3>
 
     <h4>Sprint 0 — Cadrage (Sem 1-2) — 23 SP</h4>
     <table>
@@ -1706,7 +1725,7 @@ gantt
         <tr><td>S1-03</td><td>ScenariosModule CRUD</td><td>Samy</td><td>3</td></tr>
         <tr><td>S1-04</td><td>Pages auth (login/register)</td><td>Youri</td><td>5</td></tr>
         <tr><td>S1-05</td><td>Dashboard joueur</td><td>Youri + Yassir</td><td>5</td></tr>
-        <tr><td>S1-06</td><td>Page scenarios + detail</td><td>Yassir</td><td>3</td></tr>
+        <tr><td>S1-06</td><td>Page scénarios + detail</td><td>Yassir</td><td>3</td></tr>
         <tr><td>S1-07</td><td>Service IA — integration Claude API</td><td>Samy + Kays</td><td>3</td></tr>
       </tbody>
     </table>
@@ -1718,9 +1737,9 @@ gantt
         <tr><td>S2-01</td><td>GameModule : boucle 6 phases</td><td>Samy</td><td>8</td></tr>
         <tr><td>S2-02</td><td>PhaseManager + timers</td><td>Samy + Kays</td><td>5</td></tr>
         <tr><td>S2-03</td><td>SessionsModule REST API</td><td>Kays</td><td>5</td></tr>
-        <tr><td>S2-04</td><td>Scenario Packs loader (JSON)</td><td>Kays</td><td>3</td></tr>
+        <tr><td>S2-04</td><td>Scénario Packs loader (JSON)</td><td>Kays</td><td>3</td></tr>
         <tr><td>S2-05</td><td>UI Game Board (narration, actions)</td><td>Youri</td><td>8</td></tr>
-        <tr><td>S2-06</td><td>UI Creation partie (4 etapes)</td><td>Yassir</td><td>5</td></tr>
+        <tr><td>S2-06</td><td>UI Création partie (4 étapes)</td><td>Yassir</td><td>5</td></tr>
         <tr><td>S2-07</td><td>IA narration + resolution</td><td>Samy</td><td>3</td></tr>
       </tbody>
     </table>
@@ -1730,7 +1749,7 @@ gantt
       <thead><tr><th>Ticket</th><th>Titre</th><th>Assignee</th><th>SP</th></tr></thead>
       <tbody>
         <tr><td>S3-01</td><td>WebSocket Gateway + rooms</td><td>Samy</td><td>8</td></tr>
-        <tr><td>S3-02</td><td>Lobby temps reel</td><td>Youri + Yassir</td><td>5</td></tr>
+        <tr><td>S3-02</td><td>Lobby temps réel</td><td>Youri + Yassir</td><td>5</td></tr>
         <tr><td>S3-03</td><td>TRIBUNAL jouable multijoueur</td><td>Samy + Kays</td><td>8</td></tr>
         <tr><td>S3-04</td><td>Chat en jeu (public + prive)</td><td>Youri</td><td>5</td></tr>
         <tr><td>S3-05</td><td>UI Vote TRIBUNAL</td><td>Yassir</td><td>5</td></tr>
@@ -1746,7 +1765,7 @@ gantt
         <tr><td>S4-01</td><td>DEEP scenario + jauges backend</td><td>Samy</td><td>5</td></tr>
         <tr><td>S4-02</td><td>UI jauges DEEP (O2, Energie, Coque, Profondeur)</td><td>Youri</td><td>5</td></tr>
         <tr><td>S4-03</td><td>Streaming IA (SSE → WebSocket)</td><td>Samy + Kays</td><td>5</td></tr>
-        <tr><td>S4-04</td><td>Ecran fin de partie + stats</td><td>Yassir</td><td>5</td></tr>
+        <tr><td>S4-04</td><td>Écran fin de partie + stats</td><td>Yassir</td><td>5</td></tr>
         <tr><td>S4-05</td><td>Profil joueur + historique</td><td>Youri</td><td>3</td></tr>
         <tr><td>S4-06</td><td>Polish UI + animations</td><td>Yassir</td><td>3</td></tr>
         <tr><td>S4-07</td><td>Tests unitaires backend</td><td>Kays</td><td>3</td></tr>
@@ -1759,7 +1778,7 @@ gantt
       <tbody>
         <tr><td>S5-01</td><td>Dashboard admin (stats, sessions)</td><td>Kays</td><td>5</td></tr>
         <tr><td>S5-02</td><td>Accessibilite WCAG 2.1 AA</td><td>Yassir</td><td>5</td></tr>
-        <tr><td>S5-03</td><td>Audit securite + rate limiting</td><td>Samy</td><td>3</td></tr>
+        <tr><td>S5-03</td><td>Audit sécurité + rate limiting</td><td>Samy</td><td>3</td></tr>
         <tr><td>S5-04</td><td>Deploiement production (Vercel + Railway)</td><td>Yassir</td><td>5</td></tr>
         <tr><td>S5-05</td><td>Tests E2E (Playwright)</td><td>Youri + Kays</td><td>5</td></tr>
         <tr><td>S5-06</td><td>Monitoring (Sentry + UptimeRobot)</td><td>Yassir</td><td>3</td></tr>
@@ -1770,17 +1789,17 @@ gantt
     <table>
       <thead><tr><th>Ticket</th><th>Titre</th><th>Assignee</th><th>SP</th></tr></thead>
       <tbody>
-        <tr><td>SB-01</td><td>Bug fixes prioritaires</td><td>Equipe</td><td>5</td></tr>
+        <tr><td>SB-01</td><td>Bug fixes prioritaires</td><td>Équipe</td><td>5</td></tr>
         <tr><td>SB-02</td><td>Documentation technique</td><td>Kays</td><td>3</td></tr>
         <tr><td>SB-03</td><td>Documentation utilisateur</td><td>Youri</td><td>2</td></tr>
         <tr><td>SB-04</td><td>Video demo (3-5 min)</td><td>Yassir</td><td>3</td></tr>
-        <tr><td>SB-05</td><td>Preparation soutenance</td><td>Equipe</td><td>2</td></tr>
+        <tr><td>SB-05</td><td>Preparation soutenance</td><td>Équipe</td><td>2</td></tr>
       </tbody>
     </table>
 
-    <h3>8.6 Repartition de charge equilibree</h3>
+    <h3>8.6 Répartition de charge equilibree</h3>
     <table>
-      <thead><tr><th>Membre</th><th>SP total</th><th>% charge</th><th>Heures estimees</th></tr></thead>
+      <thead><tr><th>Membre</th><th>SP total</th><th>% charge</th><th>Heures estimées</th></tr></thead>
       <tbody>
         <tr><td><strong>Kays</strong> (PO/Architecte)</td><td>48</td><td>24%</td><td>~336h</td></tr>
         <tr><td><strong>Samy</strong> (SM/Backend+IA)</td><td>58</td><td>30%</td><td>~392h</td></tr>
@@ -1788,19 +1807,20 @@ gantt
         <tr><td><strong>Yassir</strong> (Frontend/DevOps)</td><td>44</td><td>23%</td><td>~308h</td></tr>
       </tbody>
     </table>
-    <blockquote><strong>Amelioration vs v1 :</strong> Samy passe de 60% a 30% de la charge. Kays monte a 24% avec code review, OAuth, tests integration et admin. Meilleure repartition = bus factor reduit.</blockquote>
+    <blockquote><strong>Amélioration vs v1 :</strong> Samy passe de 60% a 30% de la charge. Kays monte a 24% avec code review, OAuth, tests integration et admin. Meilleure répartition = bus factor reduit.</blockquote>
 
     <h3>8.7 Chemin critique</h3>
-    <p>Le chemin critique determine la duree minimale incompressible du projet :</p>
+    <p>Le chemin critique détermine la durée minimale incompressible du projet :</p>
     <p><code>S0-02 → S0-04 → S1-01 → S1-05 → S2-01 → S3-01 → S3-03 → S4-01 → S5-04 → SB-01</code></p>
     <p>Tout retard sur ces tickets impacte directement la date de livraison. Le monitoring de ces tickets est prioritaire lors des daily standups.</p>
 
-    <h3>8.8 Budget detaille du projet</h3>
-    <p>Le projet est realise dans un contexte academique : les ressources humaines ne sont pas facturees. Le budget reel couvre uniquement les services externes. La valorisation en equivalent marche (TJM 350 EUR/jour) permet d'estimer la valeur reelle du projet.</p>
+    <h3>8.8 Budget détaillé du projet</h3>
+    <p>Le projet est réalisé dans un contexte academique : les ressources humaines ne sont pas facturees. Le budget réel couvre uniquement les services externes. La valorisation en equivalent marche (TJM 350 EUR/jour) permet d'estimer la valeur réelle du projet.</p>
 
     <h4>Valorisation RH (equivalent marche)</h4>
+    <p>Les heures ci-dessous correspondent au <strong>temps effectif planifie</strong> (disponibilité réelle × 14 semaines), tandis que la section 8.6 estime les heures a partir des story points (SP × 7h). L'ecart s'explique par le fait que le rôlePO/Architecte inclut du temps non-SP (code review, reunions, décisions) comptabilise en section 8.6 mais non valorise ici.</p>
     <table>
-      <thead><tr><th>Membre</th><th>Heures</th><th>Valorisation (50 EUR/h)</th></tr></thead>
+      <thead><tr><th>Membre</th><th>Heures planifiees</th><th>Valorisation (50 EUR/h)</th></tr></thead>
       <tbody>
         <tr><td>Kays (PO / Architecte)</td><td>244h</td><td>12 200 EUR</td></tr>
         <tr><td>Samy (SM / Backend + IA)</td><td>488h</td><td>24 400 EUR</td></tr>
@@ -1810,9 +1830,9 @@ gantt
       </tbody>
     </table>
 
-    <h4>Budget reel — Depenses effectives</h4>
+    <h4>Budget réel — Dépenses effectives</h4>
     <table>
-      <thead><tr><th>Poste</th><th>Fournisseur</th><th>Tier</th><th>Cout</th></tr></thead>
+      <thead><tr><th>Poste</th><th>Fournisseur</th><th>Tier</th><th>Coût</th></tr></thead>
       <tbody>
         <tr><td>Frontend hosting</td><td>Vercel</td><td>Hobby (gratuit)</td><td>0 EUR</td></tr>
         <tr><td>Backend hosting</td><td>Railway</td><td>Starter (5$/mois credits)</td><td>0-20 EUR</td></tr>
@@ -1824,9 +1844,9 @@ gantt
         <tr><td><strong>Total projet</strong></td><td></td><td></td><td><strong>~56-61 EUR</strong></td></tr>
       </tbody>
     </table>
-    <blockquote>Budget total prevu : 308 EUR. Depenses estimees : ~61 EUR. La marge de 247 EUR sert de contingence en cas de depassement des couts API IA ou de besoin d'upgrade infrastructure.</blockquote>
+    <blockquote>Budget total prevu : 308 EUR. Dépenses estimées : ~61 EUR. La marge de 247 EUR sert de contingence en cas de dépassement des coûts API IA ou de besoin d'upgrade infrastructure.</blockquote>
 
-    <h4>Repartition par phase</h4>
+    <h4>Répartition par phase</h4>
     <table>
       <thead><tr><th>Phase</th><th>Sprint</th><th>Infra</th><th>API IA</th><th>Total</th></tr></thead>
       <tbody>
@@ -1840,9 +1860,9 @@ gantt
 
     <!-- ================= SECTION 9 ================= -->
     <h2 id="sec9" class="section-break">9. Analyse des risques</h2>
-    <div class="rncp-box">Competence RNCP : C1.5 — Mettre en place un projet | C1.7 — Superviser le deroulement du projet</div>
+    <div class="rncp-box">Compétence RNCP : C1.5 — Mettre en place un projet | C1.7 — Superviser le deroulement du projet</div>
 
-    <h3>9.1 Matrice probabilite / impact</h3>
+    <h3>9.1 Matrice probabilité / impact</h3>
     <div style="margin:20px 0; padding:20px; background:#fafbff; border:1px solid var(--border); border-radius:12px;">
       <h4 style="text-align:center; font-size:1.15em; font-weight:700; color:var(--text); margin-bottom:16px;">Matrice des risques — Probabilité × Impact</h4>
       <div style="display:grid; grid-template-columns:auto 1fr 1fr; grid-template-rows:1fr 1fr auto; gap:0; width:100%;">
@@ -1896,55 +1916,55 @@ gantt
 
     <h3>9.2 Registre des risques (12 risques)</h3>
     <table>
-      <thead><tr><th>ID</th><th>Risque</th><th>Proba</th><th>Impact</th><th>Criticite</th><th>Categorie</th></tr></thead>
+      <thead><tr><th>ID</th><th>Risque</th><th>Proba</th><th>Impact</th><th>Criticité</th><th>Categorie</th></tr></thead>
       <tbody>
-        <tr><td>RSQ-O02</td><td>Depassement planning</td><td>4</td><td>4</td><td><span class="badge badge-critical">16</span></td><td>Organisationnel</td></tr>
+        <tr><td>RSQ-O02</td><td>Dépassement planning</td><td>4</td><td>4</td><td><span class="badge badge-critical">16</span></td><td>Organisationnel</td></tr>
         <tr><td>RSQ-T02</td><td>Latence IA excessive (>5s)</td><td>4</td><td>4</td><td><span class="badge badge-critical">16</span></td><td>Technique</td></tr>
-        <tr><td>RSQ-T01</td><td>Qualite narration IA insuffisante</td><td>3</td><td>5</td><td><span class="badge badge-high">15</span></td><td>Technique</td></tr>
-        <tr><td>RSQ-T03</td><td>Desynchronisation WebSocket</td><td>3</td><td>4</td><td><span class="badge badge-high">12</span></td><td>Technique</td></tr>
-        <tr><td>RSQ-O01</td><td>Depart/indisponibilite d'un membre</td><td>3</td><td>4</td><td><span class="badge badge-high">12</span></td><td>Organisationnel</td></tr>
+        <tr><td>RSQ-T01</td><td>Qualité narration IA insuffisante</td><td>3</td><td>5</td><td><span class="badge badge-high">15</span></td><td>Technique</td></tr>
+        <tr><td>RSQ-T03</td><td>Désynchronisation WebSocket</td><td>3</td><td>4</td><td><span class="badge badge-high">12</span></td><td>Technique</td></tr>
+        <tr><td>RSQ-O01</td><td>Départ/indisponibilité d'un membre</td><td>3</td><td>4</td><td><span class="badge badge-high">12</span></td><td>Organisationnel</td></tr>
         <tr><td>RSQ-T04</td><td>Limites API Anthropic (rate limits)</td><td>3</td><td>3</td><td><span class="badge badge-medium">9</span></td><td>Technique</td></tr>
-        <tr><td>RSQ-F01</td><td>Depassement budget API IA</td><td>3</td><td>3</td><td><span class="badge badge-medium">9</span></td><td>Financier</td></tr>
+        <tr><td>RSQ-F01</td><td>Dépassement budget API IA</td><td>3</td><td>3</td><td><span class="badge badge-medium">9</span></td><td>Financier</td></tr>
         <tr><td>RSQ-T05</td><td>Incompatibilite navigateurs</td><td>2</td><td>3</td><td><span class="badge badge-medium">6</span></td><td>Technique</td></tr>
         <tr><td>RSQ-O03</td><td>Scope creep (ajout fonctionnalites)</td><td>3</td><td>2</td><td><span class="badge badge-medium">6</span></td><td>Organisationnel</td></tr>
-        <tr><td>RSQ-T06</td><td>Faille de securite (injection, XSS)</td><td>2</td><td>4</td><td><span class="badge badge-medium">8</span></td><td>Technique</td></tr>
+        <tr><td>RSQ-T06</td><td>Faille de sécurité (injection, XSS)</td><td>2</td><td>4</td><td><span class="badge badge-medium">8</span></td><td>Technique</td></tr>
         <tr><td>RSQ-E01</td><td>Changement tarifs API Anthropic</td><td>2</td><td>3</td><td><span class="badge badge-medium">6</span></td><td>Externe</td></tr>
-        <tr><td>RSQ-E02</td><td>Regulation IA (AI Act)</td><td>1</td><td>3</td><td><span class="badge badge-low">3</span></td><td>Externe</td></tr>
+        <tr><td>RSQ-E02</td><td>Régulation IA (AI Act)</td><td>1</td><td>3</td><td><span class="badge badge-low">3</span></td><td>Externe</td></tr>
       </tbody>
     </table>
 
     <h3>9.3 Top 5 — Plans de mitigation et contingence</h3>
 
     <div class="card" style="border-left: 4px solid #ef4444;">
-      <h4 style="margin-top:0;">RSQ-O02 — Depassement planning (Criticite: 16)</h4>
-      <p><strong>Mitigation :</strong> Sprint buffer de 2 semaines, suivi velocite des Sprint 1-2 pour ajuster, backlog MoSCoW strict (COULD coupees en premier).</p>
+      <h4 style="margin-top:0;">RSQ-O02 — Dépassement planning (Criticité: 16)</h4>
+      <p><strong>Mitigation :</strong> Sprint buffer de 2 semaines, suivi vélocité des Sprint 1-2 pour ajuster, backlog MoSCoW strict (COULD coupees en premier).</p>
       <p><strong>Contingence :</strong> Si retard >1 sprint : livrer TRIBUNAL seul (couper DEEP), reduire scope admin au minimum.</p>
       <p><strong>Indicateur :</strong> SPI < 0.85 pendant 2 sprints consecutifs → activation plan de contingence.</p>
     </div>
 
     <div class="card" style="border-left: 4px solid #ef4444;">
-      <h4 style="margin-top:0;">RSQ-T02 — Latence IA excessive (Criticite: 16)</h4>
-      <p><strong>Mitigation :</strong> Streaming SSE pour narration (perception instantanee), strategie duale Sonnet/Haiku, prompts optimises (<4k tokens input), cache des narrations recurrentes.</p>
-      <p><strong>Contingence :</strong> Si Sonnet >10s : fallback automatique sur Haiku. Si Haiku >5s : narrations pre-generees par scenario (templates statiques).</p>
+      <h4 style="margin-top:0;">RSQ-T02 — Latence IA excessive (Criticité: 16)</h4>
+      <p><strong>Mitigation :</strong> Streaming SSE pour narration (perception instantanee), stratégie duale Sonnet/Haiku, prompts optimises (<4k tokens input), cache des narrations recurrentes.</p>
+      <p><strong>Contingence :</strong> Si Sonnet >10s : fallback automatique sur Haiku. Si Haiku >5s : narrations pre-générées par scenario (templates statiques).</p>
       <p><strong>Indicateur :</strong> P95 latence >8s → alerte automatique Sentry.</p>
     </div>
 
     <div class="card" style="border-left: 4px solid #f97316;">
-      <h4 style="margin-top:0;">RSQ-T01 — Qualite narration IA insuffisante (Criticite: 15)</h4>
-      <p><strong>Mitigation :</strong> Sprint 0 dedie au prompt engineering, iterations sur system prompts avec tests A/B, temperature ajustable par phase.</p>
+      <h4 style="margin-top:0;">RSQ-T01 — Qualité narration IA insuffisante (Criticité: 15)</h4>
+      <p><strong>Mitigation :</strong> Sprint 0 dédié au prompt engineering, iterations sur system prompts avec tests A/B, temperature ajustable par phase.</p>
       <p><strong>Contingence :</strong> Bibliotheque de narrations pre-ecrites par scenario + injection de "story beats" dans le prompt pour guider l'IA.</p>
-      <p><strong>Indicateur :</strong> Score qualite narratif <3/5 sur 10 parties test → revision des prompts.</p>
+      <p><strong>Indicateur :</strong> Score qualité narratif <3/5 sur 10 parties test → revision des prompts.</p>
     </div>
 
     <div class="card" style="border-left: 4px solid #f97316;">
-      <h4 style="margin-top:0;">RSQ-T03 — Desynchronisation WebSocket (Criticite: 12)</h4>
+      <h4 style="margin-top:0;">RSQ-T03 — Désynchronisation WebSocket (Criticité: 12)</h4>
       <p><strong>Mitigation :</strong> Redis Pub/Sub comme source de verite, reconnexion auto Socket.io, state sync a chaque changement de phase, heartbeat toutes les 10s.</p>
       <p><strong>Contingence :</strong> Endpoint REST de fallback pour recuperer l'etat courant si WebSocket echoue, re-sync force cote client.</p>
       <p><strong>Indicateur :</strong> Taux de deconnexion >5% par session → investigation.</p>
     </div>
 
     <div class="card" style="border-left: 4px solid #f97316;">
-      <h4 style="margin-top:0;">RSQ-O01 — Depart d'un membre (Criticite: 12)</h4>
+      <h4 style="margin-top:0;">RSQ-O01 — Départ d'un membre (Criticité: 12)</h4>
       <p><strong>Mitigation :</strong> Documentation technique exhaustive, pair programming systematique (chaque module connu par 2 personnes), code review croisees.</p>
       <p><strong>Contingence :</strong> Kays prend le backend si Samy indisponible (pair programming Sprint 0-1). Youri/Yassir interchangeables sur le frontend.</p>
       <p><strong>Indicateur :</strong> >3 jours d'absence non planifiee → redistribution immediate des tickets.</p>
@@ -1968,7 +1988,7 @@ gantt
         </tr>
         <tr>
           <td><span class="badge badge-critical">N3</span></td>
-          <td>Depart membre ou echec technique fondamental</td>
+          <td>Départ membre ou echec technique fondamental</td>
           <td>Pivot scope MVP (1 scenario), redistribution totale, escalade ecole</td>
           <td>PO (Kays) + tuteur</td>
         </tr>
@@ -1985,7 +2005,7 @@ gantt
         <tr><td><strong>Mineur</strong></td><td>Changement technique sans impact fonctionnel</td><td>Refactoring, mise a jour dependance</td><td>PR directe, pas de formulaire</td></tr>
         <tr><td><strong>Modere</strong></td><td>Ajout/modification de fonctionnalite MVP</td><td>Nouvelle US, changement d'UI</td><td>Formulaire + validation PO (Kays)</td></tr>
         <tr><td><strong>Majeur</strong></td><td>Changement de perimetre ou d'architecture</td><td>Ajout scenario, changement LLM</td><td>Formulaire complet + Comite de decision</td></tr>
-        <tr><td><strong>Urgent</strong></td><td>Correction critique en production</td><td>Bug bloquant, faille securite</td><td>Hotfix immediat + formalisation a posteriori</td></tr>
+        <tr><td><strong>Urgent</strong></td><td>Correction critique en production</td><td>Bug bloquant, faille sécurité</td><td>Hotfix immediat + formalisation a posteriori</td></tr>
       </tbody>
     </table>
 
@@ -1997,16 +2017,16 @@ gantt
         <tr><td><strong>Technique</strong></td><td>1 module impacte</td><td>2-3 modules</td><td>Architecture impactee</td></tr>
         <tr><td><strong>Planning</strong></td><td>&lt;3 SP</td><td>3-8 SP</td><td>>8 SP ou retard jalon</td></tr>
         <tr><td><strong>Budget</strong></td><td>0 EUR</td><td>&lt;50 EUR</td><td>>50 EUR</td></tr>
-        <tr><td><strong>Qualite</strong></td><td>Pas de regression</td><td>Tests a modifier</td><td>Risque de regression</td></tr>
+        <tr><td><strong>Qualité</strong></td><td>Pas de regression</td><td>Tests a modifier</td><td>Risque de regression</td></tr>
       </tbody>
     </table>
 
     <h4>Circuit de decision</h4>
     <table>
-      <thead><tr><th>Score impact</th><th>Decision par</th><th>Delai</th></tr></thead>
+      <thead><tr><th>Score impact</th><th>Décision par</th><th>Delai</th></tr></thead>
       <tbody>
         <tr><td>4-6 pts (faible)</td><td>Responsable technique concerne</td><td>Sous 24h</td></tr>
-        <tr><td>7-9 pts (modere)</td><td>PO (Kays) + SM (Samy)</td><td>Sous 48h, en Sprint Planning</td></tr>
+        <tr><td>7-9 pts (modéré)</td><td>PO (Kays) + SM (Samy)</td><td>Sous 48h, en Sprint Planning</td></tr>
         <tr><td>10-12 pts (eleve)</td><td>Comite de decision (equipe + encadrant)</td><td>Sous 1 semaine, en COPIL</td></tr>
       </tbody>
     </table>
@@ -2014,14 +2034,14 @@ gantt
 
     <!-- ================= SECTION 10 ================= -->
     <h2 id="sec10" class="section-break">10. KPI et suivi de performance</h2>
-    <div class="rncp-box">Competence RNCP : C1.6 — Mesurer la performance d'un projet et des livrables</div>
+    <div class="rncp-box">Compétence RNCP : C1.6 — Mesurer la performance d'un projet et des livrables</div>
 
     <h3>10.1 KPIs Projet (6 indicateurs)</h3>
     <table>
       <thead><tr><th>KPI</th><th>Description</th><th class="seuil-vert">Vert</th><th class="seuil-jaune">Jaune</th><th class="seuil-rouge">Rouge</th></tr></thead>
       <tbody>
-        <tr><td><strong>Velocite</strong></td><td>SP completes par sprint</td><td>>25 SP</td><td>20-25 SP</td><td>&lt;20 SP</td></tr>
-        <tr><td><strong>Burndown</strong></td><td>Ecart vs courbe ideale</td><td>&lt;10%</td><td>10-25%</td><td>>25%</td></tr>
+        <tr><td><strong>Vélocité</strong></td><td>SP completes par sprint</td><td>>25 SP</td><td>20-25 SP</td><td>&lt;20 SP</td></tr>
+        <tr><td><strong>Burndown</strong></td><td>Écart vs courbe ideale</td><td>&lt;10%</td><td>10-25%</td><td>>25%</td></tr>
         <tr><td><strong>Taux completion sprint</strong></td><td>% tickets termines vs planifies</td><td>>90%</td><td>75-90%</td><td>&lt;75%</td></tr>
         <tr><td><strong>Bug rate</strong></td><td>Bugs critiques ouverts</td><td>0</td><td>1-2</td><td>>2</td></tr>
         <tr><td><strong>SPI</strong></td><td>Schedule Performance Index</td><td>>0.95</td><td>0.85-0.95</td><td>&lt;0.85</td></tr>
@@ -2036,35 +2056,35 @@ gantt
         <tr><td><strong>Latence IA</strong></td><td>Temps reponse Claude (P95)</td><td>&lt;3s</td><td>3-8s</td><td>>8s</td></tr>
         <tr><td><strong>Latence WebSocket</strong></td><td>RTT moyen client-serveur</td><td>&lt;100ms</td><td>100-300ms</td><td>>300ms</td></tr>
         <tr><td><strong>Core Web Vitals</strong></td><td>LCP, FID, CLS (Lighthouse)</td><td>Score >90</td><td>70-90</td><td>&lt;70</td></tr>
-        <tr><td><strong>Uptime</strong></td><td>Disponibilite production</td><td>>99.5%</td><td>98-99.5%</td><td>&lt;98%</td></tr>
+        <tr><td><strong>Uptime</strong></td><td>Disponibilité production</td><td>>99.5%</td><td>98-99.5%</td><td>&lt;98%</td></tr>
         <tr><td><strong>Couverture tests</strong></td><td>% code couvert par tests</td><td>>70%</td><td>50-70%</td><td>&lt;50%</td></tr>
       </tbody>
     </table>
 
-    <h3>10.3 KPIs Conformite (4 indicateurs)</h3>
+    <h3>10.3 KPIs Conformité (4 indicateurs)</h3>
     <table>
       <thead><tr><th>KPI</th><th>Description</th><th class="seuil-vert">Vert</th><th class="seuil-jaune">Jaune</th><th class="seuil-rouge">Rouge</th></tr></thead>
       <tbody>
-        <tr><td><strong>Lighthouse Accessibility</strong></td><td>Score accessibilite audit auto</td><td>>90</td><td>80-90</td><td>&lt;80</td></tr>
-        <tr><td><strong>Eco-index</strong></td><td>Score eco-conception (GreenIT)</td><td>A ou B</td><td>C</td><td>D ou pire</td></tr>
-        <tr><td><strong>Conformite RGPD</strong></td><td>Checklist 5 traitements conformes</td><td>5/5</td><td>4/5</td><td>&lt;4/5</td></tr>
+        <tr><td><strong>Lighthouse Accessibility</strong></td><td>Score accessibilité audit auto</td><td>>90</td><td>80-90</td><td>&lt;80</td></tr>
+        <tr><td><strong>Eco-index</strong></td><td>Score éco-conception (GreenIT)</td><td>A ou B</td><td>C</td><td>D ou pire</td></tr>
+        <tr><td><strong>Conformité RGPD</strong></td><td>Checklist 5 traitements conformes</td><td>5/5</td><td>4/5</td><td>&lt;4/5</td></tr>
         <tr><td><strong>Poids de page</strong></td><td>Taille transfert page principale</td><td>&lt;500 Ko</td><td>500 Ko - 1 Mo</td><td>>1 Mo</td></tr>
       </tbody>
     </table>
 
-    <h3>10.4 Outils de mesure et frequence</h3>
+    <h3>10.4 Outils de mesure et fréquence</h3>
     <table>
-      <thead><tr><th>KPI</th><th>Outil de mesure</th><th>Frequence</th><th>Responsable</th></tr></thead>
+      <thead><tr><th>KPI</th><th>Outil de mesure</th><th>Fréquence</th><th>Responsable</th></tr></thead>
       <tbody>
-        <tr><td>Velocite / Burndown</td><td>GitHub Projects (board Kanban)</td><td>Fin de sprint</td><td>Kays (PO)</td></tr>
+        <tr><td>Vélocité / Burndown</td><td>GitHub Projects (board Kanban)</td><td>Fin de sprint</td><td>Kays (PO)</td></tr>
         <tr><td>Taux completion</td><td>GitHub Projects + Sprint Review</td><td>Fin de sprint</td><td>Samy (SM)</td></tr>
-        <tr><td>Bug rate</td><td>GitHub Issues (label "bug")</td><td>Continue</td><td>Equipe</td></tr>
+        <tr><td>Bug rate</td><td>GitHub Issues (label "bug")</td><td>Continue</td><td>Équipe</td></tr>
         <tr><td>SPI / CPI</td><td>Tableur de suivi (Google Sheets)</td><td>Bimensuel</td><td>Kays (PO)</td></tr>
         <tr><td>Latence IA</td><td>Sentry Performance</td><td>Continue (alertes auto)</td><td>Samy</td></tr>
         <tr><td>Latence WebSocket</td><td>Sentry + logs custom</td><td>Continue</td><td>Samy</td></tr>
         <tr><td>Core Web Vitals</td><td>Vercel Analytics + Lighthouse CI</td><td>A chaque deploy</td><td>Yassir</td></tr>
         <tr><td>Uptime</td><td>UptimeRobot (check 5 min)</td><td>Continue (alertes auto)</td><td>Yassir</td></tr>
-        <tr><td>Couverture tests</td><td>Jest --coverage + Codecov</td><td>A chaque PR (CI/CD)</td><td>Equipe</td></tr>
+        <tr><td>Couverture tests</td><td>Jest --coverage + Codecov</td><td>A chaque PR (CI/CD)</td><td>Équipe</td></tr>
         <tr><td>Lighthouse Accessibility</td><td>Lighthouse CI dans GitHub Actions</td><td>A chaque deploy</td><td>Yassir</td></tr>
         <tr><td>Eco-index</td><td>EcoIndex.fr + GreenIT Analysis</td><td>Fin de sprint</td><td>Yassir</td></tr>
         <tr><td>RGPD</td><td>Checklist manuelle + DPO review</td><td>Sprint 5 + livraison</td><td>Kays</td></tr>
@@ -2077,17 +2097,17 @@ gantt
     <table>
       <thead><tr><th>Indicateur</th><th>Sprint 0</th><th>Sprint 1</th><th>Sprint 2</th><th>Sprint 3</th><th>Sprint 4</th><th>Sprint 5</th></tr></thead>
       <tbody>
-        <tr><td>Velocite (SP)</td><td>—</td><td>Cible: 29</td><td>Cible: 37</td><td>Cible: 37</td><td>Cible: 29</td><td>Cible: 26</td></tr>
+        <tr><td>Vélocité (SP)</td><td>—</td><td>Cible: 29</td><td>Cible: 37</td><td>Cible: 37</td><td>Cible: 29</td><td>Cible: 26</td></tr>
         <tr><td>Taux completion</td><td>—</td><td>Cible: >90%</td><td>Cible: >90%</td><td>Cible: >90%</td><td>Cible: >90%</td><td>Cible: >90%</td></tr>
         <tr><td>Bugs critiques</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
         <tr><td>SPI</td><td>—</td><td>>0.95</td><td>>0.95</td><td>>0.95</td><td>>0.95</td><td>>0.95</td></tr>
         <tr><td>Statut global</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
       </tbody>
     </table>
-    <p><em>Ce tableau sera rempli au fil des sprints lors de chaque Sprint Review. Les cellules vides seront completees avec les valeurs reelles et colorees selon les seuils vert/jaune/rouge.</em></p>
+    <p><em>Ce tableau sera rempli au fil des sprints lors de chaque Sprint Review. Les cellules vides seront completees avec les valeurs réelles et colorees selon les seuils vert/jaune/rouge.</em></p>
 
-    <h3>10.6 Conformite aux standards qualite — ITIL et ANSSI</h3>
-    <p>Le suivi de performance s'appuie sur des referentiels reconnus pour garantir la qualite et la securite du projet.</p>
+    <h3>10.6 Conformité aux standards qualité — ITIL et ANSSI</h3>
+    <p>Le suivi de performance s'appuie sur des référentiels reconnus pour garantir la qualité et la sécurité du projet.</p>
 
     <h4>Pratiques ITIL appliquees</h4>
     <table>
@@ -2096,8 +2116,8 @@ gantt
         <tr><td><strong>Gestion des incidents</strong></td><td>Processus d'escalade 3 niveaux (operationnel → tactique → strategique)</td><td>GitHub Issues + Discord #alertes-prod</td></tr>
         <tr><td><strong>Gestion des changements</strong></td><td>Formulaire de change request, evaluation d'impact, registre des changements</td><td>GitHub Issues (label change-request)</td></tr>
         <tr><td><strong>Gestion des niveaux de service</strong></td><td>SLA internes : latence IA &lt;5s, uptime >99%, WebSocket &lt;200ms</td><td>UptimeRobot + Sentry</td></tr>
-        <tr><td><strong>Amelioration continue</strong></td><td>Retrospectives bi-hebdomadaires, actions d'amelioration tracees</td><td>Notion (CR retro)</td></tr>
-        <tr><td><strong>Gestion des connaissances</strong></td><td>Documentation technique, ADR, Scenario Pack specs, wiki interne</td><td>Notion + GitHub Wiki</td></tr>
+        <tr><td><strong>Amélioration continue</strong></td><td>Rétrospectives bi-hebdomadaires, actions d'amélioration tracees</td><td>Notion (CR retro)</td></tr>
+        <tr><td><strong>Gestion des connaissances</strong></td><td>Documentation technique, ADR, Scénario Pack specs, wiki interne</td><td>Notion + GitHub Wiki</td></tr>
       </tbody>
     </table>
 
@@ -2115,44 +2135,44 @@ gantt
     </table>
 
     <!-- ================= SECTION 11 ================= -->
-    <h2 id="sec11" class="section-break">11. Conformite reglementaire</h2>
-    <div class="rncp-box">Competence RNCP : C1.3 + C1.6 — Conformite et standards reglementaires</div>
+    <h2 id="sec11" class="section-break">11. Conformité réglementaire</h2>
+    <div class="rncp-box">Compétence RNCP : C1.3 + C1.6 — Conformité et standards réglementaires</div>
 
-    <h3>11.1 RGPD — Strategie de conformite</h3>
-    <p>MYTHOS collecte et traite des donnees personnelles dans le cadre de son service de jeu en ligne. La conformite RGPD est integree des la conception (Privacy by Design, Article 25) et couvre les aspects suivants : registre des traitements, gestion des sous-traitants, droits des personnes et mesures techniques.</p>
+    <h3>11.1 RGPD — Stratégie de conformité</h3>
+    <p>MYTHOS collecte et traite des données personnelles dans le cadre de son service de jeu en ligne. La conformité RGPD est intégrée des la conception (Privacy by Design, Article 25) et couvre les aspects suivants : registre des traitements, gestion des sous-traitants, droits des personnes et mesures techniques.</p>
 
     <h4>Principes appliques</h4>
     <table>
       <thead><tr><th>Principe RGPD</th><th>Application MYTHOS</th></tr></thead>
       <tbody>
-        <tr><td><strong>Minimisation</strong> (Art. 5.1c)</td><td>Seules les donnees strictement necessaires sont collectees (pas de nom reel, pas d'adresse)</td></tr>
-        <tr><td><strong>Limitation de conservation</strong> (Art. 5.1e)</td><td>TTL definis par traitement (90j parties, 13 mois analytics)</td></tr>
-        <tr><td><strong>Integrite et confidentialite</strong> (Art. 5.1f)</td><td>Chiffrement TLS en transit, bcrypt pour mots de passe, variables env pour secrets</td></tr>
-        <tr><td><strong>Privacy by Design</strong> (Art. 25)</td><td>Consentement cookies avant tracking, donnees IA non retenues par Anthropic</td></tr>
+        <tr><td><strong>Minimisation</strong> (Art. 5.1c)</td><td>Seules les données strictement necessaires sont collectees (pas de nom réel, pas d'adresse)</td></tr>
+        <tr><td><strong>Limitation de conservation</strong> (Art. 5.1e)</td><td>TTL définis par traitement (90j parties, 13 mois analytics)</td></tr>
+        <tr><td><strong>Intégrité et confidentialite</strong> (Art. 5.1f)</td><td>Chiffrement TLS en transit, bcrypt pour mots de passe, variables env pour secrets</td></tr>
+        <tr><td><strong>Privacy by Design</strong> (Art. 25)</td><td>Consentement cookies avant tracking, données IA non retenues par Anthropic</td></tr>
         <tr><td><strong>Transparence</strong> (Art. 12-14)</td><td>Politique de confidentialite accessible, bandeau cookies, page droits RGPD</td></tr>
       </tbody>
     </table>
 
     <h4>Registre des traitements</h4>
     <table>
-      <thead><tr><th>ID</th><th>Traitement</th><th>Base legale</th><th>Donnees</th><th>Duree conservation</th></tr></thead>
+      <thead><tr><th>ID</th><th>Traitement</th><th>Base légale</th><th>Données</th><th>Durée conservation</th></tr></thead>
       <tbody>
-        <tr><td>T1</td><td>Inscription et authentification</td><td>Contrat</td><td>Email, pseudo, hash mdp</td><td>Duree du compte + 1 an</td></tr>
+        <tr><td>T1</td><td>Inscription et authentification</td><td>Contrat</td><td>Email, pseudo, hash mdp</td><td>Durée du compte + 1 an</td></tr>
         <tr><td>T2</td><td>Gestion des parties</td><td>Contrat</td><td>Actions, votes, messages chat</td><td>90 jours apres fin partie</td></tr>
-        <tr><td>T3</td><td>Historique et statistiques</td><td>Interet legitime</td><td>Scores, roles, resultats</td><td>Duree du compte</td></tr>
-        <tr><td>T4</td><td>Generation IA (narration)</td><td>Contrat</td><td>Actions joueurs envoyees a Claude</td><td>Duree de la session uniquement</td></tr>
+        <tr><td>T3</td><td>Historique et statistiques</td><td>Interet legitime</td><td>Scores, rôles, resultats</td><td>Durée du compte</td></tr>
+        <tr><td>T4</td><td>Génération IA (narration)</td><td>Contrat</td><td>Actions joueurs envoyees a Claude</td><td>Durée de la session uniquement</td></tr>
         <tr><td>T5</td><td>Analytics et monitoring</td><td>Interet legitime</td><td>Pages vues, erreurs, performance</td><td>13 mois (cookies)</td></tr>
       </tbody>
     </table>
 
     <h4>Sous-traitants (Article 28 RGPD)</h4>
     <table>
-      <thead><tr><th>Sous-traitant</th><th>Localisation</th><th>Donnees traitees</th><th>Garanties</th></tr></thead>
+      <thead><tr><th>Sous-traitant</th><th>Localisation</th><th>Données traitees</th><th>Garanties</th></tr></thead>
       <tbody>
         <tr><td>Anthropic (Claude API)</td><td>USA</td><td>Actions joueurs (T4)</td><td>Clauses contractuelles types, pas de retention des prompts</td></tr>
         <tr><td>Vercel</td><td>USA/EU</td><td>Assets frontend, analytics (T5)</td><td>SOC 2, RGPD-compliant, serveurs EU disponibles</td></tr>
         <tr><td>Railway</td><td>USA</td><td>BDD, sessions (T1-T3)</td><td>Chiffrement au repos, backup quotidien</td></tr>
-        <tr><td>Upstash (Redis)</td><td>EU</td><td>Sessions temps reel (T2)</td><td>Region EU, chiffrement TLS, RGPD-compliant</td></tr>
+        <tr><td>Upstash (Redis)</td><td>EU</td><td>Sessions temps réel (T2)</td><td>Region EU, chiffrement TLS, RGPD-compliant</td></tr>
       </tbody>
     </table>
 
@@ -2160,11 +2180,24 @@ gantt
     <table>
       <thead><tr><th>Droit</th><th>Implementation</th></tr></thead>
       <tbody>
-        <tr><td>Acces (Art. 15)</td><td>Page profil → bouton "Exporter mes donnees" (JSON)</td></tr>
+        <tr><td>Acces (Art. 15)</td><td>Page profil → bouton "Exporter mes données" (JSON)</td></tr>
         <tr><td>Rectification (Art. 16)</td><td>Page profil → modification pseudo, email</td></tr>
         <tr><td>Effacement (Art. 17)</td><td>Page profil → bouton "Supprimer mon compte" (suppression cascade)</td></tr>
-        <tr><td>Portabilite (Art. 20)</td><td>Export JSON de toutes les donnees personnelles</td></tr>
-        <tr><td>Opposition (Art. 21)</td><td>Desinscription analytics via bandeau cookies</td></tr>
+        <tr><td>Portabilite (Art. 20)</td><td>Export JSON de toutes les données personnelles</td></tr>
+        <tr><td>Opposition (Art. 21)</td><td>Désinscription analytics via bandeau cookies</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Protection des mineurs (Article 8 RGPD + CNIL)</h4>
+    <p>MYTHOS est un jeu en ligne susceptible d'attirer un public jeune. La réglementation RGPD impose des mesures renforcées pour les utilisateurs de moins de 16 ans (seuil français : 15 ans).</p>
+    <table>
+      <thead><tr><th>Mesure</th><th>Implémentation MYTHOS</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Âge minimum</strong></td><td>Vérification déclarative à l'inscription : 13 ans minimum (alignement COPPA + pratiques du marché)</td></tr>
+        <tr><td><strong>Consentement parental (13-15 ans)</strong></td><td>Workflow d'inscription avec saisie email parental + lien de validation (double opt-in)</td></tr>
+        <tr><td><strong>Contenus IA adaptés</strong></td><td>Prompt system incluant une directive de modération : pas de violence explicite, pas de contenu sexuel, ton adapté à un public adolescent</td></tr>
+        <tr><td><strong>Données minimisées</strong></td><td>Aucune collecte de nom réel, date de naissance stockée uniquement pour vérification d'âge (non affichée)</td></tr>
+        <tr><td><strong>Droit à l'effacement renforcé</strong></td><td>Suppression simplifiée du compte mineur, délai de traitement ≤ 48h</td></tr>
       </tbody>
     </table>
 
@@ -2175,7 +2208,7 @@ gantt
         <tr><td>Chiffrement en transit</td><td>TLS 1.3 sur toutes les connexions (Vercel + Railway forcent HTTPS)</td></tr>
         <tr><td>Chiffrement au repos</td><td>PostgreSQL chiffre via Railway, Redis chiffre via Upstash</td></tr>
         <tr><td>Hashing mots de passe</td><td>bcrypt 12 rounds, salt unique par utilisateur</td></tr>
-        <tr><td>Controle d'acces</td><td>JWT avec roles (player/admin), Guards NestJS, principe du moindre privilege</td></tr>
+        <tr><td>Controle d'acces</td><td>JWT avec rôles(player/admin), Guards NestJS, principe du moindre privilege</td></tr>
         <tr><td>Logs d'acces</td><td>Journalisation des acces admin, retention 6 mois</td></tr>
         <tr><td>Sauvegarde</td><td>Backup PostgreSQL automatique quotidien (Railway), retention 7 jours</td></tr>
         <tr><td>Notification de violation</td><td>Procedure en cas de breach : notification CNIL sous 72h, notification utilisateurs si risque eleve</td></tr>
@@ -2183,23 +2216,23 @@ gantt
     </table>
 
     <h3>11.2 Accessibilite WCAG 2.1 AA</h3>
-    <p>L'accessibilite est un pilier central du design MYTHOS. Le theme sombre est concu avec des contrastes WCAG AA valides, et tous les composants interactifs sont navigables au clavier. Les maquettes Figma ont ete concues en integrant les principes WCAG des la phase de design.</p>
+    <p>L'accessibilité est un pilier central du design MYTHOS. Le thème sombre est concu avec des contrastes WCAG AA valides, et tous les composants interactifs sont navigables au clavier. Les maquettes Figma ont ete concues en integrant les principes WCAG des la phase de design.</p>
     <table>
       <thead><tr><th>Principe</th><th>Critere</th><th>Implementation MYTHOS</th></tr></thead>
       <tbody>
         <tr><td><strong>Perceptible</strong></td><td>1.1.1 Textes alternatifs</td><td>Alt text sur toutes les images, icones decoratives aria-hidden</td></tr>
-        <tr><td><strong>Perceptible</strong></td><td>1.4.3 Contraste minimum (4.5:1)</td><td>Design system Shadcn/UI avec contrastes valides, theme sombre teste</td></tr>
+        <tr><td><strong>Perceptible</strong></td><td>1.4.3 Contraste minimum (4.5:1)</td><td>Design system Shadcn/UI avec contrastes valides, thème sombre teste</td></tr>
         <tr><td><strong>Perceptible</strong></td><td>1.4.4 Redimensionnement texte</td><td>Tailles en rem/em, layout responsive, zoom 200% sans perte</td></tr>
         <tr><td><strong>Utilisable</strong></td><td>2.1.1 Navigation clavier</td><td>Tab order logique, focus visible, skip links, modales piegeantes</td></tr>
         <tr><td><strong>Utilisable</strong></td><td>2.2.1 Timers ajustables</td><td>Timer de phase avec avertissement sonore 10s avant fin, option d'extension pour l'hote</td></tr>
-        <tr><td><strong>Utilisable</strong></td><td>2.4.7 Focus visible</td><td>Outline personnalise (2px solid indigo) sur tous les elements interactifs</td></tr>
+        <tr><td><strong>Utilisable</strong></td><td>2.4.7 Focus visible</td><td>Outline personnalisé (2px solid indigo) sur tous les elements interactifs</td></tr>
         <tr><td><strong>Comprehensible</strong></td><td>3.1.1 Langue de la page</td><td>lang="fr" sur html, labels explicites sur tous les formulaires</td></tr>
         <tr><td><strong>Comprehensible</strong></td><td>3.3.1 Identification erreurs</td><td>Messages d'erreur descriptifs, aria-invalid, aria-describedby</td></tr>
-        <tr><td><strong>Robuste</strong></td><td>4.1.2 Nom, role, valeur</td><td>Composants Shadcn/UI avec aria-label, roles ARIA pour game board</td></tr>
+        <tr><td><strong>Robuste</strong></td><td>4.1.2 Nom, role, valeur</td><td>Composants Shadcn/UI avec aria-label, rôlesARIA pour game board</td></tr>
       </tbody>
     </table>
 
-    <h4>Defis specifiques d'accessibilite pour un jeu temps reel</h4>
+    <h4>Defis specifiques d'accessibilité pour un jeu temps réel</h4>
     <table>
       <thead><tr><th>Defi</th><th>Probleme</th><th>Solution MYTHOS</th></tr></thead>
       <tbody>
@@ -2207,12 +2240,12 @@ gantt
         <tr><td><strong>Streaming texte IA</strong></td><td>Le texte qui apparait mot a mot peut etre difficile a lire pour les lecteurs d'ecran</td><td>aria-live="polite" sur la zone narration, texte complet disponible apres la fin du streaming</td></tr>
         <tr><td><strong>Jauges visuelles (DEEP)</strong></td><td>Les barres de progression colorees ne sont pas accessibles aux daltoniens</td><td>Couleur + texte (pourcentage) + icone d'alerte quand jauge critique. Pas de dependance a la couleur seule.</td></tr>
         <tr><td><strong>Phase de vote</strong></td><td>Selection de joueur via grille visuelle complexe</td><td>role="radiogroup" pour la selection, navigation clavier (tab + espace), confirmation explicite avant envoi</td></tr>
-        <tr><td><strong>Chat temps reel</strong></td><td>Flux de messages rapide difficile a suivre</td><td>aria-live="polite" (pas "assertive" pour ne pas interrompre), possibilite de scroller l'historique</td></tr>
+        <tr><td><strong>Chat temps réel</strong></td><td>Flux de messages rapide difficile a suivre</td><td>aria-live="polite" (pas "assertive" pour ne pas interrompre), possibilite de scroller l'historique</td></tr>
       </tbody>
     </table>
 
-    <h3>11.3 GreenIT — Eco-conception</h3>
-    <p>L'eco-conception est integree a toutes les couches de l'application. Le choix d'un theme sombre par defaut reduit la consommation energetique des ecrans OLED, et la strategie duale IA (Sonnet/Haiku) minimise l'empreinte carbone des appels API.</p>
+    <h3>11.3 GreenIT — Éco-conception</h3>
+    <p>L'éco-conception est intégrée a toutes les couches de l'application. Le choix d'un thème sombre par défaut reduit la consommation énergétique des ecrans OLED, et la stratégie duale IA (Sonnet/Haiku) minimise l'empreinte carbone des appels API.</p>
 
     <h4>10 bonnes pratiques web</h4>
     <table>
@@ -2223,11 +2256,11 @@ gantt
         <tr><td>3</td><td>Compresser les assets</td><td>Brotli/Gzip via Vercel, images WebP</td></tr>
         <tr><td>4</td><td>Mise en cache navigateur</td><td>Cache-Control immutable sur assets statiques (1 an)</td></tr>
         <tr><td>5</td><td>Minimiser le JavaScript</td><td>Tree shaking, pas de dependances inutiles, Zustand leger (1.1 Ko)</td></tr>
-        <tr><td>6</td><td>Privilegier le SSR</td><td>Next.js SSR pour pages SEO, CSR uniquement pour le jeu temps reel</td></tr>
+        <tr><td>6</td><td>Privilegier le SSR</td><td>Next.js SSR pour pages SEO, CSR uniquement pour le jeu temps réel</td></tr>
         <tr><td>7</td><td>Optimiser les polices</td><td>Inter via Google Fonts avec font-display: swap, subset latin</td></tr>
         <tr><td>8</td><td>Limiter les animations</td><td>prefers-reduced-motion respecte, animations CSS (pas JS)</td></tr>
-        <tr><td>9</td><td>Dark mode par defaut</td><td>Reduit la consommation ecran OLED, design sombre natif</td></tr>
-        <tr><td>10</td><td>Hebergement vert</td><td>Vercel (AWS us-east-1, 100% renouvelable), monitoring EcoIndex</td></tr>
+        <tr><td>9</td><td>Dark mode par défaut</td><td>Reduit la consommation ecran OLED, design sombre natif</td></tr>
+        <tr><td>10</td><td>Hébergement vert</td><td>Vercel (AWS us-east-1, 100% renouvelable), monitoring EcoIndex</td></tr>
       </tbody>
     </table>
 
@@ -2235,35 +2268,35 @@ gantt
     <table>
       <thead><tr><th>#</th><th>Pratique</th><th>Implementation</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td>Strategie duale modeles</td><td>Haiku (leger) pour setup/validation, Sonnet (puissant) uniquement pour narration/resolution</td></tr>
+        <tr><td>1</td><td>Stratégie duale modèles</td><td>Haiku (leger) pour setup/validation, Sonnet (puissant) uniquement pour narration/resolution</td></tr>
         <tr><td>2</td><td>Cache des reponses IA</td><td>Redis cache pour narrations de setup similaires (TTL 24h)</td></tr>
         <tr><td>3</td><td>Prompts optimises</td><td>System prompt compact (&lt;500 tokens), context window &lt;4k tokens total par appel</td></tr>
         <tr><td>4</td><td>Max 2 appels IA par tour</td><td>1 narration + 1 resolution. Pas d'appel pendant Discussion/Vote.</td></tr>
-        <tr><td>5</td><td>Historique resume</td><td>Resume des 2 derniers rounds (pas l'historique complet) pour reduire les tokens d'entree</td></tr>
+        <tr><td>5</td><td>Historique résume</td><td>Resume des 2 derniers rounds (pas l'historique complet) pour reduire les tokens d'entree</td></tr>
       </tbody>
     </table>
 
     <!-- ================= SECTION 12 ================= -->
     <h2 id="sec12" class="section-break">12. Supervision, pilotage et communication</h2>
-    <div class="rncp-box">Competence RNCP : C1.7 — Superviser le deroulement du projet de developpement logiciel</div>
+    <div class="rncp-box">Compétence RNCP : C1.7 — Superviser le deroulement du projet de developpement logiciel</div>
 
     <h3>12.1 Gouvernance du projet</h3>
     <p>La gouvernance s'appuie sur les ceremonies Scrum et des instances de pilotage supplementaires inspirees des bonnes pratiques ITIL.</p>
 
     <table>
-      <thead><tr><th>Instance</th><th>Frequence</th><th>Participants</th><th>Objectif</th></tr></thead>
+      <thead><tr><th>Instance</th><th>Fréquence</th><th>Participants</th><th>Objectif</th></tr></thead>
       <tbody>
-        <tr><td><strong>Daily Standup</strong></td><td>Quotidien (async, avant 10h)</td><td>Equipe (4 membres)</td><td>Synchronisation, detection des blocages</td></tr>
+        <tr><td><strong>Daily Standup</strong></td><td>Quotidien (async, avant 10h)</td><td>Équipe (4 membres)</td><td>Synchronisation, detection des blocages</td></tr>
         <tr><td><strong>Sprint Planning</strong></td><td>Debut de sprint (lundi)</td><td>PO + SM + devs</td><td>Selectionner les US, estimer, s'engager</td></tr>
-        <tr><td><strong>Sprint Review</strong></td><td>Fin de sprint (vendredi)</td><td>Equipe + encadrant + client fictif</td><td>Demo, feedback, validation des stories</td></tr>
-        <tr><td><strong>Retrospective</strong></td><td>Fin de sprint (apres Review)</td><td>Equipe uniquement</td><td>Amelioration continue du processus</td></tr>
-        <tr><td><strong>Tech Review</strong></td><td>Hebdomadaire (mercredi)</td><td>Equipe technique</td><td>Revue architecture, PRs, dette technique</td></tr>
-        <tr><td><strong>COPIL</strong></td><td>Mensuel (S4, S8, S12, S14)</td><td>PO + SM + encadrant + client</td><td>Revue strategique, decisions majeures</td></tr>
+        <tr><td><strong>Sprint Review</strong></td><td>Fin de sprint (vendredi)</td><td>Équipe + encadrant + client fictif</td><td>Demo, feedback, validation des stories</td></tr>
+        <tr><td><strong>Rétrospective</strong></td><td>Fin de sprint (apres Review)</td><td>Équipe uniquement</td><td>Amélioration continue du processus</td></tr>
+        <tr><td><strong>Tech Review</strong></td><td>Hebdomadaire (mercredi)</td><td>Équipe technique</td><td>Revue architecture, PRs, dette technique</td></tr>
+        <tr><td><strong>COPIL</strong></td><td>Mensuel (S4, S8, S12, S14)</td><td>PO + SM + encadrant + client</td><td>Revue strategique, décisions majeures</td></tr>
       </tbody>
     </table>
 
     <h3>12.2 Processus de resolution de problemes</h3>
-    <p>Les problemes sont traites via un processus d'escalade a 3 niveaux, avec des delais de resolution definis :</p>
+    <p>Les problemes sont traites via un processus d'escalade a 3 niveaux, avec des delais de resolution définis :</p>
 
     <table>
       <thead><tr><th>Niveau</th><th>Criteres</th><th>Exemples MYTHOS</th><th>Processus</th><th>Delai</th></tr></thead>
@@ -2272,20 +2305,20 @@ gantt
           <td><span class="badge badge-low">N1 — Operationnel</span></td>
           <td>Bug mineur, question technique, tache en retard</td>
           <td>Erreur UI, test qui echoue, besoin de precision sur une US</td>
-          <td>Message Discord #help → collegue repond → resolu et documente</td>
+          <td>Message Discord #help → collegue répond → resolu et documente</td>
           <td>Sous 4h</td>
         </tr>
         <tr>
           <td><span class="badge badge-high">N2 — Tactique</span></td>
           <td>Blocage non resolu en N1, retard >1 jour, conflit technique</td>
-          <td>API Anthropic en panne >2h, desaccord architecture, pic couts IA</td>
+          <td>API Anthropic en panne >2h, desaccord architecture, pic coûts IA</td>
           <td>Alerte SM → reunion adhoc → PO + SM analysent → plan d'action</td>
           <td>Sous 24h</td>
         </tr>
         <tr>
           <td><span class="badge badge-critical">N3 — Strategique</span></td>
           <td>Retard >1 semaine, risque critique, depart membre</td>
-          <td>Sprint non livre, budget explose, membre absent longue duree</td>
+          <td>Sprint non livre, budget explose, membre absent longue durée</td>
           <td>PO prepare rapport → COPIL extraordinaire → replanification</td>
           <td>Sous 48h</td>
         </tr>
@@ -2295,11 +2328,11 @@ gantt
     <h3>12.3 Ajustement et actualisation du projet</h3>
     <p>Le projet est actualise en continu via les mecanismes suivants :</p>
     <table>
-      <thead><tr><th>Mecanisme</th><th>Frequence</th><th>Actions</th></tr></thead>
+      <thead><tr><th>Mecanisme</th><th>Fréquence</th><th>Actions</th></tr></thead>
       <tbody>
-        <tr><td><strong>Ajustement du backlog</strong></td><td>Chaque Sprint Planning</td><td>Re-priorisation MoSCoW, ajout/retrait de tickets selon la velocite reelle</td></tr>
-        <tr><td><strong>Ajustement du planning</strong></td><td>Chaque Sprint Review</td><td>Comparaison prevu/realise, mise a jour du Gantt si ecart >10%</td></tr>
-        <tr><td><strong>Ajustement des ressources</strong></td><td>Chaque Retrospective</td><td>Redistribution des taches si desequilibre de charge, pair programming si blocage</td></tr>
+        <tr><td><strong>Ajustement du backlog</strong></td><td>Chaque Sprint Planning</td><td>Re-priorisation MoSCoW, ajout/retrait de tickets selon la vélocité réelle</td></tr>
+        <tr><td><strong>Ajustement du planning</strong></td><td>Chaque Sprint Review</td><td>Comparaison prevu/réalisé, mise a jour du Gantt si écart >10%</td></tr>
+        <tr><td><strong>Ajustement des ressources</strong></td><td>Chaque Rétrospective</td><td>Redistribution des taches si desequilibre de charge, pair programming si blocage</td></tr>
         <tr><td><strong>Ajustement budgetaire</strong></td><td>Mensuel (COPIL)</td><td>Suivi CPI, alerte si consommation API IA >120% du previsionnel</td></tr>
       </tbody>
     </table>
@@ -2308,37 +2341,79 @@ gantt
 
     <h4>Identification des parties prenantes</h4>
     <table>
-      <thead><tr><th>Partie prenante</th><th>Pouvoir</th><th>Interet</th><th>Strategie</th></tr></thead>
+      <thead><tr><th>Partie prenante</th><th>Pouvoir</th><th>Interet</th><th>Stratégie</th></tr></thead>
       <tbody>
         <tr><td><strong>Encadrant academique</strong></td><td>Eleve</td><td>Eleve</td><td>Gerer de pres — rapports hebdo + Sprint Review + COPIL</td></tr>
         <tr><td><strong>Jury de soutenance</strong></td><td>Eleve</td><td>Eleve</td><td>Gerer de pres — dossier complet, soutenance preparee</td></tr>
         <tr><td><strong>Client fictif (Mythos Interactive)</strong></td><td>Moyen</td><td>Eleve</td><td>Tenir informe — Sprint Review + COPIL mensuel</td></tr>
-        <tr><td><strong>Equipe de developpement</strong></td><td>Faible</td><td>Tres eleve</td><td>Tenir informe — Daily + Discord + GitHub Projects</td></tr>
+        <tr><td><strong>Équipe de developpement</strong></td><td>Faible</td><td>Tres eleve</td><td>Tenir informe — Daily + Discord + GitHub Projects</td></tr>
       </tbody>
     </table>
 
     <h4>Matrice de communication</h4>
     <table>
-      <thead><tr><th>Communication</th><th>De</th><th>A</th><th>Frequence</th><th>Canal</th></tr></thead>
+      <thead><tr><th>Communication</th><th>De</th><th>A</th><th>Fréquence</th><th>Canal</th></tr></thead>
       <tbody>
-        <tr><td>Daily standup async</td><td>Chaque dev</td><td>Equipe</td><td>Quotidien</td><td>Discord #daily-standup</td></tr>
+        <tr><td>Daily standup async</td><td>Chaque dev</td><td>Équipe</td><td>Quotidien</td><td>Discord #daily-standup</td></tr>
         <tr><td>Rapport d'avancement</td><td>Scrum Master</td><td>Encadrant</td><td>Hebdomadaire</td><td>Notion (page partagee)</td></tr>
-        <tr><td>Sprint Review (demo)</td><td>PO + devs</td><td>Equipe + encadrant + client</td><td>Bi-hebdomadaire</td><td>Discord vocal + partage ecran</td></tr>
-        <tr><td>Retrospective</td><td>SM anime</td><td>Equipe</td><td>Bi-hebdomadaire</td><td>Discord vocal</td></tr>
+        <tr><td>Sprint Review (demo)</td><td>PO + devs</td><td>Équipe + encadrant + client</td><td>Bi-hebdomadaire</td><td>Discord vocal + partage ecran</td></tr>
+        <tr><td>Rétrospective</td><td>SM anime</td><td>Équipe</td><td>Bi-hebdomadaire</td><td>Discord vocal</td></tr>
         <tr><td>COPIL</td><td>PO anime</td><td>PO + SM + encadrant + client</td><td>Mensuel</td><td>Visioconference</td></tr>
-        <tr><td>Notification de risque</td><td>PO ou SM</td><td>Encadrant</td><td>Sur evenement</td><td>Discord #alertes + Notion</td></tr>
+        <tr><td>Notification de risque</td><td>PO ou SM</td><td>Encadrant</td><td>Sur événement</td><td>Discord #alertes + Notion</td></tr>
         <tr><td>Rapport final</td><td>PO + SM</td><td>Jury + encadrant</td><td>Fin de projet</td><td>Document PDF</td></tr>
       </tbody>
     </table>
 
-    <blockquote><strong>Nombre total de communications planifiees sur 14 semaines :</strong> ~70 daily standups, 14 rapports hebdomadaires, 7 Sprint Plannings, 7 Sprint Reviews, 7 Retrospectives, 4 COPIL, 14 Tech Reviews.</blockquote>
+    <blockquote><strong>Nombre total de communications planifiees sur 14 semaines :</strong> ~70 daily standups, 14 rapports hebdomadaires, 7 Sprint Plannings, 7 Sprint Reviews, 7 Rétrospectives, 4 COPIL, 14 Tech Reviews.</blockquote>
+
+    <!-- ================= GLOSSAIRE ================= -->
+    <h2 id="glossaire" class="section-break">Glossaire</h2>
+    <table>
+      <thead><tr><th>Terme / Acronyme</th><th>Définition</th></tr></thead>
+      <tbody>
+        <tr><td><strong>ADR</strong></td><td>Architecture Decision Record — document formalisant une décision technique avec contexte, alternatives et justification</td></tr>
+        <tr><td><strong>AI Act</strong></td><td>Règlement européen 2024/1689 sur l'intelligence artificielle, classifiant les systèmes IA par niveau de risque</td></tr>
+        <tr><td><strong>ANSSI</strong></td><td>Agence Nationale de la Sécurité des Systèmes d'Information — autorité française de cybersécurité</td></tr>
+        <tr><td><strong>Burndown</strong></td><td>Graphique montrant le reste de travail (SP) par rapport au temps dans un sprint</td></tr>
+        <tr><td><strong>COPIL</strong></td><td>Comité de Pilotage — instance de gouvernance stratégique réunissant l'équipe et l'encadrant</td></tr>
+        <tr><td><strong>CPI</strong></td><td>Cost Performance Index — indicateur d'efficacité budgétaire (valeur acquise / coût réel)</td></tr>
+        <tr><td><strong>DoD</strong></td><td>Definition of Done — critères qu'un ticket doit remplir pour être considéré terminé</td></tr>
+        <tr><td><strong>DPIA</strong></td><td>Data Protection Impact Assessment — analyse d'impact relative à la protection des données</td></tr>
+        <tr><td><strong>ERD</strong></td><td>Entity-Relationship Diagram — diagramme modélisant les entités de la base de données et leurs relations</td></tr>
+        <tr><td><strong>EVM</strong></td><td>Earned Value Management — méthode de suivi de la valeur acquise d'un projet</td></tr>
+        <tr><td><strong>GM / MJ</strong></td><td>Game Master / Maître du Jeu — rôle assuré par l'IA Claude dans MYTHOS</td></tr>
+        <tr><td><strong>ITIL</strong></td><td>Information Technology Infrastructure Library — référentiel de bonnes pratiques de gestion des services IT</td></tr>
+        <tr><td><strong>JWT</strong></td><td>JSON Web Token — standard de token d'authentification signé</td></tr>
+        <tr><td><strong>KPI</strong></td><td>Key Performance Indicator — indicateur clé de performance</td></tr>
+        <tr><td><strong>LLM</strong></td><td>Large Language Model — modèle de langage de grande taille (ex : Claude, GPT)</td></tr>
+        <tr><td><strong>MoSCoW</strong></td><td>Méthode de priorisation : Must have, Should have, Could have, Won't have</td></tr>
+        <tr><td><strong>MVP</strong></td><td>Minimum Viable Product — version minimale du produit avec les fonctionnalités essentielles</td></tr>
+        <tr><td><strong>ORM</strong></td><td>Object-Relational Mapping — outil de correspondance entre objets et base de données (ex : Prisma)</td></tr>
+        <tr><td><strong>PO</strong></td><td>Product Owner — responsable de la vision produit et de la priorisation du backlog</td></tr>
+        <tr><td><strong>POC</strong></td><td>Proof of Concept — prototype validant la faisabilité technique d'un concept</td></tr>
+        <tr><td><strong>RACI</strong></td><td>Matrice Responsible, Accountable, Consulted, Informed — outil d'attribution des responsabilités</td></tr>
+        <tr><td><strong>RGPD</strong></td><td>Règlement Général sur la Protection des Données — règlement européen 2016/679</td></tr>
+        <tr><td><strong>RNCP</strong></td><td>Répertoire National des Certifications Professionnelles — référentiel des compétences certifiées</td></tr>
+        <tr><td><strong>Scénario Pack</strong></td><td>Fichier JSON décrivant un scénario de jeu MYTHOS (rôles, jauges, phases, conditions de victoire)</td></tr>
+        <tr><td><strong>SM</strong></td><td>Scrum Master — facilitateur de l'équipe Scrum, garant de la méthodologie</td></tr>
+        <tr><td><strong>SP</strong></td><td>Story Point — unité d'estimation de la complexité d'une User Story</td></tr>
+        <tr><td><strong>SPI</strong></td><td>Schedule Performance Index — indicateur de respect du planning (valeur acquise / valeur planifiée)</td></tr>
+        <tr><td><strong>SSE</strong></td><td>Server-Sent Events — protocole de communication unidirectionnelle serveur→client</td></tr>
+        <tr><td><strong>SWOT</strong></td><td>Strengths, Weaknesses, Opportunities, Threats — matrice d'analyse stratégique</td></tr>
+        <tr><td><strong>TAM / SAM / SOM</strong></td><td>Total Addressable Market / Serviceable Addressable Market / Serviceable Obtainable Market</td></tr>
+        <tr><td><strong>TJM</strong></td><td>Taux Journalier Moyen — tarif de référence pour la valorisation des ressources humaines</td></tr>
+        <tr><td><strong>US</strong></td><td>User Story — description d'une fonctionnalité du point de vue de l'utilisateur</td></tr>
+        <tr><td><strong>WCAG</strong></td><td>Web Content Accessibility Guidelines — normes d'accessibilité web (niveau AA visé)</td></tr>
+        <tr><td><strong>WebSocket</strong></td><td>Protocole de communication bidirectionnelle temps réel entre client et serveur</td></tr>
+      </tbody>
+    </table>
 
     <!-- ================= FOOTER ================= -->
     <div class="footer-note" style="margin-top: 60px;">
       <p><strong>MYTHOS</strong> — Cahier des Charges v2.0</p>
       <p>Workshop 5A TL — S1 — Bloc 1 RNCP38822</p>
-      <p>Equipe : Kays ZAHIDI, Samy ZEROUALI, Youri EMMANUEL, Yassir SABBAR</p>
-      <p>Date : Fevrier 2026</p>
+      <p>Équipe : Kays ZAHIDI, Samy ZEROUALI, Youri EMMANUEL, Yassir SABBAR</p>
+      <p>Date : Février 2026</p>
     </div>
 
   </div><!-- end content -->
