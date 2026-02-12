@@ -755,8 +755,9 @@ export class WebsocketGateway
         await this.handleAllActionsSubmitted(data.gameId, gameRoom);
       }
     } catch (error) {
-      this.logger.error(`Error in game:action: ${error}`);
-      client.emit('game:error', { message: 'Failed to submit action' });
+      const msg = error instanceof Error ? error.message : String(error);
+      this.logger.error(`Error in game:action: ${msg}`);
+      client.emit('game:error', { message: msg || 'Failed to submit action' });
     }
   }
 
