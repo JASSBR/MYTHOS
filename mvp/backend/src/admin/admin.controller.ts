@@ -1,9 +1,19 @@
-import { Controller, Get, UseGuards } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Param,
+  Patch,
+  Body,
+  UseGuards,
+} from '@nestjs/common';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { RolesGuard } from '../common/guards/roles.guard';
+import { Roles } from '../common/decorators/roles.decorator';
 import { PrismaService } from '../prisma/prisma.service';
 
 @Controller('admin')
-@UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard, RolesGuard)
+@Roles('ADMIN')
 export class AdminController {
   constructor(private readonly prisma: PrismaService) {}
 
@@ -36,6 +46,8 @@ export class AdminController {
         id: true,
         username: true,
         email: true,
+        role: true,
+        bannedUntil: true,
         createdAt: true,
         stats: {
           select: { gamesPlayed: true },
@@ -49,6 +61,8 @@ export class AdminController {
       id: u.id,
       username: u.username,
       email: u.email,
+      role: u.role,
+      bannedUntil: u.bannedUntil,
       createdAt: u.createdAt,
       gamesPlayed: u.stats?.gamesPlayed ?? 0,
     }));
@@ -75,5 +89,30 @@ export class AdminController {
       startedAt: g.startedAt,
       finishedAt: g.finishedAt,
     }));
+  }
+
+  @Patch('users/:id/ban')
+  async banUser(
+    @Param('id') id: string,
+    @Body() body: { duration?: number },
+  ) {
+    // duration in hours, default 24h. Use 0 to unban.
+    const hours = body.duration ?? 24;
+
+    if (hours === 0) {
+      await this.prisma.user.update({
+        where: { id },
+        data: { bannedUntil: null },
+      });
+      return { success: true, bannedUntil: null };
+    }
+
+    const bannedUntil = new Date(Date.now() + hours * 60 * 60 * 1000);
+    await this.prisma.user.update({
+      where: { id },
+      data: { bannedUntil },
+    });
+
+    return { success: true, bannedUntil };
   }
 }

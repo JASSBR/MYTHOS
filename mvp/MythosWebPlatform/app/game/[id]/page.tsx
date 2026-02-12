@@ -12,6 +12,7 @@ import { PlayerCard } from "@/components/player-card"
 import { useAuth } from "@/lib/auth"
 import { api, type GameDetail, type GamePlayer } from "@/lib/api"
 import { connectSocket, disconnectSocket, getSocket } from "@/lib/socket"
+import { NarrativeRenderer } from "@/components/game/narrative-renderer"
 
 function phaseToGamePhase(phase: string): GamePhase {
   const lower = phase.toLowerCase()
@@ -70,6 +71,10 @@ export default function GamePage({ params }: { params: Promise<{ id: string }> }
   // Resolution
   const [resolutionNarrative, setResolutionNarrative] = useState("")
   const [resolutionEliminations, setResolutionEliminations] = useState<string[]>([])
+  const [resolutionGaugeChanges, setResolutionGaugeChanges] = useState<Record<string, Record<string, number>>>({})
+
+  // Global gauges (synced from game:state)
+  const [globalGauges, setGlobalGauges] = useState<Record<string, number>>({})
 
   // Game over
   const [gameOver, setGameOver] = useState<GameOverData | null>(null)
@@ -143,6 +148,10 @@ export default function GamePage({ params }: { params: Promise<{ id: string }> }
           })
         })
       }
+      // Sync global gauges
+      if (state.globalGauges) {
+        setGlobalGauges(state.globalGauges)
+      }
       // Reset per-round state based on current phase
       if (state.currentPhase === "NARRATION" || state.currentPhase === "ACTION") {
         setActionSubmitted(false)
@@ -150,6 +159,7 @@ export default function GamePage({ params }: { params: Promise<{ id: string }> }
         setSelectedVote(null)
         setResolutionNarrative("")
         setResolutionEliminations([])
+        setResolutionGaugeChanges({})
       }
     })
 
@@ -235,9 +245,20 @@ export default function GamePage({ params }: { params: Promise<{ id: string }> }
     })
 
     // Resolution
-    socket.on("game:resolution", (data: { narrative: string; eliminations: string[]; gaugeChanges: any }) => {
+    socket.on("game:resolution", (data: { narrative: string; eliminations: string[]; gaugeChanges: Record<string, Record<string, number>> }) => {
       setResolutionNarrative(data.narrative)
       setResolutionEliminations(data.eliminations || [])
+      setResolutionGaugeChanges(data.gaugeChanges || {})
+      // Update global gauges with deltas
+      if (data.gaugeChanges?.global) {
+        setGlobalGauges((prev) => {
+          const updated = { ...prev }
+          for (const [key, delta] of Object.entries(data.gaugeChanges.global)) {
+            updated[key] = (updated[key] ?? 0) + delta
+          }
+          return updated
+        })
+      }
       setWaitingMessage("")
 
       // Update player alive status
@@ -467,13 +488,7 @@ export default function GamePage({ params }: { params: Promise<{ id: string }> }
 
                   {/* Epilogue */}
                   {gameOver.epilogue && (
-                    <div className="prose prose-invert max-w-none">
-                      {gameOver.epilogue.split("\n\n").map((p, i) => (
-                        <p key={i} className="text-foreground/90 leading-relaxed font-serif text-base">
-                          {p}
-                        </p>
-                      ))}
-                    </div>
+                    <NarrativeRenderer text={gameOver.epilogue} />
                   )}
 
                   {/* Scores table */}
@@ -532,20 +547,7 @@ export default function GamePage({ params }: { params: Promise<{ id: string }> }
               {!gameOver && displayPhase === "narration" && (
                 <div className="flex flex-col gap-6">
                   {narrationText ? (
-                    <div className="prose prose-invert max-w-none">
-                      {narrationText.split("\n\n").map((p, i, arr) => (
-                        <p
-                          key={i}
-                          className="text-foreground/90 leading-relaxed font-serif text-base"
-                          style={{ animationDelay: `${i * 0.3}s` }}
-                        >
-                          {p}
-                          {isStreaming && i === arr.length - 1 && (
-                            <span className="inline-block w-1.5 h-4 ml-1 bg-primary/80 animate-pulse align-middle" />
-                          )}
-                        </p>
-                      ))}
-                    </div>
+                    <NarrativeRenderer text={narrationText} isStreaming={isStreaming} />
                   ) : (
                     <div className="flex items-center gap-3 text-muted-foreground">
                       <Loader2 className="h-4 w-4 animate-spin" />
@@ -730,17 +732,55 @@ export default function GamePage({ params }: { params: Promise<{ id: string }> }
               {!gameOver && displayPhase === "resolution" && (
                 <div className="flex flex-col gap-6">
                   {resolutionNarrative ? (
-                    <div className="prose prose-invert max-w-none">
-                      {resolutionNarrative.split("\n\n").map((p, i) => (
-                        <p key={i} className="text-foreground/90 leading-relaxed font-serif text-base">
-                          {p}
-                        </p>
-                      ))}
-                    </div>
+                    <NarrativeRenderer text={resolutionNarrative} />
                   ) : (
                     <div className="flex items-center gap-3 text-muted-foreground">
                       <Loader2 className="h-4 w-4 animate-spin" />
                       <span className="text-sm">Resolution en cours...</span>
+                    </div>
+                  )}
+
+                  {/* Gauge changes */}
+                  {resolutionNarrative && resolutionGaugeChanges.global && Object.keys(resolutionGaugeChanges.global).length > 0 && (
+                    <div className="rounded-xl border border-border bg-card/50 p-4">
+                      <h4 className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Etat des systemes</h4>
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        {Object.entries(resolutionGaugeChanges.global).map(([gaugeId, delta]) => {
+                          const currentValue = globalGauges[gaugeId] ?? 0
+                          const gaugeLabels: Record<string, { name: string; max: number; color: string; icon: string }> = {
+                            o2: { name: "Oxygene", max: 100, color: "text-cyan-400", icon: "O2" },
+                            energie: { name: "Energie", max: 100, color: "text-amber-400", icon: "E" },
+                            coque: { name: "Coque", max: 100, color: "text-orange-400", icon: "C" },
+                            profondeur: { name: "Profondeur", max: 8000, color: "text-blue-400", icon: "P" },
+                          }
+                          const gauge = gaugeLabels[gaugeId] ?? { name: gaugeId, max: 100, color: "text-foreground", icon: "?" }
+                          const pct = Math.min(100, Math.max(0, (currentValue / gauge.max) * 100))
+                          const isPositive = delta > 0
+                          const isCritical = gaugeId !== "profondeur" && pct < 25
+
+                          return (
+                            <div key={gaugeId} className="flex flex-col gap-1.5">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className={`font-medium ${gauge.color}`}>{gauge.name}</span>
+                                <span className="flex items-center gap-1.5">
+                                  <span className="text-muted-foreground">
+                                    {gaugeId === "profondeur" ? `${currentValue}m` : `${Math.round(pct)}%`}
+                                  </span>
+                                  <span className={`font-bold ${isPositive ? "text-emerald-400" : "text-red-400"}`}>
+                                    {isPositive ? "+" : ""}{gaugeId === "profondeur" ? `${delta}m` : delta}
+                                  </span>
+                                </span>
+                              </div>
+                              <div className="h-2 w-full rounded-full bg-secondary/80 overflow-hidden">
+                                <div
+                                  className={`h-full rounded-full transition-all duration-700 ${isCritical ? "bg-red-500" : gaugeId === "profondeur" ? "bg-blue-500" : "bg-emerald-500"}`}
+                                  style={{ width: `${pct}%` }}
+                                />
+                              </div>
+                            </div>
+                          )
+                        })}
+                      </div>
                     </div>
                   )}
 
@@ -758,11 +798,11 @@ export default function GamePage({ params }: { params: Promise<{ id: string }> }
                     </div>
                   )}
 
-                  {/* Waiting for next round */}
+                  {/* Waiting for next round — timer shown via GameTimer in header */}
                   {resolutionNarrative && (
-                    <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                      <Loader2 className="h-3 w-3 animate-spin" />
-                      <span className="text-xs">Prochain round dans quelques secondes...</span>
+                    <div className="mt-4 flex items-center justify-center gap-2 rounded-lg border border-border/50 bg-secondary/30 px-4 py-3">
+                      <Loader2 className="h-4 w-4 animate-spin text-primary" />
+                      <span className="text-sm text-muted-foreground">Prochain round en cours de preparation...</span>
                     </div>
                   )}
                 </div>
@@ -771,8 +811,43 @@ export default function GamePage({ params }: { params: Promise<{ id: string }> }
           </ScrollArea>
         </div>
 
-        {/* Right panel - Players */}
+        {/* Right panel - Players + Gauges */}
         <aside className="hidden w-72 flex-shrink-0 flex-col border-l border-border bg-card/50 lg:flex">
+          {/* Global gauges */}
+          {Object.keys(globalGauges).length > 0 && (
+            <div className="border-b border-border p-4">
+              <h3 className="mb-3 font-display text-sm font-bold text-foreground">Systemes</h3>
+              <div className="flex flex-col gap-2.5">
+                {Object.entries(globalGauges).map(([gaugeId, value]) => {
+                  const meta: Record<string, { name: string; max: number; color: string }> = {
+                    o2: { name: "O2", max: 100, color: "bg-cyan-500" },
+                    energie: { name: "Energie", max: 100, color: "bg-amber-500" },
+                    coque: { name: "Coque", max: 100, color: "bg-orange-500" },
+                    profondeur: { name: "Prof.", max: 8000, color: "bg-blue-500" },
+                  }
+                  const g = meta[gaugeId] ?? { name: gaugeId, max: 100, color: "bg-primary" }
+                  const pct = Math.min(100, Math.max(0, (value / g.max) * 100))
+                  const isCritical = gaugeId !== "profondeur" && pct < 25
+                  return (
+                    <div key={gaugeId} className="flex flex-col gap-1">
+                      <div className="flex items-center justify-between text-[11px]">
+                        <span className="text-muted-foreground">{g.name}</span>
+                        <span className={`font-mono font-medium ${isCritical ? "text-red-400" : "text-foreground/70"}`}>
+                          {gaugeId === "profondeur" ? `${value}m` : `${Math.round(pct)}%`}
+                        </span>
+                      </div>
+                      <div className="h-1.5 w-full rounded-full bg-secondary/80 overflow-hidden">
+                        <div
+                          className={`h-full rounded-full transition-all duration-500 ${isCritical ? "bg-red-500" : g.color}`}
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
           <div className="border-b border-border p-4">
             <h3 className="font-display text-sm font-bold text-foreground">Joueurs</h3>
           </div>

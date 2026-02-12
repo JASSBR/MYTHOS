@@ -93,6 +93,23 @@ export const api = {
       return request<ScenarioFull>(`/scenarios/${slug}`)
     },
   },
+  notifications: {
+    list() {
+      return request<NotificationsResponse>("/notifications")
+    },
+    markRead(id: string) {
+      return request<{ success: boolean }>(`/notifications/${id}/read`, { method: "PATCH" })
+    },
+    markAllRead() {
+      return request<{ success: boolean }>("/notifications/read-all", { method: "PATCH" })
+    },
+    delete(id: string) {
+      return request<{ success: boolean }>(`/notifications/${id}`, { method: "DELETE" })
+    },
+    deleteAll() {
+      return request<{ success: boolean }>("/notifications", { method: "DELETE" })
+    },
+  },
   admin: {
     stats() {
       return request<AdminStats>("/admin/stats")
@@ -103,6 +120,12 @@ export const api = {
     games() {
       return request<AdminGame[]>("/admin/games")
     },
+    banUser(id: string, duration = 24) {
+      return request<{ success: boolean; bannedUntil: string | null }>(`/admin/users/${id}/ban`, {
+        method: "PATCH",
+        body: JSON.stringify({ duration }),
+      })
+    },
   },
 }
 
@@ -112,6 +135,7 @@ export interface User {
   email: string
   username: string
   avatar: string | null
+  role: "ADMIN" | "PLAYER"
   createdAt: string
   updatedAt: string
 }
@@ -214,6 +238,21 @@ export interface ScenarioFull extends ScenarioMeta {
   roles: { id: string; name: string; team: string; description: string; objective: string; required: boolean; unique: boolean }[]
 }
 
+export interface NotificationItem {
+  id: string
+  type: string
+  title: string
+  message: string
+  data: any
+  isRead: boolean
+  createdAt: string
+}
+
+export interface NotificationsResponse {
+  notifications: NotificationItem[]
+  unreadCount: number
+}
+
 export interface AdminStats {
   totalUsers: number
   totalGames: number
@@ -225,6 +264,8 @@ export interface AdminUser {
   id: string
   username: string
   email: string
+  role: string
+  bannedUntil: string | null
   createdAt: string
   gamesPlayed: number
 }

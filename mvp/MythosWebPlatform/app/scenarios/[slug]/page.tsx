@@ -55,7 +55,7 @@ export default function ScenarioPage({ params }: { params: Promise<{ slug: strin
       {/* Hero header */}
       <div className="relative h-72 sm:h-96">
         <Image
-          src={`/images/scenario-${scenario.slug}.jpg`}
+          src={`/images/scenario-${scenario.slug}.svg`}
           alt={`Illustration du scenario ${scenario.name}`}
           fill
           className="object-cover"

@@ -11,6 +11,7 @@ import { AiModule } from './ai/ai.module';
 import { WebsocketModule } from './websocket/websocket.module';
 import { CacheModule } from './cache/cache.module';
 import { AdminModule } from './admin/admin.module';
+import { NotificationsModule } from './notifications/notifications.module';
 
 @Module({
   imports: [
@@ -41,6 +42,7 @@ import { AdminModule } from './admin/admin.module';
     AiModule,
     WebsocketModule,
     AdminModule,
+    NotificationsModule,
   ],
 })
 export class AppModule {}

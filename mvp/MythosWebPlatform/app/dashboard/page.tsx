@@ -161,7 +161,7 @@ export default function DashboardPage() {
           <ScenarioCard
             title="TRIBUNAL"
             description="Proces medieval — Jures, Avocats et Accuse."
-            image="/images/scenario-tribunal.jpg"
+            image="/images/scenario-tribunal.svg"
             duration="20 min"
             players="3-8 joueurs"
             difficulty="Normal"
@@ -170,7 +170,7 @@ export default function DashboardPage() {
           <ScenarioCard
             title="DEEP"
             description="Station sous-marine en peril — Survivez."
-            image="/images/scenario-deep.jpg"
+            image="/images/scenario-deep.svg"
             duration="15-25 min"
             players="2-6 joueurs"
             difficulty="Difficile"

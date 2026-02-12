@@ -16,6 +16,8 @@ import { TimerService } from '../engine/timer.service';
 import { GamesService } from '../games/games.service';
 import { AuthService } from '../auth/auth.service';
 import { CacheService } from '../cache/cache.service';
+import { NotificationsService } from '../notifications/notifications.service';
+import { NotificationType } from '@prisma/client';
 import {
   ClientToServerEvents,
   ServerToClientEvents,
@@ -27,7 +29,16 @@ const RECONNECT_TIMEOUT_MS = 2 * 60 * 1000; // 2 minutes
 
 @WebSocketGateway({
   cors: {
-    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+    origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
+      const allowed = (process.env.CORS_ORIGIN || 'http://localhost:3000')
+        .split(',')
+        .map((o) => o.trim());
+      if (!origin || allowed.includes(origin) || origin.endsWith('.ngrok-free.app') || origin.endsWith('.vercel.app') || origin.endsWith('.onrender.com')) {
+        cb(null, true);
+      } else {
+        cb(null, false);
+      }
+    },
     credentials: true,
   },
   namespace: '/game',
@@ -67,6 +78,7 @@ export class WebsocketGateway
     private readonly cacheService: CacheService,
     private readonly jwtService: JwtService,
     private readonly configService: ConfigService,
+    private readonly notificationsService: NotificationsService,
   ) {}
 
   // ===========================================================================
@@ -310,6 +322,73 @@ export class WebsocketGateway
     }
   }
 
+  @SubscribeMessage('lobby:kick')
+  async handleLobbyKick(
+    @ConnectedSocket() client: Socket,
+    @MessageBody() data: { code: string; targetUserId: string },
+  ): Promise<void> {
+    try {
+      if (!data?.code || !data?.targetUserId) {
+        client.emit('game:error', { message: 'Missing code or targetUserId' });
+        return;
+      }
+
+      const user = this.getUserFromSocket(client);
+      if (!user) {
+        client.emit('game:error', { message: 'Not authenticated' });
+        return;
+      }
+
+      const game = await this.gamesService.getGameByCode(data.code);
+
+      // Verify user is the host
+      const isHost = await this.gamesService.isHost(game.id, user.userId);
+      if (!isHost) {
+        client.emit('game:error', {
+          message: 'Only the host can kick players',
+        });
+        return;
+      }
+
+      // Can't kick yourself
+      if (data.targetUserId === user.userId) {
+        client.emit('game:error', { message: 'Cannot kick yourself' });
+        return;
+      }
+
+      const room = `lobby:${game.id}`;
+
+      // Remove the player from the game in DB
+      await this.gamesService.leaveGame(game.id, data.targetUserId);
+
+      // Find the target player's socket and remove them from the room
+      const roomSockets = await this.server.in(room).fetchSockets();
+      for (const sock of roomSockets) {
+        const sockUser = this.socketUsers.get(sock.id);
+        if (sockUser?.userId === data.targetUserId) {
+          sock.emit('lobby:player:kicked', { userId: data.targetUserId });
+          sock.leave(room);
+          this.untrackRoom(sock.id, room);
+          await this.cacheService.removePlayerConnection(
+            game.id,
+            data.targetUserId,
+          );
+          break;
+        }
+      }
+
+      this.logger.log(
+        `Player ${data.targetUserId} kicked from lobby ${data.code} by host ${user.username}`,
+      );
+
+      // Emit updated lobby to remaining players
+      await this.emitLobbyUpdate(room, game.id);
+    } catch (error) {
+      this.logger.error(`Error in lobby:kick: ${error}`);
+      client.emit('game:error', { message: 'Failed to kick player' });
+    }
+  }
+
   // ===========================================================================
   // Game lifecycle events
   // ===========================================================================
@@ -375,6 +454,41 @@ export class WebsocketGateway
 
       // Notify all clients that the game has started
       this.server.to(gameRoom).emit('lobby:started', { gameId: data.gameId });
+
+      // Send private role info to each player individually
+      const gameSockets = await this.server.in(gameRoom).fetchSockets();
+      for (const sock of gameSockets) {
+        const sockUser = this.socketUsers.get(sock.id);
+        if (!sockUser) continue;
+        const playerState = gameState.players.find(
+          (p) => p.userId === sockUser.userId,
+        );
+        if (!playerState) continue;
+
+        // Get the role description from the scenario
+        const scenarioConfig = this.engineService.getScenarioConfig(
+          game.scenarioSlug,
+        );
+        const roleInfo = scenarioConfig?.roles.find(
+          (r) => r.name === playerState.role,
+        );
+
+        sock.emit('game:private-info', {
+          role: playerState.role,
+          team: playerState.team,
+          description: roleInfo?.description ?? '',
+          objectives:
+            scenarioConfig?.winConditions?.[playerState.team] ?? '',
+        });
+      }
+
+      // Push persistent notifications to all players
+      this.notifyAllPlayers(
+        data.gameId,
+        NotificationType.GAME_STARTED,
+        'La partie commence !',
+        `La partie vient de démarrer. Bonne chance !`,
+      ).catch(() => {});
 
       this.logger.log(`Game ${data.gameId} started by ${user.username}`);
 
@@ -863,11 +977,17 @@ export class WebsocketGateway
         round: state.currentRound,
       });
 
-      // If we just entered ACTION phase, send action suggestions
+      // If we just entered ACTION phase, send action suggestions + notify
       if (state.currentPhase === 'ACTION') {
         this.sendActionSuggestions(data.gameId, gameRoom).catch((err) =>
           this.logger.error(`Error sending action suggestions: ${err}`),
         );
+        this.notifyAllPlayers(
+          data.gameId,
+          NotificationType.TURN_ACTION,
+          "C'est votre tour !",
+          'Choisissez votre action avant la fin du temps imparti.',
+        ).catch(() => {});
       }
 
       this.logger.log(
@@ -986,12 +1106,27 @@ export class WebsocketGateway
       // Update game status in DB
       await this.gamesService.updateGameStatus(gameId, 'FINISHED');
 
+      // Push game-finished notifications to all players
+      this.notifyAllPlayers(
+        gameId,
+        NotificationType.GAME_FINISHED,
+        'Partie terminée',
+        `Résultat : ${resolution.gameResult.result}`,
+      ).catch(() => {});
+
       // Clean up cached state
       await this.cacheService.deleteGameState(gameId);
 
       this.logger.log(`Game ${gameId} finished: ${resolution.gameResult.result}`);
     } else {
-      // Start next round after a 5-second delay
+      // Let players read the resolution — send a timer so they see a countdown
+      const RESOLUTION_DELAY = 12; // seconds
+      this.server.to(gameRoom).emit('game:timer:sync', {
+        seconds: RESOLUTION_DELAY,
+        phase: 'RESOLUTION',
+      });
+
+      // Start next round after the delay
       setTimeout(async () => {
         try {
           const gameState = await this.cacheService.getGameState(gameId);
@@ -1044,7 +1179,7 @@ export class WebsocketGateway
             message: 'Error starting next round',
           });
         }
-      }, 5000);
+      }, RESOLUTION_DELAY * 1000);
     }
   }
 
@@ -1146,6 +1281,25 @@ export class WebsocketGateway
         round: state.currentRound,
       });
 
+      // If entering ACTION phase, send suggestions + notify players
+      if (state.currentPhase === 'ACTION') {
+        this.sendActionSuggestions(gameId, gameRoom).catch((err) =>
+          this.logger.error(`Error sending action suggestions: ${err}`),
+        );
+        this.notifyAllPlayers(
+          gameId,
+          NotificationType.TURN_ACTION,
+          "C'est votre tour !",
+          'Choisissez votre action avant la fin du temps imparti.',
+        ).catch(() => {});
+      }
+
+      // If entering VOTE phase after timer expires on DISCUSSION, auto-resolve
+      // after vote timer too
+      if (state.currentPhase === 'VOTE') {
+        // handled below by the timer
+      }
+
       // Start timer for the new phase
       const gameData = await this.gamesService.getGame(gameId);
       const timeout = gameData?.turnTimeout ?? 60;
@@ -1157,7 +1311,12 @@ export class WebsocketGateway
       // Don't auto-advance from RESOLUTION (it's handled by resolveAndAdvance)
       if (state.currentPhase !== 'RESOLUTION') {
         await this.timerService.startTimer(gameId, state.currentPhase, timeout, async () => {
-          await this.autoAdvancePhase(gameId, gameRoom);
+          // When VOTE timer expires, resolve the round instead of just advancing
+          if (state.currentPhase === 'VOTE') {
+            await this.resolveAndAdvance(gameId, gameRoom);
+          } else {
+            await this.autoAdvancePhase(gameId, gameRoom);
+          }
         });
       }
 
@@ -1167,6 +1326,73 @@ export class WebsocketGateway
     } catch (error) {
       this.logger.error(
         `Error auto-advancing phase for game ${gameId}: ${error}`,
+      );
+    }
+  }
+
+  /**
+   * Create a persistent notification and push it in real-time to the user's socket.
+   */
+  private async sendNotification(
+    userId: string,
+    type: NotificationType,
+    title: string,
+    message: string,
+    data?: Record<string, any>,
+  ): Promise<void> {
+    try {
+      const notification = await this.notificationsService.create(
+        userId,
+        type,
+        title,
+        message,
+        data,
+      );
+
+      // Find the user's socket across all rooms
+      const sockets = await this.server.fetchSockets();
+      for (const socket of sockets) {
+        const socketUser = this.socketUsers.get(socket.id);
+        if (socketUser?.userId === userId) {
+          socket.emit('notification:new', {
+            id: notification.id,
+            type: notification.type,
+            title: notification.title,
+            message: notification.message,
+            data: notification.data as Record<string, any> | undefined,
+            createdAt: notification.createdAt.toISOString(),
+          });
+          break;
+        }
+      }
+    } catch (error) {
+      this.logger.error(`Error sending notification to ${userId}: ${error}`);
+    }
+  }
+
+  /**
+   * Send notifications to all players in a game.
+   */
+  private async notifyAllPlayers(
+    gameId: string,
+    type: NotificationType,
+    title: string,
+    message: string,
+    data?: Record<string, any>,
+  ): Promise<void> {
+    try {
+      const game = await this.gamesService.getGame(gameId);
+      await Promise.all(
+        game.players.map((p: any) =>
+          this.sendNotification(p.userId, type, title, message, {
+            ...data,
+            gameId,
+          }),
+        ),
+      );
+    } catch (error) {
+      this.logger.error(
+        `Error notifying all players for game ${gameId}: ${error}`,
       );
     }
   }

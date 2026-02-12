@@ -12,6 +12,7 @@
     "prisma:migrate:deploy": "prisma migrate deploy",
     "prisma:studio": "prisma studio",
     "db:setup": "npx prisma generate && npx prisma migrate dev",
+    "db:seed": "npx prisma db seed",
     "test": "jest",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\""
   },
@@ -57,6 +58,7 @@
     "typescript": "^5.3.0"
   },
   "prisma": {
-    "schema": "src/prisma/schema.prisma"
+    "schema": "src/prisma/schema.prisma",
+    "seed": "ts-node prisma/seed.ts"
   }
 }

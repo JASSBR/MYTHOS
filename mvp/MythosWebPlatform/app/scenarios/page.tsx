@@ -111,7 +111,7 @@ export default function ScenariosPage() {
                 key={s.slug}
                 title={s.name}
                 description={s.description}
-                image={`/images/scenario-${s.slug}.jpg`}
+                image={`/images/scenario-${s.slug}.svg`}
                 duration={s.duration}
                 players={`${s.minPlayers}-${s.maxPlayers} joueurs`}
                 difficulty={mapDifficulty(s.difficulty)}

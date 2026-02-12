@@ -38,6 +38,13 @@ export class EngineService {
     private readonly gamesService: GamesService,
   ) {}
 
+  /**
+   * Expose scenario config for external consumers (e.g. WebSocket gateway).
+   */
+  getScenarioConfig(slug: string) {
+    return this.scenariosService.getScenarioConfig(slug);
+  }
+
   // ===========================================================================
   // INITIALIZE GAME
   // ===========================================================================

@@ -23,6 +23,7 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
 COPY --from=builder /app/node_modules/@prisma/client ./node_modules/@prisma/client
 COPY --from=builder /app/src/prisma ./src/prisma
+COPY --from=builder /app/src/scenarios/packs ./src/scenarios/packs
 
 EXPOSE 3001
 

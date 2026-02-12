@@ -1,0 +1,6 @@
+version: "2"
+authtoken: 39Z6LqsLLdjCPQJxWzPAu309T09_2N1h7wp8KCgTqakjdZ6oB
+tunnels:
+  mythos:
+    addr: 8080
+    proto: http

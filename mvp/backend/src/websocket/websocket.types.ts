@@ -18,6 +18,7 @@ export interface ClientToServerEvents {
   'game:whisper': (data: { gameId: string; recipientId: string; message: string }) => void;
   'lobby:join': (data: { code: string; token: string }) => void;
   'lobby:leave': (data: { code: string }) => void;
+  'lobby:kick': (data: { code: string; targetUserId: string }) => void;
   'lobby:chat': (data: { code: string; message: string }) => void;
 }
 
@@ -79,6 +80,21 @@ export interface ServerToClientEvents {
   }) => void;
   'game:narration:complete': (data: { text: string }) => void;
   'game:error': (data: { message: string }) => void;
+  'notification:new': (data: {
+    id: string;
+    type: string;
+    title: string;
+    message: string;
+    data?: Record<string, any>;
+    createdAt: string;
+  }) => void;
+  'game:private-info': (data: {
+    role: string;
+    team: string;
+    description: string;
+    objectives: string;
+  }) => void;
+  'lobby:player:kicked': (data: { userId: string }) => void;
   'lobby:update': (data: {
     players: any[];
     playerCount: number;

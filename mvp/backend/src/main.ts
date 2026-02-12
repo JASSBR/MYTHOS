@@ -14,9 +14,25 @@ async function bootstrap() {
   // Security headers
   app.use(helmet());
 
-  // CORS
+  // CORS — accept comma-separated origins + ngrok wildcard
+  const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:3000')
+    .split(',')
+    .map((o) => o.trim());
+
   app.enableCors({
-    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+    origin: (origin, callback) => {
+      if (
+        !origin ||
+        allowedOrigins.includes(origin) ||
+        origin.endsWith('.ngrok-free.app') ||
+        origin.endsWith('.vercel.app') ||
+        origin.endsWith('.onrender.com')
+      ) {
+        callback(null, true);
+      } else {
+        callback(null, false);
+      }
+    },
     credentials: true,
   });
 
@@ -39,7 +55,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   const port = process.env.PORT || 3001;
-  await app.listen(port);
+  await app.listen(port, '0.0.0.0');
 
   logger.log(`MYTHOS Backend running on http://localhost:${port}`);
   logger.log(`Environment: ${process.env.NODE_ENV || 'development'}`);

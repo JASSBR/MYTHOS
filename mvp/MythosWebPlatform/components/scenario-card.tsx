@@ -31,7 +31,7 @@ export function ScenarioCard({
 }: ScenarioCardProps) {
   return (
     <div className="group relative overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:border-primary/50 hover:glow-violet-sm">
-      <div className="relative aspect-[16/10] overflow-hidden">
+      <div className="relative aspect-[16/9] sm:aspect-[16/10] overflow-hidden">
         <Image
           src={image || "/placeholder.svg"}
           alt={`Illustration du scenario ${title}`}
@@ -46,7 +46,7 @@ export function ScenarioCard({
           {difficulty}
         </Badge>
       </div>
-      <div className="flex flex-col gap-3 p-5">
+      <div className="flex flex-col gap-3 p-4 sm:p-5">
         <h3 className="font-display text-xl font-bold text-foreground">{title}</h3>
         <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
         <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
